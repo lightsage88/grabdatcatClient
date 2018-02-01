@@ -39,7 +39,7 @@ const DATA = [
 				{
 					catPic: pepper.jpg,
 					catName:"Pepper",
-					catBreed: 'Domestic Shorthair'
+					catBreed: 'Domestic Shorthair',
 					catGender: "F",
 					catAge: "Senior",
 					catColor: "Calico",
