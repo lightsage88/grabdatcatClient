@@ -1,10 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-export default function Image(props){
+import {ListGroup, ListGroupItem} from 'reactstrap';
+export default function List(props){
 //I don't know how to get the fucking picture to work, but I'm going to
 //come back for it later...
 return (
-	<img className={props.className} src={props.imageAddress} alt={props.imageAddress}/>
+	<ListGroup>
+		<ListGroupItem></ListGroupItem>
+	</ListGroup>
 	);
 
 }

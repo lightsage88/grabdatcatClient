@@ -1,16 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 export default function LoginForm(props) {
 	return(
 		<form>
-			<input type='text' value='USERNAME' placeholder='USERNAME'/>
-			<input type='text' value="PASSWORD" placeholder='PASSWORD'/>
+			<input type='text' placeholder='USERNAME'/>
+			<input type='text' placeholder='PASSWORD'/>
 			<br/>
-			<Button>LOGIN</Button>
-			<Button>REGISTER</Button>
+			<Link to='/home'><Button>LOGIN</Button></Link>
+			<Link to='/registration'><Button>REGISTER</Button></Link>
 		</form>
 		);
 }
