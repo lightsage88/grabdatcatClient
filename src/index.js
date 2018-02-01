@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from '../components/app';
+import App from '../app';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -15,7 +15,7 @@ const DATA = [
 		mBTI: "INTP",
 		catKennel: [
 				{
-					catPic: meow.jpg,
+					catPic: 'https://imgur.com/makqOuE',
 					catName: "Felix",
 					catBreed: 'Domestic Shorthair',
 					catGender: "M",
@@ -26,7 +26,7 @@ const DATA = [
 					catStory: "Old King Bo is a merry old soul and he likes to eat curds and whey"
 				},
 				{
-					catPic: mewling.jpg,
+					catPic: 'https://imgur.com/vQqvqSX',
 					catName:"Neemo",
 					catBreed: 'Tuxedo',
 					catGender: "M",
@@ -37,7 +37,7 @@ const DATA = [
 					catStory: "Neemo is a sweet cat, but he is also very skittish and cautious towards strangers. He likes to have ample places to hide and lots of food to eat. Definitely a good cat for a homebody who doesn't have loud parties or entertains much."
 				},
 				{
-					catPic: pepper.jpg,
+					catPic: 'https://imgur.com/B5EmwD6',
 					catName:"Pepper",
 					catBreed: 'Domestic Shorthair',
 					catGender: "F",
