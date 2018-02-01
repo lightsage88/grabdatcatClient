@@ -52,5 +52,5 @@ const DATA = [
 ];
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App data={DATA}/>, document.getElementById('root'));
 registerServiceWorker();
