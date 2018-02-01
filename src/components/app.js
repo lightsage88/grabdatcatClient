@@ -14,9 +14,14 @@ import './app.css';
 //   Jumbotron,
 //   Button
 // } from 'reactstrap';
+import {Button} from 'reactstrap';
+import LoginForm from './loginForm';
+import Image from './image';
 
 export default class App extends Component {
   render() {
+    console.log(this.props);
+    console.log(this.props.data);
     return (
       <div className="App">
         <header className="App-header">
@@ -24,9 +29,8 @@ export default class App extends Component {
           <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which
           cat breed will suit you best!</span>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <LoginForm />
+        <Image imageAddress={this.props.data.catKennel[0].catPic}/>
       </div>
     );
   }

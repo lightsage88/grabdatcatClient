@@ -5,8 +5,8 @@ import App from './components/app';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
 
-const DATA = [
-	{
+const DATA = {
+	
 		profilePic: '',
 		firstName: "Adrian",
 		lastName: "Rosales",
@@ -48,8 +48,9 @@ const DATA = [
 					catStory: "Miss Peppy is a pilot, nurse, mind-reader, and a ping pong champion."
 				}
 			]
-	}
-];
+}
+	
+
 
 
 ReactDOM.render(<App data={DATA}/>, document.getElementById('root'));
