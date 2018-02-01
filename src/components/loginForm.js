@@ -8,6 +8,7 @@ export default function LoginForm(props) {
 		<form>
 			<input type='text' value='USERNAME' placeholder='USERNAME'/>
 			<input type='text' value="PASSWORD" placeholder='PASSWORD'/>
+			<br/>
 			<Button>LOGIN</Button>
 			<Button>REGISTER</Button>
 		</form>

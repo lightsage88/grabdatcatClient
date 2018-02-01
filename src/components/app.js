@@ -15,6 +15,7 @@ import './app.css';
 //   Button
 // } from 'reactstrap';
 import {Button} from 'reactstrap';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import LoginForm from './loginForm';
 import Image from './image';
 
@@ -30,6 +31,8 @@ export default class App extends Component {
           cat breed will suit you best!</span>
         </header>
         <LoginForm />
+        <span>Not registered, hooman? Click the register button to fix that, hooman.</span>
+        <br/>
         <Image imageAddress={this.props.data.catKennel[0].catPic}/>
       </div>
     );
