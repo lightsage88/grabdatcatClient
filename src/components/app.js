@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './app.css';
 import {
   Collapse,
   Navbar,
@@ -15,20 +15,22 @@ import {
   Button
 } from 'reactstrap';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">GRAB DAT CAT</h1>
+          <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which
+          cat breed will suit you best!</span>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        // make a signupform here
       </div>
     );
   }
 }
 
-export default App;
+// export default App;

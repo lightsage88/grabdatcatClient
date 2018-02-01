@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from '../app';
+import App from './components/app';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
 
 const DATA = [
 	{
-		profilePic: img.jpg,
+		profilePic: '',
 		firstName: "Adrian",
 		lastName: "Rosales",
 		email: "lightsage88@zbeke.com",
