@@ -16,8 +16,8 @@ const DATA = [
 		catKennel: [
 				{
 					catPic: meow.jpg,
-					catName: "Felix"
-					catBreed: 'Domestic Shorthair'
+					catName: "Felix",
+					catBreed: 'Domestic Shorthair',
 					catGender: "M",
 					catAge: "Senior",
 					catColor: "Black",
@@ -28,7 +28,7 @@ const DATA = [
 				{
 					catPic: mewling.jpg,
 					catName:"Neemo",
-					catBreed: 'Tuxedo'
+					catBreed: 'Tuxedo',
 					catGender: "M",
 					catAge: "Adult",
 					catColor: "Black/White",
