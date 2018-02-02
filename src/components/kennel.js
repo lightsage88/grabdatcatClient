@@ -8,13 +8,16 @@ import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
 import kennelBackgroundPic from '../staticAssets/markerCats.jpg';
 import './kennel.css';
+import Litter from './litter';
 export default function Kennel(props) {
+	console.log('function Kennel working...');
+	console.log(props);
 	return(
 		<div>
 			<NavBar />
 			<h1>CAT KENNEL</h1>
-			<main>
-				<p>asdfasdf;lkasdjfasl;dkfa;lsdkjfasl;dkfj;asldfjkasldkfj</p>
+			<main className='content'>
+				<Litter accountData={props.accountData}/>
 			</main>
 
 		</div>

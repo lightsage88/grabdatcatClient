@@ -6,6 +6,7 @@ import {ListGroup, ListGroupItem, Card, CardImg, CardText, CardBody,
 import felixPic from '../staticAssets/felixImposter.jpg';
 import neemoPic from '../staticAssets/tuxedo cat.jpg';
 import pepperPic from '../staticAssets/pepperImposter.jpg';
+import HumanData from './humanData'; 
 export default function AccountList(props) {
 //I don't know how to get the fucking picture to work, but I'm going to
 //come back for it later...
@@ -39,16 +40,12 @@ return(
 	<div>
 		<section className='aboutYou'>
 			<h3>About You</h3>
-			<ListGroupItem><strong>First Name: </strong><span>{props.accountData.firstName}</span></ListGroupItem>
-			<ListGroupItem><strong>Last Name: </strong><span>{props.accountData.lastName}</span></ListGroupItem>
-			<ListGroupItem><strong>Email: </strong><span>{props.accountData.email}</span></ListGroupItem>
-			<ListGroupItem><strong>PH #: </strong><span>{props.accountData.phoneNumber}</span></ListGroupItem>
-			<ListGroupItem><strong>MBTI: </strong><span>{props.accountData.mBTI}</span></ListGroupItem>
+				<HumanData accountData={props}/>
 			<a href='/'>edit account info</a>
 		</section>
-		<section className='aboutCats'>
-						<br/>
+		<br/>
 
+		<section className='aboutCats'>
 			<h3>Cats in Kennel</h3>
 			<Card>
 				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={felixPic} alt="Felix" /></Link>
