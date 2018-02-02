@@ -48,7 +48,7 @@ const DATA = {
 					catStory: "Miss Peppy is a pilot, nurse, mind-reader, and a ping pong champion."
 				}
 			]
-}
+};
 	
 
 

@@ -1,3 +1,4 @@
-img.profilePic {
+img.profilePic, .catImage {
 	max-height: 35vw;
+	max-width: 35vw;
 }
