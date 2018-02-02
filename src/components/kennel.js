@@ -9,12 +9,13 @@ import SearchForm from './searchForm';
 import kennelBackgroundPic from '../staticAssets/markerCats.jpg';
 import './kennel.css';
 export default function Kennel(props) {
+	console.log('function Kennel working...');
+	console.log(props);
 	return(
 		<div>
 			<NavBar />
 			<h1>CAT KENNEL</h1>
-			<main>
-				<p>asdfasdf;lkasdjfasl;dkfa;lsdkjfasl;dkfj;asldfjkasldkfj</p>
+			<main className='content'>
 			</main>
 
 		</div>

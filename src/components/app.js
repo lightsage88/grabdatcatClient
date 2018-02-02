@@ -28,7 +28,7 @@ import Pedestal from './pedestal';
 export default class App extends Component {
   render() {
     console.log(this.props);
-    console.log(this.props.data);
+    console.log(this.props.accountData);
     return (
     <Router>
       <main>
