@@ -1,11 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-import {Link} from 'react-router-dom';
-import {ListGroup, ListGroupItem, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button} from 'reactstrap';
-import felixPic from '../staticAssets/felixImposter.jpg';
-import neemoPic from '../staticAssets/tuxedo cat.jpg';
-import pepperPic from '../staticAssets/pepperImposter.jpg';
+
 import HumanData from './humanData'; 
 export default function AccountList(props) {
 //I don't know how to get the fucking picture to work, but I'm going to

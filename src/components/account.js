@@ -1,9 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
-import {Button} from 'reactstrap';
-import {Link} from 'react-router-dom';
-import RegistrationForm from './registrationForm';
+
 import NavBar from './navBar';
 import AccountList from './accountList';
 import userPic from '../staticAssets/AdrianEdmundoRosales.jpg';

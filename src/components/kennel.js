@@ -4,9 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import NavBar from './navBar';
-import HomeGreet from './homeGreet';
-import SearchForm from './searchForm';
-import kennelBackgroundPic from '../staticAssets/markerCats.jpg';
+
 import felixPic from '../staticAssets/felixImposter.jpg';
 import neemoPic from '../staticAssets/tuxedo cat.jpg';
 import pepperPic from '../staticAssets/pepperImposter.jpg';

@@ -1,8 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-import {Link} from 'react-router-dom';
-import {ListGroup, ListGroupItem, Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button} from 'reactstrap';
+import {ListGroupItem} from 'reactstrap';
 
   export default function HumanData(props) {
   	console.log(props);
