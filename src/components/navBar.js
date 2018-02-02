@@ -42,7 +42,7 @@ export default class NavBar extends React.Component {
                <Link to='/account'><NavLink href="">Account</NavLink></Link>
               </NavItem>
               <NavItem>
-                <Link to='/kennel'><NavLink href="">Kennel</NavLink></Link>
+                <Link to='/kennel'><NavLink href="">Cat Kennel</NavLink></Link>
               </NavItem>
               <NavItem>
                 <Link to='/'><NavLink href="">Log Out</NavLink></Link>

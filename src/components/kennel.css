@@ -4,5 +4,12 @@
 		rgba(0,0,0,0.8)
 		),
 	url('../staticAssets/markerCats.jpg');
+
 }
 
+.card{
+	background:0;
+	color: white;
+	box-sizing:content-box;
+	border: .31vw solid lime;
+}

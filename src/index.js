@@ -5,7 +5,9 @@ import App from './components/app';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
 
-const DATA = {
+const accountData = 
+
+{
 	
 		profilePic: '',
 		firstName: "Adrian",
@@ -53,5 +55,5 @@ const DATA = {
 
 
 
-ReactDOM.render(<App data={DATA}/>, document.getElementById('root'));
+ReactDOM.render(<App accountData={accountData}/>, document.getElementById('root'));
 registerServiceWorker();
