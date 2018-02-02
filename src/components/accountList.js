@@ -51,21 +51,24 @@ return(
 
 			<h3>Cats in Kennel</h3>
 			<Card>
-				<Link to='/card'><CardImg className='catImage' top width='100%' src={felixPic} alt="Felix" /></Link>
+				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={felixPic} alt="Felix" /></Link>
 				<CardBody>
 					<CardTitle>{props.accountData.catKennel[0].catName}|{props.accountData.catKennel[0].catGender}|{props.accountData.catKennel[0].catAge}|{props.accountData.catKennel[0].catColor}</CardTitle>
 				</CardBody>
+				<Button className='removeCat' type='button'>Remove Cat</Button>
 			</Card>
 			<Card>
-				<Link to='/card'><CardImg className='catImage' top width='100%' src={neemoPic} alt="Pepper" /></Link>
+				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={neemoPic} alt="Pepper" /></Link>
 				<CardBody>
 					<CardTitle>{props.accountData.catKennel[1].catName}|{props.accountData.catKennel[1].catGender}|{props.accountData.catKennel[1].catAge}|{props.accountData.catKennel[1].catColor}</CardTitle>
 				</CardBody>
+				<Button className='removeCat' type='button'>Remove Cat</Button>
 			</Card><Card>
-				<Link to='/card'><CardImg className='catImage' top width='100%' src={pepperPic} alt="Pepper" /></Link>
+				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={pepperPic} alt="Pepper" /></Link>
 				<CardBody>
 					<CardTitle>{props.accountData.catKennel[2].catName}|{props.accountData.catKennel[2].catGender}|{props.accountData.catKennel[2].catAge}|{props.accountData.catKennel[2].catColor}</CardTitle>
 				</CardBody>
+				<Button className='removeCat' type='button'>Remove Cat</Button>
 			</Card>
 		</section>
 	</div>

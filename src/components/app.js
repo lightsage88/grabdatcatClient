@@ -22,6 +22,8 @@ import Landing from './landing';
 import Home from './home';
 import Registration from './registration';
 import Account from './account';
+import Kennel from './kennel';
+import Pedestal from './pedestal';
 
 export default class App extends Component {
   render() {
@@ -34,6 +36,8 @@ export default class App extends Component {
         <Route exact path='/home' component={Home} />
         <Route exact path='/registration' component={Registration} />
         <Route exact path='/account' component={Account} />
+        <Route exact path='/pedestal/:catName' component={Pedestal} />
+        <Route exact path='/kennel' component={Kennel} />
       </main>
 
       

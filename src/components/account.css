@@ -2,3 +2,10 @@ img.profilePic, .catImage {
 	max-height: 35vw;
 	max-width: 35vw;
 }
+
+.removeCat {
+	background: red;
+	width: 30%;
+	
+
+}
