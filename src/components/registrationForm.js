@@ -2,27 +2,27 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 // import Image from './image';
 import {Link} from 'react-router-dom';
-import {registerUser} from '../actions';
+import {registerUser} from '../actions/index.js';
 import {connect} from 'react-redux';
 
 class RegistrationForm extends React.Component {
   handleSubmit(event){
     event.preventDefault();
     console.log('crip life');
+    const username = event.target.username.value;
+    const password = event.target.password.value;
     const firstName = event.target.firstName.value;
     const lastName = event.target.lastName.value;
     const phoneNumber = event.target.phoneNumber.value;
     const emailAddress = event.target.emailAddress.value;
-    const userName = event.target.userName.value;
-    const password = event.target.password.value;
     const mBTI = event.target.mBTI.value;
-    console.log(userName);
+    console.log(username);
     console.log(password);
     console.log(phoneNumber);
     console.log(emailAddress);
     console.log(mBTI);
 
-    this.props.dispatch(registerUser(userName, password));
+    this.props.dispatch(registerUser(username, password, firstName, lastName, phoneNumber, emailAddress, mBTI));
 
   }
 
@@ -52,8 +52,8 @@ class RegistrationForm extends React.Component {
             <Input type="email" name="emailAddress" id="emailAddress"/>
         </FormGroup>
         <FormGroup>
-          <Label for="userName">USERNAME</Label>
-          <Input type="text" name="userName" id="userName"/>
+          <Label for="username">USERNAME</Label>
+          <Input type="text" name="username" id="username"/>
         </FormGroup>
         <FormGroup>
           <Label for='passwordFirst'>PASSWORD</Label>
@@ -80,7 +80,7 @@ class RegistrationForm extends React.Component {
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
-        <Button type='submit' color='info'>SUBMIT</Button>
+        <Button color='info'>SUBMIT</Button>
       </Form>
     );
   }
