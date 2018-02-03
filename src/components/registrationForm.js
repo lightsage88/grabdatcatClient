@@ -2,11 +2,34 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 // import Image from './image';
 import {Link} from 'react-router-dom';
+import {registerUser} from '../actions';
+import {connect} from 'react-redux';
 
-export default class RegistrationForm extends React.Component {
+class RegistrationForm extends React.Component {
+  handleSubmit(event){
+    event.preventDefault();
+    console.log('crip life');
+    const firstName = event.target.firstName.value;
+    const lastName = event.target.lastName.value;
+    const phoneNumber = event.target.phoneNumber.value;
+    const emailAddress = event.target.emailAddress.value;
+    const userName = event.target.userName.value;
+    const password = event.target.password.value;
+    const mBTI = event.target.mBTI.value;
+    console.log(userName);
+    console.log(password);
+    console.log(phoneNumber);
+    console.log(emailAddress);
+    console.log(mBTI);
+
+    this.props.dispatch(registerUser(userName, password));
+
+  }
+
+
   render() {
     return (
-      <Form>
+      <Form onSubmit={(e)=>this.handleSubmit(e)}>
         <h5>REGISTRATION</h5>
         <h4>Enter info below, hooman</h4>
         <FormGroup>
@@ -34,11 +57,7 @@ export default class RegistrationForm extends React.Component {
         </FormGroup>
         <FormGroup>
           <Label for='passwordFirst'>PASSWORD</Label>
-          <Input type='password' name='passwordFirst' id='passwordFirst'/>
-        </FormGroup>
-        <FormGroup>
-          <Label for='passwordSecond'>&iquest;OTRA VEZ?</Label>
-          <Input type='password' name='passwordSecond' id='passwordSecond'/>
+          <Input type='password' name='password' id='passwordFirst'/>
         </FormGroup>
         <FormGroup>
           <Label for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
@@ -61,8 +80,10 @@ export default class RegistrationForm extends React.Component {
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
-        <Link to='/home'><Button type='submit' color='info'>SUBMIT</Button></Link>
+        <Button type='submit' color='info'>SUBMIT</Button>
       </Form>
     );
   }
 }
+
+export default connect()(RegistrationForm); 

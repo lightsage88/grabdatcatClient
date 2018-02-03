@@ -4,6 +4,9 @@ import './index.css';
 import App from './components/app';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css'
+import {Provider} from 'react-redux';
+import store from './store';
+
 
 const accountData = 
 
@@ -55,5 +58,10 @@ const accountData =
 
 
 
-ReactDOM.render(<App accountData={accountData}/>, document.getElementById('root'));
+ReactDOM.render(
+	<Provider store={store}>
+<App />
+	</Provider>, document.getElementById('root')
+
+	);
 registerServiceWorker();
