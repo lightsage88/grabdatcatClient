@@ -1,5 +1,5 @@
 // user.js
-let userData;
+// let userData;
 const initialState = {
 	data: {},
 	token: '',
@@ -31,6 +31,9 @@ const user = (state=initialState, action) => {
 				cats: action.cats,
 				_id: action._id
 			}
+		case 'LOG_OUT_USER':
+			return {}
+		
 		default: 
 		return state
 	}

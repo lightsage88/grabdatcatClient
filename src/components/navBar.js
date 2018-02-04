@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -8,8 +7,10 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap';
+  import {logOutUser} from '../actions/index.js';
+import {connect} from 'react-redux';
 
-export default class NavBar extends React.Component {
+export class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +28,8 @@ export default class NavBar extends React.Component {
   handleLogout(event){
     console.log('handleLogout running');
     localStorage.clear();
-    window.location.reload();
+    this.props.dispatch(logOutUser());
+    setTimeout(function(){window.location.reload();}, 2000);
 
     //need to reload the page with react-router-dom Redirect?
   }
@@ -41,13 +43,13 @@ export default class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link to='/home'><NavLink href="">Home</NavLink></Link>
+                <NavLink href="/home">Home</NavLink>
               </NavItem>
               <NavItem>
-               <Link to='/account'><NavLink href="">Account</NavLink></Link>
+               <NavLink href="/account">Account</NavLink>
               </NavItem>
               <NavItem>
-                <Link to='/kennel'><NavLink href="">Cat Kennel</NavLink></Link>
+                 <NavLink href="/kennel">Cat Kennel</NavLink>
               </NavItem>
               <NavItem>
                <NavLink href="/" onClick={(e)=>this.handleLogout(e)}>Log Out</NavLink>
@@ -59,3 +61,5 @@ export default class NavBar extends React.Component {
     );
   }
 }
+
+export default connect()(NavBar);

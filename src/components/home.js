@@ -21,9 +21,12 @@ import {Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
 import searchPicture from '../staticAssets/gitHubIcon.png';
+import store from '../store';
+import {connect} from 'react-redux';
 
 
-export default class Home extends Component {
+export class Home extends Component {
+ 
   render() {
 
     if(localStorage.token){
@@ -35,6 +38,8 @@ export default class Home extends Component {
     }
     console.log(this.props);
     console.log(this.props.data);
+    console.log(store);
+    console.log(this.state);
     return (
     <div>
       <NavBar />
@@ -44,3 +49,5 @@ export default class Home extends Component {
       );
   }
 }
+
+export default connect()(Home);

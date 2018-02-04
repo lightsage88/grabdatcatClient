@@ -2,12 +2,13 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button} from 'reactstrap';
-import {Link, Route, Redirect} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {loginUser, loginUserSuccess, protectedEndPointTesting} from '../actions/index.js';
+import {loginUser, loginUserSuccess, protectedEndPointTesting, logOutUser} from '../actions/index.js';
 
 
 export class LoginForm extends React.Component {
+
 
 	componentDidMount(){
 		console.log('theShitCircus');
@@ -22,8 +23,9 @@ export class LoginForm extends React.Component {
 		const _id = localStorage.getItem('_id');
 		console.log(firstName);
 		this.props.dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
-
 	}
+
+
 
 	handleSubmit(event){
 		event.preventDefault();
@@ -31,11 +33,13 @@ export class LoginForm extends React.Component {
 		const password = event.target.password.value;
 		this.props.dispatch(loginUser(username, password));
 		window.location.reload();
+
 	}
 
 	handleLogout(event){
 		console.log('handleLogout running');
 		localStorage.clear();
+		this.props.dispatch(logOutUser());
 		window.location.reload();
 
 		//need to reload the page with react-router-dom Redirect?
@@ -46,6 +50,7 @@ export class LoginForm extends React.Component {
 	}
 
 	render(){
+		console.log(this.props);
 		if(localStorage.token){
 			console.log('hamboneX');
 			return(
