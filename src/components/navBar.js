@@ -23,6 +23,15 @@ export default class NavBar extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  handleLogout(event){
+    console.log('handleLogout running');
+    localStorage.clear();
+    window.location.reload();
+
+    //need to reload the page with react-router-dom Redirect?
+  }
+
   render() {
     return (
       <div>
@@ -41,7 +50,7 @@ export default class NavBar extends React.Component {
                 <Link to='/kennel'><NavLink href="">Cat Kennel</NavLink></Link>
               </NavItem>
               <NavItem>
-                <Link to='/'><NavLink href="">Log Out</NavLink></Link>
+               <NavLink href="/" onClick={(e)=>this.handleLogout(e)}>Log Out</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
