@@ -1,7 +1,15 @@
 // user.js
+let userData;
 const initialState = {
 	data: {},
-	token: ''
+	token: '',
+	firstName: '',
+	lastName: '',
+	emailAddress: '',
+	phoneNumber: '',
+	mBTI : '',
+	cats: [],
+	_id: ''
 }
 
 const user = (state=initialState, action) => {
@@ -14,7 +22,14 @@ const user = (state=initialState, action) => {
 		case 'LOGIN_USER_SUCCESS':
 			return {
 				...state,
-				token: action.token
+				token: action.token,
+				firstName: action.firstName,
+				lastName: action.lastName,
+				phoneNumber: action.phoneNumber,
+				emailAddress: action.emailAddress,
+				mBTI: action.mBTI,
+				cats: action.cats,
+				_id: action._id
 			}
 		default: 
 		return state
@@ -22,3 +37,7 @@ const user = (state=initialState, action) => {
 }
 
 export default user
+
+
+////turn the parts in USERDATA into smaller parts that wont get generalized
+//into a large object...THAT will easily persist across the entire project!

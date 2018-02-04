@@ -5,9 +5,16 @@
  });
 
 
- export const loginUserSuccess = (token) => ({
+ export const loginUserSuccess = (token, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id ) => ({
  	type: 'LOGIN_USER_SUCCESS',
- 	token
+ 	token,
+ 	firstName,
+ 	lastName, 
+ 	emailAddress,
+ 	phoneNumber,
+ 	mBTI,
+ 	cats,
+ 	_id
  })
 
 export const registerUser = (username, password, firstName, lastName, phoneNumber, emailAddress, mBTI) => {
@@ -39,9 +46,21 @@ export const loginUser = (username, password) => {
 		.then(response => response.json())
 		.then(json => {
 			const {authToken} = json;
+			const {userData} = json;
 			console.log(authToken);
 			localStorage.setItem('token', authToken);
+			localStorage.setItem('userData', userData);
+			localStorage.setItem('firstName', userData.firstName);
+			localStorage.setItem('lastName', userData.lastName);
+			localStorage.setItem('emailAddress', userData.emailAddress);
+			localStorage.setItem('phoneNumber', userData.phoneNumber);
+			localStorage.setItem('mBTI', userData.mBTI);
+			localStorage.setItem('cats', userData.cats);
+			localStorage.setItem('_id', userData._id);
 			dispatch(loginUserSuccess(authToken));
+			console.log(username);
+			console.log(password);
+			// dispatch(userDataGrab(username,password));
 		})
 		.catch(error => console.log(error))
 	}

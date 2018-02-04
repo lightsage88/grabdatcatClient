@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import {Link, Route, Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {loginUser, loginUserSuccess, protectedEndPointTesting} from '../actions/index.js';
 
@@ -12,8 +12,16 @@ export class LoginForm extends React.Component {
 	componentDidMount(){
 		console.log('theShitCircus');
 		const authToken = localStorage.getItem('token');
-		console.log(authToken);
-		this.props.dispatch(loginUserSuccess(authToken));
+		// const userData = localStorage.getItem('userData');
+		const firstName = localStorage.getItem('firstName');
+		const lastName = localStorage.getItem('lastName');
+		const phoneNumber = localStorage.getItem('phoneNumber');
+		const emailAddress = localStorage.getItem('emailAddress');
+		const mBTI = localStorage.getItem('mBTI');
+		const cats = localStorage.getItem('cats');
+		const _id = localStorage.getItem('_id');
+		console.log(firstName);
+		this.props.dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
 
 	}
 
@@ -26,7 +34,9 @@ export class LoginForm extends React.Component {
 
 	handleLogout(event){
 		console.log('handleLogout running');
-		localStorage.removeItem('token');
+		localStorage.clear();
+		window.location.reload();
+
 		//need to reload the page with react-router-dom Redirect?
 	}
 	handleTPE(event){
@@ -35,6 +45,15 @@ export class LoginForm extends React.Component {
 	}
 
 	render(){
+		if(localStorage.token){
+			console.log('hamboneX');
+			return(
+				<Redirect to='/home'/>
+				);
+		} else {
+			console.log('you do not know de whey');
+		}
+
 	return(
 		<div>
 		<form onSubmit={(e)=> this.handleSubmit(e)}>
