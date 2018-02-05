@@ -33,7 +33,12 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 		})
 		.then(response => response.json())
 		.then(json => dispatch(registerUserSuccess(json)))
-		.catch(error => console.log(error))
+		.catch(error => {
+			console.log('todays attempt has been brought to you by the letter F for fucked in the head');
+			console.log(error);
+
+			console.error(error);
+		})
 	}
 }
 

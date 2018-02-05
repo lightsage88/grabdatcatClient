@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
-
+import {connect} from 'react-redux';
 import NavBar from './navBar';
 import AccountList from './accountList';
 import userPic from '../staticAssets/AdrianEdmundoRosales.jpg';
@@ -59,9 +59,14 @@ const accountData =
 //need to have accountDetails
 //need to have catKennelDetails
 
-export default function Account(props) {
-	console.log('Account function going...');
-	console.log(props.data);
+export class Account extends React.Component {
+
+
+	render(){
+		
+	
+
+
 	return(
 
 		<div>
@@ -69,7 +74,22 @@ export default function Account(props) {
 	<h1>Account</h1>
 	<Image className='profilePic' imageAddress={userPic}/>
 		<a href='/'>UPLOAD/CHANGE PICTURE</a>
-	<AccountList accountData={accountData}/>
+	<AccountList accountData={this.props.accountData}/>
 		</div>
 		);
+	}
 }
+
+
+const mapStateToProps = state => ({
+  accountData : {
+  				firstName : state.user.firstName,
+				  lastName : state.user.lastName,
+				  emailAddress: state.user.emailAddress,
+				  phoneNumber : state.user.phoneNumber,
+				  mBTI : state.user.mBTI
+  			}
+});
+
+
+export default connect(mapStateToProps)(Account);

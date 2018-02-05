@@ -26,9 +26,9 @@ import {connect} from 'react-redux';
 
 
 export class Home extends Component {
- 
   render() {
-
+    console.log('home running...');
+    console.log(this.props);
     if(localStorage.token){
       console.log('yippie');
     } else {
@@ -43,11 +43,16 @@ export class Home extends Component {
     return (
     <div>
       <NavBar />
-      <HomeGreet firstName={localStorage.firstName}/>
+      <HomeGreet firstName={this.props.firstName}/>
       <SearchForm pic={searchPicture}/>
     </div>
       );
   }
 }
 
-export default connect()(Home);
+const mapStateToProps = state => ({
+  firstName : state.user.firstName
+});
+
+
+export default connect(mapStateToProps)(Home);
