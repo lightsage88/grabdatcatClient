@@ -51,7 +51,7 @@ export class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  firstName : state.user.firstName
+  firstName : state.app.user.firstName
 });
 
 

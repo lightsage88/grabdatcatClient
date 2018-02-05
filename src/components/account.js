@@ -83,11 +83,11 @@ export class Account extends React.Component {
 
 const mapStateToProps = state => ({
   accountData : {
-  				firstName : state.user.firstName,
-				  lastName : state.user.lastName,
-				  emailAddress: state.user.emailAddress,
-				  phoneNumber : state.user.phoneNumber,
-				  mBTI : state.user.mBTI
+  				firstName : state.app.user.firstName,
+				  lastName : state.app.user.lastName,
+				  emailAddress: state.app.user.emailAddress,
+				  phoneNumber : state.app.user.phoneNumber,
+				  mBTI : state.app.user.mBTI
   			}
 });
 

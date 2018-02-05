@@ -1,11 +1,18 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
-// import Image from './image';
-// import {Link} from 'react-router-dom';
+import {reduxForm, Field} from 'redux-form';
+import {required, nonEmpty, email} from '../validators';
 import {registerUser} from '../actions/index.js';
 import {connect} from 'react-redux';
+import InputX from './input';
 
 class RegistrationForm extends React.Component {
+  onSubmit(values){
+    console.log('onSubmit firing');
+    console.log(values);
+  }
+
+
   handleSubmit(event){
     event.preventDefault();
     console.log('crip life');
@@ -33,31 +40,43 @@ class RegistrationForm extends React.Component {
         <h5>REGISTRATION</h5>
         <h4>Enter info below, hooman</h4>
         <FormGroup>
-          <Label for="firstName">FIRST NAME</Label>
-          <Input type="text" name="firstName" id="firstName"/>
+          <Label htmlFor='firstName' >FIRST NAME</Label>
+          <Field class='form-control' name='firstName' 
+          id='firstName' type="text" component={InputX}
+          validate={[required, nonEmpty]}
+          />
         </FormGroup>
 
         <FormGroup>
-          <Label for="lastName">LAST NAME</Label>
-          <Input type="text" name="lastName" id="lastName"/>
+          <Label htmlFor="lastName">LAST NAME</Label>
+          <Field class='form-control' type="text" name="lastName" id="lastName" 
+          component={InputX}
+          validate={[required, nonEmpty]}/>
         </FormGroup>
 
         <FormGroup>
-          <Label for="phoneNumber">PH #</Label>
-          <Input type="text" name="phoneNumber" id="phoneNumber"/>
+          <Label htmlFor="phoneNumber">PH #</Label>
+          <Field class='form-control' type="text" name="phoneNumber" id="phoneNumber" 
+          component={InputX}/>
         </FormGroup>
 
         <FormGroup>
-          <Label for="emailAddress">E-MAIL</Label>
-            <Input type="email" name="emailAddress" id="emailAddress"/>
+          <Label htmlFor="emailAddress">E-MAIL</Label>
+            <Field class='form-control' type="email" name="emailAddress" id="emailAddress" 
+            component={InputX}
+            validate={[required, nonEmpty, email]}/>
         </FormGroup>
         <FormGroup>
-          <Label for="username">USERNAME</Label>
-          <Input type="text" name="username" id="username"/>
+          <Label htmlFor="username">USERNAME</Label>
+          <Field class='form-control' type="text" name="username" id="username" 
+          component={InputX}
+          validate={[required, nonEmpty]}/>
         </FormGroup>
         <FormGroup>
-          <Label for='passwordFirst'>PASSWORD</Label>
-          <Input type='password' name='password' id='passwordFirst'/>
+          <Label htmlFor='passwordFirst'>PASSWORD</Label>
+          <Field class='form-control' type='password' name='password' id='passwordFirst' 
+          component={InputX}
+          validate={[required, nonEmpty]}/>
         </FormGroup>
         <FormGroup>
           <Label for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
@@ -80,10 +99,12 @@ class RegistrationForm extends React.Component {
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
-        <Button color='info'>SUBMIT</Button>
+        <Button color='info' disabled={
+          this.props.pristine || this.props.submitting
+        }>SUBMIT</Button>
       </Form>
     );
   }
 }
 
-export default connect()(RegistrationForm); 
+export default reduxForm({form: 'registration'})(RegistrationForm); 
