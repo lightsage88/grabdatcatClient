@@ -41,7 +41,10 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 			body: JSON.stringify({username, password, firstName, lastName, phoneNumber, emailAddress, mBTI})
 		})
 		.then(response => response.json())
-		.then(json => dispatch(registerUserSuccess(json)))
+		.then(json => {
+			dispatch(registerUserSuccess(json))
+			window.location = '/';
+		})
 		.catch(error => {
 			console.log('todays attempt has been brought to you by the letter F for fucked in the head');
 			console.log(error);
@@ -124,12 +127,13 @@ export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, 
 			console.log('razzlematozoo');
 			console.log(json);
 			console.log(json.firstName);
-			// let firstName = json.firstName;
-			// let lastName = json.lastName;
-			// let emailAddress = json.emailAddress;
-			// let phoneNumber = json.phoneNumber;
-			// let mBTI = json.mBTI;
-			// dispatch(updateUserSuccess(firstName, lastName, emailAddress, phoneNumber, mBTI));
+			let firstName = json.firstName;
+			let lastName = json.lastName;
+			let emailAddress = json.emailAddress;
+			let phoneNumber = json.phoneNumber;
+			let mBTI = json.mBTI;
+			dispatch(updateUserSuccess(firstName, lastName, emailAddress, phoneNumber, mBTI));
+			window.location = '/account';
 		})
 		.catch(error => console.log(error))
 	}
