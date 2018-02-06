@@ -73,7 +73,7 @@ export const loginUser = (username, password) => {
 			localStorage.setItem('mBTI', userData.mBTI);
 			localStorage.setItem('cats', userData.cats);
 			localStorage.setItem('_id', userData._id);
-			dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
+			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id));
 			console.log(username);
 			console.log(password);
 			// dispatch(userDataGrab(username,password));
