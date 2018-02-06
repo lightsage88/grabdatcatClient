@@ -32,7 +32,7 @@
 
 export const registerUser = (username, password, firstName, lastName, phoneNumber, emailAddress, mBTI) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users/', 
+		fetch('https://radiant-dusk-44906.herokuapp.com/api/users/', 
 			{
 			method: 'POST',
 			headers:{
@@ -54,7 +54,7 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 
 export const loginUser = (username, password) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/auth/login/', 
+		fetch('https://radiant-dusk-44906.herokuapp.com/api/auth/login/', 
 			{
 			method: 'POST',
 			headers:{
@@ -94,7 +94,7 @@ export const loginUser = (username, password) => {
 export const protectedEndPointTesting = () => {
 	return (dispatch) => {
 		const token = localStorage.getItem('token');
-		fetch('http://localhost:8080/api/protected/', 
+		fetch('https://radiant-dusk-44906.herokuapp.com/api/protected/', 
 			{
 			method: 'GET',
 			headers:{
@@ -111,7 +111,7 @@ export const protectedEndPointTesting = () => {
 
 export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, mBTI) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users', 
+		fetch('https://radiant-dusk-44906.herokuapp.com/api/users', 
 			{
 			method: 'PUT',
 			headers:{
