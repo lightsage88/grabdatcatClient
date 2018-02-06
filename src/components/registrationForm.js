@@ -3,7 +3,6 @@ import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import {reduxForm, Field} from 'redux-form';
 import {required, nonEmpty, email} from '../validators';
 import {registerUser} from '../actions/index.js';
-import {connect} from 'react-redux';
 import InputX from './input';
 
 class RegistrationForm extends React.Component {

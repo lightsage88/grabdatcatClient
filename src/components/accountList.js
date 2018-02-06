@@ -1,8 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter, Form} from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 import HumanData from './humanData'; 
-import RegistrationForm from './registrationForm';
 import UpdateForm from './updateForm';
 export default class AccountList extends React.Component {
 constructor(props){

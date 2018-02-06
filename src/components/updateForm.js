@@ -1,13 +1,8 @@
 // updateForm.js
 
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, ModalFooter} from 'reactstrap';
-import {reduxForm, Field} from 'redux-form';
-import {required, nonEmpty, email} from '../validators';
-import {registerUser} from '../actions/index.js';
-import {connect} from 'react-redux';
-import InputX from './input';
-import store from '../store';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import {reduxForm} from 'redux-form';
 import {updateUser} from '../actions/index.js';
 
 class UpdateForm extends React.Component {
@@ -66,7 +61,6 @@ changeValue(e){
 	console.log('changeValue running...');
 	console.log(e.target.name);
 	console.log(e.target.value);
-	let name = e.target.name;
 	let value = e.target.value;
 	this.setState({
 
