@@ -32,7 +32,7 @@
 
 export const registerUser = (username, password, firstName, lastName, phoneNumber, emailAddress, mBTI) => {
 	return (dispatch) => {
-		fetch('https://radiant-dusk-44906.herokuapp.com/api/users/', 
+		fetch('http://localhost:8080/api/users/', 
 			{
 			method: 'POST',
 			headers:{
@@ -54,7 +54,7 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 
 export const loginUser = (username, password) => {
 	return (dispatch) => {
-		fetch('https://radiant-dusk-44906.herokuapp.com/api/auth/login/', 
+		fetch('http://localhost:8080/api/auth/login/', 
 			{
 			method: 'POST',
 			headers:{
@@ -94,7 +94,7 @@ export const loginUser = (username, password) => {
 export const protectedEndPointTesting = () => {
 	return (dispatch) => {
 		const token = localStorage.getItem('token');
-		fetch('https://radiant-dusk-44906.herokuapp.com/api/protected/', 
+		fetch('http://localhost:8080/api/protected/', 
 			{
 			method: 'GET',
 			headers:{
@@ -111,7 +111,7 @@ export const protectedEndPointTesting = () => {
 
 export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, mBTI) => {
 	return (dispatch) => {
-		fetch('https://radiant-dusk-44906.herokuapp.com/api/users', 
+		fetch('http://localhost:8080/api/users', 
 			{
 			method: 'PUT',
 			headers:{
@@ -124,12 +124,12 @@ export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, 
 			console.log('razzlematozoo');
 			console.log(json);
 			console.log(json.firstName);
-			let firstName = json.firstName;
-			let lastName = json.lastName;
-			let emailAddress = json.emailAddress;
-			let phoneNumber = json.phoneNumber;
-			let mBTI = json.mBTI;
-			dispatch(updateUserSuccess(firstName, lastName, emailAddress, phoneNumber, mBTI));
+			// let firstName = json.firstName;
+			// let lastName = json.lastName;
+			// let emailAddress = json.emailAddress;
+			// let phoneNumber = json.phoneNumber;
+			// let mBTI = json.mBTI;
+			// dispatch(updateUserSuccess(firstName, lastName, emailAddress, phoneNumber, mBTI));
 		})
 		.catch(error => console.log(error))
 	}
