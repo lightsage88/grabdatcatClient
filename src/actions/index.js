@@ -19,7 +19,16 @@
  	mBTI,
  	cats,
  	_id
- })
+ });
+
+ export const updateUserSuccess = (firstName, lastName, emailAddress, phoneNumber, mBTI) => ({
+ 	type: 'UPDATE_USER_SUCCESS',
+ 	firstName,
+ 	lastName,
+ 	emailAddress,
+ 	phoneNumber,
+ 	mBTI
+ }); 
 
 export const registerUser = (username, password, firstName, lastName, phoneNumber, emailAddress, mBTI) => {
 	return (dispatch) => {
@@ -95,6 +104,33 @@ export const protectedEndPointTesting = () => {
 		})
 		.then(response => response.json())
 		.then(json => console.log(json))
+		.catch(error => console.log(error))
+	}
+}
+
+
+export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, mBTI) => {
+	return (dispatch) => {
+		fetch('http://localhost:8080/api/users', 
+			{
+			method: 'PUT',
+			headers:{
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({_id, firstName, lastName, emailAddress, phoneNumber, mBTI})
+		})
+		.then(response => response.json())
+		.then(json => {
+			console.log('razzlematozoo');
+			console.log(json);
+			console.log(json.firstName);
+			let firstName = json.firstName;
+			let lastName = json.lastName;
+			let emailAddress = json.emailAddress;
+			let phoneNumber = json.phoneNumber;
+			let mBTI = json.mBTI;
+			dispatch(updateUserSuccess(firstName, lastName, emailAddress, phoneNumber, mBTI));
+		})
 		.catch(error => console.log(error))
 	}
 }

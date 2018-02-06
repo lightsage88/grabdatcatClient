@@ -19,6 +19,13 @@ toggle(){
 	});
 }
 
+test(e){
+	console.log('test running');
+	console.log(e);
+}
+
+
+
 
 
 render(){
@@ -33,9 +40,9 @@ return(
           <ModalBody>
          	<span>Here is where you're going to set up a form which will interact with an action to be defined that will allow
          	you to change the user's info</span>
-         		<UpdateForm props={this.props}/>
+         		<UpdateForm props={this.props} />
           </ModalBody>
-         
+                 
         </Modal>
 
 				<HumanData accountData={this.props.accountData}/>

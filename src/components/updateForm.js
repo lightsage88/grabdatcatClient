@@ -8,19 +8,20 @@ import {registerUser} from '../actions/index.js';
 import {connect} from 'react-redux';
 import InputX from './input';
 import store from '../store';
+import {updateUser} from '../actions/index.js';
 
 class UpdateForm extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
 		modal: false,
+		_id: this.props.props.accountData._id,
 		firstName: this.props.props.accountData.firstName,
 		lastName: this.props.props.accountData.lastName,
 		emailAddress: this.props.props.accountData.emailAddress,
 		phoneNumber: this.props.props.accountData.phoneNumber,
 		mBTI: this.props.props.accountData.mBTI
 	};
-	this.toggle = this.toggle.bind(this);
 	console.log(this.state);
 	console.log(this.props);
 	console.log(this.props.props.accountData);
@@ -30,6 +31,25 @@ toggle(){
 	this.setState({
 		modal: !this.state.modal
 	});
+}
+
+handleSubmit(e){
+	e.preventDefault();
+	console.log('handleSubmit running');
+	console.log(e);
+	console.log(this.state);
+	let _id = this.state._id;
+	let firstName = this.state.firstName;
+	let lastName = this.state.lastName;
+	let emailAddress = this.state.emailAddress;
+	let phoneNumber = this.state.phoneNumber;
+	let mBTI = this.state.mBTI;
+
+	//insert a dispatch of an action that will make 
+	//a request for us.
+	this.props.dispatch(updateUser(_id, firstName, lastName, emailAddress, phoneNumber, mBTI));
+
+
 }
 
 test(e){
@@ -42,14 +62,15 @@ test(e){
 changeValue(e){
 	//set up a switch so that it sees what the name is and then allows the state to be changed
 	//according to that...on SUBMIT, then we can use dispatch to send an action that will interact with the backend we set up
-	
+
 	console.log('changeValue running...');
 	console.log(e.target.name);
 	console.log(e.target.value);
-	let name = e.target.name.value;
+	let name = e.target.name;
 	let value = e.target.value;
 	this.setState({
-		name: value
+
+		[e.target.name]: value
 
 	});
 	console.log(this.state);
@@ -57,11 +78,9 @@ changeValue(e){
 
 
   render() {
-  	console.log('updateForm class running...');
-  	console.log(this.props);
-  	console.log(this.props.props.accountData);
+  	console.log(this.state);
+
   	let accountData = this.props.props.accountData;
-  	console.log(accountData);
   	
     return (
     <div>
@@ -100,7 +119,7 @@ changeValue(e){
         
         <FormGroup>
           <Label for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
-          <Input type="select" name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
+          <Input type="select" onChange={(e)=>this.changeValue(e)} name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
             <option value=''>N/A</option>
             <option value="ISFJ">ISFJ</option>
             <option value="INFJ">INFJ</option>
@@ -119,11 +138,10 @@ changeValue(e){
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
+        <Button>Submit</Button>
     </Form>
-    <ModalFooter>
-            <Button color="primary" onClick={(e)=>this.test(e)}>Do Something</Button>
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-          </ModalFooter>
+
+    
  </div>
     );
   }

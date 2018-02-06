@@ -31,6 +31,18 @@ const user = (state=initialState, action) => {
 				cats: action.cats,
 				_id: action._id
 			}
+
+		case 'UPDATE_USER_SUCCESS':
+			return Object.assign({}, state, {
+				firstName: action.firstName,
+				lastName: action.lastName,
+				emailAddress: action.emailAddress,
+				phoneNumber:action.phoneNumber,
+				mBTI: action.mBTI}
+				)
+
+			
+
 		case 'LOG_OUT_USER':
 			return {}
 		
