@@ -2,9 +2,18 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
-export default function Pedestal(props) {
+export default class Pedestal extends React.Component {
+
+	render(){
+		if(localStorage.token){
+      console.log('yippie');
+    } else {
+      return(
+      <Redirect to="/"/>
+      );
+    }
 	return(
 		<form>
 			<input type='text' placeholder='USERNAME'/>
@@ -14,4 +23,5 @@ export default function Pedestal(props) {
 			<Link to='/registration'><Button>REGISTER</Button></Link>
 		</form>
 		);
+	}	
 }

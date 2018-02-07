@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 
 import felixPic from '../staticAssets/felixImposter.jpg';
@@ -57,10 +57,19 @@ const accountData =
 			]
 };
 
-export default function Kennel(props) {
+export default class Kennel extends React.Component {
+	render(){
+		if(localStorage.token){
+      console.log('yippie');
+    } else {
+      return(
+      <Redirect to="/"/>
+      );
+    }
 	console.log('function Kennel working...');
-	console.log(props);
+	console.log(this.props);
 	console.log(accountData);
+
 	return(
 		<div>
 			<NavBar />
@@ -104,4 +113,5 @@ export default function Kennel(props) {
 
 		</div>
 		);
+}
 }
