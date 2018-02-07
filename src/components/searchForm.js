@@ -10,11 +10,9 @@ export class SearchForm extends React.Component {
     super(props);
     this.state = {
       breed : '',
-      color: '',
       gender: '',
       age: '',
-      zipCode: '',
-      distance:''
+      zipCode: ''
     }
   }
 
@@ -113,41 +111,7 @@ export class SearchForm extends React.Component {
           </Input>
         </FormGroup>
 
-        <FormGroup>
-          <Label for="color">COLOR</Label>
-          <Input onChange={(e=>this.onChange(e))} type="select" name="color" id="color">
-            <option value=''>--ANY--</option>
-          <option value='Black'>Black</option>
-          <option value='Black & White/Tuxedo'>Black & White/Tuxedo</option>
-          <option value='Blue Cream'>Blue Cream</option>
-          <option value='Blue Point'>Blue Point</option>
-          <option value='Brown/Chocolate'>Brown/Chocolate</option>
-          <option value='Buff & White'>Buff & White</option>
-          <option value='Buff/Tan/Fawn'>Buff/Tan/Fawn</option>
-          <option value='Calico'>Calico</option>
-          <option value='Chocolate Point'>Chocolate Point</option>
-          <option value='Cream/Ivory'>Cream/Ivory</option>
-          <option value='Cream Point'>Cream Point</option>
-          <option value='Dilute Calico'>Dilute Calico</option>
-          <option value='Dilute Tortoiseshell'>Dilute Tortoiseshell</option>
-          <option value='Flame Point'>Flame Point</option>
-          <option value='Gray & White'>Gray &amp; White</option>
-          <option value='Gray/Blue/Silver'>Gray/Blue/Silver</option>
-          <option value='Lilac Point'>Lilac Point</option>          
-          <option value='Orange & White'>Orange &amp; White</option>
-          <option value='Orange/Red'>Orange/Red</option>
-          <option value='Seal Point'>Seal Point</option>
-          <option value='Smoke'>Smoke</option>
-          <option value='Tabby (Brown/Chocolate)'>Tabby (Brown/Chocolate)</option>
-          <option value='Tabby (Buff/Tan/Fawn)'>Tabby (Buff/Tan/Fawn)</option>
-          <option value='Tabby (Gray/Blue/Silver)'>Tabby (Gray/Blue/Silver)</option>
-          <option value='Tabby (Orange/Red)'>Tabby (Orange/Red)</option>
-          <option value='Tabby (Tiger Striped)'>Tabby (Tiger Striped)</option>
-          <option value='Torbie'>Torbie</option>
-          <option value='Tortoiseshell'>Tortoiseshell</option>
-          <option value='White'>White</option>
-          </Input>
-        </FormGroup>
+        
 
         <FormGroup>
           <Label for="gender">GENDER</Label>
@@ -174,16 +138,7 @@ export class SearchForm extends React.Component {
           <Label for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
           <Input  onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
-        <FormGroup>
-          <Label for='distance'>DISTANCE</Label>
-          <Input onChange={(e=>this.onChange(e))} type='select' name='distance' id='distance'>
-            <option value=''>TO &#x221e; & BEYOND</option>
-            <option value='10'>10 MILES</option>
-            <option value='25'>25 MILES</option>
-            <option value='50'>50 MILES</option>
-            <option value='100'>100 MILES</option>
-          </Input>
-        </FormGroup>
+        
         <Button>SEEK!</Button>
       </Form>
     );

@@ -17,7 +17,7 @@ const user = (state=initialState, action) => {
 		case 'REGISTER_USER_SUCCESS':
 			return {
 				...state,
-				data: action.user
+				registrationData: action.user
 			}
 		case 'LOGIN_USER_SUCCESS':
 			return {
@@ -45,6 +45,12 @@ const user = (state=initialState, action) => {
 
 		case 'LOG_OUT_USER':
 			return {}
+
+		case 'GET_HOPEFULS':
+			return {
+				...state,
+				bongochea: action.pets
+			}
 		
 		default: 
 		return state

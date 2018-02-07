@@ -12,6 +12,11 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
  	user
  });
 
+ export const getHopefuls = (pets) =>({
+ 	type: 'GET_HOPEFULS',
+ 	pets
+ });
+
  export const logOutUser = () => ({
  	type: 'LOG_OUT_USER'
  });
@@ -157,6 +162,7 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	return(dispatch)=>{
 		jsonp(`http://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
+			&count=10
 			&breed=${breed}
 			&color=${color}
 			&gender=${gender}
@@ -168,7 +174,21 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 			} else {
 				console.log(data);
 				console.log(data.petfinder.pets);
+				//we want to put these cats in their own temporary state upon searching for them. 
+				//when the page reloads, we will lose the cats
+				if(!data.petfinder.pets){
+					console.log('nope');
+				} else{
+				let pets = data.petfinder.pets;
+				const {contact, age, media, id, breeds, name, sex, description} = pets;
+				console.log(contact);
+				console.log(age);
+				console.log(media);
+				console.log(id);
+
+				// dispatch(getHopefuls(pets));
 			}
+		}
 		});
 	}
 }
