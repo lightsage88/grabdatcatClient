@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 import HumanData from './humanData'; 
 import UpdateForm from './updateForm';
-export default class AccountList extends React.Component {
+import {deleteUser} from '../actions/index.js';
+import {connect} from 'react-redux';
+export class AccountList extends React.Component {
 constructor(props){
 	super(props);
 	this.state = {
@@ -34,6 +36,12 @@ test(e){
 deleteAccount(e){
 	console.log('fucking over an account now...');
 	console.log(e);
+	console.log(this.props);
+	console.log(this.props.accountData._id);
+	let id = this.props.accountData._id;
+	localStorage.clear();
+	this.props.dispatch(deleteUser(id));
+
 }
 
 
@@ -75,3 +83,4 @@ return(
 }
 }
 	
+export default connect()(AccountList);

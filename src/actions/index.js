@@ -43,6 +43,10 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
  	mBTI
  }); 
 
+ export const deleteUserSuccess = () =>({
+ 	type: 'DELETE_USER_SUCCESS'
+ });
+
 export const registerUser = (username, password, firstName, lastName, phoneNumber, emailAddress, mBTI) => {
 	return (dispatch) => {
 		fetch('http://localhost:8080/api/users/', 
@@ -152,6 +156,25 @@ export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, 
 			dispatch(updateUserSuccess(firstName, lastName, emailAddress, phoneNumber, mBTI));
 			window.location = '/account';
 		})
+		.catch(error => console.log(error))
+	}
+}
+
+export const deleteUser = (id) =>{
+	return(dispatch) => {
+		fetch('http://localhost:8080/api/users',
+		{
+			method: "DELETE",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({id})
+		})
+		.then(response => {
+			console.log(response);
+			dispatch(deleteUserSuccess());
+			window.location = '/';
+		})		
 		.catch(error => console.log(error))
 	}
 }

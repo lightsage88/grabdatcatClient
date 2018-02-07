@@ -16,8 +16,7 @@ const user = (state=initialState, action) => {
 	switch(action.type){
 		case 'REGISTER_USER_SUCCESS':
 			return {
-				...state,
-				registrationData: action.user
+				
 			}
 		case 'LOGIN_USER_SUCCESS':
 			return {
@@ -40,12 +39,10 @@ const user = (state=initialState, action) => {
 				phoneNumber:action.phoneNumber,
 				mBTI: action.mBTI}
 				)
-
-			
-
 		case 'LOG_OUT_USER':
 			return {}
-
+		case 'DELETE_USER_SUCCESS':
+			return {}
 		case 'GET_HOPEFULS':
 			return {
 				...state,

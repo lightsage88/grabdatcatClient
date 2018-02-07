@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import {connect} from 'react-redux';
 import NavBar from './navBar';
+import {Redirect} from 'react-router-dom';
 import AccountList from './accountList';
 import userPic from '../staticAssets/AdrianEdmundoRosales.jpg';
 import Image from './image';
@@ -13,7 +14,13 @@ export class Account extends React.Component {
 
 
 	render(){
-		
+		if(localStorage.token){
+      console.log('yippie');
+    } else {
+      return(
+      <Redirect to="/"/>
+      );
+    }
 	return(
 
 		<div>
