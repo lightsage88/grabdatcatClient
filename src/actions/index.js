@@ -1,4 +1,12 @@
 // index.js
+var jsonp = require('jsonp');
+require('es6-promise').polyfill();
+
+
+const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
+
+
+
  const registerUserSuccess = (user) => ({
  	type: 'REGISTER_USER_SUCCESS',
  	user
@@ -42,6 +50,10 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 		})
 		.then(response => response.json())
 		.then(json => {
+			console.log('for to get data stuff');
+			console.log(json);
+			const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
+			console.log(firstName);
 			dispatch(registerUserSuccess(json))
 			window.location = '/';
 		})
@@ -136,5 +148,27 @@ export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, 
 			window.location = '/account';
 		})
 		.catch(error => console.log(error))
+	}
+}
+
+export const seekCat = (breed, color, gender, age, zipCode, distance) => {
+	console.log('...seekCat action beind dispatched...');
+	
+	return(dispatch)=>{
+		jsonp(`http://api.petfinder.com/pet.find?key=${petFinderKey}
+			&animal=cat
+			&breed=${breed}
+			&color=${color}
+			&gender=${gender}
+			&age=${age}
+			&location=${zipCode}
+			&output=full&format=json`, null, function(err,data){
+			if(err){
+				console.error(err.message);
+			} else {
+				console.log(data);
+				console.log(data.petfinder.pets);
+			}
+		});
 	}
 }

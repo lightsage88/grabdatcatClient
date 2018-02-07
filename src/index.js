@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Provider} from 'react-redux';
 import store from './store';
 
-
 // const accountData = 
 
 // {

@@ -1,15 +1,48 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {connect} from 'react-redux';
+import {seekCat} from '../actions';
 // import Image from './image';
+import {$, jQuery} from 'jquery';
 
-export default class SearchForm extends React.Component {
+export class SearchForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      breed : '',
+      color: '',
+      gender: '',
+      age: '',
+      zipCode: '',
+      distance:''
+    }
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    console.log("searchForm's handleSubmit is running...");
+    console.log(e);
+    const {breed, color, gender, age, zipCode, distance } = this.state;
+    this.props.dispatch(seekCat(breed, color, gender, age, zipCode, distance));
+  }
+
+  onChange(e){
+    console.log("searchForm's onChange is running...");
+    console.log(e.target.name);
+    console.log(e.target.value);
+    this.setState({
+      [e.target.name] : e.target.value
+    });
+  }
+
+
   render() {
     return (
-      <Form>
+      <Form onSubmit={(e)=>this.handleSubmit(e)}>
         <h5>SEEK DAT CAT</h5>
         <FormGroup>
-          <Label for="breedSelect">BREED</Label>
-          <Input type="select" name="breedSelect" id="breedSelect">
+          <Label for="breed">BREED</Label>
+          <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
             <option value=''>--ANY--</option>
           <option value='Abyssinian'>Abysinnian</option>
           <option value='American Curl'>American Curl</option>
@@ -81,8 +114,8 @@ export default class SearchForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="colorSelect">COLOR</Label>
-          <Input type="select" name="colorSelect" id="colorSelect">
+          <Label for="color">COLOR</Label>
+          <Input onChange={(e=>this.onChange(e))} type="select" name="color" id="color">
             <option value=''>--ANY--</option>
           <option value='Black'>Black</option>
           <option value='Black & White/Tuxedo'>Black & White/Tuxedo</option>
@@ -117,8 +150,8 @@ export default class SearchForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="genderSelect">GENDER</Label>
-          <Input type="select" name="genderSelect" id="genderSelect">
+          <Label for="gender">GENDER</Label>
+          <Input onChange={(e=>this.onChange(e))} type="select" name="gender" id="gender">
             <option value=''>--ANY--</option>
             <option value='F'>F</option>
             <option value='M'>M</option>         
@@ -126,8 +159,8 @@ export default class SearchForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="ageSelect">AGE</Label>
-          <Input type="select" name="ageSelect" id="ageSelect">
+          <Label for="age">AGE</Label>
+          <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
             <option value=''>--ANY--</option>
             <option value='BABY'>BABY</option>
             <option value='YOUNG'>YOUNG</option>         
@@ -138,12 +171,12 @@ export default class SearchForm extends React.Component {
 
 
         <FormGroup>
-          <Label for="zipCode">ZIPCODE</Label>
-          <Input type="text" name="zipCode" id="zipCode" />
+          <Label for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
+          <Input  onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
         <FormGroup>
           <Label for='distance'>DISTANCE</Label>
-          <Input type='select' name='distance' id='distance'>
+          <Input onChange={(e=>this.onChange(e))} type='select' name='distance' id='distance'>
             <option value=''>TO &#x221e; & BEYOND</option>
             <option value='10'>10 MILES</option>
             <option value='25'>25 MILES</option>
@@ -156,3 +189,5 @@ export default class SearchForm extends React.Component {
     );
   }
 }
+
+export default connect()(SearchForm);

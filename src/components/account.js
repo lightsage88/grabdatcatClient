@@ -72,8 +72,6 @@ export class Account extends React.Component {
 		<div>
 	<NavBar />
 	<h1>Account</h1>
-	<Image className='profilePic' imageAddress={userPic}/>
-		<a href='/'>UPLOAD/CHANGE PICTURE</a>
 	<AccountList accountData={this.props.accountData}/>
 		</div>
 		);
