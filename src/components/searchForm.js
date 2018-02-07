@@ -126,10 +126,10 @@ export class SearchForm extends React.Component {
           <Label for="age">AGE</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
             <option value=''>--ANY--</option>
-            <option value='BABY'>BABY</option>
-            <option value='YOUNG'>YOUNG</option>         
-            <option value='ADULT'>ADULT</option>         
-            <option value='SENIOR'>SENIOR</option>         
+            <option value='Baby'>BABY</option>
+            <option value='Young'>YOUNG</option>         
+            <option value='Adult'>ADULT</option>         
+            <option value='Senior'>SENIOR</option>         
           </Input>
         </FormGroup>
 

@@ -23,6 +23,7 @@ import SearchForm from './searchForm';
 import searchPicture from '../staticAssets/gitHubIcon.png';
 import store from '../store';
 import {connect} from 'react-redux';
+import SearchResults from './searchResults';
 
 
 export class Home extends Component {
@@ -45,6 +46,7 @@ export class Home extends Component {
       <NavBar />
       <HomeGreet firstName={this.props.firstName}/>
       <SearchForm pic={searchPicture}/>
+      <SearchResults />
     </div>
       );
   }

@@ -32,7 +32,7 @@ export class LoginForm extends React.Component {
 		const username = event.target.username.value;
 		const password = event.target.password.value;
 		this.props.dispatch(loginUser(username, password));
-		window.location.reload();
+		window.location ='/home';
 
 	}
 

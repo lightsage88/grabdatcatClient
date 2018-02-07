@@ -41,13 +41,11 @@ const user = (state=initialState, action) => {
 				)
 		case 'LOG_OUT_USER':
 			return {}
+		
+
 		case 'DELETE_USER_SUCCESS':
 			return {}
-		case 'GET_HOPEFULS':
-			return {
-				...state,
-				bongochea: action.pets
-			}
+
 		
 		default: 
 		return state

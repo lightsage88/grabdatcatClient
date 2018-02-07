@@ -12,8 +12,8 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
  	user
  });
 
- export const getHopefuls = (pets) =>({
- 	type: 'GET_HOPEFULS',
+ export const petsSearchSuccess = (pets) =>({
+ 	type: 'PETS_SEARCH_SUCCESS',
  	pets
  });
 
@@ -181,7 +181,7 @@ export const deleteUser = (id) =>{
 
 export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	console.log('...seekCat action beind dispatched...');
-	
+	console.log(age);
 	return(dispatch)=>{
 		jsonp(`http://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
@@ -202,12 +202,26 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 				if(!data.petfinder.pets){
 					console.log('nope');
 				} else{
-				let pets = data.petfinder.pets;
+				let pets = data.petfinder.pets.pet;
+				console.log(pets);
 				const {contact, age, media, id, breeds, name, sex, description} = pets;
-				console.log(contact);
-				console.log(age);
-				console.log(media);
-				console.log(id);
+				let petArray=[];
+				for(let i=0; i<=pets.length-1; i++){
+					// const animal=pets[i];
+					// console.log(animal);
+					// petArray.push(pets[i]);
+					let pet = {
+						age: pets[i].age.$t,
+						sex: pets[i].sex.$t
+						//FINISH ITERATING OVER PROP=KEY PAIRS
+					};
+					petArray.push(pet)
+
+				}
+				dispatch(petsSearchSuccess(petArray));
+				
+//we can...create an empty array --- 
+
 
 				// dispatch(getHopefuls(pets));
 			}
