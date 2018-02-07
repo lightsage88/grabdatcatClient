@@ -7,9 +7,11 @@ export default class AccountList extends React.Component {
 constructor(props){
 	super(props);
 	this.state = {
-		modal: false
+		modal: false,
+		modal2: false
 	};
 	this.toggle = this.toggle.bind(this);
+	this.toggle2=this.toggle2.bind(this);
 }
 
 toggle(){
@@ -18,8 +20,19 @@ toggle(){
 	});
 }
 
+toggle2(){
+	this.setState({
+		modal2: !this.state.modal2
+	});
+}
+
 test(e){
 	console.log('test running');
+	console.log(e);
+}
+
+deleteAccount(e){
+	console.log('fucking over an account now...');
 	console.log(e);
 }
 
@@ -40,13 +53,21 @@ return(
          	<span>Here is where you're going to set up a form which will interact with an action to be defined that will allow
          	you to change the user's info</span>
          		<UpdateForm props={this.props} />
-          </ModalBody>
-                 
-        </Modal>
+	          </ModalBody>
+	                 
+	        </Modal>
+
+	        <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
+	        <ModalHeader toggle={this.toggle2}>Are you sure?</ModalHeader>
+				<Button onClick={(e)=>this.deleteAccount(e)}>JA</Button>
+				<Button onClick={this.toggle2}>NEIN</Button>        		
+	        <ModalBody>
+	        </ModalBody>
+	        </Modal>
 
 				<HumanData accountData={this.props.accountData}/>
 			<Button onClick={this.toggle}>edit account info</Button>
-
+			<Button onClick={this.toggle2}>Delete Account</Button>
 		</section>
 	</div>
 	
