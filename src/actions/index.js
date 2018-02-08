@@ -17,6 +17,10 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
  	pets
  });
 
+ export const petsSearchReset = () =>({
+ 	type: 'PETS_SEARCH_RESET'
+ });
+
  export const logOutUser = () => ({
  	type: 'LOG_OUT_USER'
  });
@@ -109,6 +113,7 @@ export const loginUser = (username, password) => {
 			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id));
 			console.log(username);
 			console.log(password);
+			window.location = '/home';
 			// dispatch(userDataGrab(username,password));
 		})
 		.catch(error => console.log(error))
@@ -212,6 +217,13 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 					// petArray.push(pets[i]);
 					let pet = {
 						age: pets[i].age.$t,
+						breed: pets[i].breeds.breed.$t,
+						contactEmail: pets[i].contact.email.$t,
+						contactPhone: pets[i].contact.phone.$t,
+						description: pets[i].description.$t,
+						id: pets[i].id.$t,
+						media: pets[i].media.photos,
+						name: pets[i].name.$t,
 						sex: pets[i].sex.$t
 						//FINISH ITERATING OVER PROP=KEY PAIRS
 					};

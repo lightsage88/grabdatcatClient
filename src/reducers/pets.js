@@ -6,6 +6,10 @@ const initialState = {
 
 const pets = (state=initialState, action) => {
 	switch(action.type){
+
+		case 'PETS_SEARCH_RESET':
+		return 	{}
+		
 		
 
 		case 'PETS_SEARCH_SUCCESS':
@@ -13,6 +17,9 @@ const pets = (state=initialState, action) => {
 				...state, 
 				pets: action.pets
 			}
+
+		case 'LOG_OUT_USER':
+			return {}
 
 
 		

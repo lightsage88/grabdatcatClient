@@ -33,6 +33,7 @@ export class Home extends Component {
     if(localStorage.token){
       console.log('yippie');
     } else {
+      console.log('shitsticks');
       return(
       <Redirect to="/"/>
       );

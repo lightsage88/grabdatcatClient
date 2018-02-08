@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {seekCat} from '../actions';
 // import Image from './image';
 import {$, jQuery} from 'jquery';
+import {petsSearchReset} from '../actions/index';
+
 
 export class SearchForm extends React.Component {
   constructor(props){
@@ -31,6 +33,11 @@ export class SearchForm extends React.Component {
     this.setState({
       [e.target.name] : e.target.value
     });
+  }
+
+  clearResults(){
+    console.log('clearResults running...');
+    this.props.dispatch(petsSearchReset());
   }
 
 
@@ -140,6 +147,8 @@ export class SearchForm extends React.Component {
         </FormGroup>
         
         <Button>SEEK!</Button>
+        <Button onClick={()=>this.clearResults()}>CLEAR!</Button>
+
       </Form>
     );
   }

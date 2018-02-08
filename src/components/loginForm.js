@@ -32,7 +32,12 @@ export class LoginForm extends React.Component {
 		const username = event.target.username.value;
 		const password = event.target.password.value;
 		this.props.dispatch(loginUser(username, password));
-		window.location ='/home';
+		// if(localStorage.token){
+		// 	window.location ='/home'
+		// } else {
+		// 	window.location ='/';
+		// }
+		
 
 	}
 
@@ -50,15 +55,7 @@ export class LoginForm extends React.Component {
 	}
 
 	render(){
-		console.log(this.props);
-		if(localStorage.token){
-			console.log('hamboneX');
-			return(
-				<Redirect to='/home'/>
-				);
-		} else {
-			console.log('you do not know de whey');
-		}
+		
 
 	return(
 		<div>
