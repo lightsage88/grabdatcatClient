@@ -21,16 +21,21 @@ export class SearchResults extends Component {
     return (
     <div>
       {this.props.results.map((pet, index)=>(
-        <li key={index}>
-          {pet.name}
-          {pet.age}
-          {pet.sex}
-          {pet.breed}
-          {pet.description}
-          {pet.contactEmail}
-          {pet.contactPhone}
-        </li>
-
+        <div>
+          <li key={index}>
+            <h4>{pet.name}</h4>
+            <img src={pet.media.photo[3].$t}/>
+            <ul>
+              <li>{pet.age}</li>
+              <li>{pet.sex}</li>
+              <li>{pet.breed}</li>
+              <li>email:{pet.contactEmail}</li>
+              <li>phone:{pet.contactPhone}</li>
+            </ul>
+            <p>{pet.description}</p>
+            
+          </li>
+        </div>
         ))}
     </div>
       );
