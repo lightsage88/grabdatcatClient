@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
 import {Link, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
+import {connect} from 'react-redux';
 
 import felixPic from '../staticAssets/felixImposter.jpg';
 import neemoPic from '../staticAssets/tuxedo cat.jpg';
@@ -57,61 +58,87 @@ const accountData =
 			]
 };
 
-export default class Kennel extends React.Component {
-	render(){
-		if(localStorage.token){
-      console.log('yippie');
-    } else {
-      return(
-      <Redirect to="/"/>
-      );
-    }
-	console.log('function Kennel working...');
-	console.log(this.props);
-	console.log(accountData);
+export class Kennel extends React.Component {
+		render(){
+			if(localStorage.token){
+	      console.log('yippie');
+	    } else {
+	      return(
+	      <Redirect to="/"/>
+	      );
+	    }
+	   console.log(this.props.cats)
+	   	const kennelCats = this.props.cats.map((cat, index)=>
+	   			<Card key={index}>
+	   				<CardBody>
+	   					<CardTitle>{cat.name} / {cat.breed} / {cat.sex} / {cat.age} *</CardTitle>
+	   					<CardImg className='catImage' top width='100%' src={cat.media.photo[3].$t} alt="Felix" />
+	   					<CardText>{cat.description}</CardText>	
+ 						<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
+ 						<br/>
+ 						<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
+	   				</CardBody>
+	   				<Button className='removeCat' type='button'>Remove Cat</Button>
+	   			</Card>
+	   	)
 
-	return(
-		<div>
-			<NavBar />
-			<h1>CAT KENNEL</h1>
-			<main className='content'>
-					<Card>
-				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={felixPic} alt="Felix" /></Link>
-				<CardBody>
-					<CardTitle>{accountData.catKennel[0].catName}|{accountData.catKennel[0].catGender}|{accountData.catKennel[0].catAge}|{accountData.catKennel[0].catColor}</CardTitle>
-					<CardText>{accountData.catKennel[0].catStory}</CardText>	
-					<span>Contact Phone:<strong>{accountData.catKennel[0].contactPhone}</strong></span>
-					<br/>
-					<span>Contact Email:<strong>{accountData.catKennel[0].contactEmail}</strong></span>
+		return(
+			<div>
+				<NavBar />
+				<h1>CAT KENNEL</h1>
+				<main className='content'>
+					{kennelCats}
+				</main>
 
-				</CardBody>
-				<Button className='removeCat' type='button'>Remove Cat</Button>
-			</Card>
-			<Card>
-				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={neemoPic} alt="Pepper" /></Link>
-				<CardBody>
-					<CardTitle>{accountData.catKennel[1].catName}|{accountData.catKennel[1].catGender}|{accountData.catKennel[1].catAge}|{accountData.catKennel[1].catColor}</CardTitle>
-					<CardText>{accountData.catKennel[1].catStory}</CardText>
-					<span>Contact Phone:<strong>{accountData.catKennel[1].contactPhone}</strong></span>
-						<br/>
-					<span>Contact Email:<strong>{accountData.catKennel[1].contactEmail}</strong></span>
-				</CardBody>
-				<Button className='removeCat' type='button'>Remove Cat</Button>
-			</Card><Card>
-				<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={pepperPic} alt="Pepper" /></Link>
-				<CardBody>
-					<CardTitle>{accountData.catKennel[2].catName}|{accountData.catKennel[2].catGender}|{accountData.catKennel[2].catAge}|{accountData.catKennel[2].catColor}</CardTitle>
-					<CardText>{accountData.catKennel[2].catStory}</CardText>
-					<span>Contact Phone:<strong>{accountData.catKennel[2].contactPhone}</strong></span>
-					<br/>
-					<span>Contact Email:<strong>{accountData.catKennel[2].contactEmail}</strong></span>
-	
-				</CardBody>
-				<Button className='removeCat' type='button'>Remove Cat</Button>
-			</Card>
-			</main>
-
-		</div>
-		);
+			</div>
+			);
+	}
 }
-}
+
+const mapStateToProps = state => ({
+ cats: state.app.user.cats
+});
+
+export default connect(mapStateToProps)(Kennel);
+
+
+
+
+
+
+
+
+// <Card>
+// 					<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={felixPic} alt="Felix" /></Link>
+// 					<CardBody>
+// 						<CardTitle>{accountData.catKennel[0].catName}|{accountData.catKennel[0].catGender}|{accountData.catKennel[0].catAge}|{accountData.catKennel[0].catColor}</CardTitle>
+// 						<CardText>{accountData.catKennel[0].catStory}</CardText>	
+// 						<span>Contact Phone:<strong>{accountData.catKennel[0].contactPhone}</strong></span>
+// 						<br/>
+// 						<span>Contact Email:<strong>{accountData.catKennel[0].contactEmail}</strong></span>
+
+// 					</CardBody>
+// 					<Button className='removeCat' type='button'>Remove Cat</Button>
+// 				</Card>
+// 				<Card>
+// 					<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={neemoPic} alt="Pepper" /></Link>
+// 					<CardBody>
+// 						<CardTitle>{accountData.catKennel[1].catName}|{accountData.catKennel[1].catGender}|{accountData.catKennel[1].catAge}|{accountData.catKennel[1].catColor}</CardTitle>
+// 						<CardText>{accountData.catKennel[1].catStory}</CardText>
+// 						<span>Contact Phone:<strong>{accountData.catKennel[1].contactPhone}</strong></span>
+// 							<br/>
+// 						<span>Contact Email:<strong>{accountData.catKennel[1].contactEmail}</strong></span>
+// 					</CardBody>
+// 					<Button className='removeCat' type='button'>Remove Cat</Button>
+// 				</Card><Card>
+// 					<Link to='/pedestal/:catName'><CardImg className='catImage' top width='100%' src={pepperPic} alt="Pepper" /></Link>
+// 					<CardBody>
+// 						<CardTitle>{accountData.catKennel[2].catName}|{accountData.catKennel[2].catGender}|{accountData.catKennel[2].catAge}|{accountData.catKennel[2].catColor}</CardTitle>
+// 						<CardText>{accountData.catKennel[2].catStory}</CardText>
+// 						<span>Contact Phone:<strong>{accountData.catKennel[2].contactPhone}</strong></span>
+// 						<br/>
+// 						<span>Contact Email:<strong>{accountData.catKennel[2].contactEmail}</strong></span>
+		
+// 					</CardBody>
+// 					<Button className='removeCat' type='button'>Remove Cat</Button>
+// 				</Card>

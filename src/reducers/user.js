@@ -18,7 +18,7 @@ const user = (state=initialState, action) => {
 		case 'ADD_CAT':
 			return {
 				...state, 
-				cats: action.cat
+				cats: [...state.cats, action.cat]
 			}
 
 

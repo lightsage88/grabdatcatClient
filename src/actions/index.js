@@ -232,10 +232,6 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 				}
 				dispatch(petsSearchSuccess(petArray));
 				
-//we can...create an empty array --- 
-
-
-				// dispatch(getHopefuls(pets));
 			}
 		}
 		});
@@ -243,7 +239,15 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 }
 
 
-export const addCat = (cat) => {
+export const selectCat = (cat) => {
+	return (dispatch) => {
+		console.log(cat);
+		dispatch(addCat(cat));
+        }
+
+	}
+	
+export const addCat = (cat) => ({
 	type: 'ADD_CAT',
 	cat
-}
+});
