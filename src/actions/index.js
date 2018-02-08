@@ -241,3 +241,9 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 		});
 	}
 }
+
+
+export const addCat = (cat) => {
+	type: 'ADD_CAT',
+	cat
+}

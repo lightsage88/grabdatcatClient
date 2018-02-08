@@ -14,6 +14,14 @@ const initialState = {
 
 const user = (state=initialState, action) => {
 	switch(action.type){
+
+		case 'ADD_CAT':
+			return {
+				...state, 
+				cats: action.cat
+			}
+
+
 		case 'REGISTER_USER_SUCCESS':
 			return {
 				
