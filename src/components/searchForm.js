@@ -3,7 +3,6 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {connect} from 'react-redux';
 import {seekCat} from '../actions';
 // import Image from './image';
-import {$, jQuery} from 'jquery';
 import {petsSearchReset} from '../actions/index';
 
 

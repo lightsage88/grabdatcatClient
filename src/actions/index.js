@@ -65,8 +65,8 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 		.then(json => {
 			console.log('for to get data stuff');
 			console.log(json);
-			const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
-			console.log(firstName);
+			// const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
+			// console.log(firstName);
 			dispatch(registerUserSuccess(json))
 			window.location = '/';
 		})
@@ -209,7 +209,7 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 				} else{
 				let pets = data.petfinder.pets.pet;
 				console.log(pets);
-				const {contact, age, media, id, breeds, name, sex, description} = pets;
+				// const {contact, age, media, id, breeds, name, sex, description} = pets;
 				let petArray=[];
 				for(let i=0; i<=pets.length-1; i++){
 					// const animal=pets[i];
@@ -239,9 +239,10 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 }
 
 
-export const selectCat = (cat) => {
+export const selectCat = (cat, userPets) => {
 	return (dispatch) => {
 		console.log(cat);
+		console.log(userPets);
 		dispatch(addCat(cat));
         }
 

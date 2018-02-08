@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
-import store from '../store';
-import {petsSearchReset, selectCat} from '../actions/index';
+import {selectCat} from '../actions/index';
 import {connect} from 'react-redux';
 import {Button} from 'reactstrap';
 
@@ -64,7 +63,7 @@ export class SearchResults extends Component {
           <li>
             <h4>{pet.name}</h4>
             <h2>{pet.id}</h2>
-            <img src={pet.media.photo[3].$t} alt='photo unavailable'/>
+            <img src={pet.media.photo[2].$t} alt ='n/a'/>
             <ul>
               <li>{pet.age}</li>
               <li>{pet.sex}</li>

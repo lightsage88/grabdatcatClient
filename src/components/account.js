@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 import NavBar from './navBar';
 import {Redirect} from 'react-router-dom';
 import AccountList from './accountList';
-import userPic from '../staticAssets/AdrianEdmundoRosales.jpg';
-import Image from './image';
 import './account.css';
 
 

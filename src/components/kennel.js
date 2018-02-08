@@ -2,63 +2,25 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
 
-import felixPic from '../staticAssets/felixImposter.jpg';
-import neemoPic from '../staticAssets/tuxedo cat.jpg';
-import pepperPic from '../staticAssets/pepperImposter.jpg';
+
 import './kennel.css';
 
-const accountData = 
 
-{
-	
-		profilePic: '',
-		firstName: "Adrian",
-		lastName: "Rosales",
-		email: "lightsage88@zbeke.com",
-		phoneNumber: "(503)-444-4444",
-		mBTI: "INTP",
-		catKennel: [
-				{
-					catPic: 'https://imgur.com/makqOuE',
-					catName: "Felix",
-					catBreed: 'Domestic Shorthair',
-					catGender: "M",
-					catAge: "Senior",
-					catColor: "Black",
-					contactEmail: 'popo@popo.com',
-					contactPhone: '(555)-555-5555',
-					catStory: "Old King Bo is a merry old soul and he likes to eat curds and whey"
-				},
-				{
-					catPic: 'https://imgur.com/vQqvqSX',
-					catName:"Neemo",
-					catBreed: 'Tuxedo',
-					catGender: "M",
-					catAge: "Adult",
-					catColor: "Black/White",
-					contactEmail: 'popo@popo.com',
-					contactPhone: '(555)-555-5555',
-					catStory: "Neemo is a sweet cat, but he is also very skittish and cautious towards strangers. He likes to have ample places to hide and lots of food to eat. Definitely a good cat for a homebody who doesn't have loud parties or entertains much."
-				},
-				{
-					catPic: 'https://imgur.com/B5EmwD6',
-					catName:"Pepper",
-					catBreed: 'Domestic Shorthair',
-					catGender: "F",
-					catAge: "Senior",
-					catColor: "Calico",
-					contactEmail: 'popo@popo.com',
-					contactPhone: '(555)-555-5555',
-					catStory: "Miss Peppy is a pilot, nurse, mind-reader, and a ping pong champion."
-				}
-			]
-};
 
 export class Kennel extends React.Component {
+
+removeCat(e, number){
+	console.log('removeCat running..');
+	console.log(number);
+	
+
+
+}
+
 		render(){
 			if(localStorage.token){
 	      console.log('yippie');
@@ -72,13 +34,13 @@ export class Kennel extends React.Component {
 	   			<Card key={index}>
 	   				<CardBody>
 	   					<CardTitle>{cat.name} / {cat.breed} / {cat.sex} / {cat.age} *</CardTitle>
-	   					<CardImg className='catImage' top width='100%' src={cat.media.photo[3].$t} alt="Felix" />
+	   					<CardImg className='catImage' width='auto' height='auto' src={cat.media.photo[3].$t} alt="Image Unavailable" />
 	   					<CardText>{cat.description}</CardText>	
  						<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
  						<br/>
  						<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
 	   				</CardBody>
-	   				<Button className='removeCat' type='button'>Remove Cat</Button>
+	   				<Button onClick={()=>this.removeCat(cat.id)}className='removeCat' type='button'>Remove Cat</Button>
 	   			</Card>
 	   	)
 

@@ -13,3 +13,8 @@
 	box-sizing:content-box;
 	border: .31vw solid lime;
 }
+
+.catImage {
+	height: auto;
+	width: auto;
+}
