@@ -39,7 +39,7 @@ export class NavBar extends React.Component {
       <div>
         <Navbar color="faded" light expand="md">
         <NavbarToggler onClick={this.toggle} className='mr-2'/>
-          <NavbarBrand href="/">GRAB DAT CAT</NavbarBrand>
+          <NavbarBrand href="/home">GRAB DAT CAT</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
