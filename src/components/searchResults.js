@@ -23,7 +23,7 @@ export class SearchResults extends Component {
     let cat;
     let mLabId = localStorage.getItem('_id');
       let idChain = [];
-    let unique = false;
+    let unique = true;
 
 
 
@@ -63,9 +63,10 @@ export class SearchResults extends Component {
               }, 2000);
         return;  
         console.log('you should not see me too');    
+        return;
         } else {
           console.log(unique);
-          unique = true;
+          // unique = true;
           console.log(unique);
         }
         return;
