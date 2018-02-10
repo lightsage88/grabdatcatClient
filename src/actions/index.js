@@ -213,16 +213,10 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 				// const {contact, age, media, id, breeds, name, sex, description} = pets;
 				let petArray=[];
 				for(let i=0; i<=pets.length-1; i++){
-					// const animal=pets[i];
-					// console.log(animal);
-					// petArray.push(pets[i]);
-					//if the array's source is non existent, then 
-					//set up a variable for a
 					let media = pic;
 					if(pets[i].media.photos){
 						media = pets[i].media.photos.photo[2].$t;
 					}
-
 					let pet = {
 						age: pets[i].age.$t,
 						breed: pets[i].breeds.breed.$t,
@@ -233,16 +227,10 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 						media,
 						name: pets[i].name.$t,
 						sex: pets[i].sex.$t
-
-						//FINISH ITERATING OVER PROP=KEY PAIRS
 					};
-
-				
 					petArray.push(pet)
-
 				}
 				dispatch(petsSearchSuccess(petArray));
-				
 			}
 		}
 		});
@@ -266,26 +254,6 @@ export const selectCat = (cat, userPets, mLabId) => {
 		.then(response =>response.json())
 		.then(json => {
 			dispatch(addCat(cat));
-		// 	console.log(json);
-		// 	console.log(userPets);
-		// 	if(userPets.length == 0) {
-		// 		console.log('our first cat');
-		// 		dispatch(addCat(cat))
-		// 	} else {
-		// 		for(let i=0; i<=userPets.length-1; i++){
-		// 			if(cat.id===userPets[i].id){
-		// 				console.log('found a duplicate');
-		// 				dispatch(foundADuplicate());
-		// 			}
-		// 		}
-
-		// 	// let cats = json.cats;
-		// 	// let target = cats[cats.length-1];
-		// 	// console.log(target);
-
-		// 	// dispatch(addCat(target));
-		// }
-
 		})
 		.catch(error => console.log(error));
 	}
@@ -305,7 +273,10 @@ export const roundUpCats = (mLabId) => {
 	return (dispatch) => {
 		fetch('http://localhost:8080/api/users/roundUpCats',
 			{
-			method: 'GET',
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
 			body: JSON.stringify({mLabId})
 		})
 		.then(response => response.json())
@@ -317,3 +288,33 @@ export const roundUpCats = (mLabId) => {
 	}
 }
  
+export const deleteCat = (mLabId, catId) => {
+	return (dispatch) => {
+		fetch('http://localhost:8080/api/users/deleteCat',
+		{
+			method: 'PUT',
+			headers: {
+				'Content-Type':'application/json'
+			},
+			body: JSON.stringify({mLabId, catId})
+		})
+		.then(response => response.json())
+		.then(json => {
+			console.log('finished delete cat so far...');
+			console.log(json);
+			dispatch(updateReduxState(catId));
+		})
+		.catch(error => console.log(error));
+	}
+}
+
+export const updateReduxState = (catId) => ({
+	type: 'UPDATE_REDUX_STATE',
+	catId
+});
+
+
+
+
+
+

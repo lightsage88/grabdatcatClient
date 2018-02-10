@@ -12,8 +12,31 @@ const initialState = {
 	_id: ''
 }
 
+
+// DELETE_ITEM: (state, action) => ({
+//   ...state,
+//   items: state.items.filter(item => item !== action.payload),
+//   lastUpdated: Date.now() 
+// })
+
 const user = (state=initialState, action) => {
 	switch(action.type){
+
+		case 'UPDATE_REDUX_STATE':
+		console.log('tooling up URS action in reducer...');
+		console.log(state.cats);
+		let reduxCats = state.cats;
+		console.log(action.catId);
+		for(let i=0; i<=reduxCats.length-1; i++){
+			if(reduxCats[i].id === action.catId){
+				console.log('baaaaaam');
+			}
+		}
+		return {
+			...state,
+			cats: state.cats.filter(item => item.id !== action.catId)
+		}
+		break;
 
 		case 'FOUND_A_DUPLICATE':
 		return {...state,

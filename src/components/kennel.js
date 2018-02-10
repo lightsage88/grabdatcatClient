@@ -5,7 +5,7 @@ import {Button, Card, Jumbotron, CardImg, CardBody, CardTitle, CardText} from 'r
 import {Link, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
-import {roundUpCats} from '../actions/index';
+import {roundUpCats, deleteCat} from '../actions/index';
 
 import './kennel.css';
 //have a componentDidMount
@@ -17,11 +17,16 @@ componentDidMount() {
 	this.props.dispatch(roundUpCats(mLabId));
 }
 
-removeCat(e, number){
+removeCat(number){
+	let mLabId = localStorage.getItem('_id');
+	let catId = number;
 	console.log('removeCat running..');
-	console.log(e);
-	console.log(e.target.value);
-	console.log(number);
+	
+
+
+
+	
+	this.props.dispatch(deleteCat(mLabId, catId));
 	
 
 
