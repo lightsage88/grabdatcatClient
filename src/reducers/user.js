@@ -15,6 +15,12 @@ const initialState = {
 const user = (state=initialState, action) => {
 	switch(action.type){
 
+		case 'FOUND_A_DUPLICATE':
+		return {...state,
+			activeButton: true
+		}
+
+
 		case 'ADD_CAT':
 			return {
 				...state, 

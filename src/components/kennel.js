@@ -2,19 +2,25 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
-import {Redirect} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
-
+import {roundUpCats} from '../actions/index';
 
 import './kennel.css';
-
+//have a componentDidMount
 
 
 export class Kennel extends React.Component {
+componentDidMount() {
+	let mLabId = localStorage.getItem('_id');
+	this.props.dispatch(roundUpCats(mLabId));
+}
 
 removeCat(e, number){
 	console.log('removeCat running..');
+	console.log(e);
+	console.log(e.target.value);
 	console.log(number);
 	
 
@@ -22,34 +28,35 @@ removeCat(e, number){
 }
 
 		render(){
-			if(localStorage.token){
-	      console.log('yippie');
-	    } else {
-	      return(
+			if(!localStorage.token){
+	 return(
 	      <Redirect to="/"/>
 	      );
 	    }
-	   console.log(this.props.cats)
-	   	const kennelCats = this.props.cats.map((cat, index)=>
-	   			<Card key={index}>
-	   				<CardBody>
-	   					<CardTitle>{cat.name} / {cat.breed} / {cat.sex} / {cat.age} *</CardTitle>
-	   					<CardImg className='catImage' width='auto' height='auto' src={cat.media.photo[3].$t} alt="Image Unavailable" />
-	   					<CardText>{cat.description}</CardText>	
- 						<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
- 						<br/>
- 						<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
-	   				</CardBody>
-	   				<Button onClick={()=>this.removeCat(cat.id)}className='removeCat' type='button'>Remove Cat</Button>
-	   			</Card>
-	   	)
+	    console.log(this.props.cats);
+		// const kennelCats = this.props.cats.map((cat, index)=>
+	 //   			<Card key={index}>
+	 //   				<CardBody>
+	 //   					<CardTitle>{cat.name} / {cat.breed} / {cat.sex} / {cat.age} </CardTitle>
+	 //   					<CardImg className='catImage' width='auto' height='auto' src={cat.media.photo[3].$t} alt="Image Unavailable" />
+	 //   					<CardText>{cat.description}</CardText>	
+ 	// 					<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
+ 	// 					<br/>
+ 	// 					<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
+	 //   				</CardBody>
+	 //   				<Button onClick={()=>this.removeCat(cat.id)}className='removeCat' type='button'>Remove Cat</Button>
+	 //   			</Card>
+	 //   	);
+	
+
+	  
 
 		return(
+
 			<div>
 				<NavBar />
 				<h1>CAT KENNEL</h1>
 				<main className='content'>
-					{kennelCats}
 				</main>
 
 			</div>

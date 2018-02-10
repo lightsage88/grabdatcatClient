@@ -1,7 +1,8 @@
 // index.js
+import pic from '../staticAssets/blackCatAroundCorner.jpg';
+
 var jsonp = require('jsonp');
 require('es6-promise').polyfill();
-
 
 const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
 
@@ -116,7 +117,7 @@ export const loginUser = (username, password) => {
 			window.location = '/home';
 			// dispatch(userDataGrab(username,password));
 		})
-		.catch(error => console.log(error))
+		.catch(error => console.log(error));
 	}
 }
 
@@ -215,6 +216,13 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 					// const animal=pets[i];
 					// console.log(animal);
 					// petArray.push(pets[i]);
+					//if the array's source is non existent, then 
+					//set up a variable for a
+					let media = pic;
+					if(pets[i].media.photos){
+						media = pets[i].media.photos.photo[2].$t;
+					}
+
 					let pet = {
 						age: pets[i].age.$t,
 						breed: pets[i].breeds.breed.$t,
@@ -222,11 +230,14 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 						contactPhone: pets[i].contact.phone.$t,
 						description: pets[i].description.$t,
 						id: pets[i].id.$t,
-						media: pets[i].media.photos,
+						media,
 						name: pets[i].name.$t,
 						sex: pets[i].sex.$t
+
 						//FINISH ITERATING OVER PROP=KEY PAIRS
 					};
+
+				
 					petArray.push(pet)
 
 				}
@@ -239,16 +250,69 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 }
 
 
-export const selectCat = (cat, userPets) => {
+export const selectCat = (cat, userPets, mLabId) => {
 	return (dispatch) => {
+
 		console.log(cat);
 		console.log(userPets);
-		dispatch(addCat(cat));
-        }
+		fetch('http://localhost:8080/api/users/addCat', 
+			{
+			method: 'PUT',
+			headers:{
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({cat, mLabId})
+		})
+		.then(response =>response.json())
+		.then(json => {
+			console.log(json);
+			console.log(userPets);
+			if(userPets.length == 0) {
+				console.log('our first cat');
+				dispatch(addCat(cat))
+			} else {
+				for(let i=0; i<=userPets.length-1; i++){
+					if(cat.id===userPets[i].id){
+						console.log('found a duplicate');
+						dispatch(foundADuplicate());
+					}
+				}
 
+			// let cats = json.cats;
+			// let target = cats[cats.length-1];
+			// console.log(target);
+
+			// dispatch(addCat(target));
+		}
+
+		})
+		.catch(error => console.log(error));
 	}
+}
+
+export const foundADuplicate = () => ({
+	type: 'FOUND_A_DUPLICATE'
+});
 	
 export const addCat = (cat) => ({
 	type: 'ADD_CAT',
 	cat
 });
+
+
+export const roundUpCats = (mLabId) => {
+	return (dispatch) => {
+		fetch('http://localhost:8080/api/users/roundUpCats',
+			{
+			method: 'GET',
+			body: JSON.stringify({mLabId})
+		})
+		.then(response => response.json())
+		.then(json => {
+			console.log('..roundUpCats ran!');
+			console.log(json);
+		})
+		.catch(error => console.log(error));
+	}
+}
+ 

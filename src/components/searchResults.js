@@ -6,15 +6,26 @@ import {Button} from 'reactstrap';
 
 
 export class SearchResults extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      activeButton : false
+    }
+  }
 
   addACat(petId){
     console.log('addACat running...');
+    this.setState({
+      activeButton: true
+    });
     let id = petId;
-    console.log(id);
-    console.log(this.props.results);
     let catArray = this.props.results;
     let userPets = this.props.userPets;  
     let cat;
+    let mLabId = localStorage.getItem('_id');
+    console.log(mLabId);
+
+
 
     for(let i=0; i<=catArray.length-1; i++){
         if(catArray[i].id===id){
@@ -22,7 +33,7 @@ export class SearchResults extends Component {
           cat = catArray[i];
           console.log(cat);
           console.log(userPets);
-          this.props.dispatch(selectCat(cat));
+          this.props.dispatch(selectCat(cat, userPets, mLabId));
         }
       }
         
@@ -48,6 +59,7 @@ export class SearchResults extends Component {
 
   render() {
 
+
   //get pets in state and render a component around them...??
   if(!this.props.results){
     return(
@@ -56,14 +68,16 @@ export class SearchResults extends Component {
       </div>
       );
   } 
+
+
     return (
     <div>
       {this.props.results.map((pet, index)=>(
-        <div key={index}>
+       <div key={index}>
           <li>
             <h4>{pet.name}</h4>
             <h2>{pet.id}</h2>
-            <img src={pet.media.photo[2].$t} alt ='n/a'/>
+            <img src={pet.media} alt ='Cat' />
             <ul>
               <li>{pet.age}</li>
               <li>{pet.sex}</li>
@@ -73,11 +87,11 @@ export class SearchResults extends Component {
             </ul>
             <p>{pet.description}</p>
           </li>
-          <Button onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
+          <Button  onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
         </div>
         ))}
     </div>
-      );
+    );
   }
 }
 

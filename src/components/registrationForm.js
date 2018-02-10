@@ -80,7 +80,7 @@ class RegistrationForm extends React.Component {
         <FormGroup>
           <Label for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
           <Input type="select" name="mBTI" id="mBTI">
-            <option value=''>N/A</option>
+            <option value='N/A'>N/A</option>
             <option value="ISFJ">ISFJ</option>
             <option value="INFJ">INFJ</option>
             <option value="INTJ">INTJ</option>

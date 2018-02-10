@@ -20,6 +20,7 @@ import NavBar from './navBar';
 import {Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
+import CatSuggestion from './catSuggestion';
 import searchPicture from '../staticAssets/gitHubIcon.png';
 import store from '../store';
 import {connect} from 'react-redux';
@@ -31,20 +32,16 @@ export class Home extends Component {
     console.log('home running...');
     console.log(this.props);
     if(localStorage.token){
-      console.log('yippie');
     } else {
-      console.log('shitsticks');
       return(
       <Redirect to="/"/>
       );
     }
-    console.log(this.props);
-    console.log(this.props.data);
-    console.log(store);
-    console.log(this.state);
+   
     return (
     <div>
       <NavBar />
+      <CatSuggestion />
       <HomeGreet firstName={this.props.firstName}/>
       <SearchForm pic={searchPicture}/>
       <SearchResults />
