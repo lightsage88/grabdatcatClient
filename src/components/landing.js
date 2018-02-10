@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
+import './landing.css';
 // import {
 //   Collapse,
 //   Navbar,
@@ -17,7 +18,7 @@ import './app.css';
 // import {Button} from 'reactstrap';
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
 import LoginForm from './loginForm';
-import catPicture from '../staticAssets/monsterCat.jpg';
+import catPicture from '../staticAssets/blackCatAroundCorner.jpg';
 
 import Image from './image';
 
@@ -33,9 +34,9 @@ export default class Landing extends Component {
           cat breed will suit you best!</span>
         </header>
         <LoginForm />
-        <span>Not registered, hooman? Click the register button to fix that, hooman.</span>
+        <span className='notRegistered'>Not registered, hooman? Click the register button to fix that, hooman.</span>
         <br/>
-        <Image imageAddress={catPicture}/>
+        <Image className='notRegisteredPic' imageAddress={catPicture}/>
       </div>
       );
   }

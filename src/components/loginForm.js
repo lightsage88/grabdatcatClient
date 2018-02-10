@@ -1,6 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
+import './loginForm.css'
 import {Button} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -60,14 +61,13 @@ export class LoginForm extends React.Component {
 	return(
 		<div>
 		<form onSubmit={(e)=> this.handleSubmit(e)}>
-			<input type='text' name='username' placeholder='USERNAME'/>
-			<input type='password' name='password' placeholder='PASSWORD'/>
+			<input id='username' type='text' name='username' placeholder='USERNAME'/>
 			<br/>
-			<Button>LOGIN</Button>
-			<Link to='/registration'><Button>REGISTER</Button></Link>
+			<input id='password' type='password' name='password' placeholder='PASSWORD'/>
+			<br/>
+			<Button className='loginFormButtons'>LOGIN</Button>
+			<Link to='/registration'><Button className='loginFormButtons'>REGISTER</Button></Link>
 		</form>
-		<Button onClick={(e)=>this.handleLogout(e)}>Logout Test</Button>
-		<Button onClick={()=>this.handleTPE()}>Test pro EP</Button>
 		</div>
 		);
 	}

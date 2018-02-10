@@ -1,0 +1,32 @@
+
+
+input{
+	display: block;
+	height: 6vw;
+	position: relative;
+	left: 3vw;
+	border-radius: 3vw;
+	text-align: center;
+	margin-bottom: 3vw;
+	height: 7vw;
+	width: 40%;
+}
+
+.loginFormButtons {
+	position: relative;
+	top: -3vw;
+	margin-left: 7vw;
+	height: 10vw;
+	width: 30vw;
+	font-family: 'Walter Turncoat', cursive;
+
+}
+
+.loginFormButtons:hover{
+	color: green;
+	background: pink;
+	font-family: 'Walter Turncoat', cursive;
+}
+
+
+
