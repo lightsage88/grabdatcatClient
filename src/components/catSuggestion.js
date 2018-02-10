@@ -30,8 +30,61 @@ render(){
 			</div>
 			);
 	} else {
+	let suggestion;
+	switch(this.props.personalityType) {
+		case 'INFJ':
+			suggestion = 'Russian Blue';
+			break;
+		case 'INTJ':
+			suggestion = 'Norwegian Forest Cat';
+			break;
+		case 'ISTP':
+			suggestion = 'Tiger';
+			break;
+		case 'ISTJ':
+			suggestion = 'British Shorthair';
+			break;
+		case 'ISFP':
+			suggestion = 'Ragdoll';
+			break;
+		case 'ISFJ':
+			suggestion = 'Persian';
+			break;
+		case 'INFP':
+			suggestion = 'Birman';
+			break;
+		case 'INTP':
+			suggestion = 'Turkish Van';
+			break;
+		case 'ESTP':
+			suggestion = 'Bengal';
+			break;
+		case 'ESFP':
+			suggestion = 'Sphynx/Hairless';
+			break;
+		case 'ENFP':
+			suggestion = 'Singapura';
+			break;
+		case 'ENTP':
+			suggestion = 'Balinese';
+			break;
+		case 'ESTJ':
+			suggestion = 'Maine Coon';
+			break;
+		case 'ESFJ':
+			suggestion = 'Tonkinese';
+			break;
+		case 'ENFJ':
+			suggestion = 'Devon Rex';
+			break;
+		case 'ENTJ':
+			suggestion = 'Siamese';
+			
+
+	}
 
 	console.log(this.props);
+	console.log(suggestion);
 	return(
 		<div>
 			<Button id="Popover1" onClick={this.toggle}>
@@ -41,7 +94,7 @@ render(){
 			target='Popover1' toggle={this.toggle}>
 			<PopoverHeader>Best Cat for your Personality Type</PopoverHeader>
           <PopoverBody>Hey there, we noticed your personality type is {this.props.personalityType}. According
-          our super scientific calculations, you'd best pair with a --insert breed dynamically-- cat.} </PopoverBody>
+          our super scientific calculations, you'd pair well with a {suggestion} cat. </PopoverBody>
         </Popover>
 		</div>
 		);
