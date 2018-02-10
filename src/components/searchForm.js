@@ -20,15 +20,12 @@ export class SearchForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     console.log("searchForm's handleSubmit is running...");
-    console.log(e);
     const {breed, color, gender, age, zipCode, distance } = this.state;
     this.props.dispatch(seekCat(breed, color, gender, age, zipCode, distance));
   }
 
   onChange(e){
     console.log("searchForm's onChange is running...");
-    console.log(e.target.name);
-    console.log(e.target.value);
     this.setState({
       [e.target.name] : e.target.value
     });

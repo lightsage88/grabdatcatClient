@@ -30,7 +30,6 @@ import SearchResults from './searchResults';
 export class Home extends Component {
   render() {
     console.log('home running...');
-    console.log(this.props);
     if(localStorage.token){
     } else {
       return(

@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
-import {Button, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
+import {Button, Card, Jumbotron, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
 import {Link, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
@@ -27,40 +27,59 @@ removeCat(e, number){
 
 }
 
-		render(){
-			if(!localStorage.token){
-	 return(
-	      <Redirect to="/"/>
-	      );
-	    }
-	    console.log(this.props.cats);
-		// const kennelCats = this.props.cats.map((cat, index)=>
-	 //   			<Card key={index}>
-	 //   				<CardBody>
-	 //   					<CardTitle>{cat.name} / {cat.breed} / {cat.sex} / {cat.age} </CardTitle>
-	 //   					<CardImg className='catImage' width='auto' height='auto' src={cat.media.photo[3].$t} alt="Image Unavailable" />
-	 //   					<CardText>{cat.description}</CardText>	
- 	// 					<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
- 	// 					<br/>
- 	// 					<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
-	 //   				</CardBody>
-	 //   				<Button onClick={()=>this.removeCat(cat.id)}className='removeCat' type='button'>Remove Cat</Button>
-	 //   			</Card>
-	 //   	);
-	
+render(){
+let catsInState = this.props.cats;
+console.log(catsInState);
+if(!localStorage.token){
+return(
+  <Redirect to="/"/>
+  );
+}
 
-	  
+if(catsInState.length >= 1){
+	console.log('ooh boy, here come dem kittehs');
+	const kennelCats = catsInState.map((cat, index) => 
+	<div key={index}>
+		<Card>
+			<CardBody>
+				<CardTitle>{cat.name} / {cat. breed} / {cat.sex} / {cat.age} </CardTitle>
+				<CardImg className='catImage' width='auto' height='auto' src={cat.media} alt="Image Unavailable" />
+	   				<CardText>{cat.description}</CardText>	
+ 					<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
+ 					<br/>
+ 					<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
+	   		</CardBody>
+	   			<Button onClick={()=>this.removeCat(cat.id)}className='removeCat' type='button'>Remove Cat</Button>
+		</Card>
+	</div>
+		);
+	return (
+		<div>
+			<NavBar />
+			<h1>CAT KENNEL</h1>
+			<main className='content'>
+				{kennelCats}
+			</main>
+		</div>
 
-		return(
+		);
+}
+if(catsInState.length === 0){
+	console.log('catsInState is empty');
+	return(
+		<div>
+		<NavBar />
+		<h1>CAT KENNEL</h1>
+			<Jumbotron>
+				<h1 className='display-3'>Oh Dear,<br/>No Kittehs In Here!</h1>
+				<p className='lead'>Oooh Hooman, you must go to 'HOME' and search for kittehs, hooman...</p>
+			</Jumbotron>
+		</div>
+		);
+}
 
-			<div>
-				<NavBar />
-				<h1>CAT KENNEL</h1>
-				<main className='content'>
-				</main>
 
-			</div>
-			);
+		
 	}
 }
 

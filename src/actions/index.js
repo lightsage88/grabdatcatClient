@@ -265,25 +265,26 @@ export const selectCat = (cat, userPets, mLabId) => {
 		})
 		.then(response =>response.json())
 		.then(json => {
-			console.log(json);
-			console.log(userPets);
-			if(userPets.length == 0) {
-				console.log('our first cat');
-				dispatch(addCat(cat))
-			} else {
-				for(let i=0; i<=userPets.length-1; i++){
-					if(cat.id===userPets[i].id){
-						console.log('found a duplicate');
-						dispatch(foundADuplicate());
-					}
-				}
+			dispatch(addCat(cat));
+		// 	console.log(json);
+		// 	console.log(userPets);
+		// 	if(userPets.length == 0) {
+		// 		console.log('our first cat');
+		// 		dispatch(addCat(cat))
+		// 	} else {
+		// 		for(let i=0; i<=userPets.length-1; i++){
+		// 			if(cat.id===userPets[i].id){
+		// 				console.log('found a duplicate');
+		// 				dispatch(foundADuplicate());
+		// 			}
+		// 		}
 
-			// let cats = json.cats;
-			// let target = cats[cats.length-1];
-			// console.log(target);
+		// 	// let cats = json.cats;
+		// 	// let target = cats[cats.length-1];
+		// 	// console.log(target);
 
-			// dispatch(addCat(target));
-		}
+		// 	// dispatch(addCat(target));
+		// }
 
 		})
 		.catch(error => console.log(error));

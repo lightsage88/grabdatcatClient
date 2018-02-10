@@ -2,58 +2,86 @@ import React, { Component } from 'react';
 import './app.css';
 import {selectCat} from '../actions/index';
 import {connect} from 'react-redux';
-import {Button} from 'reactstrap';
+import {Button, Fade} from 'reactstrap';
 
 
 export class SearchResults extends Component {
   constructor(props){
     super(props);
     this.state = {
-      activeButton : false
+      duplicateWarning: false
     }
   }
 
   addACat(petId){
     console.log('addACat running...');
-    this.setState({
-      activeButton: true
-    });
     let id = petId;
-    let catArray = this.props.results;
+    let searchResultArray = this.props.results;
+    //what is already in the redux state for the user/pets
     let userPets = this.props.userPets;  
+    console.log(userPets);
     let cat;
     let mLabId = localStorage.getItem('_id');
-    console.log(mLabId);
+      let idChain = [];
+    let unique = false;
 
 
 
-    for(let i=0; i<=catArray.length-1; i++){
-        if(catArray[i].id===id){
-          console.log('creating cat entry...');
-          cat = catArray[i];
-          console.log(cat);
-          console.log(userPets);
-          this.props.dispatch(selectCat(cat, userPets, mLabId));
+    for(let i=0; i<=searchResultArray.length-1; i++){
+        if(searchResultArray[i].id===id){
+          cat = searchResultArray[i];
         }
-      }
-        
-      
-  }
+    }
 
-    //         for(let x=0; x<=userPets.length-1; i++){
-    //           if(userPets[x].id !== cat.id){
-    //           console.log('this will fit');
-    //         //dispatch action to put cat in state
-    //           this.props.dispatch(addCat(cat));
-    //           console.log(userPets)
-    //           }
-    //         }
-    //     } else {
-    //       this.props.dispatch(addCat(cat));
-    //     }
-        
-    //   }
-    // } 
+    console.log(cat);
+    if(userPets.length === 0){
+        console.log('first cat!');
+        this.props.dispatch(selectCat(cat, userPets, mLabId));
+        return;
+        console.log('you should not see me');
+    }
+    console.log('you should not see me either');
+    for(let i=0; i<=userPets.length-1; i++){
+      idChain.push(userPets[i].id);
+    }
+      
+      console.log(cat.id);
+      console.log(idChain);
+      idChain.forEach((id)=>{
+
+        if(cat.id===id){
+          unique = false;
+          console.log('duplicates shit found');
+          console.log(unique);
+          this.setState({
+                duplicateWarning: true
+              });
+              setTimeout(()=>{
+                this.setState({
+                  duplicateWarning : false
+                })
+              }, 2000);
+        return;  
+        console.log('you should not see me too');    
+        } else {
+          console.log(unique);
+          unique = true;
+          console.log(unique);
+        }
+        return;
+        });
+        console.log(unique);
+        if(unique){
+        this.props.dispatch(selectCat(cat, userPets, mLabId));
+      }
+      
+
+    }
+  
+
+
+
+ 
   
   
 
@@ -72,6 +100,9 @@ export class SearchResults extends Component {
 
     return (
     <div>
+      <Fade in={this.state.duplicateWarning} tag='h5' className='mt-3 duplicateWarning'>
+        You already hab dis kitteh in your kennel, hooman!
+      </Fade>
       {this.props.results.map((pet, index)=>(
        <div key={index}>
           <li>
