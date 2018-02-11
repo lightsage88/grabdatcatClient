@@ -1,0 +1,62 @@
+form {
+	background: linear-gradient(
+		rgba(0,0,0,0.6),
+		rgba(0,0,0,0.6)
+		),
+	url('../staticAssets/cats of the world.jpg');
+}
+
+h1,h5{
+	background: white;
+	margin: 0;
+}
+
+h4 {
+	background: white;
+	margin-bottom: 2vw;
+}
+
+
+label {
+	color: red;
+	font-size: 4vw;
+	font-family: 'Delius Swash Caps', cursive;
+	transform: rotate(-22deg);
+	position: relative;
+	top: 2vw;
+}
+
+label.mBTILabel {
+	transform: rotate(0deg);
+}
+
+.mBTIInput, option, select{
+	max-width: 60%;
+	margin: auto 15%;
+	border: solid ;
+	border-width: 2px;
+	border-style: inset;
+	border-radius: 3vw;
+	background: black;
+	color: white;
+	font-family: 'Delius Swash Caps', cursive;
+}
+
+input {
+	background: black;
+	color: white;
+}
+
+.form-error {
+	color: lime;
+}
+
+button.btn, .btn-info.disabled, .btn-info:disabled {
+	background-color: hotpink;
+	margin: auto 33%;
+	width: auto;
+	min-width: 30%;
+}
+
+
+

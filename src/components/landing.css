@@ -1,8 +1,14 @@
-html, body {
+/*html{
 	background: url('../staticAssets/preview.jpg');
 	background-repeat: repeat-y;
 	background-size: cover;
-}
+}*/
+
+html{
+  background: url('../staticAssets/preview.jpg');
+  background-repeat: repeat-y;
+/*  background-size: cover;
+*/}
 
 .App-header {
 	font-family: 'Crafty Girls', cursive;

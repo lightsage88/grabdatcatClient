@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Popover, PopoverHeader, PopoverBody} from 'reactstrap';
 import {connect} from 'react-redux';
+import './catSuggestion.css';
 
 export class CatSuggestion extends React.Component {
 	constructor(props){
@@ -25,8 +26,8 @@ render(){
 	if(personality === "N/A"){
 		console.log('personalttype is not set');
 		return(
-			<div>
-				<p>Edit your account and pick a personality type to see what cat breed would best suit you!</p>
+			<div className='catSuggestion'>
+				<p className='catSuggestionP'>Edit your account and pick a personality type to see what cat breed would best suit you!</p>
 			</div>
 			);
 	} else {
@@ -86,7 +87,7 @@ render(){
 	console.log(this.props);
 	console.log(suggestion);
 	return(
-		<div>
+		<div className='catSuggestion'>
 			<Button id="Popover1" onClick={this.toggle}>
 				Cat Suggestion
 			</Button>

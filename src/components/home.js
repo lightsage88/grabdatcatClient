@@ -42,7 +42,7 @@ export class Home extends Component {
     <div>
       <NavBar />
       <CatSuggestion />
-      <HomeGreet firstName={this.props.firstName}/>
+      <HomeGreet  firstName={this.props.firstName}/>
       <SearchForm pic={searchPicture}/>
       <SearchResults />
     </div>

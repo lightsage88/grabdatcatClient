@@ -59,7 +59,7 @@ export class LoginForm extends React.Component {
 		
 
 	return(
-		<div>
+		<div className='loginForm'>
 		<form onSubmit={(e)=> this.handleSubmit(e)}>
 			<input id='username' type='text' name='username' placeholder='USERNAME'/>
 			<br/>
