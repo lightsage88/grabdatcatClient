@@ -34,7 +34,7 @@ export default class Landing extends Component {
           cat breed will suit you best!</span>
         </header>
         <LoginForm />
-        <span className='notRegistered'>Not registered, hooman? Click the register button to fix that, hooman.</span>
+        <span className='notRegistered'>Not registered? Click the register button to fix that, hooman.</span>
         <br/>
         <Image className='notRegisteredPic' imageAddress={catPicture}/>
       </div>

@@ -49,6 +49,7 @@ deleteAccount(e){
 
 
 render(){
+	console.log(this.props);
 //hopefully you can style the BUTTON in the style of a link a tag thing
 return(
 	<div>

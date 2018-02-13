@@ -116,6 +116,42 @@ export const loginUser = (username, password) => {
 			console.log(password);
 			window.location = '/home';
 			// dispatch(userDataGrab(username,password));
+			//put authtoken and user id in state inside local storage then redirect
+			//in home have a app.js componentDidMount user id and token from localStorage dispatch
+			//action that will make request to backend
+
+			//other idea would be to use <Redirect > but refreshing then will cause 
+			//things to be fucked in the head.
+		})
+		.catch(error => console.log(error));
+	}
+}
+
+export const persistData = (mLabId) => {
+	console.log('persistData running from action index');
+	return (dispatch) => {
+		fetch('http://localhost:8080/api/users/persist/', 
+			{
+			method: 'POST',
+			headers:{
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({mLabId})
+		})
+		.then(response => response.json())
+		.then(json => {
+			console.log(json);
+			const userData = json;
+			console.log(userData);
+			const authToken = localStorage.getItem('token');
+			const firstName = userData.firstName;
+			const lastName = userData.lastName;
+			const phoneNumber = userData.phoneNumber;
+			const emailAddress = userData.emailAddress;
+			const mBTI = userData.mBTI;
+			const cats = userData.cats;
+			const _id = userData._id;
+			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id ));
 		})
 		.catch(error => console.log(error));
 	}

@@ -6,7 +6,7 @@ form {
 	url('../staticAssets/cats of the world.jpg');
 }
 
-h1,h5{
+h1{
 	background: white;
 	margin: 0;
 }
@@ -53,7 +53,7 @@ input {
 
 button.btn, .btn-info.disabled, .btn-info:disabled {
 	background-color: hotpink;
-	margin: auto 33%;
+	margin: 2vw 33%;
 	width: auto;
 	min-width: 30%;
 }

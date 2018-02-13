@@ -4,7 +4,8 @@ import {connect} from 'react-redux';
 import {seekCat} from '../actions';
 // import Image from './image';
 import {petsSearchReset} from '../actions/index';
-
+import './navBar.css';
+import './searchForm.css';
 
 export class SearchForm extends React.Component {
   constructor(props){
@@ -39,10 +40,10 @@ export class SearchForm extends React.Component {
 
   render() {
     return (
-      <Form onSubmit={(e)=>this.handleSubmit(e)}>
-        <h5>SEEK DAT CAT</h5>
+      <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
+        <h5 className='SDCH5'>SEEK DAT CAT</h5>
         <FormGroup>
-          <Label for="breed">BREED</Label>
+          <Label className='catSearchLabel'for="breed">BREED</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
             <option value=''>--ANY--</option>
           <option value='Abyssinian'>Abysinnian</option>
@@ -117,7 +118,7 @@ export class SearchForm extends React.Component {
         
 
         <FormGroup>
-          <Label for="gender">GENDER</Label>
+          <Label className='catSearchLabel'for="gender">GENDER</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="gender" id="gender">
             <option value=''>--ANY--</option>
             <option value='F'>F</option>
@@ -126,7 +127,7 @@ export class SearchForm extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="age">AGE</Label>
+          <Label className='catSearchLabel'for="age">AGE</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
             <option value=''>--ANY--</option>
             <option value='Baby'>BABY</option>
@@ -138,11 +139,12 @@ export class SearchForm extends React.Component {
 
 
         <FormGroup>
-          <Label for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
-          <Input  onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
+          <Label className='catSearchLabel'for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
+          <Input className='catZipCodeSearch' onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
         
         <Button>SEEK!</Button>
+        <br/>
         <Button onClick={()=>this.clearResults()}>CLEAR!</Button>
 
       </Form>

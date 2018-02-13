@@ -5,7 +5,7 @@ import {Button, Card, Jumbotron, CardImg, CardBody, CardTitle, CardText} from 'r
 import {Link, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
-import {roundUpCats, deleteCat} from '../actions/index';
+import {roundUpCats, deleteCat, loginUserSuccess, persistData} from '../actions/index';
 
 import './kennel.css';
 //have a componentDidMount
@@ -13,27 +13,45 @@ import './kennel.css';
 
 export class Kennel extends React.Component {
 componentDidMount() {
-	let mLabId = localStorage.getItem('_id');
-	this.props.dispatch(roundUpCats(mLabId));
+	console.log('kennel componentWillMount going...');
+    const mLabId = localStorage.getItem('_id');
+    this.props.dispatch(persistData(mLabId));
+  
+this.props.dispatch(roundUpCats(mLabId));
 }
+
+
+// componentDidMount(){
+	// 	console.log('theShitCircus');
+	// 	const authToken = localStorage.getItem('token');
+	// 	// const userData = localStorage.getItem('userData');
+	// 	const firstName = localStorage.getItem('firstName');
+	// 	const lastName = localStorage.getItem('lastName');
+	// 	const phoneNumber = localStorage.getItem('phoneNumber');
+	// 	const emailAddress = localStorage.getItem('emailAddress');
+	// 	const mBTI = localStorage.getItem('mBTI');
+	// 	const cats = localStorage.getItem('cats');
+	// 	const _id = localStorage.getItem('_id');
+	// 	console.log(firstName);
+	// 	this.props.dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
+	// }
+
 
 removeCat(number){
 	let mLabId = localStorage.getItem('_id');
 	let catId = number;
 	console.log('removeCat running..');
-	
-
-
-
-	
 	this.props.dispatch(deleteCat(mLabId, catId));
+	window.location = '/kennel';
 	
 
 
 }
 
 render(){
-let catsInState = this.props.cats;
+	console.log(this.props);
+	console.log(this.state);
+const catsInState = this.props.cats;
 console.log(catsInState);
 if(!localStorage.token){
 return(
@@ -41,7 +59,19 @@ return(
   );
 }
 
-if(catsInState.length >= 1){
+if((catsInState === undefined) || (catsInState.length===0)){
+	console.log('catsInState is empty');
+	return(
+		<div>
+		<NavBar />
+		<h1>CAT KENNEL</h1>
+			<Jumbotron>
+				<h1 className='display-3'>Oh Dear,<br/>No Kittehs In Here!</h1>
+				<p className='lead'>Oooh Hooman, you must go to 'HOME' and search for kittehs, hooman...</p>
+			</Jumbotron>
+		</div>
+		);
+} else if(catsInState.length >= 1) {
 	console.log('ooh boy, here come dem kittehs');
 	const kennelCats = catsInState.map((cat, index) => 
 	<div key={index}>
@@ -69,19 +99,7 @@ if(catsInState.length >= 1){
 
 		);
 }
-if(catsInState.length === 0){
-	console.log('catsInState is empty');
-	return(
-		<div>
-		<NavBar />
-		<h1>CAT KENNEL</h1>
-			<Jumbotron>
-				<h1 className='display-3'>Oh Dear,<br/>No Kittehs In Here!</h1>
-				<p className='lead'>Oooh Hooman, you must go to 'HOME' and search for kittehs, hooman...</p>
-			</Jumbotron>
-		</div>
-		);
-}
+
 
 
 		

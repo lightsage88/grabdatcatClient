@@ -32,11 +32,11 @@ const user = (state=initialState, action) => {
 				console.log('baaaaaam');
 			}
 		}
-		return {
-			...state,
+		return [
+			...state,{
 			cats: state.cats.filter(item => item.id !== action.catId)
 		}
-		break;
+		]
 
 		case 'FOUND_A_DUPLICATE':
 		return {...state,
@@ -50,14 +50,25 @@ const user = (state=initialState, action) => {
 				cats: [...state.cats, action.cat]
 			}
 
+		case 'PETS_SEARCH_SUCCESS':
+			return {
+				...state
+			}
+
+		case 'PETS_SEARCH_RESET':
+			return {
+				...state
+			}
+
+
+
 
 		case 'REGISTER_USER_SUCCESS':
 			return {
 				
 			}
 		case 'LOGIN_USER_SUCCESS':
-			return {
-				...state,
+			return Object.assign({}, state,{
 				token: action.token,
 				firstName: action.firstName,
 				lastName: action.lastName,
@@ -66,8 +77,9 @@ const user = (state=initialState, action) => {
 				mBTI: action.mBTI,
 				cats: action.cats,
 				_id: action._id
-			}
-
+			})
+		
+			
 		case 'UPDATE_USER_SUCCESS':
 			return Object.assign({}, state, {
 				firstName: action.firstName,
@@ -85,7 +97,7 @@ const user = (state=initialState, action) => {
 
 		
 		default: 
-		return state
+		return {}
 	}
 }
 

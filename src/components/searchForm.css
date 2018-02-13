@@ -1,0 +1,28 @@
+input{
+	width: auto;
+}
+
+.form-control{
+	width: auto;
+}
+
+button{
+	font-family: 'Delius Swash Caps', cursive;
+}
+
+@media only screen and (min-width: 1000px) {
+	form.searchForm {
+		background: white;
+	}
+	label.catSearchLabel{
+		font-size: 2vw;
+		position: absolute;
+	}
+	.catZipCodeSearch{
+		font-size:1.4vw;
+		position: relative;
+		bottom: 31vw;
+		left: 5vw;
+	}
+
+}

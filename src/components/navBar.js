@@ -9,6 +9,7 @@ import {
   NavLink } from 'reactstrap';
   import {logOutUser} from '../actions/index.js';
 import {connect} from 'react-redux';
+import './navBar.css';
 
 export class NavBar extends React.Component {
   constructor(props) {

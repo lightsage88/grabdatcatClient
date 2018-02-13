@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
+import './searchResults.css';
 import {selectCat} from '../actions/index';
 import {connect} from 'react-redux';
 import {Button, Fade} from 'reactstrap';
@@ -15,6 +16,8 @@ export class SearchResults extends Component {
 
   addACat(petId){
     console.log('addACat running...');
+    console.log(this.props);
+    console.log(this.state);
     let id = petId;
     let searchResultArray = this.props.results;
     //what is already in the redux state for the user/pets
@@ -34,11 +37,10 @@ export class SearchResults extends Component {
     }
 
     console.log(cat);
-    if(userPets.length === 0){
+    if((userPets.length === 0) || (userPets === undefined)){
         console.log('first cat!');
         this.props.dispatch(selectCat(cat, userPets, mLabId));
         return;
-        console.log('you should not see me');
     }
     console.log('you should not see me either');
     for(let i=0; i<=userPets.length-1; i++){
@@ -62,8 +64,7 @@ export class SearchResults extends Component {
                 })
               }, 2000);
         return;  
-        console.log('you should not see me too');    
-        return;
+       
         } else {
           console.log(unique);
           // unique = true;
@@ -93,7 +94,7 @@ export class SearchResults extends Component {
   if(!this.props.results){
     return(
       <div>
-        <h4>Results will appear here</h4>
+        <h4 className='resultsWillAppear'>Results will appear here</h4>
       </div>
       );
   } 
@@ -106,20 +107,20 @@ export class SearchResults extends Component {
       </Fade>
       {this.props.results.map((pet, index)=>(
        <div key={index}>
-          <li>
-            <h4>{pet.name}</h4>
-            <h2>{pet.id}</h2>
-            <img src={pet.media} alt ='Cat' />
+          <li className='catEntry'>
+            <h4 className='petInfo petName'>{pet.name}</h4>
+            <img className='petMedia' src={pet.media} alt ='Cat' />
             <ul>
-              <li>{pet.age}</li>
-              <li>{pet.sex}</li>
-              <li>{pet.breed}</li>
-              <li>email:{pet.contactEmail}</li>
-              <li>phone:{pet.contactPhone}</li>
+              <li className='petInfo petAge'>{pet.age}</li>
+              <li className='petInfo petSex'>{pet.sex}</li>
+              <li className='petInfo petBreed'>{pet.breed}</li>
+              <li className='petInfo petEmail'>email: {pet.contactEmail}</li>
+              <li className='petInfo petPhone'>phone: {pet.contactPhone}</li>
             </ul>
             <p>{pet.description}</p>
+            <Button className='addCatButton' onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
+
           </li>
-          <Button  onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
         </div>
         ))}
     </div>

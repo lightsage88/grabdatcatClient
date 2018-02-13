@@ -4,10 +4,20 @@
 	background: red;
 }
 
-
-
-body{
+/*html{
+	background: black;
 }
+*/
+form.searchForm{
+	background: black;
+
+}
+
+form.searchForm:after{
+	background: black;
+}
+
+
 
 /*.catSuggestion, .homeGreet{
 	background: black;

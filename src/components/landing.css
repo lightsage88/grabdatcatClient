@@ -4,11 +4,23 @@
 	background-size: cover;
 }*/
 
-html{
+/*html{
   background: url('../staticAssets/preview.jpg');
   background-repeat: repeat-y;
-/*  background-size: cover;
-*/}
+}*/
+
+div.App, html{
+	background: url('../staticAssets/preview.jpg');
+	background-size: cover;
+}
+
+h1.App-title{
+	background: hotpink;
+}
+
+form.loginForm {
+	background: 0 ;
+}
 
 .App-header {
 	font-family: 'Crafty Girls', cursive;
@@ -53,6 +65,33 @@ html{
 	top: 10vw;
 	/*left: 12vw;*/
 	float: right;
+}
 
+@media only screen and (min-width: 1000px) {
+	header.App-header {
+		font-size: 2.5vw;
+		color:black;
+	}
+	span.notRegistered{
+		font-size: 2.5vw;
+		padding: 1vw;
+	}
+
+	span.notRegistered:after{
+		
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 44px solid transparent;
+    border-top-color: #00aabb;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: 92px;
+    margin-bottom: -44px;
+	}
 
 }
+

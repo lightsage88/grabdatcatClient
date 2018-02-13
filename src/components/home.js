@@ -21,14 +21,35 @@ import NavBar from './navBar';
 import {Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
+import {loginUserSuccess, persistData} from '../actions/index.js';
 import CatSuggestion from './catSuggestion';
 import searchPicture from '../staticAssets/gitHubIcon.png';
-import store from '../store';
 import {connect} from 'react-redux';
 import SearchResults from './searchResults';
 
 
 export class Home extends Component {
+
+  // componentDidMount(){
+  //  const authToken = localStorage.getItem('token');
+  //  // const userData = localStorage.getItem('userData');
+  //  const firstName = localStorage.getItem('firstName');
+  //  const lastName = localStorage.getItem('lastName');
+  //  const phoneNumber = localStorage.getItem('phoneNumber');
+  //  const emailAddress = localStorage.getItem('emailAddress');
+  //  const mBTI = localStorage.getItem('mBTI');
+  //  const cats = localStorage.getItem('cats');
+  //  const _id = localStorage.getItem('_id');
+  //  console.log(firstName);
+  //  this.props.dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
+  // }
+
+  componentDidMount(){
+    const mLabId = localStorage.getItem('_id');
+    this.props.dispatch(persistData(mLabId));
+  }
+
+
   render() {
     console.log('home running...');
     if(localStorage.token){

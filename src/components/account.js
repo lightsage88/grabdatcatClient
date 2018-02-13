@@ -5,13 +5,22 @@ import {connect} from 'react-redux';
 import NavBar from './navBar';
 import {Redirect} from 'react-router-dom';
 import AccountList from './accountList';
+import {persistData} from '../actions/index';
 import './account.css';
 
 
 export class Account extends React.Component {
+componentWillMount() {
+	console.log('kennel componentWillMount going...');
+    const mLabId = localStorage.getItem('_id');
+    this.props.dispatch(persistData(mLabId));
+  
+}
 
 
 	render(){
+		console.log(this.props);
+		console.log(this.store);
 		if(localStorage.token){
       console.log('yippie');
     } else {

@@ -1,0 +1,37 @@
+ h4.resultsWillAppear, body {
+	background: black;
+}
+
+li.catEntry{
+	margin: 8vw auto;
+	border: cyan dotted 2vw;
+	border-radius: 5vw
+}
+
+h4.petInfo.petName {
+	background: black;
+	font-family: 'Delius Swash Caps', cursive;
+	color: red;
+	transform: rotate(-10deg);
+	border: white solid;
+	width: fit-content;
+}
+
+img.petMedia {
+	height: auto;
+	max-height: 100vw;
+	width: auto;
+	max-width: 80%;
+}
+
+li{
+	list-style: none;
+	color: white;
+	padding: 2vw;
+}
+
+button.addCatButton{
+	margin: auto 25%;
+	width: auto;
+	min-width: 50%;
+}
