@@ -4,6 +4,13 @@
 	background: red;
 }
 
+.catAdd {
+	position: fixed;
+	top: 50%;
+	background: lime;
+	color: black;
+}
+
 /*html{
 	background: black;
 }

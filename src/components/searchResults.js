@@ -10,7 +10,8 @@ export class SearchResults extends Component {
   constructor(props){
     super(props);
     this.state = {
-      duplicateWarning: false
+      duplicateWarning: false,
+      catAdd: false
     }
   }
 
@@ -74,6 +75,14 @@ export class SearchResults extends Component {
         });
         console.log(unique);
         if(unique){
+        this.setState({
+                catAdd: true
+              });
+              setTimeout(()=>{
+                this.setState({
+                  catAdd : false
+                })
+              }, 2000);
         this.props.dispatch(selectCat(cat, userPets, mLabId));
       }
       
@@ -104,6 +113,9 @@ export class SearchResults extends Component {
     <div>
       <Fade in={this.state.duplicateWarning} tag='h5' className='mt-3 duplicateWarning'>
         You already hab dis kitteh in your kennel, hooman!
+      </Fade>
+      <Fade in={this.state.catAdd} tag='h5' className='mt-3 catAdd'>
+        You have gained a new friend, hooman!
       </Fade>
       {this.props.results.map((pet, index)=>(
        <div key={index}>
