@@ -23,7 +23,7 @@ toggle() {
 render(){
 	console.log(this.props.personalityType);
 	let personality = this.props.personalityType;
-	if(personality === "N/A"){
+	if(personality === "N/A" || " "){
 		console.log('personalttype is not set');
 		return(
 			<div className='catSuggestion'>
