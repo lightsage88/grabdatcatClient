@@ -1,3 +1,11 @@
+a.navbar-brand{
+	font-size: 3vw;
+}
+
+a.nav-link {
+	font-size: 2vw;
+}
+
 nav.navbar.navbar-expand-md.navbar-light.bg-faded{
 	background: hotpink;
 	font-family: 'Crafty Girls', cursive;
@@ -10,6 +18,11 @@ button.mr-2.navbar-toggler, .navbar-toggler-icon   {
 	width: auto;
 	padding: 1vw;
 
+}
+
+div.collapse.show.navbar-collapse,
+div.collapsing.navbar-collapse{
+	background: hotpink;
 }
 
 

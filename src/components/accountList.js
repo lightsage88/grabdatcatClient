@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
+import './account.css';
 import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 import HumanData from './humanData'; 
 import UpdateForm from './updateForm';
@@ -55,7 +56,6 @@ return(
 	<div>
 		<section className='aboutYou'>
 
-			<h3>About You</h3>
 			<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>

@@ -32,7 +32,10 @@ componentWillMount() {
 
 		<div>
 	<NavBar />
-	<h1>Account</h1>
+	<h1 className='accountBanner'>Account
+		<h3 className='aboutYou'>About You</h3>
+	</h1>
+
 	<AccountList accountData={this.props.accountData}/>
 
 		</div>

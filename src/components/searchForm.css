@@ -1,3 +1,7 @@
+
+#zipCode{
+	position: relative;
+}
 input{
 	width: auto;
 }
@@ -6,23 +10,79 @@ input{
 	width: auto;
 }
 
+div.form-group{
+	background: black;
+}
+
 button{
 	font-family: 'Delius Swash Caps', cursive;
 }
 
 @media only screen and (min-width: 1000px) {
 	form.searchForm {
-		background: white;
+		background: black;
+		height: auto;
+		position: relative;
+		margin-bottom: 21vw;
 	}
 	label.catSearchLabel{
 		font-size: 2vw;
-		position: absolute;
+		position: relative;
+		font-weight: bolder;
 	}
-	.catZipCodeSearch{
+	/*.catZipCodeSearch{
 		font-size:1.4vw;
 		position: relative;
-		bottom: 31vw;
+		bottom: 30.5vw;
 		left: 5vw;
+		
+	}*/
+
+	#zipCodeLabel{
+		left: 35%;
+		top:12vw;
+		position: absolute;
+		transform: rotate(90deg);
+
+	}
+
+	.catZipCodeSearch {
+		min-width: 24.5vw;
+		width: auto;
+		height: auto;
+		min-height: 2.5vw;
+		left: 35vw;
+		bottom:19.5vw;
+	}
+
+
+
+	section.searchButtonGroup {
+		    position: absolute;
+    /* border: solid white; */
+    /* bottom: 5.5vw; */
+    margin: auto 40%;
+    height: 5vw;
+    width: 10vw;
+	}
+
+	#seekButton, #clearButton {
+		position: absolute;
+		bottom: 2vw;
+	}
+
+	#seekButton {
+		right: 20%;
+	}
+
+	#clearButton {
+		left: 20%;
+	}
+
+	h4.resultsWillAppear{
+		position: absolute;
+		bottom: 9vw;
+
 	}
 
 }

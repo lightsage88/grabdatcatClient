@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './app.css';
+// import './app.css';
 import './home.css';
 // import {
 //   Collapse,
@@ -60,7 +60,7 @@ export class Home extends Component {
     }
    
     return (
-    <div>
+    <div className='homeBody'>
       <NavBar />
       <CatSuggestion />
       <HomeGreet  firstName={this.props.firstName}/>

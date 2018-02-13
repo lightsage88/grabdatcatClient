@@ -63,7 +63,7 @@ export class SearchResults extends Component {
                 this.setState({
                   duplicateWarning : false
                 })
-              }, 2000);
+              }, 3500);
         return;  
        
         } else {
@@ -82,7 +82,7 @@ export class SearchResults extends Component {
                 this.setState({
                   catAdd : false
                 })
-              }, 2000);
+              }, 3500);
         this.props.dispatch(selectCat(cat, userPets, mLabId));
       }
       
@@ -100,17 +100,17 @@ export class SearchResults extends Component {
 
 
   //get pets in state and render a component around them...??
-  if(!this.props.results){
+  if((!this.props.results)|| this.props.results.length===0 ){
     return(
       <div>
-        <h4 className='resultsWillAppear'>Results will appear here</h4>
+        <h4 className='resultsWillAppear'>Results will appear below</h4>
       </div>
       );
   } 
 
 
     return (
-    <div>
+    <div className='searchResults'>
       <Fade in={this.state.duplicateWarning} tag='h5' className='mt-3 duplicateWarning'>
         You already hab dis kitteh in your kennel, hooman!
       </Fade>
@@ -122,12 +122,12 @@ export class SearchResults extends Component {
           <li className='catEntry'>
             <h4 className='petInfo petName'>{pet.name}</h4>
             <img className='petMedia' src={pet.media} alt ='Cat' />
-            <ul>
-              <li className='petInfo petAge'>{pet.age}</li>
-              <li className='petInfo petSex'>{pet.sex}</li>
-              <li className='petInfo petBreed'>{pet.breed}</li>
-              <li className='petInfo petEmail'>email: {pet.contactEmail}</li>
-              <li className='petInfo petPhone'>phone: {pet.contactPhone}</li>
+            <ul className='catDetails'>
+              <li className='petInfo petAge'>AGE: {pet.age}</li>
+              <li className='petInfo petSex'>GENDER: {pet.sex}</li>
+              <li className='petInfo petBreed'>BREED: {pet.breed}</li>
+              <li className='petInfo petEmail'>EMAIL: {pet.contactEmail}</li>
+              <li className='petInfo petPhone'>PHONE: {pet.contactPhone}</li>
             </ul>
             <p>{pet.description}</p>
             <Button className='addCatButton' onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>

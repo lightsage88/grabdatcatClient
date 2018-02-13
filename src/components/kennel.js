@@ -64,7 +64,7 @@ if((catsInState === undefined) || (catsInState.length===0)){
 	return(
 		<div>
 		<NavBar />
-		<h1>CAT KENNEL</h1>
+		<h1 className='catKennelBanner'>CAT KENNEL</h1>
 			<Jumbotron>
 				<h1 className='display-3'>Oh Dear,<br/>No Kittehs In Here!</h1>
 				<p className='lead'>Oooh Hooman, you must go to 'HOME' and search for kittehs, hooman...</p>
@@ -77,12 +77,13 @@ if((catsInState === undefined) || (catsInState.length===0)){
 	<div key={index}>
 		<Card>
 			<CardBody>
-				<CardTitle>{cat.name} / {cat. breed} / {cat.sex} / {cat.age} </CardTitle>
-				<CardImg className='catImage' width='auto' height='auto' src={cat.media} alt="Image Unavailable" />
+				<CardTitle className='catName'>{cat.name}</CardTitle> 
+								<CardImg className='catImage' width='auto' height='auto' src={cat.media} alt="Image Unavailable" />
+
+				<CardTitle className='catDetails'>BREED: {cat. breed}<br/>SEX: {cat.sex}<br/>AGE: {cat.age}<br/>PH#: {cat.contactPhone}<br/>EMAIL: {cat.contactEmail}</CardTitle>
+				
 	   				<CardText>{cat.description}</CardText>	
- 					<span>Contact Phone:<strong>{cat.contactPhone}</strong></span>
- 					<br/>
- 					<span>Contact Email:<strong>{cat.contactEmail}</strong></span>
+ 				
 	   		</CardBody>
 	   			<Button onClick={()=>this.removeCat(cat.id)}className='removeCat' type='button'>Remove Cat</Button>
 		</Card>
@@ -91,7 +92,7 @@ if((catsInState === undefined) || (catsInState.length===0)){
 	return (
 		<div>
 			<NavBar />
-			<h1>CAT KENNEL</h1>
+			<h1 className='catKennelBanner'>CAT KENNEL</h1>
 			<main className='content'>
 				{kennelCats}
 			</main>

@@ -4,19 +4,73 @@
 		rgba(0,0,0,0.8)
 		),
 	url('../staticAssets/markerCats.jpg');
-	background-size: cover;
+	background-size: contain;
 
+}
+
+p.card-text{
+	font-size: 5.5vw;
 }
 
 .card{
 	background:0;
 	color: white;
 	box-sizing:content-box;
-	border: .31vw solid lime;
+	border: .31vw solid cyan;
 }
 
 .catImage {
 	height: auto;
+	min-height: 40vw;
 	width: auto;
-	margin: auto 25%;
+	max-width: 52vw;
+	margin: auto 1%;
+	float:left;
+}
+
+.catKennelBanner {
+	color: hotpink;
+	background: black;
+	font-family: 'Crafty Girls', cursive;
+}
+
+.catName {
+	transform: rotate(-10deg);
+	background: 0;
+	float: right;
+	color: red;
+	font-size: 10vw;
+}
+
+.catDetails {
+	clear: both;
+	text-align: left;
+	font-size: 4vw;
+	padding: 2vw;
+}
+
+
+@media only screen and (min-width: 1000px) {
+	img.catImage.card-img{
+		max-height: 20vw;
+		height: auto;
+		min-height: 5vw;
+	}	
+
+	div.card {
+		padding: 0 3vw;
+	}
+
+	.catDetails{
+	clear: none;
+    text-align: left;
+    font-size: 2vw;
+    padding: 2vw;
+    background: 0;
+	}
+
+	p.card-text {
+		font-size: 1.5vw;
+	}
+
 }

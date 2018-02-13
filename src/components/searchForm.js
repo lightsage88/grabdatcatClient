@@ -139,14 +139,14 @@ export class SearchForm extends React.Component {
 
 
         <FormGroup>
-          <Label className='catSearchLabel'for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
+          <Label id='zipCodeLabel' className='catSearchLabel'for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
           <Input className='catZipCodeSearch' onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
-        
-        <Button>SEEK!</Button>
+        <section className='searchButtonGroup'>
+        <Button id='seekButton'>SEEK!</Button>
         <br/>
-        <Button onClick={()=>this.clearResults()}>CLEAR!</Button>
-
+        <Button id='clearButton' onClick={()=>this.clearResults()}>CLEAR!</Button>
+        </section>
       </Form>
     );
   }

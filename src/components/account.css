@@ -1,15 +1,46 @@
+/*html {
+	background-color: white;
+}*/
+
 img.profilePic, .catImage {
 	max-height: 35vw;
 	max-width: 35vw;
 }
 
+h1.accountBanner{
+	font-family: 'Crafty Girls', cursive;
+}
+
+h3.aboutYou{
+	font-family: 'Crafty Girls', cursive;
+	background: white;
+	border: 0;
+}
+
+section.aboutYou{
+	background: white;
+}
+
+.humanDataItem{
+	font-family: 'Delius Swash Caps', cursive;
+}
+
 .removeCat {
 	background: red;
 	width: 30%;
-	
-
 }
 
 .humanDataItem{
 	color: black;
+}
+
+h5.modal-title {
+	background: white;
+}
+
+@media only screen and (min-width: 1000px) {
+	li.humanDataItem.list-group-item {
+		width: auto;
+		max-width: 33vw;
+	}
 }
