@@ -80,7 +80,7 @@ if((catsInState === undefined) || (catsInState.length===0)){
 				<CardTitle className='catName'>{cat.name}</CardTitle> 
 								<CardImg className='catImage' width='auto' height='auto' src={cat.media} alt="Image Unavailable" />
 
-				<CardTitle className='catDetails'>BREED: {cat. breed}<br/>SEX: {cat.sex}<br/>AGE: {cat.age}<br/>PH#: {cat.contactPhone}<br/>EMAIL: {cat.contactEmail}</CardTitle>
+				<CardTitle className='catDetails'>BREED: {cat.breed}<br/>SEX: {cat.sex}<br/>AGE: {cat.age}<br/>PH#: {cat.contactPhone}<br/>EMAIL: {cat.contactEmail}</CardTitle>
 				
 	   				<CardText>{cat.description}</CardText>	
  				

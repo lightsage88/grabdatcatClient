@@ -80,6 +80,9 @@ render(){
 			break;
 		case 'ENTJ':
 			suggestion = 'Siamese';
+			break;
+		default: 
+		suggestion = '';
 			
 
 	}
