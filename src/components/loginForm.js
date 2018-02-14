@@ -6,7 +6,7 @@ import {Button} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import store from '../store';
-import {loginUser, loginUserSuccess, protectedEndPointTesting, logOutUser} from '../actions/index.js';
+import {loginUser, protectedEndPointTesting, logOutUser} from '../actions/index.js';
 
 
 export class LoginForm extends React.Component {

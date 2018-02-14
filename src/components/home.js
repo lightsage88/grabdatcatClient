@@ -21,7 +21,7 @@ import NavBar from './navBar';
 import {Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
-import {loginUserSuccess, persistData} from '../actions/index.js';
+import {persistData} from '../actions/index.js';
 import CatSuggestion from './catSuggestion';
 import searchPicture from '../staticAssets/gitHubIcon.png';
 import {connect} from 'react-redux';

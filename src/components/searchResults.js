@@ -41,6 +41,14 @@ export class SearchResults extends Component {
     if((userPets.length === 0) || (userPets === undefined)){
         console.log('first cat!');
         this.props.dispatch(selectCat(cat, userPets, mLabId));
+        this.setState({
+                catAdd: true
+              });
+              setTimeout(()=>{
+                this.setState({
+                  catAdd : false
+                })
+              }, 3500);
         return;
     }
     console.log('you should not see me either');

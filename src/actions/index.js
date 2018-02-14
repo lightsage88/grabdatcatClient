@@ -3,7 +3,7 @@ import pic from '../staticAssets/blackCatAroundCorner.jpg';
 
 var jsonp = require('jsonp');
 require('es6-promise').polyfill();
-
+const {API_BASE_URL} = require('../config');
 const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
 
 
@@ -54,7 +54,7 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
 
 export const registerUser = (username, password, firstName, lastName, phoneNumber, emailAddress, mBTI) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users/', 
+		fetch(`${API_BASE_URL}/api/users/`, 
 			{
 			method: 'POST',
 			headers:{
@@ -83,7 +83,7 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 
 export const loginUser = (username, password) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/auth/login/', 
+		fetch(`${API_BASE_URL}/api/auth/login/`, 
 			{
 			method: 'POST',
 			headers:{
@@ -130,7 +130,7 @@ export const loginUser = (username, password) => {
 export const persistData = (mLabId) => {
 	console.log('persistData running from action index');
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users/persist/', 
+		fetch(`${API_BASE_URL}/api/users/persist/`, 
 			{
 			method: 'POST',
 			headers:{
@@ -160,7 +160,7 @@ export const persistData = (mLabId) => {
 export const protectedEndPointTesting = () => {
 	return (dispatch) => {
 		const token = localStorage.getItem('token');
-		fetch('http://localhost:8080/api/protected/', 
+		fetch(`${API_BASE_URL}/api/protected/`, 
 			{
 			method: 'GET',
 			headers:{
@@ -177,7 +177,7 @@ export const protectedEndPointTesting = () => {
 
 export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, mBTI) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users', 
+		fetch(`${API_BASE_URL}/api/users`, 
 			{
 			method: 'PUT',
 			headers:{
@@ -204,7 +204,7 @@ export const updateUser = (_id, firstName, lastName, emailAddress, phoneNumber, 
 
 export const deleteUser = (id) =>{
 	return(dispatch) => {
-		fetch('http://localhost:8080/api/users',
+		fetch(`${API_BASE_URL}/api/users`,
 		{
 			method: "DELETE",
 			headers: {
@@ -279,7 +279,7 @@ export const selectCat = (cat, userPets, mLabId) => {
 
 		console.log(cat);
 		console.log(userPets);
-		fetch('http://localhost:8080/api/users/addCat', 
+		fetch(`${API_BASE_URL}/api/users/addCat`, 
 			{
 			method: 'PUT',
 			headers:{
@@ -307,7 +307,7 @@ export const addCat = (cat) => ({
 
 export const roundUpCats = (mLabId) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users/roundUpCats',
+		fetch(`${API_BASE_URL}/api/users/roundUpCats`,
 			{
 			method: 'POST',
 			headers: {
@@ -326,7 +326,7 @@ export const roundUpCats = (mLabId) => {
  
 export const deleteCat = (mLabId, catId) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/api/users/deleteCat',
+		fetch(`${API_BASE_URL}/api/users/deleteCat`,
 		{
 			method: 'PUT',
 			headers: {
@@ -339,6 +339,7 @@ export const deleteCat = (mLabId, catId) => {
 			console.log('finished delete cat so far...');
 			console.log(json);
 			dispatch(updateReduxState(catId));
+			window.location = '/kennel';
 		})
 		.catch(error => console.log(error));
 	}

@@ -2,10 +2,10 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, Jumbotron, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
-import {roundUpCats, deleteCat, loginUserSuccess, persistData} from '../actions/index';
+import {roundUpCats, deleteCat, persistData} from '../actions/index';
 
 import './kennel.css';
 //have a componentDidMount
@@ -42,7 +42,7 @@ removeCat(number){
 	let catId = number;
 	console.log('removeCat running..');
 	this.props.dispatch(deleteCat(mLabId, catId));
-	window.location = '/kennel';
+	// window.location = '/kennel';
 	
 
 
