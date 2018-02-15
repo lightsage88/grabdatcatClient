@@ -8,7 +8,7 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
 
 
 
- const registerUserSuccess = (user) => ({
+ export const registerUserSuccess = (user) => ({
  	type: 'REGISTER_USER_SUCCESS',
  	user
  });
@@ -64,8 +64,8 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 		})
 		.then(response => response.json())
 		.then(json => {
-			console.log('for to get data stuff');
-			console.log(json);
+			// console.log('for to get data stuff');
+			// console.log(json);
 			// const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
 			// console.log(firstName);
 			dispatch(registerUserSuccess(json))
@@ -93,8 +93,11 @@ export const loginUser = (username, password) => {
 		})
 		.then(response => response.json())
 		.then(json => {
+			// console.log(json);
 			const {authToken} = json;
 			const {userData} = json;
+			// console.log('some userdata');
+			// console.log(userData);
 			const firstName = userData.firstName;
 			const lastName = userData.lastName;
 			const phoneNumber = userData.phoneNumber;
@@ -112,8 +115,8 @@ export const loginUser = (username, password) => {
 			localStorage.setItem('cats', userData.cats);
 			localStorage.setItem('_id', userData._id);
 			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id));
-			console.log(username);
-			console.log(password);
+			// console.log(username);
+			// console.log(password);
 			window.location = '/home';
 			// dispatch(userDataGrab(username,password));
 			//put authtoken and user id in state inside local storage then redirect
@@ -140,9 +143,8 @@ export const persistData = (mLabId) => {
 		})
 		.then(response => response.json())
 		.then(json => {
-			console.log(json);
 			const userData = json;
-			console.log(userData);
+			// console.log(userData);
 			const authToken = localStorage.getItem('token');
 			const firstName = userData.firstName;
 			const lastName = userData.lastName;
@@ -225,7 +227,7 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	console.log('...seekCat action beind dispatched...');
 	console.log(age);
 	return(dispatch)=>{
-		jsonp(`http://api.petfinder.com/pet.find?key=${petFinderKey}
+		jsonp(`https://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
 			&count=10
 			&breed=${breed}
