@@ -32,6 +32,8 @@ export default class Landing extends Component {
           <h1 className="App-title">GRAB DAT CAT</h1>
           <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which
           cat breed will suit you best!</span>
+          <br/><br/>
+          <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
         </header>
         <LoginForm />
         <span className='notRegistered'>Not registered? Click the register button to fix that, hooman.</span>
