@@ -40,8 +40,19 @@ div.modal-header, div.modal-body, h5.modal-title, form.editAccountModalForm {
 	background: black;
 }
 
+button.close{
+	color: white;
+}
+
 form.editAccountModalForm label{
 	font-size: 5.5vw;
+}
+
+.accountEditMBTILabel{
+ 	max-width: 50%;
+ 	margin-top:5%;
+ 	margin-bottom: 10%;
+
 }
 
 @media only screen and (min-width: 1000px) {

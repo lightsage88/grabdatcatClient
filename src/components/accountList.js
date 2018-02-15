@@ -21,6 +21,7 @@ toggle(){
 	this.setState({
 		modal: !this.state.modal
 	});
+
 }
 
 toggle2(){

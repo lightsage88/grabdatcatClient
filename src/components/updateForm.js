@@ -73,6 +73,10 @@ changeValue(e){
 
   render() {
   	console.log(this.state);
+    if(this.state._id === undefined){
+      console.log('reloading page...');
+      window.location = '/account';
+    }
 
   	let accountData = this.props.props.accountData;
   	
