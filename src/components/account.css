@@ -34,8 +34,14 @@ section.aboutYou{
 	color: black;
 }
 
-h5.modal-title {
-	background: white;
+
+/*MODAL STUFF MOBILE */
+div.modal-header, div.modal-body, h5.modal-title, form.editAccountModalForm {
+	background: black;
+}
+
+form.editAccountModalForm label{
+	font-size: 5.5vw;
 }
 
 @media only screen and (min-width: 1000px) {

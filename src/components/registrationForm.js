@@ -72,8 +72,8 @@ class RegistrationForm extends React.Component {
           validate={[required, nonEmpty]}/>
         </FormGroup>
         <FormGroup>
-          <Label htmlFor='passwordFirst'>PASSWORD</Label>
-          <Field class='form-control' type='password' name='password' id='passwordFirst' 
+          <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
+          <Field class='form-control' placeholder='at least 10 characters!' type='password' name='password' id='passwordFirst' 
           component={InputX}
           validate={[required, nonEmpty]}/>
         </FormGroup>

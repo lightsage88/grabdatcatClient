@@ -57,11 +57,9 @@ return(
 		<section className='aboutYou'>
 
 			<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle}>EDIT ACCOUNT</ModalHeader>
           <ModalBody>
-         	<span>Here is where you're going to set up a form which will interact with an action to be defined that will allow
-         	you to change the user's info</span>
-         		<UpdateForm props={this.props} />
+         	  <UpdateForm props={this.props} />
 	          </ModalBody>
 	                 
 	        </Modal>

@@ -78,8 +78,7 @@ changeValue(e){
   	
     return (
     <div>
-      <Form onSubmit={(e)=>this.handleSubmit(e)}>
-        <h5>UPDATE</h5>
+      <Form className='editAccountModalForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <FormGroup>
           <Label htmlFor='firstName' >FIRST NAME</Label>
           <Input className='form-control' name='firstName' 
@@ -112,7 +111,7 @@ changeValue(e){
         </FormGroup>
         
         <FormGroup>
-          <Label for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
+          <Label className='accountEditMBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
           <Input type="select" onChange={(e)=>this.changeValue(e)} name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
             <option value='N/A'>N/A</option>
             <option value="ISFJ">ISFJ</option>
