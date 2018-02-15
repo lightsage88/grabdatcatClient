@@ -227,7 +227,7 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	console.log('...seekCat action beind dispatched...');
 	console.log(age);
 	return(dispatch)=>{
-		jsonp(`http://api.petfinder.com/pet.find?key=${petFinderKey}
+		jsonp(`https://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
 			&count=10
 			&breed=${breed}
