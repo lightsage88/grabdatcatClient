@@ -5,7 +5,7 @@ import {Image} from './image';
 
 describe('<Image/>', ()=>{
 	it('Renders without crashing', ()=>{
-		mount(<Image/>);
+		shallow(<Image/>);
 	});
 
 });

@@ -279,6 +279,32 @@ describe('protectedEndPointTesting', ()=> {
 	});
 });
 
+describe('updateUser', ()=> {
+	it('should dispatch updateUserSuccess', ()=>{
+		const json = {
+				firstName : 'testperson',
+				lastName : 'test',
+				phoneNumber : '555-555-5555',
+				emailAddress : 'a@co.com',
+				mBTI : 'INTP'
+				};
+
+		global.fetch = jest.fn().mockImplementation(()=>
+			Promise.resolve({
+				ok: true,
+				json(){
+					return json;
+				}
+			})
+		);
+
+		const dispatch = jest.fn();
+		return updateUser()(dispatch);
+		expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/users`);
+		expect(dispatch).toHaveBeenCalledWith(json);
+	});
+});
+
 
 
 

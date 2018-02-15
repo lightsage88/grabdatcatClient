@@ -3,7 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import './loginForm.css'
 import {Button} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import store from '../store';
 import {loginUser, protectedEndPointTesting, logOutUser} from '../actions/index.js';
@@ -48,6 +48,7 @@ export class LoginForm extends React.Component {
 		
 
 	return(
+	<Router>
 		<div className='loginForm'>
 		<form className='loginForm' onSubmit={(e)=> this.handleSubmit(e)}>
 			<input id='username' type='text' name='username' placeholder='USERNAME'/>
@@ -58,6 +59,7 @@ export class LoginForm extends React.Component {
 			<Link to='/registration'><Button className='loginFormButtons'>REGISTER</Button></Link>
 		</form>
 		</div>
+	</Router>
 		);
 	}
 }
