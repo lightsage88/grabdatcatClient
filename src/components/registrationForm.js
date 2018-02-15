@@ -1,9 +1,12 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import {reduxForm, Field} from 'redux-form';
 import {required, nonEmpty, email} from '../validators';
 import {registerUser} from '../actions/index.js';
 import InputX from './input';
+import './registration.css';
+import './app.css';
+
 
 class RegistrationForm extends React.Component {
   onSubmit(values){
@@ -35,9 +38,10 @@ class RegistrationForm extends React.Component {
 
   render() {
     return (
+      <div>
       <Form onSubmit={(e)=>this.handleSubmit(e)}>
-        <h5>REGISTRATION</h5>
-        <h4>Enter info below, hooman</h4>
+        <h4 className='registrationBanner'>REGISTRATION</h4>
+        <h5>Enter info below, hooman</h5>
         <FormGroup>
           <Label htmlFor='firstName' >FIRST NAME</Label>
           <Field class='form-control' name='firstName' 
@@ -58,26 +62,26 @@ class RegistrationForm extends React.Component {
           <Field class='form-control' type="text" name="phoneNumber" id="phoneNumber" 
           component={InputX}/>
         </FormGroup>
-
-        <FormGroup>
+        <section className='desktopEscapeClause'>
+        <FormGroup id='emailAddress'>
           <Label htmlFor="emailAddress">E-MAIL</Label>
             <Field class='form-control' type="email" name="emailAddress" id="emailAddress" 
             component={InputX}
             validate={[required, nonEmpty, email]}/>
         </FormGroup>
-        <FormGroup>
+        <FormGroup id='username'>
           <Label htmlFor="username">USERNAME</Label>
           <Field class='form-control' type="text" name="username" id="username" 
           component={InputX}
           validate={[required, nonEmpty]}/>
         </FormGroup>
-        <FormGroup>
+        <FormGroup id='password'>
           <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
           <Field class='form-control' placeholder='at least 10 characters!' type='password' name='password' id='passwordFirst' 
           component={InputX}
           validate={[required, nonEmpty]}/>
         </FormGroup>
-        <FormGroup>
+        <FormGroup id='mBTI'>
           <Label className='mBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
           <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
             <option value='N/A'>N/A</option>
@@ -98,10 +102,12 @@ class RegistrationForm extends React.Component {
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
+        </section>
         <Button color='info' disabled={
           this.props.pristine || this.props.submitting
         }>SUBMIT</Button>
       </Form>
+      </div>
     );
   }
 }

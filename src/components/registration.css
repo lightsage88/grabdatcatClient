@@ -1,9 +1,13 @@
-form {
+/*form {
 	background: linear-gradient(
 		rgba(0,0,0,0.6),
 		rgba(0,0,0,0.6)
 		),
 	url('../staticAssets/cats of the world.jpg');
+}*/
+
+form {
+	background: black;
 }
 
 h1{
@@ -12,18 +16,22 @@ h1{
 }
 
 h4 {
-	background: white;
+	background: black;
+	text-align: center;
 	margin-bottom: 2vw;
+	color: hotpink;
+	font-family: 'Crafty Girls', cursive;
 }
 
 
 label {
 	color: red;
-	font-size: 4vw;
+	font-size: 5vw;
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-22deg);
 	position: relative;
 	top: 2vw;
+	font-weight: bold;
 }
 
 label.mBTILabel {
@@ -60,3 +68,99 @@ button.btn, .btn-info.disabled, .btn-info:disabled {
 
 
 
+@media only screen and (min-width: 1000px){
+	h4.registrationBanner{
+		font-size: 3vw;
+	}
+
+	h5{
+		margin-bottom: 2vw;
+	}
+
+	form {
+		height: auto;
+		position: relative;
+	}
+
+	
+
+	label {
+	color: red;
+	font-size: 1vw;
+	font-family: 'Delius Swash Caps', cursive;
+	transform: rotate(-22deg);
+	position: relative;
+	top: 1vw;
+	font-weight: bold;
+	}
+
+	input{
+		width: auto;
+		height: auto;
+		max-height: 2vw;
+		min-width: 8vw;
+		position: relative;
+		top: -1vw;
+	}
+
+	div.form-input {
+		width: 25%;
+	}
+
+	div#emailAddress {
+		/*position: absolute;
+		top: 15%;
+		left: 25%;
+		width: auto;
+		min-width: 13vw;*/
+		background: 0;
+	}
+
+	div#username{
+	/*position: absolute;*/
+/*		top: 40.5%;
+*/		background: 0;
+/*		left: 25%;
+*/	}
+
+	div#password{
+		background: 0;
+		/*position: absolute;
+		top: 60%;
+		left: 25%;*/
+	}
+
+	label.mBTILabel {
+		top: 0;
+		position: relative;
+	}
+
+	div#mBTI {
+		background: 0;
+		/*position: absolute;
+		top: 19%;
+		left: 50%;*/
+	}
+	
+	button.btn.btn-info.disabled, button.btn.btn-info{
+		position: fixed;
+		top: 60%;
+		left: 25%;
+	}
+
+
+	div.App{
+		background: black;
+
+	}
+	
+	section.desktopEscapeClause{
+		background: transparent;
+		width: auto;
+		max-width: 28%;
+		position: absolute;
+		top: 10%;
+		left: 20%;
+	}
+
+}
