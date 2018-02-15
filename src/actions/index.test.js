@@ -306,6 +306,12 @@ describe('updateUser', ()=> {
 });
 
 
+// describe('deleteUser', ()=>{
+// 	it('should dispatch deleteUserSuccess', ()=>{
+// 		const
+// 	})
+})
+
 
 
 

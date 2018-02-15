@@ -1,11 +1,11 @@
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+// import React from 'react';
+// import {shallow, mount} from 'enzyme';
 
-import {Home} from './home';
+// import {Home} from './home';
 
-describe('<Home/>', ()=>{
-	it('Renders without crashing', ()=>{
-		mount(<Home/>);
-	});
+// describe('<Home/>', ()=>{
+// 	it('Renders without crashing', ()=>{
+// 		mount(<Home/>);
+// 	});
 
-});
+// });
