@@ -36,9 +36,11 @@ export default class Landing extends Component {
           <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
         </header>
         <LoginForm />
+        <section className='cheekyCat'>
         <span className='notRegistered'>Not registered? Click the register button to fix that, hooman.</span>
         <br/>
         <Image className='notRegisteredPic' imageAddress={catPicture}/>
+        </section>
       </div>
       );
   }

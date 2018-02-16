@@ -45,6 +45,7 @@ form {
 	}
 	form.loginForm{
 		float: left;
+		background: 0;
 
 	}
 	input#username, input#password{
@@ -60,12 +61,7 @@ form {
 		margin: 1vw 0;
 	}
 
-	img.notRegisteredPic{
-		height: 14vw;
-		position: relative;
-		top: 2vw;
-		right: 10vw;
-	}
+	
 
 }
 

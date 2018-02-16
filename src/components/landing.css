@@ -25,7 +25,7 @@ h1.App-title{
 }
 
 form.loginForm {
-	background: 0 ;
+	background: rgba(0,0,0,0.75);
 }
 
 .App-header {
@@ -75,14 +75,19 @@ form.loginForm {
 
 @media only screen and (min-width: 1000px) {
 	header.App-header {
-		font-size: 2.5vw;
+		font-size: 1.5vw;
 		color:black;
 	}
 	span.notRegistered{
-		font-size: 2.5vw;
+		font-size: 1.5vw;
 		padding: 1vw;
+		position: absolute;
 	}
-
+	img.notRegisteredPic{
+		top: 7vw;
+		right: 2vw;
+		height: 12vw;
+	}
 	span.notRegistered:after{
 		
     content: '';
@@ -97,6 +102,17 @@ form.loginForm {
     border-right: 0;
     margin-left: 92px;
     margin-bottom: -44px;
+	}
+
+	div.loginForm {
+		height: 21vw;
+		padding: 3vw;
+	}
+
+	.cheekyCat{
+		position: relative;
+		top: -23vw;
+		right: 17vw;
 	}
 
 }
