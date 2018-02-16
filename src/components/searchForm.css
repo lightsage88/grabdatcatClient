@@ -101,7 +101,7 @@ button{
 	}
 
 	#clearButton {
-		left: 60%;
+		left: 70%;
 	}
 
 	#zipCode {
@@ -115,7 +115,10 @@ button{
 		top:40%;
 		background: transparent;
 		display: none;
+	}
 
+	select.form-control {
+		min-width: 11vw;
 	}
 
 }

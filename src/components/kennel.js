@@ -19,10 +19,15 @@ export class Kennel extends React.Component {
 		}
 	}
 componentDidMount() {
-	console.log('kennel componentDidMount going...');
+	let number = (Math.random()*3500);
+	setInterval(()=>{
+		console.log('kennel componentDidMount going...');
     const mLabId = localStorage.getItem('_id');
     this.props.dispatch(persistData(mLabId));
 	this.props.dispatch(roundUpCats(mLabId));
+
+	}, number);
+	
 }
 
 
@@ -56,6 +61,7 @@ if(!catsInState>0){
 	return(
 		<Jumbotron>
 				<h1 className='display-3'>Wait, Hooman<br/>We be rounding up them kittehs</h1>
+				<div className='loader'></div>
 				<p className='lead'>Oooh Hooman, patience is a virtue, hooman...</p>
 		</Jumbotron>
 		);

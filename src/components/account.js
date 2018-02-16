@@ -30,7 +30,7 @@ componentWillMount() {
     }
 	return(
 
-		<div>
+		<div className='accountArea'>
 	<NavBar />
 	<h1 className='accountBanner'>Account
 		<h3 className='aboutYou'>About You</h3>

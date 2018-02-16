@@ -2,6 +2,10 @@
 	background-color: white;
 }*/
 
+div.accountArea {
+	background: white;
+}
+
 img.profilePic, .catImage {
 	max-height: 35vw;
 	max-width: 35vw;
@@ -60,4 +64,8 @@ form.editAccountModalForm label{
 		width: auto;
 		max-width: 33vw;
 	}
+
+	
+
+
 }

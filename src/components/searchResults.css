@@ -53,6 +53,7 @@ button.addCatButton{
 	div.searchResults{
 		position: absolute;
 		top: 60vw;
+		width: 100%;
 	}
 
 	img.petMedia{
@@ -78,6 +79,7 @@ button.addCatButton{
 	ul.catDetails{
 /*		border: solid white;
 */		width: auto;
+max-width: 33vw;
 		margin: -2vw 30%;
 		padding-right: 3vw;
 		position: absolute;
