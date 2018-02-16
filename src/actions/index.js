@@ -225,7 +225,6 @@ export const deleteUser = (id) =>{
 
 export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	console.log('...seekCat action beind dispatched...');
-	console.log(age);
 	return(dispatch)=>{
 		jsonp(`https://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
@@ -279,8 +278,7 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 export const selectCat = (cat, userPets, mLabId) => {
 	return (dispatch) => {
 
-		console.log(cat);
-		console.log(userPets);
+		
 		fetch(`${API_BASE_URL}/api/users/addCat`, 
 			{
 			method: 'PUT',
@@ -319,6 +317,7 @@ export const roundUpCats = (mLabId) => {
 		})
 		.then(response => response.json())
 		.then(json => {
+			
 			console.log('..roundUpCats ran!');
 			console.log(json);
 		})

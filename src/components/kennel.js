@@ -18,19 +18,23 @@ export class Kennel extends React.Component {
 			loading:true
 		}
 	}
-componentDidMount() {
+
+componentWillMount(){
 	let number = (Math.random()*3500);
 	setInterval(()=>{
-		console.log('kennel componentDidMount going...');
+		this.setState({
+			loading: false
+		})
+	}, number);
+
+}
+
+componentDidMount() {
+	console.log('kennel componentDidMount going...');
     const mLabId = localStorage.getItem('_id');
     this.props.dispatch(persistData(mLabId));
 	this.props.dispatch(roundUpCats(mLabId));
-
-	}, number);
-	
 }
-
-
 
 
 
@@ -41,15 +45,11 @@ removeCat(number){
 	this.props.dispatch(deleteCat(mLabId, catId));
 	// window.location = '/kennel';
 	
-
-
 }
 
 render(){
-	console.log(this.props);
-	console.log(this.state);
+
 const catsInState = this.props.cats;
-console.log(catsInState);
 if(!localStorage.token){
 return(
   <Redirect to="/"/>
@@ -59,6 +59,7 @@ return(
 if(!catsInState>0){
 	
 	return(
+
 		<Jumbotron>
 				<h1 className='display-3'>Wait, Hooman<br/>We be rounding up them kittehs</h1>
 				<div className='loader'></div>
@@ -69,7 +70,6 @@ if(!catsInState>0){
 }
 
 if((catsInState === undefined) || (catsInState.length===0)){
-	console.log('catsInState is empty');
 	return(
 		<div>
 		<NavBar />
@@ -81,7 +81,6 @@ if((catsInState === undefined) || (catsInState.length===0)){
 		</div>
 		);
 } else if(catsInState.length >= 1) {
-	console.log('ooh boy, here come dem kittehs');
 	const kennelCats = catsInState.map((cat, index) => 
 	<div key={index}>
 		<Card>

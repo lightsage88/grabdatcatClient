@@ -306,16 +306,102 @@ describe('updateUser', ()=> {
 });
 
 
-// describe('deleteUser', ()=>{
-// 	it('should dispatch deleteUserSuccess', ()=>{
-// 		const
-// 	})
-})
+describe('deleteUser', ()=>{
+	it('should dispatch deleteUserSuccess', ()=>{
+		const json = {message: 'was deleted!'};
+		global.fetch =jest.fn().mockImplementation(()=>
+			Promise.resolve({
+				ok: true,
+				json(){
+					return json;
+				}
+			})
+		);
 
+		const dispatch = jest.fn();
+		return deleteUser()(dispatch);
+		expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/users`);
+		expect(dispatch).toHaveBeenCalledWith(json);
+	});
+});
 
+describe('seekCat', ()=>{
+	it('should dispatch petsSearchSuccess', ()=>{
+		const json = ['bochocan'];
 
+		global.fetch = jest.fn().mockImplementation(()=>
+			Promise.resolve({
+				ok: true,
+				json(){
+					return json;
+				}
+			})
+		);
 
+		const dispatch = jest.fn();
+		return seekCat()(dispatch);
+		expect(fetch).toHaveBeenCalledWith(`https://api.petfinder.com/pet.find?key=${petFinderKey}
+			&animal=cat
+			&count=10
+			&breed=${breed}
+			&color=${color}
+			&gender=${gender}
+			&age=${age}
+			&location=${zipCode}
+			&output=full&format=json`);
+		expect(dispatch).toHaveBeenCalledWith(json);
+	});
+});
 
+describe('selectCat', ()=>{
+	it('should dispatch addCat', ()=>{
+		const cat = {age: 'Young',
+			breed:"Domestic Shorthair",
+		contactEmail: 'TheLittleLionFoundation@gmail.com', 
+		contactPhone:'562)-212-4411', 
+		id: '40927426', 
+		media: 'https://photos.petfinder.com/photos/pets/40927426/1/?bust=1518388596&width=500&-x.jpg', 
+		name: 'Brandon', 
+		sex:'M',
+		_id: '5a7b55710dde882534dcd810'};
+	global.fetch = jest.fn().mockImplementation(()=>
+		Promise.resolve({
+			ok:true,
+			json(){
+				return cat;
+			}
+		})
+	);
+	const dispatch = jest.fn();
+	return selectCat()(dispatch);
+	expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/users/addCat`);
+	expect(dispatch).toHaveBeenCalledWith(json);
+	});
+});
+
+describe('foundADuplicate', ()=>{
+	it('should return the action', ()=>{
+		const action = foundADuplicate();
+		expect(action.type).toEqual('FOUND_A_DUPLICATE');
+	});
+});
+
+describe('addCat', ()=> {
+	it('should return the action', ()=>{
+		const cat = {age: 'Young',
+			breed:"Domestic Shorthair",
+		contactEmail: 'TheLittleLionFoundation@gmail.com', 
+		contactPhone:'562)-212-4411', 
+		id: '40927426', 
+		media: 'https://photos.petfinder.com/photos/pets/40927426/1/?bust=1518388596&width=500&-x.jpg', 
+		name: 'Brandon', 
+		sex:'M',
+		_id: '5a7b55710dde882534dcd810'};
+		const action = addCat(cat);
+		expect(action.cat).toEqual(cat);
+		expect(action.type).toEqual('ADD_CAT');
+	});
+});
 
 
 

@@ -1,11 +1,11 @@
-// import React from 'react';
-// import {shallow, mount} from 'enzyme';
+import React from 'react';
+import {shallow, mount} from 'enzyme';
 
-// import {NavBar} from './navBar';
+import {NavBar} from './navBar';
 
-// describe('<NavBar/>', ()=>{
-// 	it('Renders without crashing', ()=>{
-// 		mount(<NavBar/>);
-// 	});
+describe('<NavBar/>', ()=>{
+	it('Renders without crashing', ()=>{
+		mount(<NavBar/>);
+	});
 
-// });
+});

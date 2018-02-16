@@ -1,11 +1,11 @@
-// import React from 'react';
-// import {shallow, mount} from 'enzyme';
+import React from 'react';
+import {shallow, mount} from 'enzyme';
 
-// import {App} from './app';
+import {App} from './app';
 
-// describe('<App/>', ()=>{
-// 	it('Renders without crashing', ()=>{
-// 		mount(<App/>);
-// 	});
+describe('<App/>', ()=>{
+	it('Renders without crashing', ()=>{
+		mount(<App/>);
+	});
 
-// });
+});

@@ -1,11 +1,11 @@
-// import React from 'react';
-// import {shallow, mount} from 'enzyme';
+import React from 'react';
+import {shallow, mount} from 'enzyme';
 
-// import {CatSuggestion} from './catSuggestion';
+import {CatSuggestion} from './catSuggestion';
 
-// describe('<CatSuggestion/>', ()=>{
-// 	it('Renders without crashing', ()=>{
-// 		mount(<CatSuggestion/>);
-// 	});
+describe('<CatSuggestion/>', ()=>{
+	it('Renders without crashing', ()=>{
+		mount(<CatSuggestion/>);
+	});
 
-// });
+});
