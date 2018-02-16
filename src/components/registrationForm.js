@@ -44,45 +44,39 @@ class RegistrationForm extends React.Component {
         <h5>Enter info below, hooman</h5>
         <FormGroup>
           <Label htmlFor='firstName' >FIRST NAME</Label>
-          <Field class='form-control' name='firstName' 
-          id='firstName' type="text" component={InputX}
-          validate={[required, nonEmpty]}
-          />
+          <input class='form-control' type='text' name='firstName' id='firstName' required/>
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="lastName">LAST NAME</Label>
-          <Field class='form-control' type="text" name="lastName" id="lastName" 
-          component={InputX}
-          validate={[required, nonEmpty]}/>
+          <input class='form-control' required type='text' name='lastName' id='lastName'/>
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="phoneNumber">PH #</Label>
-          <Field class='form-control' type="text" name="phoneNumber" id="phoneNumber" 
-          component={InputX}/>
+          <input required class='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
+          
         </FormGroup>
         <section className='desktopEscapeClause'>
         <FormGroup id='emailAddress'>
           <Label htmlFor="emailAddress">E-MAIL</Label>
-            <Field class='form-control' type="email" name="emailAddress" id="emailAddress" 
-            component={InputX}
-            validate={[required, nonEmpty, email]}/>
+          <input class='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
+            
         </FormGroup>
         <FormGroup id='username'>
           <Label htmlFor="username">USERNAME</Label>
-          <Field class='form-control' type="text" name="username" id="username" 
-          component={InputX}
-          validate={[required, nonEmpty]}/>
+          <input class='form-control' type='text' name='username' id='username' required/>
+         
         </FormGroup>
         <FormGroup id='password'>
           <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
-          <Field class='form-control' placeholder='at least 10 characters!' type='password' name='password' id='passwordFirst' 
-          component={InputX}
-          validate={[required, nonEmpty]}/>
+          <input class='form-control' type='password' required name='password' id='password' minLength='10'/> 
         </FormGroup>
+                </section>
+
         <FormGroup id='mBTI'>
           <Label className='mBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
+          <p className='dontKnow'><a href='https://www.16personalities.com/free-personality-test'>Don't know?</a></p>
           <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
             <option value='N/A'>N/A</option>
             <option value="ISFJ">ISFJ</option>
@@ -102,7 +96,6 @@ class RegistrationForm extends React.Component {
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
-        </section>
         <Button color='info' disabled={
           this.props.pristine || this.props.submitting
         }>SUBMIT</Button>

@@ -9,7 +9,7 @@
   background-repeat: repeat-y;
 }*/
 
-html{
+body, .App{
 	background: url('../staticAssets/preview.jpg');
 	background-size: contain;
 }

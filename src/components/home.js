@@ -60,7 +60,8 @@ export class Home extends Component {
     }
    
     return (
-    <div className='homeBody'>
+
+    <div className='App'>
       <NavBar />
       <CatSuggestion />
       <HomeGreet  firstName={this.props.firstName}/>

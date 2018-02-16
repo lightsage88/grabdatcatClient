@@ -51,9 +51,9 @@ export class LoginForm extends React.Component {
 	<Router>
 		<div className='loginForm'>
 		<form className='loginForm' onSubmit={(e)=> this.handleSubmit(e)}>
-			<input id='username' type='text' name='username' placeholder='USERNAME'/>
+			<input id='username' required type='text' name='username' placeholder='USERNAME'/>
 			<br/>
-			<input id='password' type='password' name='password' placeholder='PASSWORD'/>
+			<input id='password' required minLength='10' type='password' name='password' placeholder='PASSWORD'/>
 			<br/>
 			<Button className='loginFormButtons'>LOGIN</Button>
 			<Link to='/registration'><Button className='loginFormButtons'>REGISTER</Button></Link>

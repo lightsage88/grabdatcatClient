@@ -7,7 +7,7 @@
 }*/
 
 form {
-	background: black;
+	background: rgba(0,0,0,0.92);
 }
 
 h1{
@@ -15,12 +15,18 @@ h1{
 	margin: 0;
 }
 
+h5{
+	background: 0;
+}
+
 h4 {
-	background: black;
+	padding-top: 4vw;
+	background: 0;
 	text-align: center;
 	margin-bottom: 2vw;
 	color: hotpink;
 	font-family: 'Crafty Girls', cursive;
+	font-size: 5vw;
 }
 
 
@@ -39,20 +45,29 @@ label.mBTILabel {
 }
 
 .mBTIInput, option, select{
+	width: auto;
+	min-width: 30%;
 	max-width: 60%;
 	margin: auto 15%;
 	border: solid ;
 	border-width: 2px;
 	border-style: inset;
 	border-radius: 3vw;
-	background: black;
+	background: 0;
 	color: white;
 	font-family: 'Delius Swash Caps', cursive;
 }
 
-input {
-	background: black;
+input, .form-control {
+	background: 0;
 	color: white;
+
+}
+
+.dontKnow {
+	position: relative;
+	font-family: 'Delius Swash Caps', cursive;
+	font-size: 3.6vw;
 }
 
 .form-error {
@@ -66,47 +81,65 @@ button.btn, .btn-info.disabled, .btn-info:disabled {
 	min-width: 30%;
 }
 
+div.form-group {
+	background: 0;
+}
+
+
+
 
 
 @media only screen and (min-width: 1000px){
+
+	div.form-group {
+		width: fit-content;
+		display: inline-grid;
+		height: auto;
+		min-height: 12vw;
+		background: 0;
+	}
+
 	h4.registrationBanner{
 		font-size: 3vw;
 	}
 
 	h5{
 		margin-bottom: 2vw;
+		background: 0;
 	}
 
-	form {
+	/*form {
 		height: auto;
 		position: relative;
-	}
+	}*/
 
 	
 
 	label {
 	color: red;
-	font-size: 1vw;
+	font-size: 1.7vw;
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-22deg);
-	position: relative;
-	top: 1vw;
+/*	position: relative;
+*/	top: -3vw;
 	font-weight: bold;
 	}
 
-	input{
+	input, .form-control{
 		width: auto;
 		height: auto;
-		max-height: 2vw;
+		max-height: 3vw;
 		min-width: 8vw;
-		position: relative;
-		top: -1vw;
+/*		position: relative;
+*/		top: -1vw;
+		background: 0;
+		color: white;
 	}
-
+/*
 	div.form-input {
 		width: 25%;
 	}
-
+*/
 	div#emailAddress {
 		/*position: absolute;
 		top: 15%;
@@ -143,24 +176,29 @@ button.btn, .btn-info.disabled, .btn-info:disabled {
 	}
 	
 	button.btn.btn-info.disabled, button.btn.btn-info{
-		position: fixed;
-		top: 60%;
-		left: 25%;
+		position: relative;
+		bottom: 11vw;
+		left: 0vw;
 	}
 
 
 	div.App{
-		background: black;
+		background: rgba(0,0,0,0.8);
 
 	}
+
+	.dontKnow {
+		font-size: 2vw;
+	}
 	
-	section.desktopEscapeClause{
-		background: transparent;
-		width: auto;
-		max-width: 28%;
-		position: absolute;
-		top: 10%;
-		left: 20%;
+	#mBTI{
+		position: relative;
+		top: -2vw;
+	}
+	
+	input#password.form-control {
+		top: -2.2vw;
+		left: 3vw;
 	}
 
 }

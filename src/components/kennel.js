@@ -12,29 +12,21 @@ import './kennel.css';
 
 
 export class Kennel extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			loading:true
+		}
+	}
 componentDidMount() {
-	console.log('kennel componentWillMount going...');
+	console.log('kennel componentDidMount going...');
     const mLabId = localStorage.getItem('_id');
     this.props.dispatch(persistData(mLabId));
-  
-this.props.dispatch(roundUpCats(mLabId));
+	this.props.dispatch(roundUpCats(mLabId));
 }
 
 
-// componentDidMount(){
-	// 	console.log('theShitCircus');
-	// 	const authToken = localStorage.getItem('token');
-	// 	// const userData = localStorage.getItem('userData');
-	// 	const firstName = localStorage.getItem('firstName');
-	// 	const lastName = localStorage.getItem('lastName');
-	// 	const phoneNumber = localStorage.getItem('phoneNumber');
-	// 	const emailAddress = localStorage.getItem('emailAddress');
-	// 	const mBTI = localStorage.getItem('mBTI');
-	// 	const cats = localStorage.getItem('cats');
-	// 	const _id = localStorage.getItem('_id');
-	// 	console.log(firstName);
-	// 	this.props.dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
-	// }
+
 
 
 removeCat(number){
@@ -57,6 +49,17 @@ if(!localStorage.token){
 return(
   <Redirect to="/"/>
   );
+}
+
+if(!catsInState>0 ){
+	
+	return(
+		<Jumbotron>
+				<h1 className='display-3'>Wait, Hooman<br/>We be rounding up them kittehs</h1>
+				<p className='lead'>Oooh Hooman, patience is a virtue, hooman...</p>
+			</Jumbotron>
+		);
+	
 }
 
 if((catsInState === undefined) || (catsInState.length===0)){

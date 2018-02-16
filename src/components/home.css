@@ -1,7 +1,12 @@
 
-.homeBody{
-	background:black;
+.App {
+	background: cyan;
 }
+
+
+/*.homeBody{
+	background:black;
+}*/
 
 /*html, div.App{
 	background: black;
