@@ -1,26 +1,27 @@
 div.searchResults{
-	background: black;
+	background: rgba(0,0,0,0.85);
 }
 
  h4.resultsWillAppear {
-	background: black;
 	color: lime;
 	text-align: center;
 	font-family: 'Crafty Girls', curisve;
+	background: rgba(0,0,0,0.92);
 
 }
 
 
 
 li.catEntry{
-	margin: 8vw auto;
-	border: cyan dotted 2vw;
+	margin: 0 1vw;
+	border: cyan dotted 1vw;
 	border-radius: 5vw;
-	background: black;
+	background: transparent;
+	margin-bottom: 1vw;
 }
 
 h4.petInfo.petName {
-	background: black;
+	background: 0;
 	font-family: 'Delius Swash Caps', cursive;
 	color: red;
 	transform: rotate(-10deg);
@@ -50,8 +51,8 @@ button.addCatButton{
 
 @media only screen and (min-width: 1000px){
 	div.searchResults{
-		position: relative;
-		bottom: 15vw;
+		position: absolute;
+		top: 60vw;
 	}
 
 	img.petMedia{
@@ -81,7 +82,7 @@ button.addCatButton{
 		padding-right: 3vw;
 		position: absolute;
 		top: 1vw;
-		left: -4vw;
+		left: -30vw;
 /*		bottom: 23vw;
 */		font-family: 'Delius Swash Caps';
 		font-size: 2vw;

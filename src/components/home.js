@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import './app.css';
 import './home.css';
+import './navBar.css';
+
 // import {
 //   Collapse,
 //   Navbar,

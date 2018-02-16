@@ -1,3 +1,15 @@
+label#zipCodeLabel.catSearchLabel{
+	transform: rotate(-9deg);
+}
+.catSearchLabel{
+	color: red;
+	font-size: 5vw;
+	font-family: 'Delius Swash Caps', cursive;
+	transform: rotate(-10deg);
+	position: relative;
+	top: 2vw;
+	font-weight: bold;
+}
 
 #zipCode{
 	position: relative;
@@ -19,17 +31,31 @@ button{
 }
 
 @media only screen and (min-width: 1000px) {
+	div.formArea{
+		background: rgba(0,0,0,0.92);
+		position: absolute;
+		width: -webkit-fill-available;
+	}
+
 	form.searchForm {
-		background: black;
+		background: 0;
 		height: auto;
 		position: relative;
 		margin-bottom: 21vw;
 	}
+
+	div.form-group {
+/*		border: solid orange;
+*/		display: block;
+		margin: auto .5vw;
+	}
+
 	label.catSearchLabel{
 		font-size: 2vw;
 		position: relative;
 		font-weight: bolder;
-	}
+/*		border: solid white;
+*/	}
 	/*.catZipCodeSearch{
 		font-size:1.4vw;
 		position: relative;
@@ -38,32 +64,31 @@ button{
 		
 	}*/
 
-	#zipCodeLabel{
+	/*#zipCodeLabel{
 		left: 35%;
 		top:12vw;
 		position: absolute;
 		transform: rotate(90deg);
 
-	}
+	}*/
 
-	.catZipCodeSearch {
+	/*.catZipCodeSearch {
 		min-width: 24.5vw;
 		width: auto;
 		height: auto;
 		min-height: 2.5vw;
 		left: 35vw;
 		bottom:19.5vw;
-	}
+	}*/
 
 
 
 	section.searchButtonGroup {
-		    position: absolute;
-    /* border: solid white; */
-    /* bottom: 5.5vw; */
+	position: absolute;
     margin: auto 40%;
     height: 5vw;
     width: 10vw;
+    top: 30vw;
 	}
 
 	#seekButton, #clearButton {
@@ -72,16 +97,24 @@ button{
 	}
 
 	#seekButton {
-		right: 20%;
+		right: 40%;
 	}
 
 	#clearButton {
-		left: 20%;
+		left: 60%;
+	}
+
+	#zipCode {
+		position: absolute;
+		top: 9vw;
+		right: -5%;
 	}
 
 	h4.resultsWillAppear{
 		position: absolute;
-		bottom: 9vw;
+		top:40%;
+		background: transparent;
+		display: none;
 
 	}
 

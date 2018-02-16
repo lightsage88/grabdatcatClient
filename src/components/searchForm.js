@@ -40,6 +40,7 @@ export class SearchForm extends React.Component {
 
   render() {
     return (
+      <div className='formArea'>
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
         <FormGroup>
@@ -148,6 +149,7 @@ export class SearchForm extends React.Component {
         <Button id='clearButton' onClick={()=>this.clearResults()}>CLEAR!</Button>
         </section>
       </Form>
+      </div>
     );
   }
 }

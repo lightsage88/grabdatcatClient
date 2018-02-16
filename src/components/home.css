@@ -1,16 +1,4 @@
 
-/*.App {
-	background: cyan;
-}*/
-
-
-/*.homeBody{
-	background:black;
-}*/
-
-/*html, div.App{
-	background: black;
-}*/
 
 .duplicateWarning {
 	position: fixed;
@@ -19,9 +7,6 @@
 	color: black;
 }
 
-/*html {
-	background: blue
-}*/
 
 .catAdd {
 	position: fixed;
@@ -30,12 +15,8 @@
 	color: black;
 }
 
-/*html{
-	background: black;
-}
-*/
+
 form.searchForm{
-	background: black;
 	height: -webkit-fit-available;
 
 }
