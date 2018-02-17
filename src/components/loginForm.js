@@ -56,7 +56,7 @@ export class LoginForm extends React.Component {
 			<input id='password' required minLength='10' type='password' name='password' placeholder='PASSWORD'/>
 			<br/>
 			<Button className='loginFormButtons'>LOGIN</Button>
-			<Button className='loginFormButtons'><Link to='/registration'>REGISTER</Link></Button>
+			<Link to='/registration'><Button onClick={()=>window.location.reload()}className='loginFormButtons'>REGISTER</Button></Link>
 		</form>
 		</div>
 	</Router>
