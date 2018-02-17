@@ -34,7 +34,8 @@ button{
 	div.formArea{
 		background: rgba(0,0,0,0.92);
 		position: absolute;
-		width: -webkit-fill-available;
+		/*width: -webkit-fill-available*/
+		width: stretch;
 	}
 
 	form.searchForm {
