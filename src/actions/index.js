@@ -244,6 +244,8 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 				//when the page reloads, we will lose the cats
 				if(!data.petfinder.pets){
 					console.log('nope');
+					//dispatch an action that will change the state in the searchForm page...
+					dispatch(noCatsFound());
 				} else{
 				let pets = data.petfinder.pets.pet;
 				console.log(pets);
@@ -273,6 +275,10 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 		});
 	}
 }
+
+export const noCatsFound = () => ({
+	type: 'NO_CATS_FOUND'
+});
 
 
 export const selectCat = (cat, userPets, mLabId) => {

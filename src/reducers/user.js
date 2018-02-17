@@ -9,7 +9,8 @@ const initialState = {
 	phoneNumber: '',
 	mBTI : '',
 	cats: [],
-	_id: ''
+	_id: '',
+	catPresent: ''
 }
 
 
@@ -50,14 +51,28 @@ const user = (state=initialState, action) => {
 				cats: [...state.cats, action.cat]
 			}
 
+		case 'NO_CATS_FOUND':
+			// setInterval(()=>{
+			// 	return {...state, catPresent: false}
+			// },3000);
+
+
+			return {
+				...state, catPresent: false
+				
+			}
+			setTimeout(()=>{
+				return {...state, catPresent: ''}
+			}, 3000);
+
 		case 'PETS_SEARCH_SUCCESS':
 			return {
-				...state
+				...state, catPresent: ''
 			}
 
 		case 'PETS_SEARCH_RESET':
 			return {
-				...state
+				...state, catPresent: ''
 			}
 
 

@@ -105,8 +105,17 @@ export class SearchResults extends Component {
   
 
   render() {
-
-
+    console.log(this.props)
+    let catPresent = this.props.catPresent;
+    console.log(catPresent);
+    if(catPresent === false) {
+    console.log('tell us about how there are no cats');
+    return(
+      <div className='searchResults'>
+        <h2 className='noCats'>Oh dear, no cats here...try again, hooman</h2>
+      </div>
+      );
+  }
   //get pets in state and render a component around them...??
   if((!this.props.results)|| this.props.results.length===0 ){
     return(
@@ -115,6 +124,9 @@ export class SearchResults extends Component {
       </div>
       );
   } 
+
+  
+
 
 
     return (
@@ -150,7 +162,8 @@ export class SearchResults extends Component {
 
 const mapStateToProps = state => ({
   results: state.app.petsReducer.pets,
-  userPets: state.app.user.cats
+  userPets: state.app.user.cats,
+  catPresent: state.app.user.catPresent
 });
 
 

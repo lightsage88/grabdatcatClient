@@ -43,13 +43,19 @@ button{
 		height: auto;
 		position: relative;
 		margin-bottom: 21vw;
+		/*margin-right: 6%;
+		margin-left: 6%;*/
+		border: cyan solid;
+		width:100%;
 	}
 
-	div.form-group {
+	.form-group {
 /*		border: solid orange;
 */		display: inline-block;
-		margin: auto .5vw;
+		margin: auto;
 		position: relative;
+		width:auto;
+		min-width:15%;
 	}
 
 	label.catSearchLabel{
@@ -87,9 +93,8 @@ button{
 
 	section.searchButtonGroup {
 	position: absolute;
-    margin: auto 40%;
+    margin: auto 50%;
     height: 5vw;
-    width: 10vw;
     top: 20vw;
 	}
 
@@ -100,10 +105,12 @@ button{
 
 	#seekButton {
 		right: 40%;
+		margin-right: 1vw;
 	}
 
 	#clearButton {
 		left: 70%;
+		margin-left: 1vw;
 	}
 
 	#zipCode {
