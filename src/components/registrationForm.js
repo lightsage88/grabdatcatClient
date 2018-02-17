@@ -1,9 +1,7 @@
 import React from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import {reduxForm, Field} from 'redux-form';
-import {required, nonEmpty, email} from '../validators';
+import {reduxForm} from 'redux-form';
 import {registerUser} from '../actions/index.js';
-import InputX from './input';
 import './registration.css';
 import './app.css';
 
