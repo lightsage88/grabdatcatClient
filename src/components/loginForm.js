@@ -3,7 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import './loginForm.css'
 import {Button} from 'reactstrap';
-// import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import store from '../store';
 import {loginUser, protectedEndPointTesting, logOutUser} from '../actions/index.js';
@@ -48,7 +48,7 @@ export class LoginForm extends React.Component {
 		
 
 	return(
-	
+	<Router>
 		<div className='loginForm'>
 		<form className='loginForm' onSubmit={(e)=> this.handleSubmit(e)}>
 			<input id='username' required type='text' name='username' placeholder='USERNAME'/>
@@ -56,9 +56,10 @@ export class LoginForm extends React.Component {
 			<input id='password' required minLength='10' type='password' name='password' placeholder='PASSWORD'/>
 			<br/>
 			<Button className='loginFormButtons'>LOGIN</Button>
-			<Button onClick={()=>window.location='/registration'}className='loginFormButtons'>REGISTER</Button>
+			<Button className='loginFormButtons'><Link to='/registration'>REGISTER</Link></Button>
 		</form>
 		</div>
+	</Router>
 		);
 	}
 }
