@@ -52,7 +52,7 @@ button.addCatButton{
 @media only screen and (min-width: 1000px){
 	div.searchResults{
 		position: absolute;
-		top: 60vw;
+		top: 41vw;
 		width: 100%;
 	}
 
