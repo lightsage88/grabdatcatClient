@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Card, Jumbotron, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
-import {Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect} from 'react-router-dom';
 import NavBar from './navBar';
 import {connect} from 'react-redux';
 import {roundUpCats, deleteCat, persistData} from '../actions/index';
@@ -52,7 +52,9 @@ render(){
 const catsInState = this.props.cats;
 if(!localStorage.token){
 return(
+<Router>
   <Redirect to="/"/>
+ </Router>
   );
 }
 

@@ -5,7 +5,7 @@ import {CatSuggestion} from './catSuggestion';
 
 describe('<CatSuggestion/>', ()=>{
 	it('Renders without crashing', ()=>{
-		mount(<CatSuggestion/>);
+		shallow(<CatSuggestion/>);
 	});
 
 });

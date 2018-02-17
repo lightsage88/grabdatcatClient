@@ -20,7 +20,7 @@ import './navBar.css';
 // import {Button} from 'reactstrap';
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NavBar from './navBar';
-import {Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
 import {persistData} from '../actions/index.js';
@@ -57,7 +57,9 @@ export class Home extends Component {
     if(localStorage.token){
     } else {
       return(
+      <Router>
       <Redirect to="/"/>
+      </Router>
       );
     }
    

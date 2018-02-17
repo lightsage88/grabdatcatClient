@@ -1,11 +1,22 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-
-import {HumanData} from './humanData';
+import {persistData} from '../actions';
+import HumanData from './humanData';
 
 describe('<HumanData/>', ()=>{
 	it('Renders without crashing', ()=>{
-		mount(<HumanData/>);
+		// const dispatch = jest.fn();
+		const wrapper = shallow(
+			<HumanData accountData={
+				{firstName: 'Bill',
+				lastName: 'Clinton',
+				emailAddress: 'ovalorifice@gmail.com',
+				phoneNumber : '555-555-5555',
+				mBTI : 'ENFJ'
+			}}/>
+			);
+		const instance = wrapper.instance();
+	
 	});
 
 });

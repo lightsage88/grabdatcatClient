@@ -5,7 +5,7 @@ import {AccountList} from './accountList';
 
 describe('<AccountList/>', ()=>{
 	it('Renders without crashing', ()=>{
-		mount(<AccountList/>);
+		shallow(<AccountList/>);
 	});
 
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import {Image} from './image';
+import Input from './image';
 
-describe('<Image/>', ()=>{
+describe('<Input/>', ()=>{
 	it('Renders without crashing', ()=>{
-		shallow(<Image/>);
+		shallow(<Input/>);
 	});
 
 });

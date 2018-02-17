@@ -403,8 +403,69 @@ describe('addCat', ()=> {
 	});
 });
 
+describe('roundUpCats', ()=>{
+	it('should fetch at /api/users/roundUpCats', ()=>{
+		const json = {age: 'Young',
+			breed:"Domestic Shorthair",
+		contactEmail: 'TheLittleLionFoundation@gmail.com', 
+		contactPhone:'562)-212-4411', 
+		id: '40927426', 
+		media: 'https://photos.petfinder.com/photos/pets/40927426/1/?bust=1518388596&width=500&-x.jpg', 
+		name: 'Brandon', 
+		sex:'M',
+		_id: '5a7b55710dde882534dcd810'};
 
+		global.fetch = jest.fn().mockImplementation(()=>
+				Promise.resolve({
+					ok: true,
+					json(){
+						return json;	
+					}
+				})
+		);
+		const dispatch = jest.fn();
+		return roundUpCats()(dispatch);
+		expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/users/roundUpCats`);
+		expect(dispatch).toHaveBeenCalledWith(json);
+	});
+});
 
+describe('deleteCat', ()=>{
+	it('should dispatch updateReduxState', ()=>{
+		const json = {age: 'Young',
+			breed:"Domestic Shorthair",
+		contactEmail: 'TheLittleLionFoundation@gmail.com', 
+		contactPhone:'562)-212-4411', 
+		id: '40927426', 
+		media: 'https://photos.petfinder.com/photos/pets/40927426/1/?bust=1518388596&width=500&-x.jpg', 
+		name: 'Brandon', 
+		sex:'M',
+		_id: '5a7b55710dde882534dcd810'};
+
+		global.fetch = jest.fn().mockImplementation(()=>
+			Promise.resolve({
+				ok: true,
+				json(){
+					return json;
+				}
+			})
+		);
+
+		const dispatch = jest.fn();
+		return deleteCat()(dispatch);
+		expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/users/deleteCat`);
+		expect(dispatch).toHaveBeenCalledWith(json);
+	});
+});
+
+describe('updateReduxState', ()=>{
+	it('should return the action', ()=>{
+		const catId = 'mr.bobby';
+		const action = updateReduxState(catId);
+		expect(action.catId).toEqual(catId);
+		expect(action.type).toEqual('UPDATE_REDUX_STATE');
+	});
+});
 
 
 
