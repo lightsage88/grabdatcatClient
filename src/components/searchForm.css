@@ -47,8 +47,9 @@ button{
 
 	div.form-group {
 /*		border: solid orange;
-*/		display: block;
+*/		display: inline-block;
 		margin: auto .5vw;
+		position: relative;
 	}
 
 	label.catSearchLabel{
@@ -106,9 +107,9 @@ button{
 	}
 
 	#zipCode {
-		position: absolute;
-		top: 9vw;
-		right: -5%;
+		top: 0;
+		margin: inherit;
+		height: calc(2.25rem + 2px);
 	}
 
 	h4.resultsWillAppear{
