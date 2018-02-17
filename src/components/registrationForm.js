@@ -3,8 +3,9 @@ import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import {reduxForm} from 'redux-form';
 import {registerUser} from '../actions/index.js';
 import './registration.css';
+import './registrationForm.css';
 import './app.css';
-
+import {connect} from 'react-redux';
 
 class RegistrationForm extends React.Component {
   onSubmit(values){
@@ -35,40 +36,45 @@ class RegistrationForm extends React.Component {
 
 
   render() {
-    return (
+    console.log(this.props);
+    console.log(this.props.validLogin);
+    let validLogin = this.props.validLogin;
+    if(validLogin===false){
+      return(
       <div>
+      <h1 className='badRegistration'>Ooooh, hooman, try a different username</h1>
       <Form onSubmit={(e)=>this.handleSubmit(e)}>
         <h4 className='registrationBanner'>REGISTRATION</h4>
         <h5>Enter info below, hooman</h5>
         <FormGroup>
           <Label htmlFor='firstName' >FIRST NAME</Label>
-          <input class='form-control' type='text' name='firstName' id='firstName' required/>
+          <input className='form-control' type='text' name='firstName' id='firstName' required/>
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="lastName">LAST NAME</Label>
-          <input class='form-control' required type='text' name='lastName' id='lastName'/>
+          <input className='form-control' required type='text' name='lastName' id='lastName'/>
         </FormGroup>
 
         <FormGroup>
           <Label htmlFor="phoneNumber">PH #</Label>
-          <input required class='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
+          <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
           
         </FormGroup>
         <section className='desktopEscapeClause'>
         <FormGroup id='emailAddress'>
           <Label htmlFor="emailAddress">E-MAIL</Label>
-          <input class='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
+          <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
             
         </FormGroup>
         <FormGroup id='username'>
           <Label htmlFor="username">USERNAME</Label>
-          <input class='form-control' type='text' name='username' id='username' required/>
+          <input className='form-control' type='text' name='username' id='username' required/>
          
         </FormGroup>
         <FormGroup id='password'>
           <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
-          <input class='form-control' type='password' required name='password' id='password' minLength='10'/> 
+          <input className='form-control' type='password' required name='password' id='password' minLength='10'/> 
         </FormGroup>
                 </section>
 
@@ -94,13 +100,81 @@ class RegistrationForm extends React.Component {
             <option value="ENTJ">ENTJ</option>
           </Input>
         </FormGroup>
-        <Button color='info' disabled={
-          this.props.pristine || this.props.submitting
-        }>SUBMIT</Button>
+        <Button color='info'>SUBMIT</Button>
+      </Form>
+      </div>
+      );
+    }
+    return (
+      <div>
+      <Form onSubmit={(e)=>this.handleSubmit(e)}>
+        <h4 className='registrationBanner'>REGISTRATION</h4>
+        <h5>Enter info below, hooman</h5>
+        <FormGroup>
+          <Label htmlFor='firstName' >FIRST NAME</Label>
+          <input className='form-control' type='text' name='firstName' id='firstName' required/>
+        </FormGroup>
+
+        <FormGroup>
+          <Label htmlFor="lastName">LAST NAME</Label>
+          <input className='form-control' required type='text' name='lastName' id='lastName'/>
+        </FormGroup>
+
+        <FormGroup>
+          <Label htmlFor="phoneNumber">PH #</Label>
+          <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
+          
+        </FormGroup>
+        <section className='desktopEscapeClause'>
+        <FormGroup id='emailAddress'>
+          <Label htmlFor="emailAddress">E-MAIL</Label>
+          <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
+            
+        </FormGroup>
+        <FormGroup id='username'>
+          <Label htmlFor="username">USERNAME</Label>
+          <input className='form-control' type='text' name='username' id='username' required/>
+         
+        </FormGroup>
+        <FormGroup id='password'>
+          <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
+          <input className='form-control' type='password' required name='password' id='password' minLength='10'/> 
+        </FormGroup>
+                </section>
+
+        <FormGroup id='mBTI'>
+          <Label className='mBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
+          <p className='dontKnow'><a href='https://www.16personalities.com/free-personality-test'>Don't know?</a></p>
+          <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
+            <option value='N/A'>N/A</option>
+            <option value="ISFJ">ISFJ</option>
+            <option value="INFJ">INFJ</option>
+            <option value="INTJ">INTJ</option>
+            <option value="ISTP">ISTP</option>
+            <option value="ISFP">ISFP</option>
+            <option value="INFP">INFP</option>
+            <option value="INTP">INTP</option>
+            <option value="ESTP">ESTP</option>
+            <option value="ESFP">ESFP</option>
+            <option value="ENFP">ENFP</option>
+            <option value="ENTP">ENTP</option>
+            <option value="ESTJ">ESTJ</option>
+            <option value="ESFJ">ESFJ</option>
+            <option value="ENFJ">ENFJ</option>
+            <option value="ENTJ">ENTJ</option>
+          </Input>
+        </FormGroup>
+        <Button color='info'>SUBMIT</Button>
       </Form>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  validLogin: state.app.user.validLogin
+});
+
+RegistrationForm = connect(mapStateToProps)(RegistrationForm);
 
 export default reduxForm({form: 'registration'})(RegistrationForm); 

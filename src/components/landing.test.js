@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 
-import Landing from './landing';
+import {Landing} from './landing';
 import Image from './image';
 describe('<Landing/>', ()=>{
 	it('Renders without crashing', ()=>{

@@ -19,13 +19,35 @@ import './landing.css';
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
 import LoginForm from './loginForm';
 import catPicture from '../staticAssets/blackCatAroundCorner.jpg';
-
+import {connect} from 'react-redux';
 import Image from './image';
 
-export default class Landing extends Component {
+export class Landing extends Component {
   render() {
-    console.log(this.props);
-    console.log(this.props.data);
+    let validLogin = this.props.validLogin;
+    console.log(validLogin);
+    if(validLogin === false){
+      return(
+        <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">GRAB DAT CAT</h1>
+          <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which
+          cat breed will suit you best!</span>
+          <br/><br/>
+          <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
+        </header>
+        <LoginForm />
+        <section className='cheekyCat'>
+        <span className='notRegistered'>Oooh, hooman, you made a mistake, silleh hooman...</span>
+        <br/>
+        <Image className='notRegisteredPic' imageAddress={catPicture}/>
+        </section>
+      </div>
+        
+        );
+    }
+
+
     return (
 <div className="App">
         <header className="App-header">
@@ -45,3 +67,9 @@ export default class Landing extends Component {
       );
   }
 }
+
+const mapStateToProps = state => ({
+  validLogin: state.app.user.validLogin
+});
+
+export default connect(mapStateToProps)(Landing);

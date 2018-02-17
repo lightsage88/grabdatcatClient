@@ -1,0 +1,24 @@
+.badRegistration{
+	font-size: 6vw;
+    text-align: center;
+    font-style: italic;
+    background: gold;
+    border: lime;
+    border-radius: 7vw;
+    position: fixed;
+    top: 40%;
+    z-index: 8;
+    border-style: outset;
+    transform: rotate(-22deg);
+
+}
+
+@media only screen and (min-width: 1000px){
+.badRegistration{
+    width: auto;
+    margin: auto 16%;
+    transform: rotate(-22deg);
+    z-index:80;
+}
+
+}

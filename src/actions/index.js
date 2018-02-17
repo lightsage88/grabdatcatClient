@@ -67,13 +67,20 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 		})
 		.then(response => response.json())
 		.then(json => {
-			// console.log('for to get data stuff');
-			// console.log(json);
-			// const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
+			if(json.code===422){
+				dispatch(loginFail());
+				setTimeout(()=>{
+					window.location.reload();
+				},2500);
+				return;
+			} else{
+			console.log('for to get data stuff');
+			console.log(json);
+						// const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
 			// console.log(firstName);
-			dispatch(registerUserSuccess(json))
+			dispatch(registerUserSuccess(json));
 			window.location = '/';
-		})
+		}})
 		.catch(error => {
 			console.log('todays attempt has been brought to you by the letter F for fucked in the head');
 			console.log(error);
@@ -135,7 +142,7 @@ export const loginUser = (username, password) => {
 			dispatch(loginFail());
 			setTimeout(()=>{
 				dispatch(logOutUser())
-			}, 2000);
+			}, 3000);
 		});
 	}
 }
