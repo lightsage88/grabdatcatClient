@@ -246,6 +246,10 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 					console.log('nope');
 					//dispatch an action that will change the state in the searchForm page...
 					dispatch(noCatsFound());
+					setTimeout(()=>{
+						dispatch(petsSearchReset());
+					}, 3000);
+					
 				} else{
 				let pets = data.petfinder.pets.pet;
 				console.log(pets);

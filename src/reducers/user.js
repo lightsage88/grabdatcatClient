@@ -61,9 +61,7 @@ const user = (state=initialState, action) => {
 				...state, catPresent: false
 				
 			}
-			setTimeout(()=>{
-				return {...state, catPresent: ''}
-			}, 3000);
+			
 
 		case 'PETS_SEARCH_SUCCESS':
 			return {
