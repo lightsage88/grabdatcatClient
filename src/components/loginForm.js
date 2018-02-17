@@ -45,6 +45,26 @@ export class LoginForm extends React.Component {
 
 	render(){
 		console.log(store);
+		console.log(this.props);
+		let validLogin = this.props.validLogin;
+		console.log(validLogin);
+		if(validLogin === false){
+			return(
+				<Router>
+		<div className='loginForm'>
+		<form className='loginForm' onSubmit={(e)=> this.handleSubmit(e)}>
+			<input id='username' required type='text' name='username' placeholder='USERNAME'/>
+			<br/>
+			<input id='password' required minLength='10' type='password' name='password' placeholder='PASSWORD'/>
+			<br/>
+			<Button className='loginFormButtons'>LOGIN</Button>
+			<Link to='/registration'><Button onClick={()=>window.location.reload()}className='loginFormButtons'>REGISTER</Button></Link>
+		</form>
+		<h2>SILLY HOOMAN, YOU MADE SOME KIND OF MISTAKE</h2>
+		</div>
+	</Router>
+				);
+		}
 		
 
 	return(
@@ -64,5 +84,9 @@ export class LoginForm extends React.Component {
 	}
 }
 
-export default connect()(LoginForm);
+const mapStateToProps = state => ({
+  validLogin: state.app.user.validLogin
+});
+
+export default connect(mapStateToProps)(LoginForm);
 //will <Link> cause a problem??

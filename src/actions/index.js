@@ -26,6 +26,9 @@ const petFinderKey = '141daf9adb9dfd50fd537d41985f5773';
  	type: 'LOG_OUT_USER'
  });
 
+export const loginFail = () => ({
+	type: 'LOGIN_FAIL'
+});
 
  export const loginUserSuccess = (token, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id ) => ({
  	type: 'LOGIN_USER_SUCCESS',
@@ -126,7 +129,14 @@ export const loginUser = (username, password) => {
 			//other idea would be to use <Redirect > but refreshing then will cause 
 			//things to be fucked in the head.
 		})
-		.catch(error => console.log(error));
+		.catch(error => {
+			console.error(error);
+			console.log(error);
+			dispatch(loginFail());
+			setTimeout(()=>{
+				dispatch(logOutUser())
+			}, 2000);
+		});
 	}
 }
 

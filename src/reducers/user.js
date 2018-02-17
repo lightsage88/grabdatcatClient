@@ -10,7 +10,8 @@ const initialState = {
 	mBTI : '',
 	cats: [],
 	_id: '',
-	catPresent: ''
+	catPresent: '',
+	validLogin: ''
 }
 
 
@@ -71,6 +72,11 @@ const user = (state=initialState, action) => {
 		case 'PETS_SEARCH_RESET':
 			return {
 				...state, catPresent: ''
+			}
+
+		case 'LOGIN_FAIL':
+			return {
+				...state, validLogin: false
 			}
 
 
