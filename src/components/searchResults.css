@@ -2,6 +2,10 @@ div.searchResults{
 	background: rgba(0,0,0,0.8);
 }
 
+
+
+
+
  h4.resultsWillAppear {
 	color: lime;
 	text-align: center;
@@ -63,6 +67,10 @@ button.addCatButton{
 	div.searchResults{
 		position: absolute;
 		width: 100%;
+	}
+
+	li.petInfo.petEmail{
+	font-size:1.2vw;
 	}
 
 	img.petMedia{

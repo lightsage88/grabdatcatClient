@@ -157,11 +157,11 @@ export class SearchResults extends Component {
             <h4 className='petInfo petName'>{pet.name}</h4>
             <img className='petMedia' src={pet.media} alt ='Cat' />
             <ul className='catDetails'>
-              <li className='petInfo petAge'>AGE: {pet.age}</li>
-              <li className='petInfo petSex'>GENDER: {pet.sex}</li>
-              <li className='petInfo petBreed'>BREED: {pet.breed}</li>
-              <li className='petInfo petEmail'>EMAIL: {pet.contactEmail}</li>
-              <li className='petInfo petPhone'>PHONE: {pet.contactPhone}</li>
+              <li className='petInfo petAge'>AGE: {pet.age ? pet.age: 'N/A'}</li>
+              <li className='petInfo petSex'>GENDER: {pet.sex ? pet.sex:'N/A'}</li>
+              <li className='petInfo petBreed'>BREED:<br/> {pet.breed ? pet.breed:'N/A'}</li>
+              <li className='petInfo petEmail'>EMAIL:<br/> {pet.contactEmail ? pet.contactEmail:'N/A'}</li>
+              <li className='petInfo petPhone'>PHONE:<br/> {pet.contactPhone ? pet.contactPhone:'N/A'}</li>
             </ul>
             <p>{pet.description}</p>
             <Button className='addCatButton' onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
