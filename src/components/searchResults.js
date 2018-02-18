@@ -3,7 +3,7 @@ import './app.css';
 import './searchResults.css';
 import {selectCat} from '../actions/index';
 import {connect} from 'react-redux';
-import {Button, Fade} from 'reactstrap';
+import {Button, Fade, Container, Row, Col} from 'reactstrap';
 
 
 export class SearchResults extends Component {
@@ -112,7 +112,13 @@ export class SearchResults extends Component {
     console.log('tell us about how there are no cats');
     return(
       <div className='searchResults'>
-        <h2 className='noCats'>Oh dear, no cats here...try again, hooman</h2>
+      <Container>
+      <Row>
+      <Col>
+        <h2 className='noCats'>Oh dear, no cats here...<br/>try again, hooman</h2>
+      </Col>
+      </Row>
+      </Container>
       </div>
       );
   }
@@ -120,7 +126,13 @@ export class SearchResults extends Component {
   if((!this.props.results)|| this.props.results.length===0 ){
     return(
       <div>
+        <Container>
+        <Row>
+        <Col>
         <h4 className='resultsWillAppear'>Results will appear below</h4>
+        </Col>
+        </Row>
+        </Container>
       </div>
       );
   } 

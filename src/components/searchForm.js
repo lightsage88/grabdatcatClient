@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input,Container, Row, Col } from 'reactstrap';
 import {connect} from 'react-redux';
 import {seekCat} from '../actions';
 // import Image from './image';
@@ -40,9 +40,14 @@ export class SearchForm extends React.Component {
 
   render() {
     return (
+      <Container>
       <div className='formArea'>
+      <Row>
+      <Col sm='12' lg='12'>
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
+        <Row>
+        <Col sm='12' lg='2'>
         <FormGroup className='form-group'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
@@ -115,9 +120,10 @@ export class SearchForm extends React.Component {
           <option value='Tuxedo'>Tuxedo</option>
           </Input>
         </FormGroup>
+        </Col>
 
         
-
+          <Col className='genderColumn' xs='12' sm='12' lg='2'>
         <FormGroup className='form-group'>
           <Label className='catSearchLabel'for="gender">GENDER</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="gender" id="gender">
@@ -126,7 +132,8 @@ export class SearchForm extends React.Component {
             <option value='M'>M</option>         
           </Input>
         </FormGroup>
-
+          </Col>
+          <Col className='ageColumn' xs='12' sm='12' lg='2'>
         <FormGroup className='form-group'>
           <Label className='catSearchLabel'for="age">AGE</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
@@ -137,19 +144,24 @@ export class SearchForm extends React.Component {
             <option value='Senior'>SENIOR</option>         
           </Input>
         </FormGroup>
-
-
+            </Col>
+            <Col sm='12' lg='6'>
         <FormGroup className='form-group'>
           <Label id='zipCodeLabel' className='catSearchLabel'for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
           <Input className='catZipCodeSearch' required minLength='5' maxLength='5' onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
+            </Col>
+          </Row>
         <section className='searchButtonGroup'>
         <Button id='seekButton'>SEEK!</Button>
         <br/>
         <Button id='clearButton' onClick={()=>this.clearResults()}>CLEAR!</Button>
         </section>
       </Form>
+      </Col>
+      </Row>
       </div>
+    </Container>
     );
   }
 }

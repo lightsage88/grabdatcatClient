@@ -242,13 +242,14 @@ export const deleteUser = (id) =>{
 
 export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	console.log('...seekCat action beind dispatched...');
+	console.log(breed, color, gender, age, zipCode);
 	return(dispatch)=>{
 		jsonp(`https://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
 			&count=10
 			&breed=${breed}
 			&color=${color}
-			&gender=${gender}
+			&sex=${gender}
 			&age=${age}
 			&location=${zipCode}
 			&output=full&format=json`, null, function(err,data){

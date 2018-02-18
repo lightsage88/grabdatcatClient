@@ -3,11 +3,11 @@ label#zipCodeLabel.catSearchLabel{
 }
 .catSearchLabel{
 	color: red;
-	font-size: 5vw;
+	font-size: 4.5vw;
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-10deg);
 	position: relative;
-	top: 2vw;
+	top: 1vw;
 	font-weight: bold;
 }
 
@@ -32,8 +32,7 @@ button{
 
 @media only screen and (min-width: 1000px) {
 	div.formArea{
-		background: rgba(0,0,0,0.92);
-		position: absolute;
+		background: transparent;
 		/*width: -webkit-fill-available*/
 		width: stretch;
 	}
