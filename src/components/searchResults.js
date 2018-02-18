@@ -151,6 +151,8 @@ export class SearchResults extends Component {
       </Fade>
       {this.props.results.map((pet, index)=>(
        <div key={index}>
+        <Container>
+        <Row>
           <li className='catEntry'>
             <h4 className='petInfo petName'>{pet.name}</h4>
             <img className='petMedia' src={pet.media} alt ='Cat' />
@@ -165,6 +167,8 @@ export class SearchResults extends Component {
             <Button className='addCatButton' onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
 
           </li>
+          </Row>
+          </Container>
         </div>
         ))}
     </div>
