@@ -246,7 +246,7 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 	return(dispatch)=>{
 		jsonp(`https://api.petfinder.com/pet.find?key=${petFinderKey}
 			&animal=cat
-			&count=10
+			&count=25
 			&breed=${breed}
 			&color=${color}
 			&sex=${gender}

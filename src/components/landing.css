@@ -84,7 +84,7 @@ form.loginForm {
 	}
 	img.notRegisteredPic{
 		top: 7vw;
-		right: 2vw;
+		right: 5vw;
 		height: 12vw;
 	}
 	span.notRegistered:after{
@@ -92,7 +92,7 @@ form.loginForm {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 40%;
     width: 0;
     height: 0;
     border: 44px solid transparent;

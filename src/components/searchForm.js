@@ -153,9 +153,15 @@ export class SearchForm extends React.Component {
             </Col>
           </Row>
         <section className='searchButtonGroup'>
+        <Row>
+        <Col lg='6'>
         <Button id='seekButton'>SEEK!</Button>
+        </Col>
         <br/>
+        <Col lg='6'>
         <Button id='clearButton' onClick={()=>this.clearResults()}>CLEAR!</Button>
+        </Col>
+        </Row>
         </section>
       </Form>
       </Col>

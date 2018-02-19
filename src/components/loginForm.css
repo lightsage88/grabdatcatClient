@@ -12,6 +12,7 @@ input{
 	text-align: center;
 	margin: 3vw 15%;
 	height: 7vw;
+	padding: 5vw;
 	width: auto;
 	min-width: 60%;
 	font-family: 'Delius Swash Caps', cursive;
@@ -59,6 +60,10 @@ form {
 		height: 10%;
 		padding: 1vw;
 		margin: 1vw 0;
+	}
+
+	input{
+		padding: 1.5vw;
 	}
 
 	

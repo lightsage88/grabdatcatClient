@@ -38,7 +38,7 @@ export class Landing extends Component {
         </header>
         <LoginForm />
         <section className='cheekyCat'>
-        <span className='notRegistered'>Oooh, hooman, you made a mistake, silleh hooman...</span>
+        <span className='notRegistered'>Ooh, hooman, you made a mistake, hooman.</span>
         <br/>
         <Image className='notRegisteredPic' imageAddress={catPicture}/>
         </section>
@@ -59,7 +59,7 @@ export class Landing extends Component {
         </header>
         <LoginForm />
         <section className='cheekyCat'>
-        <span className='notRegistered'>Not registered? Click the register button to fix that, hooman.</span>
+        <span className='notRegistered'>Not registered? Fix that, hooman.</span>
         <br/>
         <Image className='notRegisteredPic' imageAddress={catPicture}/>
         </section>

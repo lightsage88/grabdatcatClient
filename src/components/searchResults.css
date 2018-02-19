@@ -91,6 +91,7 @@ button.addCatButton{
 	li.catEntry{
 /*		height: auto;
 */		position: relative;
+margin-top:2.5vw;
 	}
 
 	ul.catDetails{

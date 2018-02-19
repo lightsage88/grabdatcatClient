@@ -44,7 +44,10 @@ button{
 		margin-bottom: 6vw;
 		/*margin-right: 6%;
 		margin-left: 6%;*/
-		border: cyan solid;
+		border: cyan .5vw;
+		border-style:outset;
+		border-radius: 1vw;
+	
 		width:100%;
 	}
 
@@ -92,7 +95,7 @@ button{
 
 	section.searchButtonGroup {
 	position: absolute;
-    margin: auto 50%;
+    margin: auto 48%;
     height: 5vw;
     top: 20vw;
 	}
