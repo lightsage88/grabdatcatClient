@@ -65,7 +65,10 @@ form.editAccountModalForm label{
 		max-width: 33vw;
 	}
 
-	
+	form.editAccountModalForm label {
+		transform:rotate(-9deg);
+		font-size: 3.5vw;
+	}
 
 
 }
