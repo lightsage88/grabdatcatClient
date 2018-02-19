@@ -1,10 +1,4 @@
-/*form {
-	background: linear-gradient(
-		rgba(0,0,0,0.6),
-		rgba(0,0,0,0.6)
-		),
-	url('../staticAssets/cats of the world.jpg');
-}*/
+
 
 form {
 	background: rgba(0,0,0,0.92);
@@ -61,6 +55,7 @@ label.mBTILabel {
 input, .form-control {
 	background: 0;
 	color: white;
+	width: -webkit-fill-available;
 
 }
 
@@ -129,7 +124,7 @@ div.form-group {
 		width: auto;
 		height: auto;
 		max-height: 3vw;
-		min-width: 8vw;
+		min-width: 14vw;
 /*		position: relative;
 */		top: -1vw;
 		background: 0;
@@ -177,7 +172,7 @@ div.form-group {
 	
 	button.btn.btn-info.disabled, button.btn.btn-info{
 		position: relative;
-		bottom: 11vw;
+		bottom: 8vw;
 		left: 0vw;
 	}
 
@@ -189,16 +184,19 @@ div.form-group {
 
 	.dontKnow {
 		font-size: 2vw;
+		width:auto;
+		float:left;
+		color: cyan;
 	}
 	
-	#mBTI{
-		position: relative;
-		top: -2vw;
+	
+	
+	input#password.form-control, input#username.form-control{
+		width: auto;
 	}
 	
-	input#password.form-control {
-		top: -2.2vw;
-		left: 3vw;
+	p{
+		margin-top:0;
 	}
 
 }

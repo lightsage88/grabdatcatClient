@@ -47,7 +47,7 @@ export class SearchForm extends React.Component {
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
         <Row>
-        <Col sm='12' lg='2'>
+        <Col sm='12' lg='3'>
         <FormGroup className='form-group'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
@@ -123,7 +123,7 @@ export class SearchForm extends React.Component {
         </Col>
 
         
-          <Col className='genderColumn' xs='12' sm='12' lg='2'>
+          <Col className='genderColumn' xs='12' sm='12' lg='3'>
         <FormGroup className='form-group'>
           <Label className='catSearchLabel'for="gender">GENDER</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="gender" id="gender">
@@ -133,7 +133,7 @@ export class SearchForm extends React.Component {
           </Input>
         </FormGroup>
           </Col>
-          <Col className='ageColumn' xs='12' sm='12' lg='2'>
+          <Col className='ageColumn' xs='12' sm='12' lg='3'>
         <FormGroup className='form-group'>
           <Label className='catSearchLabel'for="age">AGE</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
@@ -145,9 +145,9 @@ export class SearchForm extends React.Component {
           </Input>
         </FormGroup>
             </Col>
-            <Col sm='12' lg='6'>
+            <Col sm='12' lg='3'>
         <FormGroup className='form-group'>
-          <Label id='zipCodeLabel' className='catSearchLabel'for="zipCode">ZIPCODE<span>   *REQUIRED</span></Label>
+          <Label id='zipCodeLabel' className='catSearchLabel'for="zipCode">ZIPCODE</Label>
           <Input className='catZipCodeSearch' required minLength='5' maxLength='5' onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
             </Col>

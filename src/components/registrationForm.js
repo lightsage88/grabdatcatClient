@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input, Container, Row, Col} from 'reactstrap';
 import {reduxForm} from 'redux-form';
 import {registerUser} from '../actions/index.js';
 import './registration.css';
@@ -43,44 +43,64 @@ class RegistrationForm extends React.Component {
       return(
       <div>
       <h1 className='badRegistration'>Ooooh, hooman, try a different username</h1>
-      <Form onSubmit={(e)=>this.handleSubmit(e)}>
+      <Container>
+     <Form onSubmit={(e)=>this.handleSubmit(e)}>
         <h4 className='registrationBanner'>REGISTRATION</h4>
         <h5>Enter info below, hooman</h5>
+        <br/>
+        <Row>
+          <Col lg='4' md='6'>
         <FormGroup>
           <Label htmlFor='firstName' >FIRST NAME</Label>
           <input className='form-control' type='text' name='firstName' id='firstName' required/>
         </FormGroup>
-
+          </Col>
+          <Col lg='4' md='6'>
         <FormGroup>
           <Label htmlFor="lastName">LAST NAME</Label>
           <input className='form-control' required type='text' name='lastName' id='lastName'/>
         </FormGroup>
-
+          </Col>
+          <Col lg='4' md='6'>
         <FormGroup>
           <Label htmlFor="phoneNumber">PH #</Label>
           <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
-          
         </FormGroup>
+          </Col>
+        </Row>
         <section className='desktopEscapeClause'>
+        <Row>
+          <Col lg='4' md='6'>
         <FormGroup id='emailAddress'>
           <Label htmlFor="emailAddress">E-MAIL</Label>
           <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
             
         </FormGroup>
+          </Col>
+          <Col lg='4'>
         <FormGroup id='username'>
           <Label htmlFor="username">USERNAME</Label>
           <input className='form-control' type='text' name='username' id='username' required/>
-         
         </FormGroup>
+          </Col>
+          <Col lg='4'>
         <FormGroup id='password'>
-          <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
+          <Label htmlFor='passwordFirst'>PASSWORD</Label>
           <input className='form-control' type='password' required name='password' id='password' minLength='10'/> 
         </FormGroup>
-                </section>
-
+          </Col>
+        </Row>     
+        </section>
         <FormGroup id='mBTI'>
+                <Row>
+
+                  <Col lg='8'>
+
           <Label className='mBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
-          <p className='dontKnow'><a href='https://www.16personalities.com/free-personality-test'>Don't know?</a></p>
+           <p className='dontKnow'><a href='https://www.16personalities.com/free-personality-test'>Don't know?</a></p>
+          </Col>
+              
+          <Col lg='4'>
           <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
             <option value='N/A'>N/A</option>
             <option value="ISFJ">ISFJ</option>
@@ -99,52 +119,78 @@ class RegistrationForm extends React.Component {
             <option value="ENFJ">ENFJ</option>
             <option value="ENTJ">ENTJ</option>
           </Input>
+                    </Col>
+                     
+        </Row>
+
         </FormGroup>
         <Button color='info'>SUBMIT</Button>
       </Form>
+      </Container>
       </div>
-      );
+    );
     }
     return (
       <div>
+      <Container>
+
       <Form onSubmit={(e)=>this.handleSubmit(e)}>
         <h4 className='registrationBanner'>REGISTRATION</h4>
         <h5>Enter info below, hooman</h5>
+        <br/>
+        <Row>
+          <Col lg='4' md='6'>
         <FormGroup>
           <Label htmlFor='firstName' >FIRST NAME</Label>
           <input className='form-control' type='text' name='firstName' id='firstName' required/>
         </FormGroup>
-
+          </Col>
+          <Col lg='4' md='6'>
         <FormGroup>
           <Label htmlFor="lastName">LAST NAME</Label>
           <input className='form-control' required type='text' name='lastName' id='lastName'/>
         </FormGroup>
-
+          </Col>
+          <Col lg='4'>
         <FormGroup>
           <Label htmlFor="phoneNumber">PH #</Label>
           <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
-          
         </FormGroup>
+          </Col>
+        </Row>
         <section className='desktopEscapeClause'>
+        <Row>
+          <Col lg='4'>
         <FormGroup id='emailAddress'>
           <Label htmlFor="emailAddress">E-MAIL</Label>
           <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
             
         </FormGroup>
+          </Col>
+          <Col lg='4'>
         <FormGroup id='username'>
           <Label htmlFor="username">USERNAME</Label>
           <input className='form-control' type='text' name='username' id='username' required/>
-         
         </FormGroup>
+          </Col>
+          <Col lg='4'>
         <FormGroup id='password'>
-          <Label htmlFor='passwordFirst'>PASSWORD<br/>atleast 10 chars!</Label>
+          <Label htmlFor='passwordFirst'>PASSWORD</Label>
           <input className='form-control' type='password' required name='password' id='password' minLength='10'/> 
         </FormGroup>
-                </section>
-
+          </Col>
+        </Row>     
+        </section>
         <FormGroup id='mBTI'>
+                <Row>
+
+                  <Col lg='8'>
+
           <Label className='mBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
-          <p className='dontKnow'><a href='https://www.16personalities.com/free-personality-test'>Don't know?</a></p>
+           <p className='dontKnow'><a href='https://www.16personalities.com/free-personality-test'>Don't know?</a></p>
+          </Col>
+              
+          <Col lg='4'>
           <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
             <option value='N/A'>N/A</option>
             <option value="ISFJ">ISFJ</option>
@@ -163,9 +209,14 @@ class RegistrationForm extends React.Component {
             <option value="ENFJ">ENFJ</option>
             <option value="ENTJ">ENTJ</option>
           </Input>
+                    </Col>
+                     
+        </Row>
+
         </FormGroup>
         <Button color='info'>SUBMIT</Button>
       </Form>
+      </Container>
       </div>
     );
   }
