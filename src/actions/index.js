@@ -76,8 +76,7 @@ export const registerUser = (username, password, firstName, lastName, phoneNumbe
 			} else{
 			console.log('for to get data stuff');
 			console.log(json);
-						// const {firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id } = json;
-			// console.log(firstName);
+						
 			dispatch(registerUserSuccess(json));
 			window.location = '/';
 		}})
@@ -103,11 +102,9 @@ export const loginUser = (username, password) => {
 		})
 		.then(response => response.json())
 		.then(json => {
-			// console.log(json);
 			const {authToken} = json;
 			const {userData} = json;
-			// console.log('some userdata');
-			// console.log(userData);
+
 			const firstName = userData.firstName;
 			const lastName = userData.lastName;
 			const phoneNumber = userData.phoneNumber;
@@ -125,16 +122,9 @@ export const loginUser = (username, password) => {
 			localStorage.setItem('cats', userData.cats);
 			localStorage.setItem('_id', userData._id);
 			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id));
-			// console.log(username);
-			// console.log(password);
-			window.location = '/home';
-			// dispatch(userDataGrab(username,password));
-			//put authtoken and user id in state inside local storage then redirect
-			//in home have a app.js componentDidMount user id and token from localStorage dispatch
-			//action that will make request to backend
 
-			//other idea would be to use <Redirect > but refreshing then will cause 
-			//things to be fucked in the head.
+			window.location = '/home';
+		
 		})
 		.catch(error => {
 			console.error(error);
@@ -161,7 +151,6 @@ export const persistData = (mLabId) => {
 		.then(response => response.json())
 		.then(json => {
 			const userData = json;
-			// console.log(userData);
 			const authToken = localStorage.getItem('token');
 			const firstName = userData.firstName;
 			const lastName = userData.lastName;
@@ -258,11 +247,9 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 			} else {
 				console.log(data);
 				console.log(data.petfinder.pets);
-				//we want to put these cats in their own temporary state upon searching for them. 
-				//when the page reloads, we will lose the cats
+				
 				if(!data.petfinder.pets){
 					console.log('nope');
-					//dispatch an action that will change the state in the searchForm page...
 					dispatch(noCatsFound());
 					setTimeout(()=>{
 						dispatch(petsSearchReset());
@@ -271,7 +258,6 @@ export const seekCat = (breed, color, gender, age, zipCode, distance) => {
 				} else{
 				let pets = data.petfinder.pets.pet;
 				console.log(pets);
-				// const {contact, age, media, id, breeds, name, sex, description} = pets;
 				let petArray=[];
 				for(let i=0; i<=pets.length-1; i++){
 					let media = pic;

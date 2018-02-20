@@ -40,20 +40,7 @@ const dummyState = {
         expect(state).toEqual(currentState);
     });
 
-    // describe('updateReduxState', ()=>{
-    // 	it('should return a state with only unique cats', ()=> {
-    // 		// let state;
-    // 		let currentState = {
-    // 			cats: [{id:2}]
-    // 			};
-    // 		let reduxCats = [{id:2}];
-    // 		const state = user(currentState, updateReduxState(3));
-    // 		expect(state).toEqual( {
-    // 			cats: [{id:2},{id:3}]
-    // 		});
-    // 	});
-    // });
-
+   
     describe('foundADuplicate', ()=>{
     	it('should return a state where activeButton is true', ()=>{
     		let currentState = {
@@ -78,22 +65,7 @@ const dummyState = {
     		});
     	});
     });
-    // describe('petsSearchSuccess', ()=>{
-    // 	it('should return the same state', ()=>{
-    // 		let currentState = {};
-    // 		const state = user(currentState, petsSearchSuccess());
-    // 		expect(state).toEqual(Object {
-    //   "catPresent": "",
-    // });
-    // 	});
-    // });
-    // describe('petsSearchReset', ()=>{
-    // 	it('should return the same state', ()=>{
-    // 		let currentState = {};
-    // 		const state = user(currentState, petsSearchSuccess());
-    // 		expect(state).toEqual(currentState);
-    // 	});
-    // });
+  
 
     describe('registerUserSuccess', ()=>{
     	it('should return an empty state',()=>{

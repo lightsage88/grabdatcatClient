@@ -32,7 +32,6 @@ export class NavBar extends React.Component {
     this.props.dispatch(logOutUser());
     setTimeout(function(){window.location.reload();}, 2000);
 
-    //need to reload the page with react-router-dom Redirect?
   }
 
   render() {

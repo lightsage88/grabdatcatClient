@@ -11,9 +11,7 @@ describe('<Kennel/>', ()=>{
 		const wrapper = shallow(<Kennel dispatch={dispatch} persistData={persistData} />);
 		const instance = wrapper.instance();
 		expect(dispatch).toHaveBeenCalled;
-		// expect(dispatch).toHaveBeenCalledWith(deleteCat(mLabId, catId));
-		// expect(dispatch).toHaveBeenCalledWith(persistData(mLabId), persistData(mLabId));
-		// expect(dispatch).toHaveBeenCalledWith(roundUpCats(mLabId));
+		
 	});
 
 });

@@ -21,7 +21,6 @@ export class SearchResults extends Component {
     console.log(this.state);
     let id = petId;
     let searchResultArray = this.props.results;
-    //what is already in the redux state for the user/pets
     let userPets = this.props.userPets;  
     console.log(userPets);
     let cat;
@@ -76,7 +75,6 @@ export class SearchResults extends Component {
        
         } else {
           console.log(unique);
-          // unique = true;
           console.log(unique);
         }
         return;
@@ -122,7 +120,6 @@ export class SearchResults extends Component {
       </div>
       );
   }
-  //get pets in state and render a component around them...??
   if((!this.props.results)|| this.props.results.length===0 ){
     return(
       <div>

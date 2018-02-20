@@ -104,10 +104,7 @@ div.form-group {
 		background: 0;
 	}
 
-	/*form {
-		height: auto;
-		position: relative;
-	}*/
+	
 
 	
 
@@ -116,8 +113,7 @@ div.form-group {
 	font-size: 1.7vw;
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-22deg);
-/*	position: relative;
-*/	top: -3vw;
+	top: -3vw;
 	font-weight: bold;
 	}
 
@@ -126,37 +122,22 @@ div.form-group {
 		height: auto;
 		max-height: 3vw;
 		min-width: 14vw;
-/*		position: relative;
-*/		top: -1vw;
+		top: -1vw;
 		background: 0;
 		color: white;
 	}
-/*
-	div.form-input {
-		width: 25%;
-	}
-*/
+
 	div#emailAddress {
-		/*position: absolute;
-		top: 15%;
-		left: 25%;
-		width: auto;
-		min-width: 13vw;*/
-		background: 0;
+				background: 0;
 	}
 
 	div#username{
-	/*position: absolute;*/
-/*		top: 40.5%;
-*/		background: 0;
-/*		left: 25%;
-*/	}
+		background: 0;
+	}
 
 	div#password{
 		background: 0;
-		/*position: absolute;
-		top: 60%;
-		left: 25%;*/
+		
 	}
 
 	label.mBTILabel {
@@ -166,9 +147,7 @@ div.form-group {
 
 	div#mBTI {
 		background: 0;
-		/*position: absolute;
-		top: 19%;
-		left: 50%;*/
+		
 	}
 	
 	button.btn.btn-info.disabled, button.btn.btn-info{

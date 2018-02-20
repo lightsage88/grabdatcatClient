@@ -15,11 +15,6 @@ const initialState = {
 }
 
 
-// DELETE_ITEM: (state, action) => ({
-//   ...state,
-//   items: state.items.filter(item => item !== action.payload),
-//   lastUpdated: Date.now() 
-// })
 
 const user = (state=initialState, action) => {
 	switch(action.type){
@@ -123,5 +118,3 @@ const user = (state=initialState, action) => {
 export default user
 
 
-////turn the parts in USERDATA into smaller parts that wont get generalized
-//into a large object...THAT will easily persist across the entire project!

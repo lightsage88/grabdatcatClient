@@ -3,22 +3,7 @@ import React, { Component } from 'react';
 import './home.css';
 import './navBar.css';
 
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   Container,
-//   Row,
-//   Col,
-//   Jumbotron,
-//   Button
-// } from 'reactstrap';
-// import {Button} from 'reactstrap';
-// import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 import NavBar from './navBar';
 import {BrowserRouter as Router, Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
@@ -32,19 +17,7 @@ import SearchResults from './searchResults';
 
 export class Home extends Component {
 
-  // componentDidMount(){
-  //  const authToken = localStorage.getItem('token');
-  //  // const userData = localStorage.getItem('userData');
-  //  const firstName = localStorage.getItem('firstName');
-  //  const lastName = localStorage.getItem('lastName');
-  //  const phoneNumber = localStorage.getItem('phoneNumber');
-  //  const emailAddress = localStorage.getItem('emailAddress');
-  //  const mBTI = localStorage.getItem('mBTI');
-  //  const cats = localStorage.getItem('cats');
-  //  const _id = localStorage.getItem('_id');
-  //  console.log(firstName);
-  //  this.props.dispatch(loginUserSuccess(authToken, firstName, lastName, phoneNumber, emailAddress, mBTI, cats, _id));
-  // }
+
 
   componentDidMount(){
     const mLabId = localStorage.getItem('_id');

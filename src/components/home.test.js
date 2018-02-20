@@ -10,11 +10,7 @@ describe('<Home/>', ()=>{
 		const mLabId = '1234';
 		const wrapper = mount(<Home dispatch={dispatch} persistData={persistData}/>);
 		const instance = wrapper.instance();
-		// console.log(dispatch);
-		// console.log(persistData);
-		// instance();
-		// instance.persistData(mLabId);
-		// expect(dispatch).toHaveBeenCalledWith(persistData(mLabId));
+
 		expect(dispatch).toBeCalled();
 	});
 

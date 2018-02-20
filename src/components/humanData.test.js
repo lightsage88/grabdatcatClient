@@ -5,7 +5,6 @@ import HumanData from './humanData';
 
 describe('<HumanData/>', ()=>{
 	it('Renders without crashing', ()=>{
-		// const dispatch = jest.fn();
 		const wrapper = shallow(
 			<HumanData accountData={
 				{firstName: 'Bill',

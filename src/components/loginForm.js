@@ -40,15 +40,6 @@ export class LoginForm extends React.Component {
 		},1000);
 		
 		
-
-		
-		// if(localStorage.token){
-		// 	window.location ='/home'
-		// } else {
-		// 	window.location ='/';
-		// }
-		
-
 	}
 
 	handleLogout(event){
@@ -57,7 +48,6 @@ export class LoginForm extends React.Component {
 		this.props.dispatch(logOutUser());
 		window.location.reload();
 
-		//need to reload the page with react-router-dom Redirect?
 	}
 	handleTPE(event){
 		console.log('you a real crip');
@@ -94,4 +84,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(LoginForm);
-//will <Link> cause a problem??

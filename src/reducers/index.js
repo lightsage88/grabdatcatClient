@@ -8,6 +8,5 @@ const rootReducer = combineReducers({
 	user,
 	petsReducer: pets
 })
-//so we can do state.petsReducer.pets...
 
 export default rootReducer

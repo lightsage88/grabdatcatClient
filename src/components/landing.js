@@ -1,22 +1,7 @@
 import React, { Component } from 'react';
 import './app.css';
 import './landing.css';
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   Container,
-//   Row,
-//   Col,
-//   Jumbotron,
-//   Button
-// } from 'reactstrap';
-// import {Button} from 'reactstrap';
-// import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 import LoginForm from './loginForm';
 import catPicture from '../staticAssets/blackCatAroundCorner.jpg';
 import {connect} from 'react-redux';

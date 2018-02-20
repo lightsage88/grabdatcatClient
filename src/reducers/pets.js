@@ -34,7 +34,3 @@ const pets = (state=initialState, action) => {
 }
 
 export default pets
-
-
-////turn the parts in USERDATA into smaller parts that wont get generalized
-//into a large object...THAT will easily persist across the entire project!

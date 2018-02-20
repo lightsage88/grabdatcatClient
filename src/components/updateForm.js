@@ -40,8 +40,7 @@ handleSubmit(e){
 	let phoneNumber = this.state.phoneNumber;
 	let mBTI = this.state.mBTI;
 
-	//insert a dispatch of an action that will make 
-	//a request for us.
+	
 	this.props.dispatch(updateUser(_id, firstName, lastName, emailAddress, phoneNumber, mBTI));
 
 
@@ -55,9 +54,7 @@ test(e){
 }
 
 changeValue(e){
-	//set up a switch so that it sees what the name is and then allows the state to be changed
-	//according to that...on SUBMIT, then we can use dispatch to send an action that will interact with the backend we set up
-
+	
 	console.log('changeValue running...');
 	console.log(e.target.name);
 	console.log(e.target.value);
