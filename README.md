@@ -34,5 +34,9 @@ Other packages employed in the creation of this app include:
 >npm start
 ```
 Then open [`localhost:3000`](http://localhost:3000) in your browser.
+```
+```
 ###Homie don play dat, just lemme find dem kitties already!
+```
 Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
+```
