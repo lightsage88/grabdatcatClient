@@ -50,6 +50,7 @@ label.mBTILabel {
 	background: 0;
 	color: red;
 	font-family: 'Delius Swash Caps', cursive;
+	font-size: 1.6vw;
 }
 
 input, .form-control {
