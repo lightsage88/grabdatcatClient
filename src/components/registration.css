@@ -55,7 +55,7 @@ label.mBTILabel {
 input, .form-control {
 	background: 0;
 	color: white;
-	width: -webkit-fill-available;
+	width: stretch;
 
 }
 
