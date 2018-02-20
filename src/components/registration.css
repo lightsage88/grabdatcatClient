@@ -182,7 +182,9 @@ div.form-group {
 		background: rgba(0,0,0,0.8);
 
 	}
-
+	select#mBTI.mBTIInput.form-control{
+		font-size: 1.4vw;
+	}
 	.dontKnow {
 		font-size: 2vw;
 		width:auto;
