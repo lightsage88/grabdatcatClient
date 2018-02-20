@@ -1,6 +1,6 @@
 <h1>GRAB DAT CAT</h1>
 <p><a href='https://affectionate-panini-e16d31.netlify.com'>GRAB DAT CAT</a> is an app that allows you find cats to adopt, but also offers recommendations based on your Meyers-Briggs Personality Type</p>
-<img src='/staticAssets/gdcPreview.jpg'>
+<img src='/src/staticAssets/gdcPreview.jpg'>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
