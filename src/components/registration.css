@@ -50,7 +50,7 @@ label.mBTILabel {
 	background: 0;
 	color: red;
 	font-family: 'Delius Swash Caps', cursive;
-	font-size: 1.8vw;
+	font-size: 2vw;
 }
 
 input, .form-control {
@@ -183,7 +183,7 @@ div.form-group {
 
 	}
 	select#mBTI.mBTIInput.form-control{
-		font-size: 1.2vw;
+		font-size: 1.1vw;
 	}
 	.dontKnow {
 		font-size: 2vw;
