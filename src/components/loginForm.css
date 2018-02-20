@@ -1,3 +1,11 @@
+ div.css-4ecjhy{
+	height: 20vw;
+    position: absolute;
+    top: 25%;
+    width: 22vw;
+    left: 40%;
+}
+
 div.loginForm {
 	background: rgba(0,0,0,0.2);
 	border: solid 2vw lime;
@@ -40,7 +48,13 @@ form {
 }
 
 @media only screen and (min-width: 1000px) {
+	 div.css-4ecjhy{
+	position:absolute;
+	left: 40%;
+	width: auto;
+	min-width: 20%;
 
+ }
 	div.loginForm{
 		border: none;
 	}

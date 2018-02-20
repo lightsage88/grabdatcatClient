@@ -61,7 +61,7 @@ class RegistrationForm extends React.Component {
           <input className='form-control' required type='text' name='lastName' id='lastName'/>
         </FormGroup>
           </Col>
-          <Col lg='4' md='6'>
+          <Col lg='4'>
         <FormGroup>
           <Label htmlFor="phoneNumber">PH #</Label>
           <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
@@ -70,7 +70,7 @@ class RegistrationForm extends React.Component {
         </Row>
         <section className='desktopEscapeClause'>
         <Row>
-          <Col lg='4' md='6'>
+          <Col lg='4'>
         <FormGroup id='emailAddress'>
           <Label htmlFor="emailAddress">E-MAIL</Label>
           <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
