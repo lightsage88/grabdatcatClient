@@ -20,7 +20,7 @@ Other packages employed in the creation of this app include:
 - [Redux-Form](https://github.com/erikras/redux-form)
 - [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 
-##GETTING STARTED
+###GETTING STARTED
 ### Installing
 ```
 >git clone https://github.com/lightsage88/grabdatcatClient
