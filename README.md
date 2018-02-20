@@ -20,7 +20,7 @@ Other packages employed in the creation of this app include:
 - [Redux-Form](https://github.com/erikras/redux-form)
 - [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 
-###GETTING STARTED
+##GETTING STARTED
 ### Installing
 ```
 >git clone https://github.com/lightsage88/grabdatcatClient
@@ -34,9 +34,19 @@ Other packages employed in the creation of this app include:
 >npm start
 ```
 Then open [`localhost:3000`](http://localhost:3000) in your browser.
+
+###Testing
 ```
+> npm test
 ```
+
+
 ###Homie don play dat, just lemme find dem kitties already!
-```
 Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
-```
+
+---------------------------------------------------------
+<h2>Introduction</h2>
+<p>I really love cats. They are definitely my favorite pet. Having made two capstones about my very nerdy and stereotypical, for a web developer anyways, hobbies of comic books and video games, I thought I should shift my focus towards something a bit different.<br>Grab Dat Cat is a an app helps you find a cat to adopt near you and offers recommendations for cat breeds you should consider when making your pick based off of your Meyers-Briggs Personality Type. Grab Dat Cat only offers suggestions based on what type you are, an optional detail you can select on the registration page or edit on the account page.<br>
+  Actual determination of your M-B Personality Type is made at a link that is offered in the registration page, but you can take that test at any location you please.</p>
+
+  <h2>How it Works</h2>
