@@ -1,19 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 Other packages employed in the creation of this app include:
-- [Emotion](https://github.com/emotion-js/emotion);
-- [Enzyme]
+- [Emotion](https://github.com/emotion-js/emotion)
+- [Enzyme](https://github.com/airbnb/enzyme)
 - [Enzyme-Adapter-React-16]
-- [Jsonp]
-- [React]
-- [React-Dom]
-- [React-Redux]
-- [React-Router-Dom]
-- [React-Spinners]
-- [Reactstrap]
-- [Redux]
-- [Redux-Devtools-Extension]
-- [Redux-Form]
-- [Redux-Thunk]
+- [Jsonp](https://github.com/webmodules/jsonp)
+- [React](https://github.com/facebook/react)
+- [React-Dom]https://www.npmjs.com/package/react-dom)
+- [React-Redux](https://github.com/reactjs/react-redux)
+- [React-Router-Dom](https://github.com/ReactTraining/react-router)
+- [React-Spinners](https://github.com/davidhu2000/react-spinners)
+- [Reactstrap](https://reactstrap.github.io/)
+- [Redux](https://github.com/reactjs/redux)
+- [Redux-Devtools-Extension](https://github.com/zalmoxisus/redux-devtools-extension)
+- [Redux-Form](https://github.com/erikras/redux-form)
+- [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
