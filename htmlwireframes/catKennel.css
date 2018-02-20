@@ -1,0 +1,53 @@
+img{
+	height: 35vw;
+	float: left;
+}
+
+img.buttonPic{
+	height: 11vw;
+}
+
+button {
+	background: 0;
+	border: 0;
+}
+
+
+.deleteButton{
+	float: right;
+}
+
+ul {
+	clear: left;
+	color: white;
+}
+
+.catDetails {
+	border: solid .3vw black;
+	margin-top:3vw;
+	margin-bottom: 3vw;
+
+}
+
+.catName{
+	color: red;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 10vw;
+	transform: rotate(-30deg);
+	margin-top: 20vw;
+}
+
+nav {
+	background: white;
+}
+
+h1 {
+	background: white;
+}
+main{
+	background: linear-gradient(
+		rgba(0,0,0,0.8),
+		rgba(0,0,0,0.8)
+		),
+	url('../assets/OQ5DF90.jpg');
+}

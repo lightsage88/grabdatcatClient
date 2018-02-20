@@ -46,7 +46,34 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 
 ---------------------------------------------------------
 <h2>Introduction</h2>
-<p>I really love cats. They are definitely my favorite pet. Having made two capstones about my very nerdy and stereotypical, for a web developer anyways, hobbies of comic books and video games, I thought I should shift my focus towards something a bit different.<br>Grab Dat Cat is a an app helps you find a cat to adopt near you and offers recommendations for cat breeds you should consider when making your pick based off of your Meyers-Briggs Personality Type. Grab Dat Cat only offers suggestions based on what type you are, an optional detail you can select on the registration page or edit on the account page.<br>
-  Actual determination of your M-B Personality Type is made at a link that is offered in the registration page, but you can take that test at any location you please.</p>
+<p>I really love cats. They are definitely my favorite pet. Having made two capstones about my very nerdy and stereotypical, for a web developer anyways, hobbies of comic books and video games, I thought I should shift my focus towards something a bit different.Grab Dat Cat is a an app helps you find a cat to adopt near you and offers recommendations for cat breeds you should consider when making your pick based off of your Meyers-Briggs Personality Type. Grab Dat Cat only offers suggestions based on what type you are, an optional detail you can select on the registration page or edit on the account page.Actual determination of your M-B Personality Type is made at a link that is offered in the registration page, but you can take that test at any location you please.</p>
 
-  <h2>How it Works</h2>
+<h2>How it Works</h2>
+<h3>Register</h3>
+<p>In order to use this site, you need to make an account. There isn't really anything super fancy going on here that deviates from the norm in terms of user experience. While you could argue that the information should be freely available to those who stumble across the site, that would defeat the purpose of being able to keep track of the cats your find during your searches that you seriously would consider adopting. To that end, I created a part of the page called 'Cat Kennel', and it will be discussed later in this Readme.</p>
+
+<h2>Wireframes</h2>
+<p>The original wireframes were made on Balsamiq's cloud service and can be seen in <span>gdcclient/htmlwireframes</span>. They were not followed completely to a 'T' as, during development, I came up with a few ideas that I prefered to my original designs</p>
+
+<h2>Technology</h2>
+<h3>Front End</h3>
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JavaScript</li>
+  <li>React</li>
+  <li>React-Redux</li>
+  <li>React-Router-Dom</li>
+  <li>Reactstrap</li>
+  <li>Redux</li>
+  <li>Redux-DevTools-Extension</li>
+  <li>Redux-Form</li>
+  <li>Redux-Thunk</li>
+</ul>
+<h3>Back End</h3>
+<ul>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MongoDB/mLab.com</li>
+  <li>Mocha + Chai</li>
+  <li>Continuous integration and deployment with<a href='https://travis-ci.org/'>Travis-CI</a></li>

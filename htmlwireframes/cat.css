@@ -1,0 +1,25 @@
+h1.catProfileBanner {
+	background: white;
+}
+
+main {
+	background: linear-gradient(
+		rgba(122,122,122,0.8),
+		rgba(100,100,100,0.8)
+		),
+	url('../assets/catSil.jpg');
+	background-size: cover;
+}
+
+img.catPicture{
+	margin: auto 25%;
+}
+
+div.catInfo {
+	border: black .3vw solid;
+	background: rgba(255,255,255,0.8);
+}
+
+ul{
+	list-style:none; 
+}
