@@ -124,7 +124,7 @@ class RegistrationForm extends React.Component {
         </Row>
 
         </FormGroup>
-        <Button color='info'>SUBMIT</Button>
+        <Button className='submitButton' color='info'>SUBMIT</Button>
       </Form>
       </Container>
       </div>
@@ -214,7 +214,7 @@ class RegistrationForm extends React.Component {
         </Row>
 
         </FormGroup>
-        <Button color='info'>SUBMIT</Button>
+        <Button className='submitButton' color='info'>SUBMIT</Button>
       </Form>
       </Container>
       </div>
