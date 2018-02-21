@@ -20,8 +20,8 @@ Other packages employed in the creation of this app include:
 - [Redux-Form](https://github.com/erikras/redux-form)
 - [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 
-<h1>GETTING STARTED</h1>
-### Installing
+##GETTING STARTED
+# Installing
 ```
 >git clone https://github.com/lightsage88/grabdatcatClient
 >cd grabdatcatClient
@@ -29,13 +29,13 @@ Other packages employed in the creation of this app include:
 >npm install
 ```
 
-<h2>Launching</h2>
+#Launching
 ```
 >npm start
 ```
 Then open [`localhost:3000`](http://localhost:3000) in your browser.
 
-<h2>Testing</h2>
+#Testing
 ```
 > npm test
 ```
