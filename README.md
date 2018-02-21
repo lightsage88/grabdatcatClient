@@ -42,8 +42,9 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 
 
 <h2>Homie don play dat, just lemme find dem kitties already!</h2>
+```
 Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
-
+```
 ---------------------------------------------------------
 <h2>Introduction</h2>
 <p>I really love cats. They are definitely my favorite pet. Having made two capstones about my very nerdy and stereotypical, for a web developer anyways, hobbies of comic books and video games, I thought I should shift my focus towards something a bit different.Grab Dat Cat is a an app helps you find a cat to adopt near you and offers recommendations for cat breeds you should consider when making your pick based off of your Meyers-Briggs Personality Type. Grab Dat Cat only offers suggestions based on what type you are, an optional detail you can select on the registration page or edit on the account page.Actual determination of your M-B Personality Type is made at a link that is offered in the registration page, but you can take that test at any location you please.</p>
