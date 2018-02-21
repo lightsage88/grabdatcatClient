@@ -51,7 +51,6 @@ render() {
             </FormGroup>
           </Col>
         </Row>
-        <section className='desktopEscapeClause'>
         <Row>
           <Col lg='4'>
             <FormGroup id='emailAddress'>
@@ -72,7 +71,6 @@ render() {
             </FormGroup>
           </Col>
         </Row>     
-        </section>
         <FormGroup id='mBTI'>
           <Row>
             <Col lg='8'>
