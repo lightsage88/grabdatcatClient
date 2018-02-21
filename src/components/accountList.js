@@ -66,7 +66,7 @@ return(
 
 			<HumanData accountData={this.props.accountData}/>
 			<Button onClick={this.toggle}>edit account info</Button>
-			<Button onClick={this.toggle2}>Delete Account</Button>
+			<Button className='deleteAccountButton' onClick={this.toggle2}>Delete Account</Button>
 			</section>
 		</div>
 		);

@@ -68,5 +68,9 @@ form.editAccountModalForm label{
 		font-size: 3.5vw;
 	}
 
+	button.deleteAccountButton.btn.btn-secondary {
+		float:right;
+	}
+
 
 }
