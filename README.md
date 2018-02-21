@@ -94,7 +94,6 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 <ul>
   <li>Bcrypt.js</li>
   <li>Body-Parser<li>
-  <li>Dotenv</li>
   <li>Express.js</li>
   <li>Json Web Token</li>
   <li>Mocha + Chai + ChaiHttp</li>
@@ -105,3 +104,4 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
   <li>Passport + Passport.jwt + Passport.local</li>
   <li>Request</li>
   <li>Continuous integration and deployment with <a href='https://travis-ci.org/'>Travis-CI</a></li>
+</ul>
