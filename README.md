@@ -20,7 +20,7 @@ Other packages employed in the creation of this app include:
 - [Redux-Form](https://github.com/erikras/redux-form)
 - [Redux-Thunk](https://github.com/gaearon/redux-thunk)
 
-##GETTING STARTED
+<h1>GETTING STARTED</h1>
 ### Installing
 ```
 >git clone https://github.com/lightsage88/grabdatcatClient
@@ -29,19 +29,19 @@ Other packages employed in the creation of this app include:
 >npm install
 ```
 
-###Launching
+<h2>Launching</h2>
 ```
 >npm start
 ```
 Then open [`localhost:3000`](http://localhost:3000) in your browser.
 
-###Testing
+<h2>Testing</h2>
 ```
 > npm test
 ```
 
 
-###Homie don play dat, just lemme find dem kitties already!
+<h2>Homie don play dat, just lemme find dem kitties already!</h2>
 Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 
 ---------------------------------------------------------
