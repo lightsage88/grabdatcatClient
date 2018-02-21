@@ -12,10 +12,9 @@ describe('<HumanData/>', ()=>{
 				emailAddress: 'ovalorifice@gmail.com',
 				phoneNumber : '555-555-5555',
 				mBTI : 'ENFJ'
-			}}/>
-			);
+				}
+			}/>
+		);
 		const instance = wrapper.instance();
-	
 	});
-
 });

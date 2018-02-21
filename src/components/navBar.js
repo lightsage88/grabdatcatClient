@@ -12,50 +12,49 @@ import {connect} from 'react-redux';
 import './navBar.css';
 
 export class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
+constructor(props) {
+   super(props);
+   this.toggle = this.toggle.bind(this);
+   this.state = {
       isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
+   };
+}
 
-  handleLogout(event){
-    console.log('handleLogout running');
-    localStorage.clear();
-    this.props.dispatch(logOutUser());
-    setTimeout(function(){window.location.reload();}, 2000);
+toggle() {
+  this.setState({
+    isOpen: !this.state.isOpen
+  });
+}
 
-  }
+handleLogout(event){
+  console.log('handleLogout running');
+  localStorage.clear();
+  this.props.dispatch(logOutUser());
+  setTimeout(function(){window.location.reload();}, 2000);
+}
 
-  render() {
+render() {
     return (
       <div>
         <Navbar color="faded" light expand="md">
         <NavbarToggler onClick={this.toggle} className='mr-2'/>
-          <NavbarBrand href="/home">GRAB DAT CAT</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/home">Home</NavLink>
-              </NavItem>
-              <NavItem>
-               <NavLink href="/account">Account</NavLink>
-              </NavItem>
-              <NavItem>
-                 <NavLink href="/kennel">Cat Kennel</NavLink>
-              </NavItem>
-              <NavItem>
-               <NavLink href="/" onClick={(e)=>this.handleLogout(e)}>Log Out</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+        <NavbarBrand href="/home">GRAB DAT CAT</NavbarBrand>
+        <Collapse isOpen={this.state.isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <NavLink href="/home">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/account">Account</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/kennel">Cat Kennel</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/" onClick={(e)=>this.handleLogout(e)}>Log Out</NavLink>
+          </NavItem>
+        </Nav>
+        </Collapse>
         </Navbar>
       </div>
     );

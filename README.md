@@ -57,11 +57,11 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 <h3>Home/SEEK DAT CAT</h3>
 <p>At the home screen, you will be greeted by your first name and you will be presented with fields to fill out in order to look for cats. The only <strong>required</strong> one is the zip code. Other than that, you can choose to seek cats of any/all breed types, genders, ages by leaving those options in their default positions.</p>
 <h4>Upon failure to find cats</h4>
-<p>If your search yields no results, then a message will pop on screen saying so</p>
+<p>If your search yields no results, then a message will pop on screen saying so.</p>
 <h4>Upon finding cats</h4>
-<p>Cats will appear in a box of their own with a decadent, gaudy, blue-dotted border containing a picture of the cat, the cats details, a description, and a button that says <strong>"Add to kennel"</strong></p>
+<p>Cats will appear in a box of their own with a decadent, gaudy, blue-dotted border containing a picture of the cat, the cats details, a description, and a button that says <strong>"Add to kennel"</strong>.</p>
 <h4>Pressing "Add to kennel"</h4>
-<p>If you have never pressed the button for that particular cat, then a message will appear in the center of your screen for a short while saying that a new friend as been added. However, if you've already pressed the button before for that particular cat and have not since deleted the cat from your kennel, then a message will appear saying that you already have the cat in your kennel</p>
+<p>If you have never pressed the button for that particular cat, then a message will appear in the center of your screen for a short while saying that a new friend as been added. However, if you've already pressed the button before for that particular cat and have not since deleted the cat from your kennel, then a message will appear saying that you already have the cat in your kennel.</p>
 <h3>Cat Kennel</h3>
 <p>This part of the site will contain all the pets you have added to your kennel up to this point by pressing the 'Add to kennel' buttons on your search results on the home page. If you're serious about adopting a cat, you can use the info on this page to contact the people necessary to go through with it.</p>
 <h4>Pressing "Remove Cat"</h4>

@@ -45,34 +45,34 @@ describe('registerUserSuccess', () => {
 describe('petsSearchSuccess', () => {
 	it('Should return the action', () => {
 	const pets = [{age: "Adult",
-breed: "American Shorthair",
-contactEmail: "dawnvargas05@yahoo.com",
-contactPhone: "213-840-0153",
-description: "If you are interested in meeting any one of our cat's or kittens please call: DAWN (213) 840-0153 OR feel free to email us at dawnvargas05@yahoo.com.   We would love for you to come by and hang out in our new cattery until you find the best matched cat for you!  We have many cute kittens AND young cats here at Fur Baby that are ready for their forever homes.  Come find your purrfect meowing match today!",
-id: "33267037",
-media: "http://photos.petfinder.com/photos/pets/33267037/1/?bust=1442078873&width=500&-x.jpg",
-name: "Midnight",
-sex: "M"},
-{
-age: "Adult",
-breed: "American Shorthair",
-contactEmail: "dawnvargas05@yahoo.com",
-contactPhone: "213-840-0153",
-description: "If you are interested in meeting any one of our cat's or kittens please call: DAWN (213) 840-0153 OR feel free to email us at dawnvargas05@yahoo.com.   We would love for you to come by and hang out in our new cattery until you find the best matched cat for you!  We have many cute kittens AND young cats here at Fur Baby that are ready for their forever homes.  Come find your purrfect meowing match today!",
-id: "33267037",
-media: "http://photos.petfinder.com/photos/pets/33267037/1/?bust=1442078873&width=500&-x.jpg",
-name: "Midnight",
-sex: "M"},
-{
-age: "Adult",
-breed: "American Shorthair",
-contactEmail: "dawnvargas05@yahoo.com",
-contactPhone: "213-840-0153",
-description: "If you are interested in meeting any one of our cat's or kittens please call: DAWN (213) 840-0153 OR feel free to email us at dawnvargas05@yahoo.com.   We would love for you to come by and hang out in our new cattery until you find the best matched cat for you!  We have many cute kittens AND young cats here at Fur Baby that are ready for their forever homes.  Come find your purrfect meowing match today!",
-id: "33267037",
-media: "http://photos.petfinder.com/photos/pets/33267037/1/?bust=1442078873&width=500&-x.jpg",
-name: "Midnight",
-sex: "M"}];
+			breed: "American Shorthair",
+			contactEmail: "dawnvargas05@yahoo.com",
+			contactPhone: "213-840-0153",
+			description: "If you are interested in meeting any one of our cat's or kittens please call: DAWN (213) 840-0153 OR feel free to email us at dawnvargas05@yahoo.com.   We would love for you to come by and hang out in our new cattery until you find the best matched cat for you!  We have many cute kittens AND young cats here at Fur Baby that are ready for their forever homes.  Come find your purrfect meowing match today!",
+			id: "33267037",
+			media: "http://photos.petfinder.com/photos/pets/33267037/1/?bust=1442078873&width=500&-x.jpg",
+			name: "Midnight",
+			sex: "M"},
+			{
+			age: "Adult",
+			breed: "American Shorthair",
+			contactEmail: "dawnvargas05@yahoo.com",
+			contactPhone: "213-840-0153",
+			description: "If you are interested in meeting any one of our cat's or kittens please call: DAWN (213) 840-0153 OR feel free to email us at dawnvargas05@yahoo.com.   We would love for you to come by and hang out in our new cattery until you find the best matched cat for you!  We have many cute kittens AND young cats here at Fur Baby that are ready for their forever homes.  Come find your purrfect meowing match today!",
+			id: "33267037",
+			media: "http://photos.petfinder.com/photos/pets/33267037/1/?bust=1442078873&width=500&-x.jpg",
+			name: "Midnight",
+			sex: "M"},
+			{
+			age: "Adult",
+			breed: "American Shorthair",
+			contactEmail: "dawnvargas05@yahoo.com",
+			contactPhone: "213-840-0153",
+			description: "If you are interested in meeting any one of our cat's or kittens please call: DAWN (213) 840-0153 OR feel free to email us at dawnvargas05@yahoo.com.   We would love for you to come by and hang out in our new cattery until you find the best matched cat for you!  We have many cute kittens AND young cats here at Fur Baby that are ready for their forever homes.  Come find your purrfect meowing match today!",
+			id: "33267037",
+			media: "http://photos.petfinder.com/photos/pets/33267037/1/?bust=1442078873&width=500&-x.jpg",
+			name: "Midnight",
+			sex: "M"}];
 
 const action = petsSearchSuccess(pets); 
 expect(action.type).toEqual('PETS_SEARCH_SUCCESS');

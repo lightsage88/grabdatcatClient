@@ -2,16 +2,11 @@ div.searchResults{
 	background: rgba(0,0,0,0.8);
 }
 
-
-
-
-
- h4.resultsWillAppear {
+h4.resultsWillAppear {
 	color: lime;
 	text-align: center;
 	font-family: 'Crafty Girls', curisve;
 	background: rgba(0,0,0,0.92);
-
 }
 
 h2 {
@@ -94,8 +89,8 @@ button.addCatButton{
 	}
 
 	ul.catDetails{
-width: 30%;
-float:left;
+		width: 30%;
+		float: left;
 		margin: auto;
 		top: 1vw;
 		left: -30vw;
@@ -112,6 +107,7 @@ float:left;
 		margin-top: 12%;
 		max-height: 20vw;
 		overflow: auto;
+
 	}
 	li.petInfo {
 		margin: 0;
@@ -140,9 +136,8 @@ float:left;
 	.noCats{
 		font-size: 2.5vw;
 	}
-
-
-
-
-
+	p.petDescription {
+		margin-top: 4vw;
+		margin-bottom: 0;
+	}
 }

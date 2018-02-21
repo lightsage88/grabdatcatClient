@@ -6,20 +6,17 @@ import {reduxForm} from 'redux-form';
 import {updateUser} from '../actions/index.js';
 
 class UpdateForm extends React.Component {
-	constructor(props){
-		super(props);
-		this.state = {
-		modal: false,
-		_id: this.props.props.accountData._id,
-		firstName: this.props.props.accountData.firstName,
-		lastName: this.props.props.accountData.lastName,
-		emailAddress: this.props.props.accountData.emailAddress,
-		phoneNumber: this.props.props.accountData.phoneNumber,
-		mBTI: this.props.props.accountData.mBTI
-	};
-	console.log(this.state);
-	console.log(this.props);
-	console.log(this.props.props.accountData);
+constructor(props){
+	super(props);
+	this.state = {
+	modal: false,
+	_id: this.props.props.accountData._id,
+	firstName: this.props.props.accountData.firstName,
+	lastName: this.props.props.accountData.lastName,
+	emailAddress: this.props.props.accountData.emailAddress,
+	phoneNumber: this.props.props.accountData.phoneNumber,
+	mBTI: this.props.props.accountData.mBTI
+  };
 }
 
 toggle(){
@@ -29,117 +26,84 @@ toggle(){
 }
 
 handleSubmit(e){
-	e.preventDefault();
-	console.log('handleSubmit running');
-	console.log(e);
-	console.log(this.state);
-	let _id = this.state._id;
-	let firstName = this.state.firstName;
-	let lastName = this.state.lastName;
-	let emailAddress = this.state.emailAddress;
-	let phoneNumber = this.state.phoneNumber;
-	let mBTI = this.state.mBTI;
-
-	
-	this.props.dispatch(updateUser(_id, firstName, lastName, emailAddress, phoneNumber, mBTI));
-
-
-}
-
-test(e){
-	console.log('test running...');
-	console.log(e);
-	console.log(this.refs.firstNameInput);
-	console.log(e.target.value);
+  e.preventDefault();
+  let _id = this.state._id;
+  let firstName = this.state.firstName;
+  let lastName = this.state.lastName;
+  let emailAddress = this.state.emailAddress;
+  let phoneNumber = this.state.phoneNumber;
+  let mBTI = this.state.mBTI;
+  this.props.dispatch(updateUser(_id, firstName, lastName, emailAddress, phoneNumber, mBTI));
 }
 
 changeValue(e){
-	
-	console.log('changeValue running...');
-	console.log(e.target.name);
-	console.log(e.target.value);
-	let value = e.target.value;
+  let value = e.target.value;
 	this.setState({
-
 		[e.target.name]: value
-
 	});
-	console.log(this.state);
 }
 
 
-  render() {
-  	console.log(this.state);
-    if(this.state._id === undefined){
-      console.log('reloading page...');
-      window.location = '/account';
-    }
+render() {
+  if(this.state._id === undefined){
+    window.location = '/account';
+  }
+let accountData = this.props.props.accountData;
 
-  	let accountData = this.props.props.accountData;
-  	
-    return (
-    <div>
-      <Form className='editAccountModalForm' onSubmit={(e)=>this.handleSubmit(e)}>
-        <FormGroup>
-          <Label htmlFor='firstName' >FIRST NAME</Label>
-          <Input className='form-control' name='firstName' 
-          id='firstName' type="text"
-          defaultValue={accountData.firstName} placeholder={accountData.firstName}
-          onChange={(e)=>this.changeValue(e)}
-          ref='firstNameInput' />
-        </FormGroup>
-
-        <FormGroup>
-          <Label htmlFor="lastName">LAST NAME</Label>
-          <Input className='form-control' type="text" name="lastName" id="lastName" 
-          onChange={(e)=>this.changeValue(e)}
-          defaultValue={accountData.lastName} placeholder={accountData.lastName}/>
-        </FormGroup>
-
-        <FormGroup>
-          <Label htmlFor="phoneNumber">PH #</Label>
-          <Input className='form-control' type="text" name="phoneNumber" id="phoneNumber" 
-          onChange={(e)=>this.changeValue(e)}
-          defaultValue={accountData.phoneNumber} placeholder={accountData.phoneNumber}/>
-        </FormGroup>
-
-        <FormGroup>
-          <Label htmlFor="emailAddress">E-MAIL</Label>
-            <Input className='form-control' type="email" name="emailAddress" id="emailAddress" 
-            
-            onChange={(e)=>this.changeValue(e)}
-            defaultValue={accountData.emailAddress} placeholder={accountData.emailAddress}/>
-        </FormGroup>
-        
-        <FormGroup>
-          <Label className='accountEditMBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
-          <Input type="select" onChange={(e)=>this.changeValue(e)} name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
-            <option value='N/A'>N/A</option>
-            <option value="ISFJ">ISFJ</option>
-            <option value="INFJ">INFJ</option>
-            <option value="INTJ">INTJ</option>
-            <option value="ISTP">ISTP</option>
-            <option value="ISFP">ISFP</option>
-            <option value="INFP">INFP</option>
-            <option value="INTP">INTP</option>
-            <option value="ESTP">ESTP</option>
-            <option value="ESFP">ESFP</option>
-            <option value="ENFP">ENFP</option>
-            <option value="ENTP">ENTP</option>
-            <option value="ESTJ">ESTJ</option>
-            <option value="ESFJ">ESFJ</option>
-            <option value="ENFJ">ENFJ</option>
-            <option value="ENTJ">ENTJ</option>
-          </Input>
-        </FormGroup>
-        <Button>Submit</Button>
-    </Form>
-
-    
- </div>
-    );
+return (
+<div>
+  <Form className='editAccountModalForm' onSubmit={(e)=>this.handleSubmit(e)}>
+    <FormGroup>
+      <Label htmlFor='firstName' >FIRST NAME</Label>
+      <Input className='form-control' name='firstName' 
+      id='firstName' type="text"
+      defaultValue={accountData.firstName} placeholder={accountData.firstName}
+      onChange={(e)=>this.changeValue(e)}
+      ref='firstNameInput' />
+    </FormGroup>
+    <FormGroup>
+      <Label htmlFor="lastName">LAST NAME</Label>
+      <Input className='form-control' type="text" name="lastName" id="lastName" 
+      onChange={(e)=>this.changeValue(e)}
+      defaultValue={accountData.lastName} placeholder={accountData.lastName}/>
+    </FormGroup>
+    <FormGroup>
+      <Label htmlFor="phoneNumber">PH #</Label>
+      <Input className='form-control' type="text" name="phoneNumber" id="phoneNumber" 
+      onChange={(e)=>this.changeValue(e)}
+      defaultValue={accountData.phoneNumber} placeholder={accountData.phoneNumber}/>
+    </FormGroup>
+    <FormGroup>
+      <Label htmlFor="emailAddress">E-MAIL</Label>
+        <Input className='form-control' type="email" name="emailAddress" id="emailAddress" 
+        onChange={(e)=>this.changeValue(e)}
+        defaultValue={accountData.emailAddress} placeholder={accountData.emailAddress}/>
+    </FormGroup>
+    <FormGroup>
+      <Label className='accountEditMBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
+      <Input type="select" onChange={(e)=>this.changeValue(e)} name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
+        <option value='N/A'>N/A</option>
+        <option value="ISFJ">ISFJ</option>
+        <option value="INFJ">INFJ</option>
+        <option value="INTJ">INTJ</option>
+        <option value="ISTP">ISTP</option>
+        <option value="ISFP">ISFP</option>
+        <option value="INFP">INFP</option>
+        <option value="INTP">INTP</option>
+        <option value="ESTP">ESTP</option>
+        <option value="ESFP">ESFP</option>
+        <option value="ENFP">ENFP</option>
+        <option value="ENTP">ENTP</option>
+        <option value="ESTJ">ESTJ</option>
+        <option value="ESFJ">ESFJ</option>
+        <option value="ENFJ">ENFJ</option>
+        <option value="ENTJ">ENTJ</option>
+      </Input>
+    </FormGroup>
+    <Button>Submit</Button>
+</Form>
+</div>);
   }
 }
-
 
 export default reduxForm({form: 'registration'})(UpdateForm); 

@@ -4,12 +4,12 @@ form {
 	background: rgba(0,0,0,0.92);
 }
 
-h1{
+h1 {
 	background: white;
 	margin: 0;
 }
 
-h5{
+h5 {
 	background: 0;
 }
 
@@ -81,10 +81,6 @@ div.form-group {
 	background: 0;
 }
 
-
-
-
-
 @media only screen and (min-width: 1000px){
 
 	div.form-group {
@@ -103,10 +99,6 @@ div.form-group {
 		margin-bottom: 2vw;
 		background: 0;
 	}
-
-	
-
-	
 
 	label {
 	color: red;

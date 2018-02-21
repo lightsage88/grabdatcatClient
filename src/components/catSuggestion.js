@@ -87,26 +87,21 @@ render(){
 			
 
 	}
-
-	console.log(this.props);
-	console.log(suggestion);
-	return(
+return(
 		<div className='catSuggestion'>
 			<Button id="Popover1" onClick={this.toggle}>
 				Cat Suggestion
 			</Button>
 			<Popover placement='bottom' isOpen={this.state.popoverOpen}
 			target='Popover1' toggle={this.toggle}>
-			<PopoverHeader>Best Cat for your Personality Type</PopoverHeader>
-          <PopoverBody>Hey there, we noticed your personality type is {this.props.personalityType}. According
-          our super scientific calculations, you'd pair well with a {suggestion} cat. </PopoverBody>
-        </Popover>
+				<PopoverHeader>Best Cat for your Personality Type</PopoverHeader>
+	      		<PopoverBody>Hey there, we noticed your personality type is {this.props.personalityType}. According
+	      		our super scientific calculations, you'd pair well with a {suggestion} cat. </PopoverBody>
+	    	</Popover>
 		</div>
-		);
- }
-}
-
-
+			);
+	 	}
+	}
 }
 
 const mapStateToProps = state => ({

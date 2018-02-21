@@ -20,9 +20,7 @@ export default class App extends Component {
         <Route exact path='/account' component={Account} />
         <Route exact path='/kennel' component={Kennel} />
       </main>
-
-      
-    </Router>
+   </Router>
     );
   }
 }

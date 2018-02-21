@@ -17,11 +17,11 @@ componentWillMount() {
 }
 
 
-	render(){
-		console.log(this.props);
-		console.log(this.store);
-		if(localStorage.token){
-      console.log('yippie');
+render(){
+	console.log(this.props);
+	console.log(this.store);
+	if(localStorage.token){
+	    console.log('yippie');
     } else {
       return(
       <Redirect to="/"/>
@@ -29,14 +29,12 @@ componentWillMount() {
     }
 	return(
 
-		<div className='accountArea'>
-	<NavBar />
-	<h1 className='accountBanner'>Account
-		<h3 className='aboutYou'>About You</h3>
-	</h1>
-
+	<div className='accountArea'>
+		<NavBar />
+		<h1 className='accountBanner'>Account
+			<h3 className='aboutYou'>About You</h3>
+		</h1>
 	<AccountList accountData={this.props.accountData}/>
-
 		</div>
 		);
 	}

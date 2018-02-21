@@ -30,16 +30,10 @@ toggle2(){
 	});
 }
 
-test(e){
-	console.log('test running');
-	console.log(e);
-}
+
 
 deleteAccount(e){
-	console.log('fucking over an account now...');
-	console.log(e);
-	console.log(this.props);
-	console.log(this.props.accountData._id);
+	
 	let id = this.props.accountData._id;
 	localStorage.clear();
 	this.props.dispatch(deleteUser(id));
@@ -51,36 +45,32 @@ deleteAccount(e){
 
 
 render(){
-	console.log(this.props);
-//hopefully you can style the BUTTON in the style of a link a tag thing
 return(
-	<div>
-		<section className='aboutYou'>
-
+		<div>
+			<section className='aboutYou'>
 			<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>EDIT ACCOUNT</ModalHeader>
-          <ModalBody>
-         	  <UpdateForm props={this.props} />
-	          </ModalBody>
-	                 
-	        </Modal>
+	          <ModalHeader toggle={this.toggle}>EDIT ACCOUNT</ModalHeader>
+	          	<ModalBody>
+	         	  <UpdateForm props={this.props} />
+		        </ModalBody>
+		                 
+		    </Modal>
 
-	        <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
-	        <ModalHeader toggle={this.toggle2}>Are you sure?</ModalHeader>
-				<Button onClick={(e)=>this.deleteAccount(e)}>JA</Button>
-				<Button onClick={this.toggle2}>NEIN</Button>        		
-	        <ModalBody>
-	        </ModalBody>
-	        </Modal>
+		    <Modal isOpen={this.state.modal2} toggle={this.toggle2} className={this.props.className}>
+		        <ModalHeader toggle={this.toggle2}>Are you sure?</ModalHeader>
+					<Button onClick={(e)=>this.deleteAccount(e)}>JA</Button>
+					<Button onClick={this.toggle2}>NEIN</Button>        		
+		    	<ModalBody>
+		    	</ModalBody>
+		    </Modal>
 
-				<HumanData accountData={this.props.accountData}/>
+			<HumanData accountData={this.props.accountData}/>
 			<Button onClick={this.toggle}>edit account info</Button>
 			<Button onClick={this.toggle2}>Delete Account</Button>
-		</section>
-	</div>
-	
-	);
-}
+			</section>
+		</div>
+		);
+	}
 }
 	
 export default connect()(AccountList);

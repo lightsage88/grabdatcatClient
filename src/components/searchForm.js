@@ -8,38 +8,38 @@ import './navBar.css';
 import './searchForm.css';
 
 export class SearchForm extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      breed : '',
-      gender: '',
-      age: '',
-      zipCode: ''
-    }
+constructor(props){
+  super(props);
+  this.state = {
+    breed : '',
+    gender: '',
+    age: '',
+    zipCode: ''
   }
+}
 
-  handleSubmit(e){
-    e.preventDefault();
-    console.log("searchForm's handleSubmit is running...");
-    const {breed, color, gender, age, zipCode, distance } = this.state;
-    this.props.dispatch(seekCat(breed, color, gender, age, zipCode, distance));
-  }
+handleSubmit(e){
+  e.preventDefault();
+  console.log("searchForm's handleSubmit is running...");
+  const {breed, color, gender, age, zipCode, distance } = this.state;
+  this.props.dispatch(seekCat(breed, color, gender, age, zipCode, distance));
+}
 
-  onChange(e){
-    console.log("searchForm's onChange is running...");
-    this.setState({
-      [e.target.name] : e.target.value
-    });
-  }
+onChange(e){
+  console.log("searchForm's onChange is running...");
+  this.setState({
+    [e.target.name] : e.target.value
+  });
+}
 
-  clearResults(){
-    console.log('clearResults running...');
-    this.props.dispatch(petsSearchReset());
-  }
+clearResults(){
+  console.log('clearResults running...');
+  this.props.dispatch(petsSearchReset());
+}
 
 
-  render() {
-    return (
+render() {
+  return (
       <Container>
       <div className='formArea'>
       <Row>

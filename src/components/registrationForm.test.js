@@ -9,5 +9,4 @@ describe('<RegistrationForm/>', ()=>{
 		const wrapper = shallow(<RegistrationForm dispatch={dispatch}/>);
 		const instance = wrapper.instance();
 	});
-
 });

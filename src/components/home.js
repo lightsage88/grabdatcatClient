@@ -16,16 +16,13 @@ import SearchResults from './searchResults';
 
 
 export class Home extends Component {
-
-
-
-  componentDidMount(){
+componentDidMount(){
     const mLabId = localStorage.getItem('_id');
     this.props.dispatch(persistData(mLabId));
   }
 
 
-  render() {
+render() {
     console.log('home running...');
     if(localStorage.token){
     } else {
@@ -36,8 +33,7 @@ export class Home extends Component {
       );
     }
    
-    return (
-
+return (
     <div className='App'>
       <NavBar />
       <CatSuggestion />
@@ -45,13 +41,12 @@ export class Home extends Component {
       <SearchForm pic={searchPicture}/>
       <SearchResults />
     </div>
-      );
+    );
   }
 }
 
 const mapStateToProps = state => ({
   firstName : state.app.user.firstName
 });
-
 
 export default connect(mapStateToProps)(Home);

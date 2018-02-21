@@ -7,5 +7,4 @@ describe('<SearchForm/>', ()=>{
 	it('Renders without crashing', ()=>{
 		mount(<SearchForm/>);
 	});
-
 });
