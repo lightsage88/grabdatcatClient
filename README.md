@@ -93,7 +93,7 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 <h3>Back End</h3>
 <ul>
   <li>Bcrypt.js</li>
-  <li>Body-Parser<li>
+  <li>Body-Parser</li>
   <li>Express.js</li>
   <li>Json Web Token</li>
   <li>Mocha + Chai + ChaiHttp</li>
