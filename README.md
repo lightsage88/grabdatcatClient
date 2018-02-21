@@ -51,6 +51,25 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 <h2>How it Works</h2>
 <h3>Register</h3>
 <p>In order to use this site, you need to make an account. There isn't really anything super fancy going on here that deviates from the norm in terms of user experience. While you could argue that the information should be freely available to those who stumble across the site, that would defeat the purpose of being able to keep track of the cats your find during your searches that you seriously would consider adopting. To that end, I created a part of the page called 'Cat Kennel', and it will be discussed later in this Readme.</p>
+<h3>Login</h3>
+<p>You can log in with a username of your choosing, assuming it isn't already taken, and a password that is atleast 10 characters long. There is also a snooty little cat with a comic bubble who will speak to you a little bit too</p>
+<p>During loading you will also see a red spinning figure courtesy of React-Spinners</p>
+<h3>Home/SEEK DAT CAT</h3>
+<p>At the home screen, you will be greeted by your first name and you will be presented with fields to fill out in order to look for cats. The only <strong>required</strong> one is the zip code. Other than that, you can choose to seek cats of any/all breed types, genders, ages by leaving those options in their default positions.</p>
+<h4>Upon failure to find cats</h4>
+<p>If your search yields no results, then a message will pop on screen saying so</p>
+<h4>Upon finding cats</h4>
+<p>Cats will appear in a box of their own with a decadent, gaudy, blue-dotted border containing a picture of the cat, the cats details, a description, and a button that says <strong>"Add to kennel"</strong></p>
+<h4>Pressing "Add to kennel"</h4>
+<p>If you have never pressed the button for that particular cat, then a message will appear in the center of your screen for a short while saying that a new friend as been added. However, if you've already pressed the button before for that particular cat and have not since deleted the cat from your kennel, then a message will appear saying that you already have the cat in your kennel</p>
+<h3>Cat Kennel</h3>
+<p>This part of the site will contain all the pets you have added to your kennel up to this point by pressing the 'Add to kennel' buttons on your search results on the home page. If you're serious about adopting a cat, you can use the info on this page to contact the people necessary to go through with it.</p>
+<h4>Pressing "Remove Cat"</h4>
+<p>This simply gets rid of the cat from your 'cat kennel'. If you find that same cat again in future searches, you will be able to add the cat to your kennel again</p>
+<h3>Account</h3>
+<p>The account page lets your view and edit your account details as well as delete the account entirely</p>
+<h3>Log out</h3>
+<p>This lets you log out securely, clearing the localStorage for the site from your browser as well as the Redux state used to make the site work.</p>
 
 <h2>Wireframes</h2>
 <p>The original wireframes were made on Balsamiq's cloud service and can be seen in <span>gdcclient/htmlwireframes</span>. They were not followed completely to a 'T' as, during development, I came up with a few ideas that I prefered to my original designs</p>
@@ -64,6 +83,7 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
   <li>React</li>
   <li>React-Redux</li>
   <li>React-Router-Dom</li>
+  <li>React-Spinners</li>
   <li>Reactstrap</li>
   <li>Redux</li>
   <li>Redux-DevTools-Extension</li>
@@ -72,8 +92,16 @@ Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 </ul>
 <h3>Back End</h3>
 <ul>
-  <li>Node.js</li>
+  <li>Bcrypt.js</li>
+  <li>Body-Parser<li>
+  <li>Dotenv</li>
   <li>Express.js</li>
+  <li>Json Web Token</li>
+  <li>Mocha + Chai + ChaiHttp</li>
   <li>MongoDB/mLab.com</li>
-  <li>Mocha + Chai</li>
-  <li>Continuous integration and deployment with<a href='https://travis-ci.org/'>Travis-CI</a></li>
+  <li>Mongoose</li>
+  <li>Morgan</li>
+  <li>Node.js</li>
+  <li>Passport + Passport.jwt + Passport.local</li>
+  <li>Request</li>
+  <li>Continuous integration and deployment with <a href='https://travis-ci.org/'>Travis-CI</a></li>
