@@ -41,7 +41,7 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 ```
 
 
-<h2>Homie don play dat, just lemme find dem kitties already!</h2>
+##Homie don play dat, just lemme find dem kitties already!
 ```
 Just go to [`GRAB DAT CAT`](https://affectionate-panini-e16d31.netlify.com).
 ```
