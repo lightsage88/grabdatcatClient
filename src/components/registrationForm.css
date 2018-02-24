@@ -29,4 +29,12 @@ button.submitButton.btn.btn-info{
     z-index:80;
 }
 
+#emailAddress {
+    margin-top: .5vw;
+}
+
+#bottomRow {
+    margin-bottom: -9vw;
+}
+
 }

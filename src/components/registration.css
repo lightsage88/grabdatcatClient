@@ -1,4 +1,6 @@
-
+a {
+	color: #73eedc;
+}
 
 form {
 	background: rgba(0,0,0,0.92);
@@ -25,7 +27,7 @@ h4 {
 
 
 label {
-	color: red;
+	color: #c20114;
 	font-size: 5vw;
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-22deg);
@@ -48,7 +50,7 @@ label.mBTILabel {
 	border-style: inset;
 	border-radius: 3vw;
 	background: 0;
-	color: red;
+	color: #c20114;
 	font-family: 'Delius Swash Caps', cursive;
 	font-size: 2vw;
 }
@@ -85,8 +87,8 @@ div.form-group {
 
 	div.form-group {
 		width: fit-content;
-		display: inline-grid;
-		height: auto;
+/*		display: inline-grid;
+*/		height: auto;
 		min-height: 12vw;
 		background: 0;
 	}
@@ -101,10 +103,10 @@ div.form-group {
 	}
 
 	label {
-	color: red;
+	color: #c20114;
 	font-size: 1.7vw;
 	font-family: 'Delius Swash Caps', cursive;
-	transform: rotate(-22deg);
+	transform: rotate(-11deg);
 	top: -4vw;
 	font-weight: bold;
 	}
@@ -114,7 +116,7 @@ div.form-group {
 		height: auto;
 		max-height: 3vw;
 		min-width: 14vw;
-		top: -1vw;
+		top: -4vw;
 		background: 0;
 		color: white;
 	}
@@ -167,6 +169,7 @@ div.form-group {
 	
 	input#password.form-control, input#username.form-control{
 		width: auto;
+		max-width: 20vw;
 	}
 	
 	p{

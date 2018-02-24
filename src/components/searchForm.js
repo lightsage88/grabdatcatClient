@@ -48,7 +48,7 @@ render() {
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
         <Row>
         <Col sm='12' lg='3'>
-        <FormGroup className='form-group'>
+        <FormGroup className='form-group searchform-group'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
             <option value=''>--ANY--</option>

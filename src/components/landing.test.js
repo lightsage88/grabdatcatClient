@@ -8,6 +8,11 @@ describe('<Landing/>', ()=>{
 		shallow(<Landing/>);
 	});
 
+	// it.only('Renders without crashing', ()=>{
+	// 	const wrapper = mount(<Landing/>);
+	// 	console.log(wrapper.debug());
+	// });
+
 	it('renders the title', ()=>{
 		const title = 'GRAB DAT CAT';
 		const wrapper = shallow(<Landing title={title} />);

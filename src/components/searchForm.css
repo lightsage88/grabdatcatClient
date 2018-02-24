@@ -2,7 +2,7 @@ label#zipCodeLabel.catSearchLabel{
 	transform: rotate(-9deg);
 }
 .catSearchLabel{
-	color: red;
+	color: #c20114;
 	font-size: 4.5vw;
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-10deg);
@@ -24,6 +24,7 @@ input{
 
 div.form-group{
 	background: black;
+
 }
 
 button{
@@ -49,7 +50,7 @@ button{
 		width:100%;
 	}
 
-	.form-group {
+	.searchform-group {
 	display: inline-block;
 		margin: auto;
 		position: relative;

@@ -51,7 +51,7 @@ render() {
             </FormGroup>
           </Col>
         </Row>
-        <Row>
+        <Row id='bottomRow'>
           <Col lg='4'>
             <FormGroup id='emailAddress'>
               <Label htmlFor="emailAddress">E-MAIL</Label>
@@ -133,7 +133,7 @@ render() {
             </Col>
           </Row>
           <section className='desktopEscapeClause'>
-          <Row>
+          <Row id='bottomRow'>
             <Col lg='4'>
             <FormGroup id='emailAddress'>
               <Label htmlFor="emailAddress">E-MAIL</Label>
