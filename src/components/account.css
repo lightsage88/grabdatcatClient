@@ -1,4 +1,6 @@
-
+.deleteAccountButton {
+	float:right;
+}
 
 div.accountArea {
 	background: white;

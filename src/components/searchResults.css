@@ -63,6 +63,7 @@ button.addCatButton{
 	div.searchResults{
 		position: absolute;
 		width: 100%;
+		background: 0;
 	}
 
 	li.petInfo.petEmail{
