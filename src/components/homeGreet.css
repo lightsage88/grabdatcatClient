@@ -4,3 +4,17 @@ h1.homeGreet, p.homeGreet{
 	font-family: 'Delius Swash Caps', serif;
 }
 
+
+p.homeGreet {
+	font-size: 4vw;
+}
+
+
+@media only screen and (min-width: 1000px){
+	p.homeGreet {
+		position: absolute;
+		width: auto;
+		height: 8vw;
+		font-size: 2.5vw;
+	}
+}

@@ -6,8 +6,20 @@ div.catSuggestion{
 
 .catSuggestionP {
 	margin-bottom: 0;
+	font-family: 'Delius Swash Caps', serif;
 }
 
 html{
 	background-color: #30343f;
+}
+
+@media only screen and (min-width: 1000px) {
+	.catSuggestionP{
+		display: none;
+	}
+
+	#Popover1 {
+		position: relative;
+		top: -3vw;
+	}
 }

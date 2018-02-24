@@ -5,8 +5,10 @@ export default function HomeGreet(props){
 
 	return(
 		<div>
-		<h1 className='homeGreet'>Hello, {props.firstName}</h1>
-		<p className='homeGreet'>If you set an MBTI type during registration, you can view our recommendation for your cat search below!</p>
+		<h1 className='homeGreet'>Hello, {props.firstName}
+					<p className='homeGreet'>If you set an MBTI type during registration, you can view our recommendation for your cat search below!</p>
+
+		</h1>
 		</div>
 		);
 }
