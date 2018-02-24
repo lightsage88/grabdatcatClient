@@ -21,7 +21,7 @@ h2 {
 
 li.catEntry{
 	margin: 0 1vw;
-	border: cyan dotted 1vw;
+	border: #B1DDF1 dotted 1vw;
 	border-radius: 5vw;
 	background: transparent;
 	margin-bottom: 1vw;
@@ -31,7 +31,7 @@ li.catEntry{
 h4.petInfo.petName {
 	background: 0;
 	font-family: 'Delius Swash Caps', cursive;
-	color: red;
+	color: #C20114;
 	transform: rotate(-10deg);
 	width: fit-content;
 
@@ -42,6 +42,7 @@ img.petMedia {
 	max-height: 100vw;
 	width: auto;
 	max-width: 80%;
+	border-radius: 1vw;
 }
 
 li{

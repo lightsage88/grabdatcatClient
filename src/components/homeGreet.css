@@ -1,5 +1,6 @@
-h1.homeGreet{
+h1.homeGreet, p.homeGreet{
 	color: hotpink;
 	background: #30343f;
+	font-family: 'Delius Swash Caps', serif;
 }
 

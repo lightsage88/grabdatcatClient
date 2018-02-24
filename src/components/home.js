@@ -9,7 +9,7 @@ import {BrowserRouter as Router, Redirect} from 'react-router-dom';
 import HomeGreet from './homeGreet';
 import SearchForm from './searchForm';
 import {persistData} from '../actions/index.js';
-import CatSuggestion from './catSuggestion';
+// import CatSuggestion from './catSuggestion';
 import searchPicture from '../staticAssets/gitHubIcon.png';
 import {connect} from 'react-redux';
 import SearchResults from './searchResults';
@@ -36,7 +36,6 @@ render() {
 return (
     <div className='App'>
       <NavBar />
-      <CatSuggestion />
       <HomeGreet  firstName={this.props.firstName}/>
       <SearchForm pic={searchPicture}/>
       <SearchResults />

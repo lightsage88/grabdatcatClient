@@ -7,7 +7,7 @@ label#zipCodeLabel.catSearchLabel{
 	font-family: 'Delius Swash Caps', cursive;
 	transform: rotate(-10deg);
 	position: relative;
-	top: 1vw;
+	top: -1vw;
 	font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ button{
 
 	#seekButton, #clearButton {
 		position: absolute;
-		bottom: 2vw;
+		bottom: 1vw;
 	}
 
 	#seekButton {

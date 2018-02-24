@@ -6,6 +6,7 @@ import {seekCat} from '../actions';
 import {petsSearchReset} from '../actions/index';
 import './navBar.css';
 import './searchForm.css';
+import CatSuggestion from './catSuggestion';
 
 export class SearchForm extends React.Component {
 constructor(props){
@@ -46,6 +47,7 @@ render() {
       <Col sm='12' lg='12'>
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
+        <CatSuggestion />
         <Row>
         <Col sm='12' lg='3'>
         <FormGroup className='form-group searchform-group'>
