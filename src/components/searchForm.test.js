@@ -5,6 +5,6 @@ import {SearchForm} from './searchForm';
 
 describe('<SearchForm/>', ()=>{
 	it('Renders without crashing', ()=>{
-		mount(<SearchForm/>);
+		shallow(<SearchForm/>);
 	});
 });
