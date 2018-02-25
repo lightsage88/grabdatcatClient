@@ -16,5 +16,6 @@ p.homeGreet {
 		width: auto;
 		height: 8vw;
 		font-size: 2.5vw;
+		padding: 0 5vw;
 	}
 }

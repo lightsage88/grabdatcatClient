@@ -104,5 +104,12 @@ form.loginForm {
 		right: 17vw;
 	}
 
+	div.searchResults {
+
+	background: url('../staticAssets/OSVP600.jpg');
+	background-size: contain;
+	}
 }
+
+
 
