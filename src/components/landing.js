@@ -15,8 +15,7 @@ render() {
         <div className="App">
         <header className="App-header">
           <h1 className="App-title">GRAB DAT CAT</h1>
-          <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which
-          cat breed will suit you best!</span>
+          <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which cat breed will suit you best! Adopting a pet can involve rough adjustment periods for beasts both 4 and 2 legged! This app will assist you in adopting a cat that is likely to strike a harmonious chord with you.</span>
           <br/><br/>
           <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
         </header>
@@ -33,9 +32,8 @@ render() {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">GRAB DAT CAT</h1>
-          <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which
-          cat breed will suit you best!
-          </span>
+                    <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which cat breed will suit you best! Adopting a pet can involve rough adjustment periods for beasts both 4 and 2 legged! This app will assist you in adopting a cat that is likely to strike a harmonious chord with you.</span>
+
           <br/><br/>
           <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
         </header>
