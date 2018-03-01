@@ -32,7 +32,7 @@ handleSubmit(event){
 				loading:false
 			});
 		}
-	},9000);
+	},4200);
 }
 
 handleLogout(event){

@@ -24,7 +24,10 @@
 }
 
 p.card-text{
-	font-size: 5.5vw;
+	font-size: 4.5vw;
+	font-family: 'Kavivanar', sans-serif;
+	letter-spacing: .2vw;
+	line-height: 1.7;
 }
 
 .card{
@@ -60,16 +63,18 @@ p.card-text{
 .catDetails {
 	clear: both;
 	text-align: left;
-	font-size: 4vw;
+	font-size: 5vw;
 	padding: 2vw;
 }
 
 
 @media only screen and (min-width: 1000px) {
 	img.catImage.card-img{
-		max-height: 20vw;
-		height: auto;
-		min-height: 5vw;
+    height: auto;
+	max-height: 28vw;
+    min-height: 5vw;
+    max-width: 34vw;
+    width: auto;
 	}	
 
 	div.card {
