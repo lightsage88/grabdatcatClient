@@ -1,12 +1,12 @@
 div.searchResults{
-	background: rgba(0,0,0,0.8);
+	background: white;
 }
 
 h4.resultsWillAppear {
-	color: #73eedc;
+	color: #c20114;
 	text-align: center;
 	font-family: 'Crafty Girls', curisve;
-	background: rgba(0,0,0,0.92);
+	background: white;
 }
 
 h2 {
@@ -23,9 +23,11 @@ li.catEntry{
 	margin: 0 1vw;
 	border: #B1DDF1 dotted 1vw;
 	border-radius: 5vw;
-	background: transparent;
+	background: whitesmoke;
 	margin-bottom: 1vw;
 	width: 100%;
+	margin-top: 5vw;
+	border-width: .3em;
 }
 
 h4.petInfo.petName {
@@ -48,7 +50,8 @@ img.petMedia {
 
 li{
 	list-style: none;
-	color: white;
+	color: black;
+	font-family: 'Delius Swash Caps', cursive;
 	padding: 2vw;
 }
 
@@ -64,7 +67,8 @@ button.addCatButton{
 	div.searchResults{
 		position: absolute;
 		width: 100%;
-		background: 0;
+		background: white;
+		margin-top: 4vw;
 	}
 
 	li.petInfo.petEmail{

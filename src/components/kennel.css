@@ -14,11 +14,11 @@
 }
 
 .content{
-	background: linear-gradient(
+	background: white;/*linear-gradient(
 		rgba(0,0,0,0.8),
 		rgba(0,0,0,0.8)
 		),
-	url('../staticAssets/markerCats.jpg');
+	url('../staticAssets/markerCats.jpg');*/
 	background-size: contain;
 
 }
@@ -28,13 +28,17 @@ p.card-text{
 	font-family: 'Kavivanar', sans-serif;
 	letter-spacing: .2vw;
 	line-height: 1.7;
+	color: black;
 }
 
 .card{
-	background:0;
+	background:whitesmoke;
 	color: white;
 	box-sizing:content-box;
-	border: .31vw solid #b1ddf1;
+	border: .31vw dotted #b1ddf1;
+	margin: 5vw;
+	border-width: 0.69vw;
+	border-radius: 2vw;
 }
 
 .catImage {
@@ -48,7 +52,7 @@ p.card-text{
 
 .catKennelBanner {
 	color: hotpink;
-	background: #30343f;
+	background: white;
 	font-family: 'Crafty Girls', cursive;
 }
 
@@ -79,6 +83,7 @@ p.card-text{
 
 	div.card {
 		padding: 0 3vw;
+		border-width:.25vw;
 	}
 	.catName{
 		font-size: 7vw;

@@ -31,20 +31,29 @@ button{
 	font-family: 'Delius Swash Caps', cursive;
 }
 
+form {
+	border-radius: 2vw;
+	background: white;
+}
+
 @media only screen and (min-width: 1000px) {
 	div.formArea{
 		background: transparent;
 		width: stretch;
 	}
 
+	html {
+		background: white;
+	}
+
 	form.searchForm {
-		background: 0;
+		background: white;
 		height: auto;
 		position: relative;
 		margin-bottom: 6vw;
 		top: 7vw;
 		border: #73EEDC .5vw;
-		border-style:outset;
+		border-style: double;
 		border-radius: 1vw;
 	
 		width:100%;

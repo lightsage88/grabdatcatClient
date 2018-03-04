@@ -1,6 +1,6 @@
 h1.homeGreet, p.homeGreet{
 	color: hotpink;
-	background: #30343f;
+	background: white;
 	font-family: 'Delius Swash Caps', serif;
 }
 
@@ -15,7 +15,12 @@ p.homeGreet {
 		position: absolute;
 		width: auto;
 		height: 8vw;
-		font-size: 2.5vw;
-		padding: 0 5vw;
+		font-size: 1.5vw;
+		padding: 0 2vw;
+		background: white;
+		margin: 2vw;
+		min-width: 50%;
+		text-align: center;
+		left: 10%;
 	}
 }

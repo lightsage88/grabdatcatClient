@@ -151,10 +151,10 @@ div.form-group {
 	}
 
 
-	div.App{
+	/*div.App{
 		background: rgba(0,0,0,0.8);
 
-	}
+	}*/
 	select#mBTI.mBTIInput.form-control{
 		font-size: 1.1vw;
 	}

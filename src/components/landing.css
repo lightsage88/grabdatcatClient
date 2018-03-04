@@ -1,8 +1,7 @@
 
 
 body, .App{
-	background: url('../staticAssets/OSVP600.jpg');
-	background-size: contain;
+	background: white;
 }
 
 .testLogin {

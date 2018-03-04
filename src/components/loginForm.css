@@ -7,9 +7,11 @@
 }
 
 div.loginForm {
-	border: solid 2vw #73eedc;
+	border: dotted 1vw #73eedc;
 	position: relative;
 	top: -2vw;
+	border-radius: 2vw;
+	border-width: .6vw;
 }
 
 input{
@@ -67,6 +69,7 @@ form {
 		font-size: 2.5vw;
 		margin: 1vw;
 		padding: 0;
+		color: black;
 	}
 	
 	button.loginFormButtons.btn.btn-secondary{

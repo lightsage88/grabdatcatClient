@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 import {seekCat} from '../actions';
 // import Image from './image';
 import {petsSearchReset} from '../actions/index';
-import './navBar.css';
 import './searchForm.css';
+import './navBar.css';
 import CatSuggestion from './catSuggestion';
 
 export class SearchForm extends React.Component {

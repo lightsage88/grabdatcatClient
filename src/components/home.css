@@ -18,6 +18,9 @@
 
 form.searchForm{
 	height: -webkit-fit-available;
+	background: white;
+	border-radius: 2vw;
+	border: #b1ddf1 double 3px;
 
 }
 
