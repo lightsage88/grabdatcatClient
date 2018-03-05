@@ -7,6 +7,14 @@
     animation: spin 2s linear infinite;
 }
 
+.lead {
+		font-size: 5vw;
+	}
+
+
+.display-3 {
+	font-size: 10vw;
+}
 
 @keyframes spin {
 	0% { transform: rotate(0deg); }
@@ -100,5 +108,18 @@ p.card-text{
 		font-size: 1.5vw;
 		margin-top:0;
 	}
+
+	.lead {
+		font-size: 3vw;
+		position: absolute;
+		left: 40%;
+		top: 40%;
+	}
+
+
+	.display-3 {
+		font-size: 6vw;
+	}
+
 
 }
