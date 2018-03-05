@@ -9,6 +9,7 @@ label#zipCodeLabel.catSearchLabel{
 	position: relative;
 	top: -1vw;
 	font-weight: bold;
+	margin-top:3vw;
 }
 
 #zipCode{
@@ -70,13 +71,14 @@ form {
 	label.catSearchLabel{
 		font-size: 2vw;
 		font-weight: bolder;
+		margin-top: 0;
 	}
 	
 
 
 	section.searchButtonGroup {
 	position: absolute;
-    margin: auto 48%;
+    margin: auto 45%;
     height: 5vw;
     top: 20vw;
 	}
