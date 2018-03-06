@@ -175,7 +175,7 @@ div.form-group {
 		color:white;
 	}
 
-	input#password.form-control:focus, input#username.form-control:focus {
+	input#password.form-control:focus, input#username.form-control:focus, select#mBTI.mBTIInput.form-control:focus {
 		background: white;
 		color:black;
 	}
