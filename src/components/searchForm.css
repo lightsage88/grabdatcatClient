@@ -108,6 +108,7 @@ form {
 		top: 0;
 		margin: inherit;
 		height: calc(2.25rem + 2px);
+		color:inherit;
 	}
 
 	h4.resultsWillAppear{
