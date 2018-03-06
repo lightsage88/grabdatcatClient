@@ -50,12 +50,13 @@ label.mBTILabel {
 	border-style: inset;
 	border-radius: 3vw;
 	background: 0;
-	color: #c20114;
+	color: black;
 	font-family: 'Delius Swash Caps', cursive;
 	font-size: 2vw;
+	background: white;
 }
 
-input, .form-control {
+input {
 	background: 0;
 	color: white;
 	width: stretch;
@@ -157,6 +158,7 @@ div.form-group {
 	}*/
 	select#mBTI.mBTIInput.form-control{
 		font-size: 1.1vw;
+		color: white;
 	}
 	.dontKnow {
 		font-size: 2vw;
@@ -170,6 +172,7 @@ div.form-group {
 	input#password.form-control, input#username.form-control{
 		width: auto;
 		max-width: 20vw;
+		color:white;
 	}
 	
 	p{

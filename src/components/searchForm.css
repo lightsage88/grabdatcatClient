@@ -19,8 +19,14 @@ input{
 	width: auto;
 }
 
-.form-control{
+/*select.formControl {
+	color:#495057;
+}*/
+
+input, .form-control{
 	width: auto;
+	color: #495057;
+
 }
 
 div.form-group{
@@ -113,5 +119,6 @@ form {
 
 	select.form-control {
 		min-width: 11vw;
+		color: inherit;
 	}
 }
