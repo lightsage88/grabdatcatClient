@@ -8,7 +8,7 @@ a.nav-link {
 
 nav.navbar.navbar-expand-md.navbar-light.bg-faded{
 	background: hotpink;
-	font-family: 'Crafty Girls', cursive;
+	font-family: 'Delius Swash Caps', cursive;
 	font-weight: bolder;
 }
 
@@ -45,7 +45,7 @@ button#Popover1.btn.btn-secondary {
 
 h3.popover-header {
 	background: #DCFFFD;
-	font-family: 'Crafty Girls', cursive;
+	font-family: 'Delius Swash Caps', cursive;
 }
 
 div.popover-body {
@@ -63,4 +63,13 @@ h5 {
 	font-weight: bold;
 	color: #b1ddf1;
 	background-color: black;
+}
+
+@media only screen and (min-width: 1000px) {
+
+	nav.navbar.navbar-expand-md.navbar-light.bg-faded {
+		height:5vw;
+	}
+
+
 }

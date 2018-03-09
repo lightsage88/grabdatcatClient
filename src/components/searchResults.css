@@ -34,8 +34,8 @@ h4.petInfo.petName {
 	background: 0;
 	font-family: 'Delius Swash Caps', cursive;
 	color: #C20114;
-	transform: rotate(-10deg);
-	width: fit-content;
+/*	transform: rotate(-10deg);
+*/	width: auto;
 	margin-bottom: 4vw;
 
 }

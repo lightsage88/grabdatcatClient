@@ -23,4 +23,8 @@ p.homeGreet {
 		text-align: center;
 		left: 10%;
 	}
+
+	h1.homeGreet {
+		margin-top:1.5vw;
+	}
 }

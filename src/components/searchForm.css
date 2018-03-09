@@ -1,11 +1,11 @@
 label#zipCodeLabel.catSearchLabel{
-	transform: rotate(-9deg);
+	transform: rotate(0deg);
 }
 .catSearchLabel{
 	color: #c20114;
 	font-size: 4.5vw;
 	font-family: 'Delius Swash Caps', cursive;
-	transform: rotate(-10deg);
+	transform: rotate(0deg);
 	position: relative;
 	top: -1vw;
 	font-weight: bold;
@@ -86,7 +86,7 @@ form {
 	position: absolute;
     margin: auto 45%;
     height: 5vw;
-    top: 20vw;
+    top: 23vw;
 	}
 
 	#seekButton, #clearButton {
@@ -121,5 +121,9 @@ form {
 	select.form-control {
 		min-width: 11vw;
 		color: inherit;
+	}
+
+	h5.SDCH5 {
+		margin-bottom:4vw;
 	}
 }
