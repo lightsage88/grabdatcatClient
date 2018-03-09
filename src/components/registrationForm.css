@@ -1,3 +1,9 @@
+select#mBTI.mBTIInput.form-control {
+    bottom: 28vw;
+    right: 14vw;
+}
+
+
 button.submitButton.btn.btn-info{
     background-color: hotpink;
     margin: 2vw 35%;
@@ -40,5 +46,11 @@ form{
 #bottomRow {
     margin-bottom: -9vw;
 }
+select#mBTI.mBTIInput.form-control {
+
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    }
 
 }

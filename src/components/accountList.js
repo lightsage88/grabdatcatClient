@@ -65,7 +65,7 @@ return(
 		    </Modal>
 
 			<HumanData accountData={this.props.accountData}/>
-			<Button onClick={this.toggle}>edit account info</Button>
+			<Button className='editAccountButton' onClick={this.toggle}>edit account info</Button>
 			<Button className='deleteAccountButton' onClick={this.toggle2}>Delete Account</Button>
 			</section>
 		</div>

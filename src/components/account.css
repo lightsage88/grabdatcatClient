@@ -1,3 +1,7 @@
+label {
+	transform: rotate(0deg);
+}
+
 .deleteAccountButton {
 	float:right;
 }
@@ -12,11 +16,11 @@ img.profilePic, .catImage {
 }
 
 h1.accountBanner{
-	font-family: 'Crafty Girls', cursive;
+	font-family: 'Delius Swash Caps', cursive;
 }
 
 h3.aboutYou{
-	font-family: 'Crafty Girls', cursive;
+	font-family: 'Delius Swash Caps', cursive;
 	background: white;
 	border: 0;
 }
@@ -59,6 +63,8 @@ form.editAccountModalForm label{
 
 }
 
+
+
 @media only screen and (min-width: 1000px) {
 	li.humanDataItem.list-group-item {
 		width: auto;
@@ -66,13 +72,18 @@ form.editAccountModalForm label{
 	}
 
 	form.editAccountModalForm label {
-		transform:rotate(-9deg);
+		transform:rotate(0deg);
 		font-size: 3.5vw;
 	}
 
 	button.deleteAccountButton.btn.btn-secondary {
 		float:right;
 	}
+
+	button.deleteAccountButton, button.editAccountButton {
+		width: 30%;
+	}
+
 
 
 }

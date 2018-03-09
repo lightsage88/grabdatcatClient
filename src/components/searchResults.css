@@ -5,7 +5,7 @@ div.searchResults{
 h4.resultsWillAppear {
 	color: #c20114;
 	text-align: center;
-	font-family: 'Crafty Girls', curisve;
+	font-family: 'Delius Swash Caps', curisve;
 	background: white;
 }
 
@@ -15,8 +15,10 @@ h2 {
 }
 
 .noCats {
-	font-family: 'Crafty Girls',cursive;
-	font-size: 6vw;
+	font-family: 'Delius Swash Caps',cursive;
+	font-size: 4vw;
+	border: solid hotpink;
+	background: black;
 }
 
 li.catEntry{
@@ -84,7 +86,7 @@ button.addCatButton{
 	h4.petInfo.petName{
 		position:absolute;
 		left: 75%;
-		top: -3vw;
+		top: 0;
 		font-size: 3vw;
 		margin: auto -7vw;
 		width: auto;
@@ -143,6 +145,9 @@ button.addCatButton{
 
 	.noCats{
 		font-size: 2.5vw;
+		border: solid hotpink;
+		background: black;
+
 	}
 	p.petDescription {
 		margin-top: 10vw;

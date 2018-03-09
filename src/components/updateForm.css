@@ -1,0 +1,40 @@
+select#mBTI.form-control {
+	position: absolute;
+	right: 1vw;
+	bottom: 53vw;
+}
+
+button.editSubmit.btn.btn-secondary {
+			min-width: 100%;
+		}
+
+label.labelFN {
+			padding-top: 3vw;
+		}
+
+
+
+
+@media only screen and (min-width: 1000px){
+
+		select#mBTI.form-control {
+			position: relative;
+			right: 3vw;
+			color: white;
+		}
+
+		select#mBTI.form-control:focus {
+			color: black;
+		}
+
+
+
+		button.editSubmit.btn.btn-secondary {
+			min-width: 100%;
+		}
+
+		label.labelFN {
+			padding-top: 3vw;
+		}
+
+}

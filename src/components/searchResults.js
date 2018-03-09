@@ -103,7 +103,9 @@ render() {
 } 
 
 return (
+
 <div className='searchResults'>
+
   <Fade in={this.state.duplicateWarning} tag='h5' className='mt-3 duplicateWarning'>
     You already hab dis kitteh in your kennel, hooman!
   </Fade>

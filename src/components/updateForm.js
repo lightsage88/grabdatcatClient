@@ -4,6 +4,8 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import {reduxForm} from 'redux-form';
 import {updateUser} from '../actions/index.js';
+import './updateForm.css';
+
 
 class UpdateForm extends React.Component {
 constructor(props){
@@ -54,7 +56,7 @@ return (
 <div>
   <Form className='editAccountModalForm' onSubmit={(e)=>this.handleSubmit(e)}>
     <FormGroup>
-      <Label htmlFor='firstName' >FIRST NAME</Label>
+      <Label className='labelFN' htmlFor='firstName' >FIRST NAME</Label>
       <Input className='form-control' name='firstName' 
       id='firstName' type="text"
       defaultValue={accountData.firstName} placeholder={accountData.firstName}
@@ -100,7 +102,7 @@ return (
         <option value="ENTJ">ENTJ</option>
       </Input>
     </FormGroup>
-    <Button>Submit</Button>
+    <Button className='editSubmit'>Submit</Button>
 </Form>
 </div>);
   }

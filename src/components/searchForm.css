@@ -86,7 +86,7 @@ form {
 	position: absolute;
     margin: auto 45%;
     height: 5vw;
-    top: 23vw;
+    padding-top: 2vw;
 	}
 
 	#seekButton, #clearButton {
