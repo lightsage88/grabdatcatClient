@@ -19,7 +19,7 @@ form.loginForm {
 }
 
 .App-header {
-	font-family: 'Crafty Girls', cursive;
+	font-family: 'Delius Swash Caps', cursive;
 	font-size: 6vw;
 	height: auto;
 	font-weight: bold;
@@ -64,17 +64,21 @@ form.loginForm {
 	header.App-header {
 		font-size: 1.5vw;
 		color:black;
+		padding: 0 16vw;
 	}
 	span.notRegistered{
 		font-size: 1.5vw;
 		padding: 1vw;
 		position: absolute;
 		background: gold;
+		z-index: 1;
 	}
 	img.notRegisteredPic{
-		top: 7vw;
-		right: 5vw;
-		height: 12vw;
+		    top: 4vw;
+    right: -9vw;
+    height: 28vw;
+    /* float: right; */
+    position: absolute;
 	}
 	span.notRegistered:after{
 		
