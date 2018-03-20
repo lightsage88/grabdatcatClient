@@ -53,8 +53,8 @@ render(){
 					<br/>
 					<input id='password' required minLength='10' type='password' name='password' placeholder='PASSWORD'/>
 					<br/>
-					<Button className='loginFormButtons'>LOGIN</Button>
-					<Link to='/registration'><Button onClick={()=>window.location.reload()}className='loginFormButtons'>REGISTER</Button></Link>
+					<Button id='login' className='loginFormButtons'>LOGIN</Button>
+					<Link to='/registration'><Button id='register' onClick={()=>window.location.reload()}className='loginFormButtons'>REGISTER</Button></Link>
 				</form>
 				<ClipLoader className='ClipLoader' color={'red'}  loading={this.state.loading}/>
 			</div>

@@ -29,7 +29,6 @@ render() {
         <Container>
         <Form onSubmit={(e)=>this.handleSubmit(e)}>
           <h4 className='registrationBanner'>REGISTRATION</h4>
-          <h5>Enter info below, hooman</h5>
           <br/>
           <Row>
             <Col lg='4' md='6'>
@@ -110,7 +109,6 @@ render() {
       <Container>
         <Form onSubmit={(e)=>this.handleSubmit(e)}>
           <h4 className='registrationBanner'>REGISTRATION</h4>
-          <h5>Enter info below, hooman</h5>
           <br/>
           <Row>
             <Col lg='4' md='6'>

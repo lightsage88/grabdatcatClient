@@ -7,7 +7,6 @@
 }
 
 div.loginForm {
-	border: dotted 1vw #73eedc;
 	position: relative;
 	top: -2vw;
 	border-radius: 2vw;
@@ -36,6 +35,10 @@ input{
 	margin: 2vw 10%;
 	font-family: 'Walter Turncoat', cursive;
 
+}
+
+#login {
+	margin-right:2px;
 }
 
 .loginFormButtons:hover{
