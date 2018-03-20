@@ -2,6 +2,10 @@ a.navbar-brand{
 	font-size: 3vw;
 }
 
+li.nav-item {
+	font-family: 'Delius Swash Caps', sans-serif;
+}
+
 a.nav-link {
 	font-size: 3vw;
 }

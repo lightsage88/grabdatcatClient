@@ -17,6 +17,7 @@ label#zipCodeLabel.catSearchLabel{
 }
 input{
 	width: auto;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 /*select.formControl {
@@ -121,9 +122,15 @@ form {
 	select.form-control {
 		min-width: 11vw;
 		color: inherit;
+		font-family: 'IBM Plex Sans', sans-serif;
 	}
+
+
 
 	h5.SDCH5 {
 		margin-bottom:4vw;
+		color:#333;
+		font-family: 'IBM Plex Sans', sans-serif;
+		font-style:italic;
 	}
 }

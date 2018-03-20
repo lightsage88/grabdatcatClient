@@ -73,6 +73,8 @@ form {
 		margin: 1vw;
 		padding: 0;
 		color: black;
+						font-family: 'IBM Plex Sans', sans-serif;
+
 	}
 	
 	button.loginFormButtons.btn.btn-secondary{
@@ -80,6 +82,8 @@ form {
 		height: 10%;
 		padding: 1vw;
 		margin: 1vw 0;
+				font-family: 'IBM Plex Sans', sans-serif;
+
 	}
 
 	input{

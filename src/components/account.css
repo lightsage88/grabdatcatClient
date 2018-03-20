@@ -17,6 +17,7 @@ img.profilePic, .catImage {
 
 h1.accountBanner{
 	font-family: 'Delius Swash Caps', cursive;
+	text-align:center;
 }
 
 h3.aboutYou{
@@ -69,6 +70,8 @@ form.editAccountModalForm label{
 	li.humanDataItem.list-group-item {
 		width: auto;
 		max-width: 33vw;
+		text-align: center;
+		margin: auto;
 	}
 
 	form.editAccountModalForm label {
@@ -82,8 +85,12 @@ form.editAccountModalForm label{
 
 	button.deleteAccountButton, button.editAccountButton {
 		width: 30%;
+		margin: 2vw 9%;
 	}
 
 
 
 }
+
+
+

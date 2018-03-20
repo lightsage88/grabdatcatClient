@@ -25,8 +25,14 @@ form.loginForm {
 	font-weight: bold;
 }
 
+span {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-style: italic;
+}
+
 .notRegistered {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-style: italic;
 	font-size: 6vw;
 	border-radius: 4vw;
 	color: black;
@@ -50,6 +56,7 @@ form.loginForm {
 	border-right: 0;
 	margin-left: -22px;
 	margin-bottom: -44px;
+	z-index: 2;
 }
 
 .notRegisteredPic {

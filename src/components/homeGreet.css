@@ -1,7 +1,8 @@
 h1.homeGreet, p.homeGreet{
 	color: hotpink;
 	background: white;
-	font-family: 'Delius Swash Caps', serif;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-style: italic;
 }
 
 

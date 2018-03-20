@@ -33,10 +33,9 @@
 
 p.card-text{
 	font-size: 4.5vw;
-	font-family: 'Kavivanar', sans-serif;
-	letter-spacing: .2vw;
+	font-family: 'IBM Plex Sans', sans-serif;
 	line-height: 1.7;
-	color: black;
+	color: #333;
 }
 
 .card{
@@ -59,9 +58,13 @@ p.card-text{
 }
 
 .catKennelBanner {
-	color: hotpink;
+	color: #333;
+	font-weight: bold;
 	background: white;
 	font-family: 'Delius Swash Caps', cursive;
+	text-align: center;
+	position: relative;
+	top: 2vw;
 }
 
 .catName {
@@ -77,6 +80,8 @@ p.card-text{
 	text-align: left;
 	font-size: 5vw;
 	padding: 2vw;
+	color: #333;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 
