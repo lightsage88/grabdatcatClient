@@ -19,7 +19,7 @@ h1.App-title{
 .funkyTitle{
 	    font-family: 'Monoton', sans-serif;
     position: absolute;
-    top: 20%;
+    top: 24%;
     background: transparent;
     z-index: 100;
     color: #23C9FF;
@@ -161,9 +161,9 @@ span {
 	background-size: contain;
 	}
 	.funkyTitle {
-		    top: 30vw;
+		        top: 1vw;
     left: 4vw;
-    font-size: 4vw;
+    font-size: 7vw;
 	}
 
 }
