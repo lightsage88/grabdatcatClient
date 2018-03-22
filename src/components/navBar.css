@@ -1,5 +1,5 @@
 a.navbar-brand{
-	font-size: 3vw;
+	font-size: 4vw;
 }
 
 li.nav-item {
@@ -11,8 +11,8 @@ a.nav-link {
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-faded{
-	background: hotpink;
-	font-family: 'Delius Swash Caps', cursive;
+	background: #ffc4d1;
+	font-family: 'monoton',sans-serif;
 	font-weight: bolder;
 }
 
@@ -26,7 +26,7 @@ button.mr-2.navbar-toggler, .navbar-toggler-icon   {
 
 div.collapse.show.navbar-collapse,
 div.collapsing.navbar-collapse{
-	background: hotpink;
+	background: #ffc4d1;
 }
 
 
@@ -41,7 +41,7 @@ span.navbar-toggler-icon{
 }
 
 button#Popover1.btn.btn-secondary {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', cursive;
 	margin: 0;
 	padding: 0;
 
@@ -49,16 +49,16 @@ button#Popover1.btn.btn-secondary {
 
 h3.popover-header {
 	background: #DCFFFD;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', cursive;
 }
 
 div.popover-body {
 	background: #75DBCD;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', cursive;
 }
 
 h1.homeGreet {
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', cursive;
 }
 
 h5 {

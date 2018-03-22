@@ -20,7 +20,7 @@ h4 {
 	background: 0;
 	text-align: center;
 	margin-bottom: 5vw;
-	color: hotpink;
+	color: #ffc4d1;
 	font-family: 'Delius Swash Caps', cursive;
 	font-weight:bolder;
 	font-size: 7vw;
@@ -75,10 +75,11 @@ input {
 }
 
 button.btn, .btn-info.disabled, .btn-info:disabled {
-	background-color: hotpink;
+	background-color: #ffc4d1;
 	margin: 2vw auto;
 	width: auto;
 	min-width: 30%;
+	color: #312f2f;
 }
 
 div.form-group {

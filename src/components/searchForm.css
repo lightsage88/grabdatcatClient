@@ -2,9 +2,9 @@ label#zipCodeLabel.catSearchLabel{
 	transform: rotate(0deg);
 }
 .catSearchLabel{
-	color: #c20114;
+	color: #23c9ff;
 	font-size: 4.5vw;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', cursive;
 	transform: rotate(0deg);
 	position: relative;
 	top: -1vw;
@@ -36,7 +36,8 @@ div.form-group{
 }
 
 button{
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
+	color: #312f2f;
 }
 
 form {
@@ -129,7 +130,7 @@ form {
 
 	h5.SDCH5 {
 		margin-bottom:4vw;
-		color:#333;
+		color:#23c9ff;
 		font-family: 'IBM Plex Sans', sans-serif;
 		font-style:italic;
 	}

@@ -7,10 +7,10 @@ div.searchResults{
 }
 
 h4.resultsWillAppear {
-	color: #c20114;
+	color: #312f2f;
 	text-align: center;
-	font-family: 'Delius Swash Caps', curisve;
-	background: white;
+	font-family: 'IBM Plex Sans', curisve;
+	background: inherit;
 }
 
 h2 {
