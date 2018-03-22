@@ -3,9 +3,7 @@ import './app.css';
 import './landing.css';
 
 import LoginForm from './loginForm';
-import catPicture from '../staticAssets/blackCatAroundCorner.jpg';
 import {connect} from 'react-redux';
-import Image from './image';
 
 export class Landing extends Component {
 render() {
