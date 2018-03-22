@@ -89,7 +89,7 @@ if((catsInState === undefined) || (catsInState.length===0)){
 	</div>
 );
 		return (
-			<div>
+			<div className='kennelPage'>
 				<NavBar />
 				<h1 className='catKennelBanner'>CAT KENNEL</h1>
 				<main className='content'>

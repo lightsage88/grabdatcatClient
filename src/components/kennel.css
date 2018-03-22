@@ -1,3 +1,9 @@
+.kennelPage {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .loader{
 
     background-image: url('../staticAssets/felix.jpg');
@@ -28,6 +34,9 @@
 		),
 	url('../staticAssets/markerCats.jpg');*/
 	background-size: contain;
+	position: absolute;
+	width: 98%;
+
 
 }
 
@@ -39,13 +48,23 @@ p.card-text{
 }
 
 .card{
-	background:whitesmoke;
+	/*background:whitesmoke;
 	color: white;
 	box-sizing:content-box;
 	border: .31vw dotted #b1ddf1;
 	margin: 5vw;
 	border-width: 0.69vw;
 	border-radius: 2vw;
+}*/
+
+    margin: 0 1vw;
+    border: #ffc4d1 double 1vw;
+    border-radius: 5vw;
+    background: whitesmoke;
+    margin-bottom: 1vw;
+    width: 100%;
+    margin-top: 5vw;
+    border-width: .3em;
 }
 
 .catImage {
@@ -61,10 +80,11 @@ p.card-text{
 	color: #333;
 	font-weight: bold;
 	background: white;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
 	text-align: center;
 	position: relative;
 	top: 2vw;
+	font-style: italic;
 }
 
 .catName {

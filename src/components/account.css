@@ -8,6 +8,12 @@ label {
 
 div.accountArea {
 	background: white;
+	    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    margin: 1;
+    min-width: 100%;
 }
 
 img.profilePic, .catImage {
@@ -16,12 +22,12 @@ img.profilePic, .catImage {
 }
 
 h1.accountBanner{
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
 	text-align:center;
 }
 
 h3.aboutYou{
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
 	background: white;
 	border: 0;
 }
@@ -31,7 +37,7 @@ section.aboutYou{
 }
 
 .humanDataItem{
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'Ibm Plex sans', sans-serif;
 }
 
 .removeCat {
@@ -46,7 +52,8 @@ section.aboutYou{
 
 /*MODAL STUFF MOBILE */
 div.modal-header, div.modal-body, h5.modal-title, form.editAccountModalForm {
-	background: black;
+	background: #312f2f;
+	color: #abe7db;
 }
 
 button.close{

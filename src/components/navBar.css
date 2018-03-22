@@ -8,12 +8,17 @@ li.nav-item {
 
 a.nav-link {
 	font-size: 3vw;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-style: italic;
+	text-align:center;
+
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-faded{
 	background: #ffc4d1;
 	font-family: 'monoton',sans-serif;
 	font-weight: bolder;
+	width:100vw;
 }
 
 button.mr-2.navbar-toggler, .navbar-toggler-icon   {
@@ -61,13 +66,13 @@ h1.homeGreet {
 	font-family: 'IBM Plex Sans', cursive;
 }
 
-h5 {
+/*h5 {
 	text-align: center;
 	font-family: 'Delius Swash Caps', cursive;
 	font-weight: bold;
 	color: #b1ddf1;
 	background-color: black;
-}
+}*/
 
 @media only screen and (min-width: 1000px) {
 

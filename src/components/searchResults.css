@@ -3,14 +3,16 @@ p.petDescription {
 }
 
 div.searchResults{
-	background: white;
+	background: #abe7db;
+	position: absolute;
 }
 
 h4.resultsWillAppear {
 	color: #312f2f;
 	text-align: center;
 	font-family: 'IBM Plex Sans', curisve;
-	background: inherit;
+	background: #abe7db;
+
 }
 
 h2 {
@@ -19,15 +21,22 @@ h2 {
 }
 
 .noCats {
-	font-family: 'Delius Swash Caps',cursive;
-	font-size: 4vw;
-	border: solid hotpink;
-	background: black;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 5vw;
+	color: #312f2f;
+	text-align: center;
+	background: #abe7db;
+	font-weight: bolder;
+	    width: auto;
+        min-width: 94vw;
+    padding-bottom: 1vw;
+
+	
 }
 
 li.catEntry{
 	margin: 0 1vw;
-	border: #B1DDF1 dotted 1vw;
+	border: #ffc4d1 double 1vw;
 	border-radius: 5vw;
 	background: whitesmoke;
 	margin-bottom: 1vw;
@@ -38,11 +47,11 @@ li.catEntry{
 
 h4.petInfo.petName {
 	background: 0;
-	font-family: 'Delius Swash Caps', cursive;
-	color: #C20114;
-/*	transform: rotate(-10deg);
-*/	width: auto;
+	font-family: 'Monoton', sans-serif;
+	color: #23c9ff;
+	width: auto;
 	margin-bottom: 4vw;
+	text-shadow: .8vw .8vw .8vw #8d3b72;
 
 }
 
@@ -69,7 +78,7 @@ button.addCatButton{
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 750px){
 	div.searchResults{
 		position: absolute;
 		width: 100%;
@@ -89,6 +98,7 @@ button.addCatButton{
 
 	h4.petInfo.petName{
 		position:absolute;
+
 		left: 75%;
 		top: 0;
 		font-size: 3vw;
@@ -146,6 +156,8 @@ button.addCatButton{
 		border: outset silver .4vw;
 		border-radius: 2vw;
 	}
+
+	
 
 	.noCats{
 		font-size: 2.5vw;

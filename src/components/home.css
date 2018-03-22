@@ -1,18 +1,28 @@
-
+div.App {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .duplicateWarning {
-	position: fixed;
-	top: 50%;
-	background: red;
-	color: black;
+	    position: fixed;
+    top: 50%;
+    background: #312f2f;
+    color: #ffc4d1;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 1vw;
+    border: double #23c9ff;
 }
 
 
 .catAdd {
-	position: fixed;
-	top: 50%;
-	background: lime;
-	color: black;
+	        position: fixed;
+    top: 50%;
+    background: #ffc4d1;
+    color: #312f2f;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 20%;
+    border: double #23c9ff;
 }
 
 

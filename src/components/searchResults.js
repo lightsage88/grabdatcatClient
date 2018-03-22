@@ -81,7 +81,7 @@ render() {
       <Container>
       <Row>
       <Col>
-        <h2 className='noCats'>Oh dear, no cats here...<br/>try again, hooman</h2>
+        <h4 className='noCats'>Oh dear, no cats here...</h4>
       </Col>
       </Row>
       </Container>
@@ -143,6 +143,7 @@ const mapStateToProps = state => ({
   results: state.app.petsReducer.pets,
   userPets: state.app.user.cats,
   catPresent: state.app.user.catPresent
+  // catPresent: false
 });
 
 
