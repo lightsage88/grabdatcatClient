@@ -1,3 +1,9 @@
+form.loginForm {
+	border-radius: 0;
+	background:#ABE7DB;
+}
+
+
  div.css-4ecjhy{
 	height: 20vw;
     position: absolute;
@@ -7,7 +13,6 @@
 }
 
 div.loginForm {
-	position: relative;
 	top: -2vw;
 	border-radius: 2vw;
 	border-width: .6vw;
@@ -51,7 +56,32 @@ form {
 	background: white;
 }
 
-@media only screen and (min-width: 1000px) {
+button#login.loginFormButtons.btn.btn-secondary, button#register.loginFormButtons.btn.btn-secondary {
+	background: #ffc4d1;
+	color: #312f2f;
+}
+
+button#login.loginFormButtons.btn.btn-secondary:hover, button#register.loginFormButtons.btn.btn-secondary:hover {
+	background: #312f2f;
+	color: #ffc4d1;
+}
+
+input#username, input#password{
+		width: 24vw;
+		font-size: 2.5vw;
+		margin: 1vw;
+		padding: 0;
+		color: black;
+		font-family: 'IBM Plex Sans', sans-serif;
+		background: white;
+	}
+
+	input#username:focus, input#password:focus{
+		background: #312f2f;
+		color: #ffc4d1;
+	}
+
+@media only screen and (min-width: 750px) {
 	 div.css-4ecjhy{
 	position:absolute;
 	left: 40%;
@@ -61,10 +91,15 @@ form {
  }
 	div.loginForm{
 		border: none;
-	}
+		    border: none;
+    /* float: right; */
+    right: 3vw;
+/*    top: -28vw;
+*/	}
 	form.loginForm{
 		float: left;
 		background: 0;
+		top:43vw;
 
 	}
 	input#username, input#password{
@@ -73,8 +108,13 @@ form {
 		margin: 1vw;
 		padding: 0;
 		color: black;
-						font-family: 'IBM Plex Sans', sans-serif;
+		font-family: 'IBM Plex Sans', sans-serif;
+		background: white;
+	}
 
+	input#username:focus, input#password:focus{
+		background: #312f2f;
+		color: #ffc4d1;
 	}
 	
 	button.loginFormButtons.btn.btn-secondary{
