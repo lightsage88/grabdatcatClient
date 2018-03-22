@@ -13,15 +13,15 @@ describe('<Landing/>', ()=>{
 	// 	console.log(wrapper.debug());
 	// });
 
-	it('renders the title', ()=>{
-		const title = 'GRAB DAT CAT';
-		const wrapper = shallow(<Landing title={title} />);
-		expect(wrapper.contains(<h1 className='App-title'>{title}</h1>)).toEqual(true);
-	});
+	// it('renders the title', ()=>{
+	// 	const title = 'GRAB DAT CAT';
+	// 	const wrapper = shallow(<Landing title={title} />);
+	// 	expect(wrapper.contains(<h1 className='App-title'>{title}</h1>)).toEqual(true);
+	// });
 
-	it('shows a picture of a cat', ()=>{
-		const picture = '../staticAssets/blackCatAroundCorner.jpg';
-		const wrapper = shallow(<Landing picture={picture}/>);
-		expect(wrapper.contains(<Image className='notRegisteredPic' imageAddress={picture}/>));
-	});
+	// it('shows a picture of a cat', ()=>{
+	// 	const picture = '../staticAssets/blackCatAroundCorner.jpg';
+	// 	const wrapper = shallow(<Landing picture={picture}/>);
+	// 	expect(wrapper.contains(<Image className='notRegisteredPic' imageAddress={picture}/>));
+	// });
 });
