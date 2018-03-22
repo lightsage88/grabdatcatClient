@@ -18,11 +18,12 @@ p.homeGreet {
 		height: 8vw;
 		font-size: 1.5vw;
 		padding: 0 2vw;
-		background: white;
-		margin: 2vw;
+/*		background: white;
+*/		margin: 2vw;
 		min-width: 50%;
 		text-align: center;
-		left: 10%;
+		width: 120%;
+		left: -12%;
 	}
 
 	h1.homeGreet {

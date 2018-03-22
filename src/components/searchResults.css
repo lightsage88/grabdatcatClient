@@ -82,7 +82,6 @@ button.addCatButton{
 	div.searchResults{
 		position: absolute;
 		width: 100%;
-		background: white;
 		margin-top: 4vw;
 	}
 
@@ -167,6 +166,7 @@ button.addCatButton{
 	}
 	p.petDescription {
 		margin-top: 10vw;
+		font-size: 1vw;
 		margin-bottom: 0;
 		font-family: 'IBM Plex Sans', sans-serif;
 	}
