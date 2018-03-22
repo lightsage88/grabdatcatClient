@@ -95,7 +95,15 @@ form.editAccountModalForm label{
 		margin: 2vw 9%;
 	}
 
+	section.aboutYou {
+		position:relative;
+		margin-top:2%;
+	}
 
+	h1.accountBanner {
+		position: relative;
+		margin-top:7%;
+	}
 
 }
 

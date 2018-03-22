@@ -65,7 +65,7 @@ if(!catsInState>0){
 
 if((catsInState === undefined) || (catsInState.length===0)){
 	return(
-		<div>
+		<div className='kenScreen'>
 		<NavBar />
 		<h1 className='catKennelBanner'>CAT KENNEL</h1>
 			<Jumbotron>
@@ -89,7 +89,7 @@ if((catsInState === undefined) || (catsInState.length===0)){
 	</div>
 );
 		return (
-			<div className='kennelPage'>
+			<div className='kenScreen'>
 				<NavBar />
 				<h1 className='catKennelBanner'>CAT KENNEL</h1>
 				<main className='content'>

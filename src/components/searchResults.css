@@ -83,6 +83,7 @@ button.addCatButton{
 		position: absolute;
 		width: 100%;
 		margin-top: 4vw;
+		left:0;
 	}
 
 	li.petInfo.petEmail{
@@ -144,7 +145,7 @@ button.addCatButton{
 		position: relative;
 	}
 
-	h5.mt-3.duplicateWarning.fade, h5.mt-3.catAdd.fade {
+	/*h5.mt-3.duplicateWarning.fade, h5.mt-3.catAdd.fade {
 		position: fixed;
 		width: auto;
 		bottom: 25%;
@@ -154,14 +155,28 @@ button.addCatButton{
 		height: 4vw;
 		border: outset silver .4vw;
 		border-radius: 2vw;
-	}
-
+	}*/
+	.catAdd{
+	position: fixed;
+    top: 50%;
+    background: #ffc4d1;
+    color: #312f2f;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 45%;
+    border: double #23c9ff;
+    z-index: 11;
+}
 	
 
 	.noCats{
 		font-size: 2.5vw;
 		border: solid hotpink;
 		background: black;
+		position: fixed;
+		left:5%;
+		top:50%;
+		color: white;
+		z-index: 11;
 
 	}
 	p.petDescription {
@@ -170,4 +185,16 @@ button.addCatButton{
 		margin-bottom: 0;
 		font-family: 'IBM Plex Sans', sans-serif;
 	}
+
+	.duplicateWarning {
+    position: fixed;
+    top: 50%;
+    background: #312f2f;
+    color: #ffc4d1;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: auto 45%;
+    border: double #23c9ff;
+    
+    z-index: 11;
+}
 }

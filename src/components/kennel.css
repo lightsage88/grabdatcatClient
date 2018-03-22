@@ -1,4 +1,4 @@
-.kennelPage {
+.kenScreen {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -28,14 +28,15 @@
 }
 
 .content{
-	background: white;/*linear-gradient(
+	background:#abe7db;/*linear-gradient(
 		rgba(0,0,0,0.8),
 		rgba(0,0,0,0.8)
 		),
 	url('../staticAssets/markerCats.jpg');*/
 	background-size: contain;
-	position: absolute;
-	width: 98%;
+/*	position: absolute;
+*/	width: auto;
+	min-width:100%;
 
 
 }
@@ -62,7 +63,7 @@ p.card-text{
     border-radius: 5vw;
     background: whitesmoke;
     margin-bottom: 1vw;
-    width: 100%;
+    width: auto;
     margin-top: 5vw;
     border-width: .3em;
 }
@@ -79,7 +80,7 @@ p.card-text{
 .catKennelBanner {
 	color: #333;
 	font-weight: bold;
-	background: white;
+	background: #abe7db;
 	font-family: 'IBM Plex Sans', sans-serif;
 	text-align: center;
 	position: relative;
@@ -105,7 +106,44 @@ p.card-text{
 }
 
 
-@media only screen and (min-width: 1000px) {
+	div.kenScreen {
+		background: #abe7db;
+	}
+
+	nav.navbar.navbar-expand-md.navbar-light.bg-faded {
+    background: #ffc4d1;
+    font-family: 'monoton',sans-serif;
+    font-weight: bolder;
+    width: 100%;
+}
+
+@media only screen and (min-width: 750px) {
+	
+	nav {
+		position:relative;
+	}
+
+	.content {
+		position:unset;
+		background: unset;
+		margin-top: 10%;
+	}
+
+
+	.kennelScreen {
+		position: absolute;
+	}
+
+	div.kenScreen {
+		background: #abe7db;
+		height: auto;
+	}
+
+	h1.catKennelBanner {
+		top:7vw;
+		background:unset;
+	}
+
 	img.catImage.card-img{
     height: auto;
 	max-height: 28vw;
@@ -145,6 +183,18 @@ p.card-text{
 	.display-3 {
 		font-size: 6vw;
 	}
+
+
+nav.navbar.navbar-expand-md.navbar-light.bg-faded {
+    height: 5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    /* min-width: 99vw; */
+    margin: auto;
+    min-width: 100%;
+}
 
 
 }

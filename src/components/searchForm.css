@@ -71,8 +71,9 @@ h5.SDCH5 {
 		border: #73EEDC .5vw;
 		border-style: double;
 		border-radius: 1vw;
-		left:-12%;
+		left:-10%;
 		width:120%;
+		padding-bottom:5%;
 	}
 
 	.searchform-group {

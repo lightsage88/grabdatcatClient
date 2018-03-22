@@ -11,19 +11,19 @@ p.homeGreet {
 }
 
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 750px){
 	p.homeGreet {
-		position: absolute;
-		width: auto;
-		height: 8vw;
-		font-size: 1.5vw;
-		padding: 0 2vw;
-/*		background: white;
-*/		margin: 2vw;
-		min-width: 50%;
-		text-align: center;
-		width: 120%;
-		left: -12%;
+		  position: absolute;
+    width: auto;
+    height: 8vw;
+    font-size: 1.5vw;
+    padding: 0 2vw;
+    /* background: white; */
+    /* margin: 2vw 25%; */
+    min-width: 50%;
+    text-align: center;
+    left: 12%;
+    /* left: -12%; */
 	}
 
 	h1.homeGreet {
