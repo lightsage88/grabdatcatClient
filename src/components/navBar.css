@@ -4,6 +4,8 @@ a.navbar-brand{
 	font-size: 4vw;
 }
 
+
+
 li.nav-item {
 	font-family: 'Delius Swash Caps', sans-serif;
 	padding: 1vw;
@@ -93,6 +95,9 @@ h1.homeGreet {
 	padding: 1vw;
 
 }
-
+.navbar-light .navbar-brand:hover {
+	color: #23c9ff;
+	text-shadow: .2vw .3vw .4vw #8d3b72;
+}
 
 }

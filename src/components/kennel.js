@@ -54,11 +54,11 @@ return(
 }
 
 if(!catsInState>0){
+
 	return(
 		<Jumbotron>
 			<h1 className='display-3'>Wait, Hooman<br/>We be rounding up them kittehs</h1>
 			<div className='loader'></div>
-			<p className='lead'>Oooh Hooman, patience is a virtue, hooman...</p>
 		</Jumbotron>
 	);
 }
