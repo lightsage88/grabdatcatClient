@@ -1,6 +1,17 @@
+
+input#username.form-control, input#password.form-control {
+    width: auto;
+    margin: auto;
+}
+
+
+div.row {
+    display:block;
+}
+
 select#mBTI.mBTIInput.form-control {
-    bottom: 28vw;
-    right: 14vw;
+    position: initial;
+    margin: auto;
 }
 
 
@@ -31,7 +42,7 @@ form{
     padding: 1vw;
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 750px){
 .badRegistration{
     width: auto;
     margin: auto 16%;

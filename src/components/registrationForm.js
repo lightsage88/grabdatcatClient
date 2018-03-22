@@ -43,7 +43,7 @@ render() {
               <input className='form-control' required type='text' name='lastName' id='lastName'/>
             </FormGroup>
           </Col>
-          <Col lg='4'>
+          <Col lg='4' md='6'>
             <FormGroup>
               <Label htmlFor="phoneNumber">PH #</Label>
               <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
@@ -51,13 +51,13 @@ render() {
           </Col>
         </Row>
         <Row id='bottomRow'>
-          <Col lg='4'>
+          <Col lg='4' md='6'>
             <FormGroup id='emailAddress'>
               <Label htmlFor="emailAddress">E-MAIL</Label>
               <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
             </FormGroup>
           </Col>
-          <Col lg='4'>
+          <Col lg='4' md='6'>
             <FormGroup id='username'>
               <Label htmlFor="username">USERNAME</Label>
               <input className='form-control' type='text' name='username' id='username' required/>
@@ -123,7 +123,7 @@ render() {
                 <input className='form-control' required type='text' name='lastName' id='lastName'/>
               </FormGroup>
             </Col>
-            <Col lg='4'>
+            <Col lg='4' md='6'>
               <FormGroup>
                 <Label htmlFor="phoneNumber">PH #</Label>
                 <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
@@ -132,19 +132,19 @@ render() {
           </Row>
           <section className='desktopEscapeClause'>
           <Row id='bottomRow'>
-            <Col lg='4'>
+            <Col lg='4' md='6'>
             <FormGroup id='emailAddress'>
               <Label htmlFor="emailAddress">E-MAIL</Label>
               <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
             </FormGroup>
             </Col>
-            <Col lg='4'>
+            <Col lg='4' md='6'>
               <FormGroup id='username'>
                 <Label htmlFor="username">USERNAME</Label>
                 <input className='form-control' type='text' name='username' id='username' required/>
               </FormGroup>
             </Col>
-            <Col lg='4'>
+            <Col lg='4' md='6'>
               <FormGroup id='password'>
                 <Label htmlFor='passwordFirst'>PASSWORD</Label>
                 <input className='form-control' type='password' required name='password' id='password' minLength='10'/> 
