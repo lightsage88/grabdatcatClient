@@ -113,19 +113,19 @@ render() {
           <Row>
             <Col lg='4' md='6'>
               <FormGroup>
-                <Label htmlFor='firstName' >FIRST NAME</Label>
+                <Label id='firstNameLabel' htmlFor='firstName' >FIRST NAME</Label>
                 <input className='form-control' type='text' name='firstName' id='firstName' required/>
               </FormGroup>
             </Col>
             <Col lg='4' md='6'>
               <FormGroup>
-                <Label htmlFor="lastName">LAST NAME</Label>
+                <Label id='lastNameLabel' htmlFor="lastName">LAST NAME</Label>
                 <input className='form-control' required type='text' name='lastName' id='lastName'/>
               </FormGroup>
             </Col>
             <Col lg='4' md='6'>
               <FormGroup>
-                <Label htmlFor="phoneNumber">PH #</Label>
+                <Label id='phoneNumberLabel' htmlFor="phoneNumber">PH #</Label>
                 <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
               </FormGroup>
             </Col>
@@ -134,7 +134,7 @@ render() {
           <Row id='bottomRow'>
             <Col lg='4' md='6'>
             <FormGroup id='emailAddress'>
-              <Label htmlFor="emailAddress">E-MAIL</Label>
+              <Label id='emailAddressLabel' htmlFor="emailAddress">E-MAIL</Label>
               <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
             </FormGroup>
             </Col>

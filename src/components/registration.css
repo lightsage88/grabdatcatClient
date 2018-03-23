@@ -102,7 +102,7 @@ div.form-group {
 	background: 0;
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 750px){
 
 	div.form-group {
 		width: fit-content;
@@ -110,6 +110,7 @@ div.form-group {
 */		height: auto;
 		background: 0;
 		padding-bottom: 3vw;
+		margin: auto 100%;
 	}
 
 	h4.registrationBanner{
@@ -124,7 +125,7 @@ div.form-group {
 	label {
 	color: #c20114;
 	font-size: 1.7vw;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
 	transform: rotate(-11deg);
 	top: -4vw;
 	font-weight: bold;
@@ -133,11 +134,12 @@ div.form-group {
 	input, .form-control{
 		width: auto;
 		height: auto;
-		max-height: 3vw;
+		max-height: 2vw;
 		min-width: 14vw;
 		top: -4vw;
 		background: 0;
 		color: white;
+		margin:0;
 	}
 
 	div#emailAddress {
@@ -153,13 +155,12 @@ div.form-group {
 		
 	}
 
-	label.mBTILabel {
-		top: 0;
-		position: relative;
-	}
+	
 
 	div#mBTI {
 		background: 0;
+		margin:0;
+		width:0;
 		
 	}
 	
@@ -201,5 +202,7 @@ div.form-group {
 	p{
 		margin-top:0;
 	}
+
+	
 
 }
