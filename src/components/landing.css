@@ -28,6 +28,8 @@ section.topHat {
 
 }
 
+
+
 .funkyTitle{
 	    font-family: 'Monoton', sans-serif;
     position: absolute;
@@ -66,7 +68,7 @@ span {
     background: gold;
     border-radius: .4em;
     position: absolute;
-    top: 475%;
+    top:85%;
     left: 3vw;
     z-index: 39;
 }

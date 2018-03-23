@@ -1,6 +1,10 @@
 form.loginForm {
 	border-radius: 0;
-	background:#ABE7DB;
+    background: #ABE7DB;
+    /* margin: auto 25%; */
+    top: 20em;
+    border: solid blue;
+    width: 90%;
 }
 
 
@@ -10,6 +14,10 @@ form.loginForm {
     top: 25%;
     width: 22vw;
     left: 40%;
+}
+
+#peskyA{
+    margin: 0;
 }
 
 div.loginForm {
