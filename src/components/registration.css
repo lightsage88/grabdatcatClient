@@ -36,6 +36,7 @@ h4 {
 h4.registrationBanner {
 	position: relative;
 	top: 1em;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 
@@ -80,9 +81,11 @@ input {
 
 }
 
+
+
 .dontKnow {
 	position: relative;
-	font-family: 'Delius Swash Caps', cursive;
+	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 3.6vw;
 }
 
@@ -184,6 +187,8 @@ div.form-group {
 		width:auto;
 		float:left;
 		color: cyan;
+		position: relative;
+    left: 8em;
 	}
 	
 	
@@ -201,6 +206,10 @@ div.form-group {
 	
 	p{
 		margin-top:0;
+	}
+
+	p a {
+		margin: 0;
 	}
 
 	
