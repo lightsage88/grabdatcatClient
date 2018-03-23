@@ -2,7 +2,7 @@
 section.titleAndBlurb {
 	border: solid 5px;
 	position: relative;
-	margin-top: 45vh;
+	margin-top: 5%;
 }
 
 .testLogin {
@@ -13,6 +13,19 @@ section.titleAndBlurb {
 
 h1.App-title{
 	
+}
+
+section.topHat {
+        height: auto;
+    padding: 20px;
+    color: black;
+    margin-bottom: 37%;
+    position: relative;
+    top: 37vw;
+    border: solid red;
+    height: auto;
+    min-height: 13em;
+
 }
 
 .funkyTitle{
@@ -164,6 +177,23 @@ span {
     left: 4vw;
     font-size: 7vw;
 	}
+
+
+    .main, .stand {
+        top: 5%;
+    }
+    .main .cat {
+        right: inherit;
+    }
+
+    html body {
+        background-color: #abe7db;
+    }
+
+    section.topHat{
+        top:15vw;
+        margin-bottom: 0;
+    }
 
 }
 
