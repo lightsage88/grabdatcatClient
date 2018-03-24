@@ -88,7 +88,7 @@ h1.homeGreet {
     top: 0;
     left: 0;
     width: auto;
-    min-width: 99vw;
+    min-width: 100%;
 	}
 
 	ul.ml-auto.navbar-nav {

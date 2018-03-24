@@ -37,7 +37,7 @@ return (
     <div className='App'>
       <NavBar />
       <HomeGreet  firstName={this.props.firstName}/>
-      <SearchForm pic={searchPicture}/>
+      <SearchForm id='theTrueSearchForm' pic={searchPicture}/>
       <SearchResults />
     </div>
     );

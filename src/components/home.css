@@ -26,17 +26,16 @@ div.App {
 }
 
 
-form.searchForm{
-	height: -webkit-fit-available;
-	background: #8d3b72;
-	border-radius: 2vw;
-	border: #b1ddf1 double 3px;
 
-}
 
 
 @media only screen and (min-width: 750px) {
     div.App {
         position: unset;
+    }
+
+    .row {
+        top: 0;
+        display:flex;
     }
 }

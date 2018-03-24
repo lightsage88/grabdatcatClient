@@ -43,14 +43,14 @@ render() {
   return (
       <Container>
       <div className='formArea'>
-      <Row>
+      <Row id='searchFormRow'>
       <Col sm='12' lg='12'>
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
         <CatSuggestion />
         <Row>
         <Col sm='12' lg='3'>
-        <FormGroup className='form-group searchform-group'>
+        <FormGroup id='breedSelect' className='form-group searchform-group'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
             <option value=''>--ANY--</option>
@@ -126,7 +126,7 @@ render() {
 
         
           <Col className='genderColumn' xs='12' sm='12' lg='3'>
-        <FormGroup className='form-group'>
+        <FormGroup id='genderSelect' className='form-group'>
           <Label className='catSearchLabel'for="gender">GENDER</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="gender" id="gender">
             <option value=''>--ANY--</option>
