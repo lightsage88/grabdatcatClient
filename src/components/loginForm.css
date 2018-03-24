@@ -3,8 +3,8 @@ form.loginForm {
     background: #ABE7DB;
     /* margin: auto 25%; */
     top: 102%;
-    border: solid blue;
-    width: 100%;
+/*    border: solid blue;
+*/    width: 100%;
     position:absolute;
     left:0;
 }
@@ -100,26 +100,25 @@ input#username, input#password{
 
  }
 	div.loginForm{
-		border: none;
-		    border: none;
-    /* float: right; */
-    right: 3vw;
-/*    top: -28vw;
-*/	}
+		   
+	}
 	form.loginForm{
 		float: left;
 		background: 0;
-		top:43vw;
+/*		border: solid blue;
+*/		width: 28em;
+		top: 99%;
 
 	}
 	input#username, input#password{
 		width: 24vw;
-		font-size: 2.5vw;
+		font-size: 2.2vw;
 		margin: 1vw;
 		padding: 0;
 		color: black;
 		font-family: 'IBM Plex Sans', sans-serif;
 		background: white;
+		top:-0.5em;
 	}
 
 	input#username:focus, input#password:focus{
@@ -130,8 +129,8 @@ input#username, input#password{
 	button.loginFormButtons.btn.btn-secondary{
 		width: 80%;
 		height: 10%;
-		padding: 1vw;
-		margin: 1vw 0;
+		/*padding: 1vw;
+		margin: 1vw 0;*/
 				font-family: 'IBM Plex Sans', sans-serif;
 
 	}
