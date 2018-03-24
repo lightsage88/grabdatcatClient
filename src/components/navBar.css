@@ -2,6 +2,7 @@
 
 a.navbar-brand{
 	font-size: 4vw;
+
 }
 
 
@@ -90,6 +91,11 @@ h1.homeGreet {
     min-width: 99vw;
 	}
 
+	ul.ml-auto.navbar-nav {
+		position: relative;
+		top: 2vw;
+	}
+
 	button#Popover1.btn.btn-secondary {
 	
 	padding: 1vw;
@@ -98,6 +104,18 @@ h1.homeGreet {
 .navbar-light .navbar-brand:hover {
 	color: #23c9ff;
 	text-shadow: .2vw .3vw .4vw #8d3b72;
+}
+
+a.navbar-brand {
+	font-size: 4vw;
+    position: absolute;
+    right: 60%;
+}
+
+a.nav-link {
+	margin: 0;
+	position: relative;
+	top:-2vw;
 }
 
 }
