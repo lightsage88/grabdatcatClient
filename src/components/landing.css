@@ -2,7 +2,7 @@
 section.titleAndBlurb {
 	border: solid 5px;
 	position: relative;
-	margin-top: 5%;
+    margin-top: 20%;
 }
 
 .testLogin {
@@ -19,9 +19,8 @@ section.topHat {
         height: auto;
     padding: 20px;
     color: black;
-    margin-bottom: 37%;
     position: relative;
-    top: 37vw;
+    top: 20vw;
     border: solid red;
     height: auto;
     min-height: 13em;
@@ -40,10 +39,7 @@ section.topHat {
     text-shadow: 0.2vh 0.2vh 0.2vh #8D3B72;
 }
 
-form.loginForm {
-	background: rgba(0,0,0,0.75);
-	
-}
+
 
 .App-header {
 	font-family: 'Delius Swash Caps', cursive;

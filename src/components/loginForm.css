@@ -2,9 +2,11 @@ form.loginForm {
 	border-radius: 0;
     background: #ABE7DB;
     /* margin: auto 25%; */
-    top: 20em;
+    top: 102%;
     border: solid blue;
-    width: 90%;
+    width: 100%;
+    position:absolute;
+    left:0;
 }
 
 
