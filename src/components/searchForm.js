@@ -48,9 +48,9 @@ render() {
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
         <CatSuggestion />
-        <Row>
+        <Row id='kittyBar'>
         <Col sm='12' lg='3'>
-        <FormGroup id='breedSelect' className='form-group searchform-group'>
+        <FormGroup id='breedSelect' className='form-group searchform-group bloco'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
             <option value=''>--ANY--</option>
@@ -126,7 +126,7 @@ render() {
 
         
           <Col className='genderColumn' xs='12' sm='12' lg='3'>
-        <FormGroup id='genderSelect' className='form-group'>
+        <FormGroup id='genderSelect' className='form-group bloco'>
           <Label className='catSearchLabel'for="gender">GENDER</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="gender" id="gender">
             <option value=''>--ANY--</option>
@@ -136,7 +136,7 @@ render() {
         </FormGroup>
           </Col>
           <Col className='ageColumn' xs='12' sm='12' lg='3'>
-        <FormGroup className='form-group'>
+        <FormGroup className='form-group bloco'>
           <Label className='catSearchLabel'for="age">AGE</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
             <option value=''>--ANY--</option>
@@ -148,7 +148,7 @@ render() {
         </FormGroup>
             </Col>
             <Col sm='12' lg='3'>
-        <FormGroup className='form-group'>
+        <FormGroup className='form-group bloco' >
           <Label id='zipCodeLabel' className='catSearchLabel'for="zipCode">ZIPCODE</Label>
           <Input className='catZipCodeSearch' required minLength='5' maxLength='5' onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>
