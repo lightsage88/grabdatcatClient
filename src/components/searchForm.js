@@ -136,7 +136,7 @@ render() {
         </FormGroup>
           </Col>
           <Col className='ageColumn' xs='12' sm='12' lg='3'>
-        <FormGroup className='form-group bloco'>
+        <FormGroup id='ageColumn' className='form-group bloco'>
           <Label className='catSearchLabel'for="age">AGE</Label>
           <Input onChange={(e=>this.onChange(e))} type="select" name="age" id="age">
             <option value=''>--ANY--</option>
@@ -148,7 +148,7 @@ render() {
         </FormGroup>
             </Col>
             <Col sm='12' lg='3'>
-        <FormGroup className='form-group bloco' >
+        <FormGroup id='zipCodeColumn' className='form-group bloco' >
           <Label id='zipCodeLabel' className='catSearchLabel'for="zipCode">ZIPCODE</Label>
           <Input className='catZipCodeSearch' required minLength='5' maxLength='5' onChange={(e=>this.onChange(e))} type="text" name="zipCode" id="zipCode" />
         </FormGroup>

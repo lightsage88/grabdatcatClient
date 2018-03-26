@@ -70,6 +70,9 @@ h5.SDCH5 {
 
 @media only screen and (min-width: 750px) {
 	#kittyBar {
+		display:inherit;
+		position:absolute;
+		left:0;
 	}
 
 	h5.SDCH5 {
@@ -84,7 +87,35 @@ h5.SDCH5 {
 		margin:unset;
 	}
 
+	form.searchForm {
+		position: relative;
+	}
+
+	.formArea {
+		position: absolute;
+left: 0;
+top: 5%;
+margin: auto 10%;
+width: 80%;
+	}
+
+	#zipCode {
+width: 10%;
+	}
+
+	input#zipCode {
+		top: unset;
+	}
+
 	.catSearchLabel {
 		font-size: 1.5vw;
+		margin-top: unset;
+	}
+
+	#zipCodeColumn, #ageColumn, #genderSelect, #breedSelect {
+		border: none;
+border: solid yellow;
+left: 0;
+margin: 0;
 	}
 }
