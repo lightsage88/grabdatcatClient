@@ -80,18 +80,24 @@ button.addCatButton{
 
 @media only screen and (min-width: 750px){
 	h4.resultsWillAppear {
-		display:none;
-	}
+		margin: auto 60%;
+font-size: 4vw;
+width: 30%;
+}
 
 	div.searchResults{
-		position: absolute;
-		width: 100%;
-		margin-top: 4vw;
-		left:0;
+		
+	 	position: absolute;
+	 	width: auto;
+	 	top: 10%;
+	 	background: 0;
+	 	margin: auto 2%;
+	 
 	}
 
 	li.petInfo.petEmail{
 	font-size:1.2vw;
+	word-wrap: break-word;
 	}
 
 	img.petMedia{
@@ -101,15 +107,16 @@ button.addCatButton{
 	}
 
 	h4.petInfo.petName{
-		position:absolute;
-
+/*		position:absolute;
+*/
 		left: 75%;
 		top: 0;
 		font-size: 3vw;
-		margin: auto -7vw;
-		width: auto;
+/*		margin: auto -7vw;
+*/		width: auto;
 		max-width: 34vw;
 		max-inline-size: 24vw;
+		float:left;
 	}
 	li.catEntry{
 	position: relative;
@@ -122,7 +129,7 @@ button.addCatButton{
 		margin: auto;
 		top: 1vw;
 		left: -30vw;
-
+		clear:left;
 		word-break: break-word;
 
 	}
@@ -169,6 +176,8 @@ button.addCatButton{
     margin: 45%;
     border: double #23c9ff;
     z-index: 11;
+    left: 0;
+    width: auto;
 }
 	
 
@@ -198,7 +207,7 @@ button.addCatButton{
     font-family: 'IBM Plex Sans', sans-serif;
     margin: auto 45%;
     border: double #23c9ff;
-    
+    left:0;
     z-index: 11;
 }
 }

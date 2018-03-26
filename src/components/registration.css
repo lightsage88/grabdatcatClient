@@ -113,11 +113,12 @@ div.form-group {
 */		height: auto;
 		background: 0;
 		padding-bottom: 3vw;
-		margin: auto 100%;
-	}
+/*		margin: auto 100%;
+*/	}
 
 	h4.registrationBanner{
 		font-size: 3vw;
+		padding-right:1vw;
 	}
 
 	h5{

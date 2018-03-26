@@ -94,7 +94,7 @@ render() {
         <Container>
         <Row>
         <Col>
-        <h4 className='resultsWillAppear'>Results will appear below</h4>
+        <h4 className='resultsWillAppear'>Results will appear here</h4>
         </Col>
         </Row>
         </Container>
