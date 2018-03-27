@@ -97,7 +97,14 @@ h5.SDCH5 {
 
 	 #kittyBar {
 	 	top: unset;
-	 	padding-top: 10vh;
+padding-top: 10vh;
+border: solid lime;
+margin: uns;
+padding: 0;
+    padding-top: 0px;
+margin: auto;
+width: 20vw;
+padding-top: 2em;
 	 }
 
 	 #zipCodeColumn {
@@ -114,6 +121,7 @@ margin: auto;
 	 .catSuggestion {
 	 	position: absolute;
 
+
 right: 0;
 
 padding: 3vw;
@@ -124,9 +132,16 @@ padding: 3vw;
 }	 
 
 section.searchButtonGroup {
-	    position: absolute;
-    right: 0;
-    margin-right: 20%;
+    position: absolute;
+    left:0;
+
+}
+
+#seekButton, #clearButton {
+	width: auto;
+margin: auto 20%;
+min-width: 5em;
+min-height: 7em;
 }
 
 }
