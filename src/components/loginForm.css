@@ -84,6 +84,8 @@ input#username, input#password{
 		color: black;
 		font-family: 'IBM Plex Sans', sans-serif;
 		background: white;
+		min-height:4vw;
+		height:auto;
 	}
 
 	input#username:focus, input#password:focus{

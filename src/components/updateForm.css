@@ -1,7 +1,7 @@
 select#mBTI.form-control {
-	position: absolute;
-	right: 1vw;
-	bottom: 53vw;
+	margin:auto;	
+	height:auto;
+	min-height:5vw;
 }
 
 button.editSubmit.btn.btn-secondary {
@@ -21,6 +21,7 @@ label.labelFN {
 			position: relative;
 			right: 3vw;
 			color: white;
+			margin:unset;
 		}
 
 		select#mBTI.form-control:focus {
@@ -37,4 +38,15 @@ label.labelFN {
 			padding-top: 3vw;
 		}
 
+		form.editAccountModalForm {
+			position:unset;
+			top:unset;
+			left:0;
+			display:unset;
+		}
+
+		select#mBTI.form-control {
+			right:unset;
+			position:relative;
+		}
 }

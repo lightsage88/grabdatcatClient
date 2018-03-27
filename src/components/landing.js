@@ -54,7 +54,7 @@ render() {
       </section>
       <h1 className='funkyTitle'>GRAB DAT CAT</h1>
       <section className='titleAndBlurb'>
-          <h1 className="App-title">purrrfect</h1>
+          <h1 className="App-title">the purrrfect match</h1>
                     <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which cat breed will suit you best! Adopting a pet can involve rough adjustment periods for beasts both 4 and 2 legged! This app will assist you in adopting a cat that is likely to strike a harmonious chord with you.</span>
 
 
@@ -115,7 +115,7 @@ render() {
       </section>
       <h1 className='funkyTitle'>GRAB DAT CAT</h1>
       <section className='titleAndBlurb'>
-          <h1 className="App-title">purrrfect</h1>
+          <h1 className="App-title">the purrrfect match</h1>
                     <span>Find a cat to adopt and use Myers-Briggs personality tests to determine which cat breed will suit you best! Adopting a pet can involve rough adjustment periods for beasts both 4 and 2 legged! This app will assist you in adopting a cat that is likely to strike a harmonious chord with you.</span>
 
 

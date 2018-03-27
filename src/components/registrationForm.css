@@ -70,6 +70,7 @@ form{
 
 #bottomRow {
     margin-bottom: -9vw;
+    position: absolute;
 }
 select#mBTI.mBTIInput.form-control {
 
@@ -148,4 +149,11 @@ label#emailAddressLabel {
     margin: -1%;
     margin-left: 1em;
  }
+
+ input#username.form-control, input#password.form-control{
+    position: absolute;
+    min-height: unset;
+ }
+
+ 
 }

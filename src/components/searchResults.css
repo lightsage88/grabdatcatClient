@@ -97,13 +97,14 @@ width: 30%;
 
 	li.petInfo.petEmail{
 	font-size:1.2vw;
-	word-wrap: break-word;
+	word-wrap: normal;
 	}
 
 	img.petMedia{
-		max-height: 30vw;
-		max-width: 25%;
-
+		/*max-height: 30vw;
+		max-width: 25%;*/
+		max-height: 20vw;
+max-width: 40%;
 	}
 
 	h4.petInfo.petName{
