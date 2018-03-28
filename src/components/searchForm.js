@@ -47,7 +47,8 @@ render() {
       <Col sm='12' lg='12'>
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
-        <CatSuggestion />
+        <CatSuggestion visitButton={<Button id='seekButton'>SEEK!</Button>
+} />
         <Row id='kittyBar'>
         <Col sm='12' lg='3'>
         <FormGroup id='breedSelect' className='form-group searchform-group bloco'>

@@ -46,8 +46,14 @@ label.labelFN {
 			top:unset;
 			left:0;
 			display:unset;
+            
 		}
 
+    form.editAccountModalForm label {
+        font-size: 2.5vw;
+    margin-top: 10%;
+    }
+    
 		select#mBTI.form-control {
 			right:unset;
 			position:relative;
@@ -55,4 +61,8 @@ label.labelFN {
             height: auto;
             min-height: 6vh;
 		}
+    
+    div#editAccountLand.form-group {
+        width: auto;
+    }
 }

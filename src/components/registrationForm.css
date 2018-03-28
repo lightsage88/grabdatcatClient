@@ -71,7 +71,12 @@ form{
 #bottomRow {
     margin-bottom: -9vw;
     position: absolute;
+    top:25%;
 }
+    
+    #bottomRow div {
+     margin-bottom:2vw;
+    }
 select#mBTI.mBTIInput.form-control {
 
     position: absolute;

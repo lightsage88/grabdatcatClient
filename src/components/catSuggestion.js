@@ -87,8 +87,10 @@ render(){
 			
 
 	}
+        
 return(
 		<div className='catSuggestion'>
+            <div id='timeTraveler'>{this.props.visitButton}</div>
 			<Button id="Popover1" onClick={this.toggle}>
 				Cat Suggestion
 			</Button>
