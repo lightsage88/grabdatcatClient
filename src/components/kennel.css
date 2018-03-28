@@ -198,7 +198,7 @@ p.card-text{
 		font-size: 6vw;
 	}
     
-    .emptyKen {
+    #emptyKen {
         position: unset;
     }
 
