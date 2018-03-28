@@ -4,7 +4,7 @@ import './landing.css';
 
 import LoginForm from './loginForm';
 import {connect} from 'react-redux';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export class Landing extends Component {
 render() {

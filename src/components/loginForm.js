@@ -3,7 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import './loginForm.css'
 import {Button} from 'reactstrap';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {loginUser, protectedEndPointTesting, logOutUser} from '../actions/index.js';
 import {ClipLoader} from 'react-spinners';

@@ -12,12 +12,8 @@ handleSubmit(event){
   event.preventDefault();
   const username = event.target.username.value;
   const password = event.target.password.value;
-  const firstName = event.target.firstName.value;
-  const lastName = event.target.lastName.value;
-  const phoneNumber = event.target.phoneNumber.value;
-  const emailAddress = event.target.emailAddress.value;
   const mBTI = event.target.mBTI.value;
-  this.props.dispatch(registerUser(username, password, firstName, lastName, phoneNumber, emailAddress, mBTI));
+  this.props.dispatch(registerUser(username, password, mBTI));
 }
 
 render() {
@@ -30,34 +26,8 @@ render() {
         <Form onSubmit={(e)=>this.handleSubmit(e)}>
           <h4 className='registrationBanner'>REGISTRATION</h4>
           <br/>
-          <Row>
-            <Col lg='4' md='6'>
-            <FormGroup>
-              <Label htmlFor='firstName' >FIRST NAME</Label>
-              <input className='form-control' type='text' name='firstName' id='firstName' required/>
-            </FormGroup>
-          </Col>
-          <Col lg='4' md='6'>
-            <FormGroup>
-              <Label htmlFor="lastName">LAST NAME</Label>
-              <input className='form-control' required type='text' name='lastName' id='lastName'/>
-            </FormGroup>
-          </Col>
-          <Col lg='4' md='6'>
-            <FormGroup>
-              <Label htmlFor="phoneNumber">PH #</Label>
-              <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
-            </FormGroup>
-          </Col>
-        </Row>
-        <Row id='bottomRow'>
-          <Col lg='4' md='6'>
-            <FormGroup id='emailAddress'>
-              <Label htmlFor="emailAddress">E-MAIL</Label>
-              <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
-            </FormGroup>
-          </Col>
-          <Col lg='4' md='6'>
+           <Row>
+           <Col lg='4' md='6'>
             <FormGroup id='username'>
               <Label htmlFor="username">USERNAME</Label>
               <input className='form-control' type='text' name='username' id='username' required/>
@@ -110,34 +80,9 @@ render() {
         <Form onSubmit={(e)=>this.handleSubmit(e)}>
           <h4 className='registrationBanner'>REGISTRATION</h4>
           <br/>
-          <Row>
-            <Col lg='4' md='6'>
-              <FormGroup>
-                <Label id='firstNameLabel' htmlFor='firstName' >FIRST NAME</Label>
-                <input className='form-control' type='text' name='firstName' id='firstName' required/>
-              </FormGroup>
-            </Col>
-            <Col lg='4' md='6'>
-              <FormGroup>
-                <Label id='lastNameLabel' htmlFor="lastName">LAST NAME</Label>
-                <input className='form-control' required type='text' name='lastName' id='lastName'/>
-              </FormGroup>
-            </Col>
-            <Col lg='4' md='6'>
-              <FormGroup>
-                <Label id='phoneNumberLabel' htmlFor="phoneNumber">PH #</Label>
-                <input required className='form-control' type='text' name='phoneNumber' id='phoneNumber'/>
-              </FormGroup>
-            </Col>
-          </Row>
+          
           <section className='desktopEscapeClause'>
           <Row id='bottomRow'>
-            <Col lg='4' md='6'>
-            <FormGroup id='emailAddress'>
-              <Label id='emailAddressLabel' htmlFor="emailAddress">E-MAIL</Label>
-              <input className='form-control' type='email' name='emailAddress' id='emailAddress' placeholder='cat@gato.meow'/>
-            </FormGroup>
-            </Col>
             <Col lg='4' md='6'>
               <FormGroup id='username'>
                 <Label htmlFor="username">USERNAME</Label>
