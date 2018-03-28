@@ -1,20 +1,10 @@
 form.loginForm {
-/*
-	border-radius: 0;
-    background: #ABE7DB;
-    top: 102%;
-    border: solid blue;
-    width: 100%;
-    position:absolute;
-    left:0;
-*/
+
             border-radius: 0;
-    /* background: #ABE7DB; */
+     background: #ABE7DB; 
     margin: auto 25%;
     top: 20vw;
-/*    border: solid blue;*/
     width: auto;
-    /* position: absolute; */
     position: relative;
     left:0;
     padding:3vw;
@@ -170,5 +160,10 @@ input#username, input#password{
 	input{
 		padding: 1.5vw;
 	}
+    
+    #login {
+        top: unset;
+        margin:0;
+    }
 }
 

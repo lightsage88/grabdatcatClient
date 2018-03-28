@@ -56,6 +56,9 @@ render(){
 					<Button id='login' className='loginFormButtons'>LOGIN</Button>					
 				</form>
 				<ClipLoader className='ClipLoader' color={'red'}  loading={this.state.loading}/>
+                <div className='testLoginBox'>
+          <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
+          </div>
 			</div>
 			</Router>
 		);

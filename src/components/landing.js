@@ -60,9 +60,7 @@ render() {
 
 
           
-          <div className='testLoginBox'>
-          <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
-          </div>
+          
           <LoginForm />
        </section>
         
@@ -123,9 +121,7 @@ render() {
 
 
         
-          <div className='testLoginBox'>
-          <span className='testLogin'>Username: spiderman<br/>pw: 1234567890</span>
-          </div>
+          
           
        </section>
         <section id='tab2' className='titleAndBlurb'>
