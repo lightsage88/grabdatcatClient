@@ -151,6 +151,7 @@ p.card-text{
 	h1.catKennelBanner {
 		top:7vw;
 		background:unset;
+        position:absolute;
 	}
 
 	img.catImage.card-img{
@@ -200,6 +201,10 @@ p.card-text{
     
     #emptyKen {
         position: unset;
+    }
+    
+    #fullKen {
+        width: 100%;
     }
 
 
