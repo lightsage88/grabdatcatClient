@@ -164,6 +164,8 @@ p.card-text{
 	div.card {
 		padding: 0 3vw;
 		border-width:.25vw;
+        margin-left:7.5%;
+        margin-right: 7.5%;
 	}
 	.catName{
 		font-size: 7vw;
@@ -179,6 +181,8 @@ p.card-text{
 	p.card-text {
 		font-size: 1.5vw;
 		margin-top:0;
+        margin: auto;
+        width: 90%;
 	}
 
 	.lead {
