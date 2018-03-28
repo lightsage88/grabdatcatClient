@@ -185,12 +185,12 @@ div.form-group {
 	}
 	.dontKnow {
 		font-size: 2vw;
-		width:auto;
-		float:left;
-		color: cyan;
-		position: relative;
-    left: 8em;
-    bottom:-1vw;
+width: auto;
+float: left;
+color: cyan;
+position: relative;
+left: 17em;
+bottom: 10vw;
 	}
 	
 	
