@@ -12,7 +12,7 @@ form.loginForm {
     /* background: #ABE7DB; */
     margin: auto 25%;
     top: 20vw;
-    border: solid blue;
+/*    border: solid blue;*/
     width: auto;
     /* position: absolute; */
     position: relative;
@@ -137,6 +137,7 @@ input#username, input#password{
 /*		border: solid blue;
 */		width: 28em;
 		top: 99%;
+       left:20%;
 
 	}
 	input#username, input#password{
@@ -148,6 +149,8 @@ input#username, input#password{
 		font-family: 'IBM Plex Sans', sans-serif;
 		background: white;
 		top:-0.5em;
+        min-height:unset;
+        min-height: 4vw;
 	}
 
 	input#username:focus, input#password:focus{

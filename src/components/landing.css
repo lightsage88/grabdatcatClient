@@ -60,7 +60,7 @@ section.topHat {
     color: black;
     position: relative;
     top: 20vw;
-    border: solid red;
+/*    border: solid red;*/
     height: auto;
     min-height: 13em;
 
@@ -205,9 +205,10 @@ span {
 	background-size: contain;
 	}
 	.funkyTitle {
-		        top: 1vw;
-    left: 4vw;
-    font-size: 7vw;
+        position: absolute;
+        left: 0;
+        font-size: 7vw;
+        margin:0;
 	}
 
 
@@ -223,7 +224,9 @@ span {
     }
 
     section.topHat{
-        top:15vw;
+        position: absolute;
+        left:5%;
+        top: 40%;
         margin-bottom: 0;
     }
     
