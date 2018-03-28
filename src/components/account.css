@@ -14,6 +14,7 @@ div.accountArea {
     width: auto;
     margin: 1;
     min-width: 100%;
+    height: 100vh;
 }
 
 img.profilePic, .catImage {
@@ -66,14 +67,18 @@ form.editAccountModalForm label{
 
 .accountEditMBTILabel{
  	max-width: 50%;
+/*
  	margin-top:5%;
  	margin-bottom: 10%;
+*/
+    margin: auto 20%;
+    min-width: 60%;
 
 }
 
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 750px) {
 	li.humanDataItem.list-group-item {
 		width: auto;
 		max-width: 33vw;

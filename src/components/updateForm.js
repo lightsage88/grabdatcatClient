@@ -55,33 +55,7 @@ let accountData = this.props.props.accountData;
 return (
 <div>
   <Form className='editAccountModalForm' onSubmit={(e)=>this.handleSubmit(e)}>
-    <FormGroup>
-      <Label className='labelFN' htmlFor='firstName' >FIRST NAME</Label>
-      <Input className='form-control' name='firstName' 
-      id='firstName' type="text"
-      defaultValue={accountData.firstName} placeholder={accountData.firstName}
-      onChange={(e)=>this.changeValue(e)}
-      ref='firstNameInput' />
-    </FormGroup>
-    <FormGroup>
-      <Label htmlFor="lastName">LAST NAME</Label>
-      <Input className='form-control' type="text" name="lastName" id="lastName" 
-      onChange={(e)=>this.changeValue(e)}
-      defaultValue={accountData.lastName} placeholder={accountData.lastName}/>
-    </FormGroup>
-    <FormGroup>
-      <Label htmlFor="phoneNumber">PH #</Label>
-      <Input className='form-control' type="text" name="phoneNumber" id="phoneNumber" 
-      onChange={(e)=>this.changeValue(e)}
-      defaultValue={accountData.phoneNumber} placeholder={accountData.phoneNumber}/>
-    </FormGroup>
-    <FormGroup>
-      <Label htmlFor="emailAddress">E-MAIL</Label>
-        <Input className='form-control' type="email" name="emailAddress" id="emailAddress" 
-        onChange={(e)=>this.changeValue(e)}
-        defaultValue={accountData.emailAddress} placeholder={accountData.emailAddress}/>
-    </FormGroup>
-    <FormGroup>
+   <FormGroup>
       <Label className='accountEditMBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
       <Input type="select" onChange={(e)=>this.changeValue(e)} name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
         <option value='N/A'>N/A</option>

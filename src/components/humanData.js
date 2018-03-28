@@ -7,10 +7,6 @@ import {ListGroupItem} from 'reactstrap';
   	console.log(props);
   		return(
   		<div>
-			<ListGroupItem className='humanDataItem'><strong>First Name: </strong><span>{props.accountData.firstName}</span></ListGroupItem>
-			<ListGroupItem className='humanDataItem'><strong>Last Name: </strong><span>{props.accountData.lastName}</span></ListGroupItem>
-			<ListGroupItem className='humanDataItem'><strong>Email: </strong><span>{props.accountData.emailAddress}</span></ListGroupItem>
-			<ListGroupItem className='humanDataItem'><strong>PH #: </strong><span>{props.accountData.phoneNumber}</span></ListGroupItem>
 			<ListGroupItem className='humanDataItem'><strong>MBTI: </strong><span>{props.accountData.mBTI}</span></ListGroupItem>
 		</div>
 		);

@@ -132,17 +132,12 @@ padding: 3vw;
 	max-height: unset;
 }	 
 
-section.searchButtonGroup {
-    /*position: absolute;
-    right:5%;*/
-        position: absolute;
-    right: 7%;
-   
 
-}
 
 #seekButton {
-
+    height: auto;
+min-height: 24vw;
+margin: 0;
 }
 
 #seekButton, #clearButton {

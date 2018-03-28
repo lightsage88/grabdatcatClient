@@ -45,10 +45,7 @@ const mapStateToProps = state => ({
   accountData : {
   				_id: state.app.user._id,
   				username : state.app.user.username,
-  				firstName : state.app.user.firstName,
-				  lastName : state.app.user.lastName,
-				  emailAddress: state.app.user.emailAddress,
-				  phoneNumber : state.app.user.phoneNumber,
+  				
 				  mBTI : state.app.user.mBTI
   			}
 });

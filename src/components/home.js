@@ -36,7 +36,7 @@ render() {
 return (
     <div className='App'>
       <NavBar />
-      <HomeGreet  firstName={this.props.firstName}/>
+      <HomeGreet  firstName={this.props.userName}/>
       <SearchForm id='theTrueSearchForm' pic={searchPicture}/>
       <SearchResults />
     </div>
@@ -45,7 +45,7 @@ return (
 }
 
 const mapStateToProps = state => ({
-  firstName : state.app.user.firstName
+  userName : state.app.user.username
 });
 
 export default connect(mapStateToProps)(Home);

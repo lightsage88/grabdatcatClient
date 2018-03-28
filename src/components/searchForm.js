@@ -160,9 +160,6 @@ render() {
         <Button id='seekButton'>SEEK!</Button>
         </Col>
         <br/>
-        <Col lg='6'>
-        <Button id='clearButton' onClick={()=>this.clearResults()}>CLEAR!</Button>
-        </Col>
         </Row>
         </section>
       </Form>

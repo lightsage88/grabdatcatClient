@@ -1,7 +1,9 @@
 select#mBTI.form-control {
 	margin:auto;	
+/*
 	height:auto;
 	min-height:5vw;
+*/
 }
 
 button.editSubmit.btn.btn-secondary {
@@ -11,6 +13,7 @@ button.editSubmit.btn.btn-secondary {
 label.labelFN {
 			padding-top: 3vw;
 		}
+
 
 
 
@@ -48,5 +51,8 @@ label.labelFN {
 		select#mBTI.form-control {
 			right:unset;
 			position:relative;
+            margin: auto;
+            height: auto;
+            min-height: 6vh;
 		}
 }

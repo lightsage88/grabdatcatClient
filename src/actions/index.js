@@ -162,7 +162,8 @@ export const persistData = (mLabId) => {
 			const mBTI = userData.mBTI;
 			const cats = userData.cats;
 			const _id = userData._id;
-			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id ));
+			const username = userData.username;
+			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id, username ));
 		})
 		.catch(error => console.log(error));
 	}

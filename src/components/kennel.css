@@ -1,5 +1,5 @@
 .kenScreen {
-	position: absolute;
+    position: absolute;
 	top: 0;
 	left: 0;
 }
@@ -84,7 +84,7 @@ p.card-text{
 	background: #abe7db;
 	font-family: 'IBM Plex Sans', sans-serif;
 	text-align: center;
-	position: relative;
+/*	position: relative;*/
 	top: 2vw;
 	font-style: italic;
 }
@@ -93,9 +93,17 @@ p.card-text{
 	transform: rotate(0deg);
 	background: 0;
 	float: right;
-	color: #c20114;
+	color: #23c9ff;
 	font-size: 10vw;
+	font-family: 'Monoton', sans-serif;
+	text-shadow: .1vw .1vw .1vw #8d3b72;
+
 }
+
+/*	background: 0;
+	width: auto;
+	margin-bottom: 4vw;
+*/
 
 .catDetails {
 	clear: both;
@@ -178,12 +186,17 @@ p.card-text{
 		position: absolute;
 		left: 40%;
 		top: 40%;
+        display:none;
 	}
 
 
 	.display-3 {
 		font-size: 6vw;
 	}
+    
+    .kenScreen {
+        position: unset;
+    }
 
 
 /*nav.navbar.navbar-expand-md.navbar-light.bg-faded {
