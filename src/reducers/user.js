@@ -10,6 +10,7 @@ const initialState = {
 	mBTI : '',
 	cats: [],
 	_id: '',
+	username: '',
 	catPresent: '',
 	validLogin: ''
 }
@@ -90,7 +91,8 @@ const user = (state=initialState, action) => {
 				emailAddress: action.emailAddress,
 				mBTI: action.mBTI,
 				cats: action.cats,
-				_id: action._id
+				_id: action._id,
+				username: action.username
 			})
 		
 			

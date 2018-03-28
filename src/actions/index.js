@@ -30,7 +30,7 @@ export const loginFail = () => ({
 	type: 'LOGIN_FAIL'
 });
 
- export const loginUserSuccess = (token, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id ) => ({
+ export const loginUserSuccess = (token, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id, username ) => ({
  	type: 'LOGIN_USER_SUCCESS',
  	token,
  	firstName,
@@ -39,7 +39,8 @@ export const loginFail = () => ({
  	phoneNumber,
  	mBTI,
  	cats,
- 	_id
+ 	_id,
+ 	username
  });
 
  export const updateUserSuccess = (firstName, lastName, emailAddress, phoneNumber, mBTI) => ({
@@ -104,7 +105,8 @@ export const loginUser = (username, password) => {
 		.then(json => {
 			const {authToken} = json;
 			const {userData} = json;
-
+			console.log(userData);
+			const username = userData.username;
 			const firstName = userData.firstName;
 			const lastName = userData.lastName;
 			const phoneNumber = userData.phoneNumber;
@@ -113,6 +115,7 @@ export const loginUser = (username, password) => {
 			const cats = userData.cats;
 			const _id = userData._id;
 			localStorage.setItem('token', authToken);
+			localStorage.setItem('username', username);
 			localStorage.setItem('userData', userData);
 			localStorage.setItem('firstName', userData.firstName);
 			localStorage.setItem('lastName', userData.lastName);
@@ -121,7 +124,7 @@ export const loginUser = (username, password) => {
 			localStorage.setItem('mBTI', userData.mBTI);
 			localStorage.setItem('cats', userData.cats);
 			localStorage.setItem('_id', userData._id);
-			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id));
+			dispatch(loginUserSuccess(authToken, firstName, lastName, emailAddress, phoneNumber, mBTI, cats, _id, username));
 
 			window.location = '/home';
 		
