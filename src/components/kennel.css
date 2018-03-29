@@ -190,12 +190,13 @@ margin: 16vh auto;
 
 float: unset;
 
-margin: auto 20%;
+margin: auto;
 
 width: 100%;
+        text-align: center;
 	}
 	.catDetails{
-	clear: unset;
+	clear: left;
 /*    text-align: left;*/
     font-size: 1.5vw;
     padding: 2vw;
