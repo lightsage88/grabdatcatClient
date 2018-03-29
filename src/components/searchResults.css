@@ -102,36 +102,32 @@ button.addCatButton{
 	}
 
 	img.petMedia{
-		/*max-height: 30vw;
-		max-width: 25%;*/
 		max-height: 20vw;
-max-width: 40%;
+        max-width: 40%;
+        float:left;
+        clear:left;
 	}
 
 	h4.petInfo.petName{
-/*		position:absolute;
-*/
+
 		left: 75%;
 		top: 0;
 		font-size: 3vw;
-/*		margin: auto -7vw;
-*/		width: auto;
-		max-width: 34vw;
+	width: auto;
 		max-inline-size: 24vw;
-		float:left;
-	}
+        margin:auto
+    }
 	li.catEntry{
 	position: relative;
-	margin-top:2.5vw;
+	margin-top: 10vh;
 	}
 
 	ul.catDetails{
-		width: 30%;
-		float: left;
+/*		width: 30%;*/
+		float: right;
 		margin: auto;
 		top: 1vw;
 		left: -30vw;
-		clear:left;
 		word-break: break-word;
 
 	}
@@ -195,10 +191,16 @@ max-width: 40%;
 
 	}
 	p.petDescription {
-		margin-top: 10vw;
-		font-size: 1vw;
-		margin-bottom: 0;
-		font-family: 'IBM Plex Sans', sans-serif;
+		margin-top: auto;
+
+font-size: 1vw;
+
+margin-bottom: 0;
+
+font-family: 'IBM Plex Sans', sans-serif;
+
+
+width: auto;
 	}
 
 	.duplicateWarning {

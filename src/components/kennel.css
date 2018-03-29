@@ -149,9 +149,17 @@ p.card-text{
 	}
 
 	h1.catKennelBanner {
-		top:7vw;
-		background:unset;
-        position:absolute;
+		top: 5vw;
+
+background: unset;
+
+position: absolute;
+
+left: 0;
+
+/*border: solid black;*/
+
+width: 100%;
 	}
 
 	img.catImage.card-img{

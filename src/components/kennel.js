@@ -91,8 +91,9 @@ if((catsInState === undefined) || (catsInState.length===0)){
 		return (
 			<div className='kenScreen' id='fullKen'>
 				<NavBar />
-				<h1 className='catKennelBanner'>CAT KENNEL</h1>
 				<main className='content'>
+                    <h1 className='catKennelBanner'>CAT KENNEL</h1>
+
 					{kennelCats}
 				</main>
 			</div>
