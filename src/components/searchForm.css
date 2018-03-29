@@ -1,3 +1,19 @@
+@keyframes introFormArea {
+    from {left: -50%;}
+    to {left: 0;}
+}
+
+@keyframes introFormAreaMobile {
+    0% {position: relative; left:-100vw;}
+    25%  {left:0;}
+    100%{position:unset;}
+}
+
+.formArea {
+    animation-name: introFormAreaMobile;
+    animation-duration: 2.5s;
+}
+
 #timeTraveler {
     display:none;
 }
@@ -83,6 +99,8 @@ h5.SDCH5 {
 		top: 5%;
 		width:auto;
 		min-width: 45%;
+        animation-name: introFormArea;
+        animation-duration: 2.5s;
 	}
 
 	.catSearchLabel {
