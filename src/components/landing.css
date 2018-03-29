@@ -24,7 +24,7 @@ section.titleAndBlurb h1 {
     width:unset;
     margin: 0;
     min-width: unset;
-        text-shadow: 0.2px 0.3px 0.8px #8d3b72;
+        text-shadow: 0.8px 0.8px 0.8px #8d3b72;
 }
 
 #tab1 {
@@ -36,8 +36,8 @@ section.titleAndBlurb h1 {
     border-color:red;
 }
 
-#tab2 h1 {
-    font-size: 200%;
+#tab2 h1, #tab3 h1 {
+    font-size: 150%;
 }
 
 #tab3{
@@ -111,8 +111,8 @@ span {
     position: relative;
     background: gold;
     border-radius: .4em;
-    position: absolute;
-    top:85%;
+    position: relative;
+    top:20vh;
     left: 3vw;
     z-index: 39;
 }
@@ -164,7 +164,7 @@ span {
     position: relative;
     background: gold;
     z-index: 1;
-    top: -10vw;
+    top: -20vh;
     left: auto;
 	}
 
@@ -198,8 +198,9 @@ span {
     border-bottom: 0;
     border-right: 0;
     margin-left: 92px;
-    margin-bottom: -44px;
+    margin-bottom: -10px;
     transform: rotate(0deg);
+        z-index: -2;
 	}
 
 	
@@ -238,7 +239,7 @@ span {
         position: absolute;
         left:5%;
         top: 40%;
-        margin-bottom: 0;
+        margin-top: 5%;
     }
     
     #tab1 {
@@ -254,6 +255,10 @@ span {
         position: absolute;
         top: 100vh;
         left: 67%;
+    }
+    
+    #tab2 h1, #tab3 h1 {
+        font-size: 2.5em;
     }
     
     .testLoginBox {
