@@ -164,15 +164,30 @@ p.card-text{
 
 	div.card {
 		padding: 0 3vw;
-		border-width:.25vw;
-        margin-left:7.5%;
-        margin-right: 7.5%;
+
+border-width: .25vw;
+
+margin-left: 7.5%;
+
+margin-right: 7.5%;
+
+width: auto;
+
+max-width: 60%;
+
+margin: 16vh auto;
 	}
 	.catName{
 		font-size: 7vw;
+
+float: unset;
+
+margin: auto 20%;
+
+width: 100%;
 	}
 	.catDetails{
-	clear: both;
+	clear: unset;
 /*    text-align: left;*/
     font-size: 1.5vw;
     padding: 2vw;
