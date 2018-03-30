@@ -1,5 +1,6 @@
 p.petDescription {
 	font-family: 'IBM Plex Sans', sans-serif;
+	margin-bottom: 1vw;
 }
 
 div.searchResults{
@@ -192,10 +193,9 @@ button.addCatButton{
 	}
 	p.petDescription {
 		margin-top: auto;
-
+		margin-bottom: 1vw;
 font-size: 1vw;
 
-margin-bottom: 0;
 
 font-family: 'IBM Plex Sans', sans-serif;
 

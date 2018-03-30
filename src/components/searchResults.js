@@ -127,6 +127,7 @@ return (
           <li className='petInfo petPhone'>PHONE:<br/> {pet.contactPhone ? pet.contactPhone:'N/A'}</li>
         </ul>
         <p className='petDescription'>{pet.description}</p>
+        <br/>
         <Button className='addCatButton' onClick={()=>this.addACat(pet.id)}>Add to Kennel</Button>
 
       </li>
