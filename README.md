@@ -88,8 +88,17 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 <p>This part of the site will contain all the pets you have added to your kennel up to this point by pressing the 'Add to kennel' buttons on your search results on the home page. If you're serious about adopting a cat, you can use the info on this page to contact the people necessary to go through with it.</p>
 <h4>Pressing "Remove Cat"</h4>
 <p>This simply gets rid of the cat from your 'cat kennel'. If you find that same cat again in future searches, you will be able to add the cat to your kennel again</p>
+<img src='version 2 screenshots/kennel-desktop-occupied1.jpg'>
+<img src='version 2 screenshots/kennel-desktop-occupied2.jpg'>
+<img src='version 2 screenshots/kennel-mobile-occupied1'>
+<img src='version 2 screenshots/kennel-mobile-occupied2'>
 <h3>Account</h3>
 <p>The account page lets your view and edit your account details as well as delete the account entirely</p>
+<img src='version 2 screenshots/account-desktop'>
+<img src='version 2 screenshots/account-mobile.jpg'><img src='version 2 screenshots/account-edit-desktop.jpg'>
+<img src='version 2 screenshots/account-edit-mobile.jpg'>
+<img src='version 2 screenshots/account-delete-desktop.jpg'>
+<img src='version 2 screenshots/account-delete-mobile.jpg'>
 <h3>Log out</h3>
 <p>This lets you log out securely, clearing the localStorage for the site from your browser as well as the Redux state used to make the site work.</p>
 
