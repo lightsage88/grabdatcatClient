@@ -67,11 +67,12 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 <img src='version 2 screenshots/home-desktop.jpg'>
 <img src='version 2 screenshots/home-mobile.jpg'>
 
-<h4>Upon failure to find cats</h4>
+<h4>Upon failure to find cats (with screenshots)</h4>
 <p>If your search yields no results, then a message will pop on screen saying so.</p>
+
 <img src='version 2 screenshots/home-searchFail-desktop.jpg'>
 <img src='version 2 screenshots/home-searchFail-mobile.jpg'>
-<h4>Upon finding cats</h4>
+<h4>Upon finding cats (with screenshots)</h4>
 <p>Cats will appear in a box of their own with a decadent, gaudy, blue-dotted border containing a picture of the cat, the cats details, a description, and a button that says <strong>"Add to kennel"</strong>.</p>
 
 <img src='version 2 screenshots/home-search1-desktop.jpg'>
@@ -79,6 +80,7 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 
 <h4>Pressing "Add to kennel"</h4>
 <p>If you have never pressed the button for that particular cat, then a message will appear in the center of your screen for a short while saying that a new friend as been added. However, if you've already pressed the button before for that particular cat and have not since deleted the cat from your kennel, then a message will appear saying that you already have the cat in your kennel.</p>
+<h5>Adding Cats Screenshots</h5>
 <img src='version 2 screenshots/home-newCat-desktop.jpg'>
 <img src='version 2 screenshots/home-newCat-mobile.jpg'>
 <img src='version 2 screenshots/home-alreadyHaveCat-desktop.jpg'>
@@ -88,12 +90,14 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 <p>This part of the site will contain all the pets you have added to your kennel up to this point by pressing the 'Add to kennel' buttons on your search results on the home page. If you're serious about adopting a cat, you can use the info on this page to contact the people necessary to go through with it.</p>
 <h4>Pressing "Remove Cat"</h4>
 <p>This simply gets rid of the cat from your 'cat kennel'. If you find that same cat again in future searches, you will be able to add the cat to your kennel again</p>
+<h5>Kennel Screenshots</h5>
 <img src='version 2 screenshots/kennel-desktop-occupied1.jpg'>
 <img src='version 2 screenshots/kennel-desktop-occupied2.jpg'>
 <img src='version 2 screenshots/kennel-mobile-occupied1.jpg'>
 <img src='version 2 screenshots/kennel-mobile-occupied2.jpg'>
 <h3>Account</h3>
 <p>The account page lets your view and edit your account details as well as delete the account entirely</p>
+<h5>Account Screenshots</h5>
 <img src='version 2 screenshots/account-desktop.jpg'>
 <img src='version 2 screenshots/account-mobile.jpg'><img src='version 2 screenshots/account-edit-desktop.jpg'>
 <img src='version 2 screenshots/account-edit-mobile.jpg'>
