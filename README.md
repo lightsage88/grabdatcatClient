@@ -90,11 +90,11 @@ Then open [`localhost:3000`](http://localhost:3000) in your browser.
 <p>This simply gets rid of the cat from your 'cat kennel'. If you find that same cat again in future searches, you will be able to add the cat to your kennel again</p>
 <img src='version 2 screenshots/kennel-desktop-occupied1.jpg'>
 <img src='version 2 screenshots/kennel-desktop-occupied2.jpg'>
-<img src='version 2 screenshots/kennel-mobile-occupied1'>
-<img src='version 2 screenshots/kennel-mobile-occupied2'>
+<img src='version 2 screenshots/kennel-mobile-occupied1.jpg'>
+<img src='version 2 screenshots/kennel-mobile-occupied2.jpg'>
 <h3>Account</h3>
 <p>The account page lets your view and edit your account details as well as delete the account entirely</p>
-<img src='version 2 screenshots/account-desktop'>
+<img src='version 2 screenshots/account-desktop.jpg'>
 <img src='version 2 screenshots/account-mobile.jpg'><img src='version 2 screenshots/account-edit-desktop.jpg'>
 <img src='version 2 screenshots/account-edit-mobile.jpg'>
 <img src='version 2 screenshots/account-delete-desktop.jpg'>
