@@ -16,8 +16,8 @@ div.catSuggestion{
 
 @media only screen and (min-width: 750px) {
 	.catSuggestionP{
-		display: none;
-	}
+/*		display: none;
+*/	}
 
 	#Popover1 {
 		position: relative;

@@ -48,7 +48,6 @@ render() {
             </Col>
             <Col lg='4'>
               <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
-                <option value='N/A'>N/A</option>
                 <option value="ISFJ">ISFJ</option>
                 <option value="INFJ">INFJ</option>
                 <option value="INTJ">INTJ</option>
@@ -105,7 +104,6 @@ render() {
               </Col>
               <Col lg='4'>
                 <Input className='mBTIInput' type="select" name="mBTI" id="mBTI">
-                  <option value='N/A'>N/A</option>
                   <option value="ISFJ">ISFJ</option>
                   <option value="INFJ">INFJ</option>
                   <option value="INTJ">INTJ</option>

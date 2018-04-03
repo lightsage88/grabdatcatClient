@@ -58,7 +58,6 @@ return (
    <FormGroup id='editAccountLand'>
       <Label className='accountEditMBTILabel' for="mBTI">MYERS-BRIGGS PERSONALITY TYPE</Label>
       <Input type="select" onChange={(e)=>this.changeValue(e)} name="mBTI" id="mBTI" defaultValue={accountData.mBTI} placeholder={accountData.mBTI}>
-        <option value='N/A'>N/A</option>
         <option value="ISFJ">ISFJ</option>
         <option value="INFJ">INFJ</option>
         <option value="INTJ">INTJ</option>
