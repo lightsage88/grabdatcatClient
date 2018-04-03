@@ -16,7 +16,13 @@ export class Landing extends Component {
 render() {
   let validLogin = this.props.validLogin;
   console.log(validLogin);
-  
+  //   if(validLogin === false){
+  //     return (
+  //     <script>
+  //       document.getElementById('catBubbleSpeech').innerHTML = 'You made a mistake, hooman';
+  //     </script>
+  //     );
+  // }
     return (
 
        
