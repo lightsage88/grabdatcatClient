@@ -41,7 +41,7 @@ li.catEntry{
 	border-radius: 5vw;
 	background: whitesmoke;
 	margin-bottom: 1vw;
-	width: 100%;
+	width: auto;
 	margin-top: 5vw;
 	border-width: .3em;
 }

@@ -15,9 +15,11 @@ export class CatSuggestion extends React.Component {
 
 
 toggle() {
+	console.log(this.props.personalityType);
 	this.setState({
 		popoverOpen: !this.state.popoverOpen
 	});
+	
 }
 
 render(){
