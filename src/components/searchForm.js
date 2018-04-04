@@ -19,6 +19,11 @@ constructor(props){
   }
 }
 
+componentDidMount(){
+  console.log('bocho');
+  console.log(this.props);
+}
+
 handleSubmit(e){
   e.preventDefault();
   console.log("searchForm's handleSubmit is running...");
@@ -38,8 +43,70 @@ clearResults(){
   this.props.dispatch(petsSearchReset());
 }
 
+viewSuggestion(){
+  console.log('viewSuggestion running...');
+  console.log(this.props);
+  let breedPick;
+  switch(this.props.homeMBTI) {
+    case 'INFJ':
+      breedPick = 'Russian Blue';
+      break;
+    case 'INTJ':
+      breedPick = 'Norwegian Forest Cat';
+      break;
+    case 'ISTP':
+      breedPick = 'Tiger';
+      break;
+    case 'ISTJ':
+      breedPick = 'British Shorthair';
+      break;
+    case 'ISFP':
+      breedPick = 'Ragdoll';
+      break;
+    case 'ISFJ':
+      breedPick = 'Persian';
+      break;
+    case 'INFP':
+      breedPick = 'Birman';
+      break;
+    case 'INTP':
+      breedPick = 'Turkish Van';
+      break;
+    case 'ESTP':
+      breedPick = 'Bengal';
+      break;
+    case 'ESFP':
+      breedPick = 'Sphynx/Hairless';
+      break;
+    case 'ENFP':
+      breedPick = 'Singapura';
+      break;
+    case 'ENTP':
+      breedPick = 'Balinese';
+      break;
+    case 'ESTJ':
+      breedPick = 'Maine Coon';
+      break;
+    case 'ESFJ':
+      breedPick = 'Tonkinese';
+      break;
+    case 'ENFJ':
+      breedPick = 'Devon Rex';
+      break;
+    case 'ENTJ':
+      breedPick = 'Siamese';
+      break;
+    default: 
+    breedPick = '';
+  }
+  console.log(breedPick);
+  // this.inputOption = breedPick;
+  this.inputOption = breedPick;
+}
+
 
 render() {
+  console.log(this.props);
   return (
       <Container>
       <div className='formArea'>
@@ -47,13 +114,12 @@ render() {
       <Col sm='12' lg='12'>
       <Form className='searchForm' onSubmit={(e)=>this.handleSubmit(e)}>
         <h5 className='SDCH5'>SEEK DAT CAT</h5>
-        <CatSuggestion visitButton={<Button id='seekButton'>SEEK!</Button>
-} />
+        <CatSuggestion visitButton={<Button id='seekButton'>SEEK!</Button>} onClick={()=>{this.viewSuggestion()}} mbti={this.props.homeMBTI} />
         <Row id='kittyBar'>
         <Col sm='12' lg='3'>
         <FormGroup id='breedSelect' className='form-group searchform-group bloco'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
-          <Input onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
+          <Input ref={this.inputOption} onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
             <option value=''>--ANY--</option>
           <option value='Abyssinian'>Abysinnian</option>
           <option value='American Curl'>American Curl</option>
