@@ -36,15 +36,14 @@ h2 {
 }
 
 li.catEntry{
-/*	margin: 0 1vw;
-*/	border: #ffc4d1 double 1vw;
+	margin: 0 1vw;
+	border: #ffc4d1 double 1vw;
 	border-radius: 5vw;
 	background: whitesmoke;
-/*	margin-bottom: 1vw;
-*/	width: 89%;
+	margin-bottom: 1vw;
+	width: 100%;
 	margin-top: 5vw;
 	border-width: .3em;
-	margin:2vw auto;
 }
 
 h4.petInfo.petName {
