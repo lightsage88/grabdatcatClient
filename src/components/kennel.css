@@ -135,7 +135,7 @@ p.card-text{
 	.content {
 		position:unset;
 		background: unset;
-		margin-top: 10%;
+		margin-top: 20%;
 	}
 
 
@@ -157,9 +157,12 @@ position: absolute;
 
 left: 0;
 
+
 /*border: solid black;*/
 
 width: 100%;
+padding: 5vw;
+font-size: 5vw;
 	}
 
 	img.catImage.card-img{
@@ -185,8 +188,12 @@ max-width: 60%;
 
 margin: 16vh auto;
 	}
+
+
+
+
 	.catName{
-		font-size: 7vw;
+		font-size: 5vw;
 
 float: unset;
 
