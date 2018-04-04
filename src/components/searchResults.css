@@ -6,6 +6,10 @@ p.petDescription {
 div.searchResults{
 	background: #abe7db;
 	position: absolute;
+	border:solid;
+	width:auto;
+	margin: auto 1%;
+	max-width: 97%;
 }
 
 h4.resultsWillAppear {
