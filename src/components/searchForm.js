@@ -15,7 +15,8 @@ constructor(props){
     breed : '',
     gender: '',
     age: '',
-    zipCode: ''
+    zipCode: '',
+    buttonBreed: ''
   }
 }
 
@@ -100,8 +101,12 @@ viewSuggestion(){
     breedPick = '';
   }
   console.log(breedPick);
-  // this.inputOption = breedPick;
-  this.inputOption = breedPick;
+  this.setState({
+    breed : breedPick    
+  });
+ 
+
+
 }
 
 
@@ -119,8 +124,9 @@ render() {
         <Col sm='12' lg='3'>
         <FormGroup id='breedSelect' className='form-group searchform-group bloco'>
           <Label className='catSearchLabel'for="breed">BREED</Label>
-          <Input ref={this.inputOption} onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed">
-            <option value=''>--ANY--</option>
+          <Input ref={this.inputOption} onChange={(e=>this.onChange(e))} type="select" name="breed" id="breed" value={this.state.breed}>
+
+          <option value=''>ANY</option>
           <option value='Abyssinian'>Abysinnian</option>
           <option value='American Curl'>American Curl</option>
           <option value='American Shorthair'>American Shorthair</option>
